@@ -1556,6 +1556,75 @@ class LandCruiserBlueprint {
         
         // Setup search functionality
         this.setupSearch();
+        
+        // Click detection on 3D model
+        this.renderer.domElement.addEventListener('click', (event) => this.onCanvasClick(event));
+        
+        // Hover effect
+        this.renderer.domElement.addEventListener('mousemove', (event) => this.onCanvasHover(event));
+    }
+    
+    onCanvasClick(event) {
+        // Calculate mouse position in normalized device coordinates
+        const rect = this.renderer.domElement.getBoundingClientRect();
+        this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+        
+        // Raycast
+        this.raycaster.setFromCamera(this.mouse, this.camera);
+        const intersects = this.raycaster.intersectObjects(this.vehicleGroup.children, true);
+        
+        if (intersects.length > 0) {
+            // Find which part was clicked
+            let clickedObject = intersects[0].object;
+            
+            // Traverse up to find the part group
+            while (clickedObject.parent && clickedObject.parent !== this.vehicleGroup) {
+                clickedObject = clickedObject.parent;
+            }
+            
+            // Find the part name
+            const partName = this.findPartName(clickedObject);
+            if (partName) {
+                this.selectPart(partName);
+            }
+        }
+    }
+    
+    onCanvasHover(event) {
+        const rect = this.renderer.domElement.getBoundingClientRect();
+        this.mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        this.mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+        
+        this.raycaster.setFromCamera(this.mouse, this.camera);
+        const intersects = this.raycaster.intersectObjects(this.vehicleGroup.children, true);
+        
+        if (intersects.length > 0) {
+            this.renderer.domElement.style.cursor = 'pointer';
+        } else {
+            this.renderer.domElement.style.cursor = 'grab';
+        }
+    }
+    
+    findPartName(object) {
+        // Check if this object is directly in our parts dictionary
+        for (const [name, part] of Object.entries(this.parts)) {
+            if (part === object) {
+                return name;
+            }
+        }
+        
+        // Check by matching userData or traverse children
+        for (const [name, part] of Object.entries(this.parts)) {
+            if (!part) continue;
+            let found = false;
+            part.traverse(child => {
+                if (child === object) found = true;
+            });
+            if (found) return name;
+        }
+        
+        return null;
     }
     
     onResize() {
@@ -1632,6 +1701,10 @@ class LandCruiserBlueprint {
         
         document.querySelectorAll('.part-btn').forEach(b => b.classList.remove('selected'));
         document.getElementById('info-panel').classList.remove('visible');
+        
+        // Reset all part colors
+        this.resetHighlight();
+        this.selectedPart = null;
     }
     
     animateTo(obj, target, duration = 800) {
@@ -1707,10 +1780,37 @@ class LandCruiserBlueprint {
             const isSelected = name === selectedName;
             part.traverse(child => {
                 if (child.material) {
-                    child.material.color.setHex(
-                        isSelected ? this.colors.highlight : 
-                        (child.material.color.getHex() === this.colors.highlight ? this.colors.primary : child.material.color.getHex())
-                    );
+                    if (isSelected) {
+                        // Bright highlight for selected part
+                        child.material.color.setHex(this.colors.accent);
+                        if (child.material.linewidth !== undefined) {
+                            child.material.linewidth = 2;
+                        }
+                        child.material.opacity = 1.0;
+                    } else {
+                        // Dim other parts
+                        child.material.color.setHex(this.colors.dim);
+                        if (child.material.linewidth !== undefined) {
+                            child.material.linewidth = 1;
+                        }
+                        child.material.opacity = 0.4;
+                    }
+                    child.material.transparent = true;
+                    child.material.needsUpdate = true;
+                }
+            });
+        });
+    }
+    
+    resetHighlight() {
+        Object.entries(this.parts).forEach(([name, part]) => {
+            if (!part) return;
+            part.traverse(child => {
+                if (child.material) {
+                    child.material.color.setHex(this.colors.primary);
+                    child.material.opacity = 1.0;
+                    child.material.transparent = false;
+                    child.material.needsUpdate = true;
                 }
             });
         });
