@@ -58,13 +58,23 @@ class LandCruiserBlueprint {
         
         this.camera = this.perspCamera;
         
-        // Renderer
-        this.renderer = new THREE.WebGLRenderer({ 
+        // Renderer with fallback options for Safari compatibility
+        var rendererParams = { 
             antialias: true,
-            alpha: true
-        });
+            alpha: true,
+            powerPreference: 'default'
+        };
+        
+        try {
+            this.renderer = new THREE.WebGLRenderer(rendererParams);
+        } catch(e) {
+            console.warn('WebGL with antialias failed, trying without:', e);
+            rendererParams.antialias = false;
+            this.renderer = new THREE.WebGLRenderer(rendererParams);
+        }
+        
         this.renderer.setSize(window.innerWidth, window.innerHeight);
-        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
         this.renderer.setClearColor(0x0a1628, 1);
         this.container.appendChild(this.renderer.domElement);
         
@@ -1956,5 +1966,15 @@ class LandCruiserBlueprint {
     }
 }
 
-// Initialize
-window.addEventListener('DOMContentLoaded', () => new LandCruiserBlueprint());
+// Initialize with error handling
+window.addEventListener('DOMContentLoaded', function() {
+    try {
+        new LandCruiserBlueprint();
+    } catch(e) {
+        console.error('Failed to initialize:', e);
+        var loading = document.getElementById('loading');
+        if (loading) {
+            loading.innerHTML = '<p style="color: #ff6666;">Failed to initialize 3D view.<br>' + e.message + '</p>';
+        }
+    }
+});
