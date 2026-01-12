@@ -1815,7 +1815,7 @@ class LandCruiserBlueprint {
         
         if (info.parts && info.parts.length > 0) {
             html += `<div class="part-list">
-                <div class="part-list-title">PART NUMBERS: (click BUY for japan-parts.eu)</div>`;
+                <div class="part-list-title">PART NUMBERS:</div>`;
             info.parts.forEach((p, idx) => {
                 html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}">
                     <span class="part-name">${p.name}</span>
