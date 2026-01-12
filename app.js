@@ -1809,10 +1809,12 @@ class LandCruiserBlueprint {
                 </div>
                 <div class="popup-content">
                     <div class="popup-part-number"></div>
+                    <div class="popup-vehicle">Toyota Land Cruiser 100 Series (1998-2007)</div>
                     <div class="popup-actions">
-                        <a class="popup-btn ebay-btn" target="_blank">Search eBay</a>
-                        <a class="popup-btn amazon-btn" target="_blank">Search Amazon</a>
-                        <a class="popup-btn google-btn" target="_blank">Google Search</a>
+                        <a class="popup-btn toyota-btn" target="_blank">🔧 Toyota Parts Official</a>
+                        <a class="popup-btn ebay-btn" target="_blank">eBay</a>
+                        <a class="popup-btn amazon-btn" target="_blank">Amazon</a>
+                        <a class="popup-btn google-btn" target="_blank">Google Shopping</a>
                     </div>
                 </div>
             `;
@@ -1823,12 +1825,18 @@ class LandCruiserBlueprint {
             });
         }
         
+        // Part code is first 5 digits
+        const partCode = partNumber.split('-')[0];
         const formatNum = partNumber.replace(/-/g, '');
+        
         popup.querySelector('.popup-title').textContent = partName;
         popup.querySelector('.popup-part-number').textContent = `Part Number: ${partNumber}`;
+        
+        // Toyota Official Parts - search by part code
+        popup.querySelector('.toyota-btn').href = `https://autoparts.toyota.com/search?searchText=${partCode}`;
         popup.querySelector('.ebay-btn').href = `https://www.ebay.com/sch/i.html?_nkw=toyota+${formatNum}+land+cruiser+100`;
         popup.querySelector('.amazon-btn').href = `https://www.amazon.com/s?k=toyota+${formatNum}+land+cruiser`;
-        popup.querySelector('.google-btn').href = `https://www.google.com/search?q=toyota+${partNumber}+land+cruiser+100+buy`;
+        popup.querySelector('.google-btn').href = `https://www.google.com/search?tbm=shop&q=toyota+${partNumber}+land+cruiser+100`;
         
         popup.classList.add('visible');
     }
@@ -2173,6 +2181,10 @@ class LandCruiserBlueprint {
             }
         };
         
+        // Use external PARTS_DATABASE if available, otherwise fall back to inline data
+        if (typeof PARTS_DATABASE !== 'undefined' && PARTS_DATABASE[name]) {
+            return PARTS_DATABASE[name];
+        }
         return data[name] || { title: name.toUpperCase(), description: 'Component information not available.', parts: [] };
     }
     
