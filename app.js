@@ -1725,15 +1725,87 @@ class LandCruiserBlueprint {
         const info = this.getPartInfo(partName);
         // Part number formatting
         const formatPartNumber = (num) => num.replace(/-/g, '');
-        // Japan-Parts.eu - direct link to LC100 catalog with part search
+        
+        // Japan-Parts.eu category mapping based on part code prefix
+        const JAPAN_PARTS_CATEGORIES = {
+            // Tool / Engine / Fuel
+            '09': 'tool-engine-fuel/0901_standard-tool',
+            '11': 'tool-engine-fuel/1101_partial-engine-assembly',
+            '12': 'tool-engine-fuel/1201_ventilation-hose',
+            '13': 'tool-engine-fuel/1301_crankshaft-piston',
+            '15': 'tool-engine-fuel/1501_engine-oil-pump',
+            '16': 'tool-engine-fuel/1601_water-pump',
+            '17': 'tool-engine-fuel/1701_manifold',
+            '19': 'tool-engine-fuel/1901_ignition-coil-spark-plug',
+            '22': 'tool-engine-fuel/2211_fuel-injection-system',
+            '23': 'electrical/8201_battery-battery-cable',
+            // Powertrain / Chassis
+            '33': 'powertrain-chassis/3312_shift-lever-retainer',
+            '35': 'powertrain-chassis/3501_transaxle-or-transmission-assy-gasket-kit-atm',
+            '36': 'powertrain-chassis/3608_transfer-assembly-gasket-kit',
+            '37': 'powertrain-chassis/3701_propeller-shaft-universal-joint',
+            '41': 'powertrain-chassis/4101_rear-axle-housing-differential',
+            '42': 'powertrain-chassis/4102_rear-axle-shaft-hub',
+            '43': 'powertrain-chassis/4301_front-axle-housing-differential',
+            '44': 'powertrain-chassis/4701_brake-pedal-bracket',
+            '45': 'powertrain-chassis/4501_steering-column-shaft',
+            '46': 'powertrain-chassis/4601_parking-brake-cable',
+            '47': 'powertrain-chassis/4701_brake-pedal-bracket',
+            '48': 'powertrain-chassis/4802_front-axle-arm-steering-knuckle',
+            '49': 'powertrain-chassis/4804_rear-spring-shock-absorber',
+            // Body
+            '51': 'body/5151_frame',
+            '52': 'body/5251_cab-mounting-body-mounting',
+            '53': 'body/5351_radiator-grille',
+            '55': 'body/5551_instrument-panel-glove-compartment',
+            '58': 'body/5851_front-floor-panel-front-floor-member',
+            '61': 'body/6151_side-member',
+            '62': 'body/6152_side-window',
+            '64': 'body/6451_inside-trim-board',
+            '67': 'body/6751_front-door-panel-glass',
+            '68': 'body/6761_back-door-panel-glass',
+            '69': 'body/6765_lock-cylinder-set',
+            '71': 'body/7151_seat-seat-track',
+            '72': 'body/7152_seat-belt',
+            '73': 'body/7152_seat-belt',
+            '74': 'body/7451_armrest-visor',
+            '75': 'body/7551_emblem-name-plate',
+            '76': 'body/7652_spoiler-side-mudguard',
+            '77': 'body/7751_fuel-tank-tube',
+            '78': 'body/7851_accelerator-link',
+            // Electrical
+            '81': 'electrical/8101_headlamp',
+            '82': 'electrical/8201_battery-battery-cable',
+            '83': 'electrical/8301_meter',
+            '84': 'electrical/8401_switch-relay-computer',
+            '85': 'electrical/8501_windshield-wiper',
+            '86': 'electrical/8601_radio-receiver-amplifier-condenser',
+            '87': 'electrical/8701_mirror',
+            '88': 'electrical/8712_heating-air-conditioning-heater-unit-blower',
+            '89': 'electrical/8421_air-bag',
+            '90': 'electrical/8401_switch-relay-computer'
+        };
+        
+        // Get japan-parts.eu URL for a part
         const getBuyUrl = (partNum, partCode) => {
-            const baseUrl = 'https://www.japan-parts.eu/toyota/eu/2007/land-cruiser-100/uzj100l-gnaeka';
-            const pn = formatPartNumber(partNum);
-            // Use pnn (part name number) and pa (part actual) params if code available
-            if (partCode) {
-                return `${baseUrl}?pnn=${partCode}&pa=${pn}`;
+            const baseUrl = 'https://www.japan-parts.eu/toyota/eu/2007/land-cruiser-100/uzj100l-gnaeka/3_791450_002_';
+            
+            // Get prefix from code or part number
+            let prefix = '';
+            if (partCode && partCode.length >= 2) {
+                prefix = partCode.substring(0, 2);
+            } else if (partNum) {
+                prefix = partNum.replace(/-/g, '').substring(0, 2);
             }
-            return baseUrl;
+            
+            // Find matching category
+            const category = JAPAN_PARTS_CATEGORIES[prefix];
+            if (category) {
+                return `${baseUrl}/${category}`;
+            }
+            
+            // Fallback to base catalog
+            return 'https://www.japan-parts.eu/toyota/eu/2007/land-cruiser-100/uzj100l-gnaeka';
         };
         
         document.getElementById('info-title').textContent = info.title;
