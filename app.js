@@ -1551,10 +1551,11 @@ class LandCruiserBlueprint {
             btn.addEventListener('click', () => {
                 const partName = btn.dataset.part;
                 this.selectPart(partName);
-                document.querySelectorAll('.part-btn').forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
             });
         });
+        
+        // Setup search functionality
+        this.setupSearch();
     }
     
     onResize() {
@@ -1649,9 +1650,27 @@ class LandCruiserBlueprint {
     selectPart(partName) {
         const part = this.parts[partName];
         const info = this.getPartInfo(partName);
+        const toyotaPartsUrl = 'https://autoparts.toyota.com/search?searchTerm=';
         
         document.getElementById('info-title').textContent = info.title;
-        document.getElementById('info-desc').innerHTML = info.description;
+        
+        // Build description with parts list
+        let html = info.description;
+        
+        if (info.parts && info.parts.length > 0) {
+            html += `<div class="part-list">
+                <div class="part-list-title">PART NUMBERS:</div>`;
+            info.parts.forEach(p => {
+                html += `<div class="part-item">
+                    <span class="part-name">${p.name}</span>
+                    <span class="part-number">${p.number}</span>
+                    <a href="${toyotaPartsUrl}${p.number}" target="_blank" class="order-link">ORDER</a>
+                </div>`;
+            });
+            html += '</div>';
+        }
+        
+        document.getElementById('info-desc').innerHTML = html;
         
         // Load technical diagram if available
         const imgContainer = document.getElementById('info-image-container');
@@ -1666,13 +1685,20 @@ class LandCruiserBlueprint {
         // Highlight selected part
         this.highlightPart(partName);
         
-        // Focus camera
+        // Zoom to part with smooth animation
         if (part?.userData?.originalPosition) {
             const pos = this.isExploded ? part.position.clone() : part.userData.originalPosition.clone();
-            const offset = new THREE.Vector3(5, 3, 5);
-            this.animateTo(this.camera.position, pos.clone().add(offset));
-            this.animateTo(this.controls.target, pos);
+            // Calculate zoom distance based on part
+            const zoomDistance = 6;
+            const offset = new THREE.Vector3(zoomDistance, zoomDistance * 0.6, zoomDistance);
+            this.animateTo(this.camera.position, pos.clone().add(offset), 800);
+            this.animateTo(this.controls.target, pos, 800);
         }
+        
+        // Update button states
+        document.querySelectorAll('.part-btn').forEach(btn => {
+            btn.classList.toggle('selected', btn.dataset.part === partName);
+        });
     }
     
     highlightPart(selectedName) {
@@ -1691,7 +1717,7 @@ class LandCruiserBlueprint {
     }
     
     getPartInfo(name) {
-        const baseUrl = '/home/exedev/manual/manual/repair/img/png/';
+        const toyotaPartsUrl = 'https://autoparts.toyota.com/search?searchTerm=';
         const data = {
             'chassis': {
                 title: 'CHASSIS FRAME - J100',
@@ -1708,7 +1734,14 @@ class LandCruiserBlueprint {
                     • E-coat corrosion protection<br>
                     • Body mount isolation bushings
                 `,
-                image: '../manual/manual/repair/img/png/A075599.png'
+                parts: [
+                    { name: 'Frame Assembly', number: '51100-60210' },
+                    { name: 'Frame Cross Member #1', number: '51205-60100' },
+                    { name: 'Frame Cross Member #2', number: '51206-60080' },
+                    { name: 'Body Mount Cushion', number: '52205-60050' },
+                    { name: 'Frame Side Rail RH', number: '51101-60150' },
+                    { name: 'Frame Side Rail LH', number: '51102-60140' }
+                ]
             },
             'body': {
                 title: 'BODY PANELS - J100',
@@ -1719,18 +1752,21 @@ class LandCruiserBlueprint {
                     • HDJ100: Diesel (1HD-FTE)<br>
                     • FZJ100: 6-cyl Petrol (1FZ-FE)<br><br>
                     <strong>DIMENSIONS:</strong><br>
-                    • Length: 4,890mm<br>
-                    • Width: 1,940mm<br>
-                    • Height: 1,890mm<br><br>
-                    <strong>WINCH (Optional):</strong><br>
-                    • Type: Electric 12V<br>
-                    • Capacity: 4,500kg (10,000lb)<br>
-                    • Bull bar mounting required<br><br>
-                    <strong>FEATURES:</strong><br>
-                    • 5-door wagon body<br>
-                    • Rear swing-out spare<br>
-                    • Split tailgate
-                `
+                    • Length: 4,890mm | Width: 1,940mm | Height: 1,890mm
+                `,
+                parts: [
+                    { name: 'Hood Assembly', number: '53301-60550' },
+                    { name: 'Front Fender RH', number: '53811-60700' },
+                    { name: 'Front Fender LH', number: '53812-60680' },
+                    { name: 'Front Door RH', number: '67001-60590' },
+                    { name: 'Front Door LH', number: '67002-60570' },
+                    { name: 'Rear Door RH', number: '67003-60410' },
+                    { name: 'Rear Door LH', number: '67004-60390' },
+                    { name: 'Back Door Assembly', number: '67005-60691' },
+                    { name: 'Front Bumper Cover', number: '52119-60918' },
+                    { name: 'Rear Bumper Cover', number: '52159-60916' },
+                    { name: 'Grille Assembly', number: '53111-60490' }
+                ]
             },
             'engine': {
                 title: 'ENGINE - 2UZ-FE V8',
@@ -1741,13 +1777,21 @@ class LandCruiserBlueprint {
                     • Bore x Stroke: 94 x 84mm<br>
                     • Compression: 10.0:1<br>
                     • Power: 175kW @ 4,800rpm<br>
-                    • Torque: 434Nm @ 3,400rpm<br><br>
-                    <strong>SYSTEMS:</strong><br>
-                    • Sequential multi-port injection<br>
-                    • VVT-i variable timing<br>
-                    • Coil-on-plug ignition<br>
-                    • Aluminum heads, iron block
-                `
+                    • Torque: 434Nm @ 3,400rpm
+                `,
+                parts: [
+                    { name: 'Engine Assembly 2UZ-FE', number: '19000-50470' },
+                    { name: 'Cylinder Head RH', number: '11101-59327' },
+                    { name: 'Cylinder Head LH', number: '11102-59276' },
+                    { name: 'Cylinder Block', number: '11401-59755' },
+                    { name: 'Intake Manifold', number: '17109-50101' },
+                    { name: 'Exhaust Manifold RH', number: '17104-50140' },
+                    { name: 'Exhaust Manifold LH', number: '17105-50110' },
+                    { name: 'Timing Chain', number: '13506-50030' },
+                    { name: 'Water Pump', number: '16100-59275' },
+                    { name: 'Oil Pump', number: '15100-50050' },
+                    { name: 'Spark Plug (each)', number: '90919-01194' }
+                ]
             },
             'transmission': {
                 title: 'TRANSMISSION & TRANSFER',
@@ -1766,185 +1810,281 @@ class LandCruiserBlueprint {
                     • Low range: 2.488:1<br>
                     • High range: 1.000:1<br><br>
                     <strong>CLUTCH (Manual):</strong><br>
-                    • Disc diameter: 300mm<br>
-                    • Hydraulic release
-                `
+                    • Disc diameter: 300mm | Hydraulic release
+                `,
+                parts: [
+                    { name: 'Transmission A750F', number: '35010-60A30' },
+                    { name: 'Transfer Case VF2A', number: '36100-60590' },
+                    { name: 'Torque Converter', number: '32000-60050' },
+                    { name: 'ATF Filter', number: '35330-60050' },
+                    { name: 'Trans Oil Pan Gasket', number: '35168-60010' },
+                    { name: 'Transfer Shift Lever', number: '33505-60100' }
+                ]
             },
             'front-axle': {
                 title: 'FRONT AXLE - IFS',
                 description: `
-                    <strong>TYPE:</strong> Independent front suspension<br><br>
-                    <strong>DIFFERENTIAL:</strong><br>
-                    • Aluminum housing<br>
-                    • Ratio: 3.909:1 or 4.100:1<br>
-                    • Automatic ADD (Auto Disconnecting Diff)<br><br>
-                    <strong>SUSPENSION:</strong><br>
+                    <strong>TYPE:</strong> Independent front suspension<br>
                     • Double wishbone (high-mount)<br>
                     • Torsion bar springs<br>
-                    • Gas shock absorbers<br>
-                    • Stabilizer bar<br><br>
-                    <strong>TRAVEL:</strong> 185mm
-                `
+                    • Ratio: 3.909:1 or 4.100:1
+                `,
+                parts: [
+                    { name: 'Front Differential Carrier', number: '41110-60820' },
+                    { name: 'Front Axle Shaft RH', number: '43030-60040' },
+                    { name: 'Front Axle Shaft LH', number: '43040-60020' },
+                    { name: 'CV Joint Boot Kit', number: '04427-60100' },
+                    { name: 'Upper Control Arm RH', number: '48610-60050' },
+                    { name: 'Upper Control Arm LH', number: '48640-60010' },
+                    { name: 'Lower Control Arm RH', number: '48068-60030' },
+                    { name: 'Lower Control Arm LH', number: '48069-60020' },
+                    { name: 'Torsion Bar RH', number: '48131-60140' },
+                    { name: 'Front Shock Absorber', number: '48510-69505' },
+                    { name: 'Steering Knuckle RH', number: '43211-60120' }
+                ]
             },
             'rear-axle': {
                 title: 'REAR AXLE - LIVE',
                 description: `
-                    <strong>TYPE:</strong> Semi-floating live axle<br><br>
-                    <strong>DIFFERENTIAL:</strong><br>
-                    • Cast iron housing<br>
-                    • Ratio: 3.909:1 or 4.100:1<br>
-                    • Electric rear locker (option)<br><br>
-                    <strong>SUSPENSION:</strong><br>
+                    <strong>TYPE:</strong> Semi-floating live axle<br>
                     • 4-link coil spring<br>
-                    • Lateral rod (Panhard)<br>
-                    • Gas shock absorbers<br>
-                    • Stabilizer bar<br><br>
-                    <strong>CAPACITY:</strong><br>
-                    • GVM: 3,350kg<br>
-                    • Towing: 3,500kg
-                `
+                    • Ratio: 3.909:1 or 4.100:1<br>
+                    • Electric rear locker (option)
+                `,
+                parts: [
+                    { name: 'Rear Axle Housing', number: '42110-60760' },
+                    { name: 'Rear Differential Carrier', number: '41110-60770' },
+                    { name: 'Rear Axle Shaft RH', number: '42311-60200' },
+                    { name: 'Rear Axle Shaft LH', number: '42312-60160' },
+                    { name: 'Rear Coil Spring', number: '48231-60730' },
+                    { name: 'Rear Shock Absorber', number: '48531-69445' },
+                    { name: 'Lateral Control Rod', number: '48740-60070' },
+                    { name: 'Upper Control Arm', number: '48790-60010' },
+                    { name: 'Lower Control Arm', number: '48710-60070' },
+                    { name: 'Differential Lock Actuator', number: '41303-60030' }
+                ]
             },
             'steering': {
                 title: 'STEERING SYSTEM',
                 description: `
-                    <strong>TYPE:</strong> Recirculating ball<br><br>
-                    <strong>SPECIFICATIONS:</strong><br>
-                    • Power assisted (hydraulic)<br>
+                    <strong>TYPE:</strong> Recirculating ball, power assisted<br>
                     • Turns lock-to-lock: 4.2<br>
-                    • Turning radius: 6.7m<br><br>
-                    <strong>COMPONENTS:</strong><br>
-                    • Steering box (recirculating ball)<br>
-                    • Pitman arm<br>
-                    • Drag link<br>
-                    • Tie rod assembly<br>
-                    • Steering damper<br>
-                    • Kingpin steering knuckles
-                `
+                    • Turning radius: 6.7m
+                `,
+                parts: [
+                    { name: 'Steering Gear Box', number: '44110-60212' },
+                    { name: 'Power Steering Pump', number: '44320-60370' },
+                    { name: 'Steering Column', number: '45250-60120' },
+                    { name: 'Pitman Arm', number: '45401-60090' },
+                    { name: 'Relay Rod', number: '45450-60060' },
+                    { name: 'Tie Rod End RH', number: '45046-69235' },
+                    { name: 'Tie Rod End LH', number: '45047-69105' },
+                    { name: 'Steering Damper', number: '45700-60060' },
+                    { name: 'PS Reservoir', number: '44360-60120' },
+                    { name: 'Steering Wheel', number: '45100-60590' }
+                ]
             },
             'brakes': {
                 title: 'BRAKE SYSTEM',
                 description: `
-                    <strong>FRONT:</strong><br>
-                    • Ventilated discs: 319mm<br>
-                    • Twin-piston calipers<br><br>
-                    <strong>REAR:</strong><br>
-                    • Solid discs: 322mm<br>
-                    • Single-piston calipers<br><br>
-                    <strong>SYSTEMS:</strong><br>
-                    • Vacuum servo booster<br>
-                    • ABS (Anti-lock)<br>
-                    • EBD (Electronic Brake Distribution)<br>
-                    • Parking brake: Drum in disc
-                `
+                    <strong>FRONT:</strong> Ventilated discs 319mm, Twin-piston<br>
+                    <strong>REAR:</strong> Solid discs 322mm<br>
+                    • ABS standard | EBD equipped
+                `,
+                parts: [
+                    { name: 'Front Brake Rotor', number: '43512-60150' },
+                    { name: 'Front Brake Pad Set', number: '04465-60280' },
+                    { name: 'Front Brake Caliper RH', number: '47730-60280' },
+                    { name: 'Front Brake Caliper LH', number: '47750-60200' },
+                    { name: 'Rear Brake Rotor', number: '42431-60290' },
+                    { name: 'Rear Brake Pad Set', number: '04466-60090' },
+                    { name: 'Rear Brake Caliper', number: '47830-60061' },
+                    { name: 'Brake Master Cylinder', number: '47201-60570' },
+                    { name: 'Brake Booster', number: '44610-60760' },
+                    { name: 'ABS Actuator', number: '44050-60100' }
+                ]
             },
             'wheels': {
                 title: 'WHEELS & TIRES',
                 description: `
-                    <strong>WHEELS:</strong><br>
-                    • Size: 16x7.5J / 16x8J<br>
-                    • PCD: 5 x 150mm<br>
-                    • Offset: 0 to +25mm<br>
-                    • Center bore: 110.1mm<br><br>
-                    <strong>TIRES:</strong><br>
-                    • 265/70R16<br>
-                    • 285/75R16 (optional)<br>
-                    • All-terrain or mud-terrain<br><br>
-                    <strong>SPARE:</strong> Full-size, rear-mounted
-                `
-            },
-            'interior': {
-                title: 'INTERIOR & SYSTEMS',
-                description: `
-                    <strong>SEATING:</strong><br>
-                    • 5-8 passengers (variant)<br>
-                    • Leather or cloth upholstery<br>
-                    • Power driver seat<br><br>
-                    <strong>AIR CONDITIONING:</strong><br>
-                    • Dual-zone automatic climate<br>
-                    • R-134a refrigerant<br>
-                    • Rear A/C (option)<br>
-                    • Cabin air filter<br><br>
-                    <strong>SRS (AIRBAGS):</strong><br>
-                    • Driver front airbag<br>
-                    • Passenger front airbag<br>
-                    • Side airbags (option)<br>
-                    • Curtain airbags (option)<br><br>
-                    <strong>BODY ELECTRICAL:</strong><br>
-                    • 12V system, 80A alternator<br>
-                    • Multiplex wiring system<br>
-                    • OBD-II diagnostic port
-                `
+                    <strong>WHEELS:</strong> 16x8J, PCD 5x150mm<br>
+                    <strong>TIRES:</strong> 275/70R16
+                `,
+                parts: [
+                    { name: 'Alloy Wheel 16x8', number: '42611-60A00' },
+                    { name: 'Steel Wheel 16x8', number: '42601-60490' },
+                    { name: 'Wheel Nut', number: '90942-01058' },
+                    { name: 'Wheel Hub RH Front', number: '43502-60120' },
+                    { name: 'Wheel Hub LH Front', number: '43512-60070' },
+                    { name: 'Wheel Bearing Front', number: '90369-54001' },
+                    { name: 'Wheel Bearing Rear', number: '90366-40068' },
+                    { name: 'TPMS Sensor', number: '42607-60010' },
+                    { name: 'Spare Tire Carrier', number: '51900-60150' }
+                ]
             },
             'driveshafts': {
-                title: 'DRIVESHAFTS',
+                title: 'PROPELLER SHAFTS',
                 description: `
-                    <strong>FRONT DRIVESHAFT:</strong><br>
-                    • 2-piece with center bearing<br>
-                    • Double cardan joints<br>
-                    • Splined slip yoke<br><br>
-                    <strong>REAR DRIVESHAFT:</strong><br>
-                    • Single piece design<br>
-                    • U-joint connections<br>
-                    • Balanced and phased<br><br>
-                    <strong>SPECIFICATIONS:</strong><br>
-                    • Material: Steel tube<br>
-                    • Joint angle: < 3° max<br>
-                    • Greaseable U-joints
-                `
+                    <strong>FRONT:</strong> 2-piece, center bearing<br>
+                    <strong>REAR:</strong> Single piece, double cardan
+                `,
+                parts: [
+                    { name: 'Front Propeller Shaft', number: '37140-60390' },
+                    { name: 'Rear Propeller Shaft', number: '37110-60820' },
+                    { name: 'Center Bearing Support', number: '37230-60130' },
+                    { name: 'Universal Joint Front', number: '04371-60070' },
+                    { name: 'Universal Joint Rear', number: '04371-60050' },
+                    { name: 'Propeller Shaft Flange', number: '41303-35040' },
+                    { name: 'Drive Shaft Dust Boot', number: '04438-60020' }
+                ]
             },
             'exhaust': {
                 title: 'EXHAUST SYSTEM',
                 description: `
-                    <strong>COMPONENTS:</strong><br>
-                    • Cast iron manifolds<br>
-                    • Catalytic converters (3-way)<br>
-                    • Resonator chamber<br>
-                    • Main muffler<br><br>
-                    <strong>SPECIFICATIONS:</strong><br>
-                    • Pipe diameter: 2.5"<br>
-                    • Stainless steel construction<br>
-                    • Rear exit configuration<br><br>
-                    <strong>EMISSIONS:</strong><br>
-                    • O2 sensors (4)<br>
-                    • LEV compliant
-                `
+                    <strong>COMPONENTS:</strong> Cast manifolds, dual cats<br>
+                    • Pipe diameter: 2.5" | Rear exit
+                `,
+                parts: [
+                    { name: 'Exhaust Manifold RH', number: '17104-50140' },
+                    { name: 'Exhaust Manifold LH', number: '17105-50110' },
+                    { name: 'Catalytic Converter RH', number: '17410-50290' },
+                    { name: 'Catalytic Converter LH', number: '17420-50170' },
+                    { name: 'Center Exhaust Pipe', number: '17420-50210' },
+                    { name: 'Muffler Assembly', number: '17430-50310' },
+                    { name: 'Tail Pipe', number: '17405-50170' },
+                    { name: 'Exhaust Gasket', number: '17451-50020' },
+                    { name: 'O2 Sensor Front', number: '89467-60010' },
+                    { name: 'O2 Sensor Rear', number: '89465-60150' }
+                ]
             },
             'fuel-tank': {
                 title: 'FUEL SYSTEM',
                 description: `
-                    <strong>MAIN TANK:</strong><br>
-                    • Capacity: 96 liters<br>
-                    • Steel construction<br>
-                    • Skid plate protected<br><br>
-                    <strong>SUB TANK (Optional):</strong><br>
-                    • Capacity: 45 liters<br>
-                    • Automatic transfer pump<br><br>
-                    <strong>FUEL DELIVERY:</strong><br>
-                    • Electric in-tank pump<br>
-                    • Return-less system<br>
-                    • Fuel filter: 10 micron
-                `
+                    <strong>MAIN TANK:</strong> 96 liters, steel<br>
+                    <strong>SUB TANK:</strong> 45 liters (option)
+                `,
+                parts: [
+                    { name: 'Fuel Tank Main', number: '77001-60820' },
+                    { name: 'Fuel Tank Sub', number: '77002-60180' },
+                    { name: 'Fuel Pump Assembly', number: '23220-50130' },
+                    { name: 'Fuel Filter', number: '23300-50090' },
+                    { name: 'Fuel Sender Gauge', number: '83320-60450' },
+                    { name: 'Fuel Tank Cap', number: '77310-52010' },
+                    { name: 'Fuel Filler Pipe', number: '77201-60310' },
+                    { name: 'Fuel Injector', number: '23209-50090' },
+                    { name: 'Fuel Pressure Regulator', number: '23280-50040' }
+                ]
             },
             'cooling': {
                 title: 'COOLING SYSTEM',
                 description: `
-                    <strong>RADIATOR:</strong><br>
-                    • Aluminum core, plastic tanks<br>
-                    • Cross-flow design<br>
-                    • Capacity: ~12 liters<br><br>
-                    <strong>COMPONENTS:</strong><br>
-                    • Viscous fan clutch<br>
-                    • Electric auxiliary fan<br>
-                    • Thermostat: 82°C<br>
-                    • Coolant overflow tank<br><br>
-                    <strong>TRANSMISSION COOLER:</strong><br>
-                    • Integrated in radiator
-                `
+                    <strong>RADIATOR:</strong> Aluminum core, ~12L capacity<br>
+                    <strong>THERMOSTAT:</strong> 82°C opening
+                `,
+                parts: [
+                    { name: 'Radiator Assembly', number: '16400-50280' },
+                    { name: 'Radiator Cap', number: '16401-20353' },
+                    { name: 'Cooling Fan', number: '16361-50100' },
+                    { name: 'Fan Clutch', number: '16210-50100' },
+                    { name: 'Water Pump', number: '16100-59275' },
+                    { name: 'Thermostat', number: '90916-03100' },
+                    { name: 'Upper Radiator Hose', number: '16571-50170' },
+                    { name: 'Lower Radiator Hose', number: '16572-50090' },
+                    { name: 'Coolant Reservoir', number: '16470-50220' },
+                    { name: 'Heater Core', number: '87107-60120' }
+                ]
+            },
+            'interior': {
+                title: 'INTERIOR & SYSTEMS',
+                description: `
+                    <strong>A/C:</strong> Dual-zone, R-134a<br>
+                    <strong>SRS:</strong> Driver/Pass front, side, curtain airbags
+                `,
+                parts: [
+                    { name: 'Dashboard Assembly', number: '55300-60040' },
+                    { name: 'Instrument Cluster', number: '83800-60B20' },
+                    { name: 'Steering Column', number: '45250-60120' },
+                    { name: 'Driver Seat Assembly', number: '71100-60740' },
+                    { name: 'A/C Compressor', number: '88320-60720' },
+                    { name: 'A/C Condenser', number: '88460-60350' },
+                    { name: 'Evaporator Core', number: '88501-60260' },
+                    { name: 'Blower Motor', number: '87103-60190' },
+                    { name: 'Driver Airbag Module', number: '45130-60100' },
+                    { name: 'ECU Engine Control', number: '89661-60B40' }
+                ]
             }
         };
         
-        return data[name] || { title: name.toUpperCase(), description: 'Component information not available.' };
+        return data[name] || { title: name.toUpperCase(), description: 'Component information not available.', parts: [] };
     }
+    
+    // Parts database for search
+    getAllParts() {
+        const allParts = [];
+        const categories = ['chassis', 'body', 'engine', 'transmission', 'front-axle', 'rear-axle', 
+                           'steering', 'brakes', 'wheels', 'driveshafts', 'exhaust', 'fuel-tank', 'cooling', 'interior'];
+        
+        categories.forEach(cat => {
+            const info = this.getPartInfo(cat);
+            if (info.parts) {
+                info.parts.forEach(part => {
+                    allParts.push({
+                        category: cat,
+                        categoryTitle: info.title,
+                        name: part.name,
+                        number: part.number
+                    });
+                });
+            }
+        });
+        return allParts;
+    }
+    
+    searchParts(query) {
+        if (!query || query.length < 2) return [];
+        query = query.toLowerCase();
+        return this.getAllParts().filter(part => 
+            part.name.toLowerCase().includes(query) || 
+            part.number.toLowerCase().includes(query) ||
+            part.categoryTitle.toLowerCase().includes(query)
+        ).slice(0, 10);
+    }
+    
+    setupSearch() {
+        const searchInput = document.getElementById('part-search');
+        const searchResults = document.getElementById('search-results');
+        const self = this;
+        
+        searchInput.addEventListener('input', function() {
+            const results = self.searchParts(this.value);
+            if (results.length > 0) {
+                searchResults.innerHTML = results.map(r => `
+                    <div class="search-result-item" data-category="${r.category}">
+                        <div>${r.name}</div>
+                        <div class="part-number">${r.number}</div>
+                    </div>
+                `).join('');
+                searchResults.classList.add('visible');
+                
+                // Add click handlers
+                searchResults.querySelectorAll('.search-result-item').forEach(item => {
+                    item.addEventListener('click', function() {
+                        const cat = this.dataset.category;
+                        self.selectPart(cat);
+                        searchResults.classList.remove('visible');
+                        searchInput.value = '';
+                    });
+                });
+            } else {
+                searchResults.classList.remove('visible');
+            }
+        });
+        
+        searchInput.addEventListener('blur', function() {
+            setTimeout(() => searchResults.classList.remove('visible'), 200);
+        });
+    }
+    
     
     animate() {
         requestAnimationFrame(() => this.animate());
