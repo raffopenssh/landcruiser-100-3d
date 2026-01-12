@@ -58,21 +58,20 @@ class LandCruiserBlueprint {
         
         this.camera = this.perspCamera;
         
-        // Renderer with fallback options for Safari compatibility
+        // Renderer with Safari WebGL compatibility
+        var canvas = document.createElement('canvas');
+        var context = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        
         var rendererParams = { 
+            canvas: canvas,
+            context: context,
             antialias: true,
             alpha: true,
-            powerPreference: 'default'
+            powerPreference: 'default',
+            failIfMajorPerformanceCaveat: false
         };
         
-        try {
-            this.renderer = new THREE.WebGLRenderer(rendererParams);
-        } catch(e) {
-            console.warn('WebGL with antialias failed, trying without:', e);
-            rendererParams.antialias = false;
-            this.renderer = new THREE.WebGLRenderer(rendererParams);
-        }
-        
+        this.renderer = new THREE.WebGLRenderer(rendererParams);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
         this.renderer.setClearColor(0x0a1628, 1);
