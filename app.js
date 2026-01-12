@@ -682,52 +682,237 @@ class LandCruiserBlueprint {
         engine.userData = { name: 'engine', originalPosition: new THREE.Vector3(2.0, 0.75, 0) };
         
         const color = this.colors.primary;
+        this.engineParts = {};
         
-        // V8 engine block outline
+        // === CYLINDER BLOCK (11xx parts) ===
+        const cylinderBlock = new THREE.Group();
+        cylinderBlock.userData = { 
+            name: 'cylinder-block', 
+            label: 'Cylinder Block',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1105_cylinder-block'
+        };
         const block = this.createWireBox(0.7, 0.5, 0.6, color);
-        block.position.set(0, 0, 0);
-        engine.add(block);
+        cylinderBlock.add(block);
+        engine.add(cylinderBlock);
+        this.engineParts['cylinder-block'] = cylinderBlock;
         
-        // Cylinder banks (V shape)
+        // === CYLINDER HEAD LEFT (11xx parts) ===
+        const cylinderHeadLeft = new THREE.Group();
+        cylinderHeadLeft.userData = { 
+            name: 'cylinder-head-lh', 
+            label: 'Cylinder Head LH',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1104_cylinder-head'
+        };
         const bankLeft = this.createWireBox(0.6, 0.15, 0.25, this.colors.secondary);
         bankLeft.position.set(0, 0.32, -0.2);
         bankLeft.rotation.x = 0.3;
-        engine.add(bankLeft);
-        
-        const bankRight = this.createWireBox(0.6, 0.15, 0.25, this.colors.secondary);
-        bankRight.position.set(0, 0.32, 0.2);
-        bankRight.rotation.x = -0.3;
-        engine.add(bankRight);
-        
-        // Valve covers
+        cylinderHeadLeft.add(bankLeft);
         const valveL = this.createWireBox(0.55, 0.08, 0.2, this.colors.accent);
         valveL.position.set(0, 0.42, -0.22);
         valveL.rotation.x = 0.3;
-        engine.add(valveL);
+        cylinderHeadLeft.add(valveL);
+        engine.add(cylinderHeadLeft);
+        this.engineParts['cylinder-head-lh'] = cylinderHeadLeft;
         
+        // === CYLINDER HEAD RIGHT ===
+        const cylinderHeadRight = new THREE.Group();
+        cylinderHeadRight.userData = { 
+            name: 'cylinder-head-rh', 
+            label: 'Cylinder Head RH',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1104_cylinder-head'
+        };
+        const bankRight = this.createWireBox(0.6, 0.15, 0.25, this.colors.secondary);
+        bankRight.position.set(0, 0.32, 0.2);
+        bankRight.rotation.x = -0.3;
+        cylinderHeadRight.add(bankRight);
         const valveR = this.createWireBox(0.55, 0.08, 0.2, this.colors.accent);
         valveR.position.set(0, 0.42, 0.22);
         valveR.rotation.x = -0.3;
-        engine.add(valveR);
+        cylinderHeadRight.add(valveR);
+        engine.add(cylinderHeadRight);
+        this.engineParts['cylinder-head-rh'] = cylinderHeadRight;
         
-        // Intake manifold (center V)
+        // === INTAKE MANIFOLD (17xx parts) ===
+        const intakeManifold = new THREE.Group();
+        intakeManifold.userData = { 
+            name: 'intake-manifold', 
+            label: 'Intake Manifold',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1701_manifold'
+        };
         const intake = this.createWireBox(0.5, 0.15, 0.2, this.colors.secondary);
         intake.position.set(0, 0.45, 0);
-        engine.add(intake);
+        intakeManifold.add(intake);
+        const throttle = this.createWireCylinder(0.06, 0.06, 0.08, 12, this.colors.accent);
+        throttle.rotation.x = Math.PI / 2;
+        throttle.position.set(0.25, 0.45, 0);
+        intakeManifold.add(throttle);
+        engine.add(intakeManifold);
+        this.engineParts['intake-manifold'] = intakeManifold;
         
-        // Turbochargers
-        const turboL = this.createWireCylinder(0.1, 0.1, 0.1, 12, this.colors.accent);
-        turboL.position.set(0.4, 0.15, -0.35);
-        engine.add(turboL);
+        // === EXHAUST MANIFOLDS ===
+        const exhaustLeft = new THREE.Group();
+        exhaustLeft.userData = { 
+            name: 'exhaust-manifold-lh', 
+            label: 'Exhaust Manifold LH',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1701_manifold'
+        };
+        const exhL = this.createWireCylinder(0.08, 0.08, 0.25, 8, this.colors.dim);
+        exhL.rotation.x = Math.PI / 2;
+        exhL.position.set(0, 0.15, -0.45);
+        exhaustLeft.add(exhL);
+        engine.add(exhaustLeft);
+        this.engineParts['exhaust-manifold-lh'] = exhaustLeft;
         
-        const turboR = this.createWireCylinder(0.1, 0.1, 0.1, 12, this.colors.accent);
-        turboR.position.set(0.4, 0.15, 0.35);
-        engine.add(turboR);
+        const exhaustRight = new THREE.Group();
+        exhaustRight.userData = { 
+            name: 'exhaust-manifold-rh', 
+            label: 'Exhaust Manifold RH',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1701_manifold'
+        };
+        const exhR = this.createWireCylinder(0.08, 0.08, 0.25, 8, this.colors.dim);
+        exhR.rotation.x = Math.PI / 2;
+        exhR.position.set(0, 0.15, 0.45);
+        exhaustRight.add(exhR);
+        engine.add(exhaustRight);
+        this.engineParts['exhaust-manifold-rh'] = exhaustRight;
         
-        // Oil pan
+        // === OIL PAN (15xx parts) ===
+        const oilPan = new THREE.Group();
+        oilPan.userData = { 
+            name: 'oil-pan', 
+            label: 'Oil Pan & Pump',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1501_engine-oil-pump'
+        };
         const pan = this.createWireBox(0.6, 0.15, 0.5, this.colors.dim);
         pan.position.set(0, -0.32, 0);
-        engine.add(pan);
+        oilPan.add(pan);
+        engine.add(oilPan);
+        this.engineParts['oil-pan'] = oilPan;
+        
+        // === TIMING COVER ===
+        const timingCover = new THREE.Group();
+        timingCover.userData = { 
+            name: 'timing-cover', 
+            label: 'Timing Cover',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1106_timing-gear-cover-rear-end-plate'
+        };
+        const timing = this.createWireBox(0.1, 0.4, 0.55, this.colors.secondary);
+        timing.position.set(0.4, 0.05, 0);
+        timingCover.add(timing);
+        engine.add(timingCover);
+        this.engineParts['timing-cover'] = timingCover;
+        
+        // === ALTERNATOR ===
+        const alternatorGroup = new THREE.Group();
+        alternatorGroup.userData = { 
+            name: 'alternator', 
+            label: 'Alternator',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1903_alternator'
+        };
+        const alternator = this.createWireCylinder(0.08, 0.08, 0.1, 12, this.colors.secondary);
+        alternator.rotation.x = Math.PI / 2;
+        alternator.position.set(-0.2, 0.1, 0.4);
+        alternatorGroup.add(alternator);
+        const altPulley = this.createWireCylinder(0.06, 0.06, 0.02, 12, this.colors.accent);
+        altPulley.rotation.x = Math.PI / 2;
+        altPulley.position.set(-0.2, 0.1, 0.46);
+        alternatorGroup.add(altPulley);
+        engine.add(alternatorGroup);
+        this.engineParts['alternator'] = alternatorGroup;
+        
+        // === STARTER ===
+        const starterGroup = new THREE.Group();
+        starterGroup.userData = { 
+            name: 'starter', 
+            label: 'Starter Motor',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1904_starter'
+        };
+        const starter = this.createWireCylinder(0.06, 0.06, 0.15, 12, this.colors.secondary);
+        starter.rotation.z = Math.PI / 2;
+        starter.position.set(-0.35, -0.15, 0.25);
+        starterGroup.add(starter);
+        engine.add(starterGroup);
+        this.engineParts['starter'] = starterGroup;
+        
+        // === WATER PUMP ===
+        const waterPump = new THREE.Group();
+        waterPump.userData = { 
+            name: 'water-pump', 
+            label: 'Water Pump',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1601_water-pump'
+        };
+        const pump = this.createWireCylinder(0.08, 0.08, 0.08, 12, this.colors.secondary);
+        pump.position.set(0.38, 0.1, 0);
+        waterPump.add(pump);
+        engine.add(waterPump);
+        this.engineParts['water-pump'] = waterPump;
+        
+        // === AIR CLEANER ===
+        const airCleaner = new THREE.Group();
+        airCleaner.userData = { 
+            name: 'air-cleaner', 
+            label: 'Air Cleaner',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1703_air-cleaner'
+        };
+        const airBox = this.createWireBox(0.25, 0.15, 0.2, this.colors.dim);
+        airBox.position.set(0.15, 0.6, 0.35);
+        airCleaner.add(airBox);
+        const intakeTube = this.createWireCylinder(0.04, 0.04, 0.15, 8, this.colors.dim);
+        intakeTube.rotation.z = Math.PI / 4;
+        intakeTube.position.set(0.22, 0.52, 0.2);
+        airCleaner.add(intakeTube);
+        engine.add(airCleaner);
+        this.engineParts['air-cleaner'] = airCleaner;
+        
+        // === IGNITION COILS ===
+        const ignitionSystem = new THREE.Group();
+        ignitionSystem.userData = { 
+            name: 'ignition-coils', 
+            label: 'Ignition Coils & Plugs',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/1901_ignition-coil-spark-plug'
+        };
+        for (let i = 0; i < 4; i++) {
+            const coilL = this.createWireBox(0.04, 0.08, 0.04, this.colors.accent);
+            coilL.position.set(-0.15 + i * 0.12, 0.48, -0.22);
+            ignitionSystem.add(coilL);
+            const coilR = this.createWireBox(0.04, 0.08, 0.04, this.colors.accent);
+            coilR.position.set(-0.15 + i * 0.12, 0.48, 0.22);
+            ignitionSystem.add(coilR);
+        }
+        engine.add(ignitionSystem);
+        this.engineParts['ignition-coils'] = ignitionSystem;
+        
+        // === FUEL INJECTION ===
+        const fuelInjection = new THREE.Group();
+        fuelInjection.userData = { 
+            name: 'fuel-injection', 
+            label: 'Fuel Injection System',
+            category: 'engine',
+            japanPartsUrl: 'tool-engine-fuel/2211_fuel-injection-system'
+        };
+        const fuelRailL = this.createWireCylinder(0.015, 0.015, 0.4, 8, this.colors.accent);
+        fuelRailL.rotation.z = Math.PI / 2;
+        fuelRailL.position.set(0, 0.35, -0.15);
+        fuelInjection.add(fuelRailL);
+        const fuelRailR = this.createWireCylinder(0.015, 0.015, 0.4, 8, this.colors.accent);
+        fuelRailR.rotation.z = Math.PI / 2;
+        fuelRailR.position.set(0, 0.35, 0.15);
+        fuelInjection.add(fuelRailR);
+        engine.add(fuelInjection);
+        this.engineParts['fuel-injection'] = fuelInjection;
         
         // Bellhousing mounting face
         const bellFace = this.createWireCylinder(0.25, 0.25, 0.05, 16, color);
@@ -735,23 +920,11 @@ class LandCruiserBlueprint {
         bellFace.position.set(-0.37, -0.05, 0);
         engine.add(bellFace);
         
-        // Alternator
-        const alternator = this.createWireCylinder(0.08, 0.08, 0.1, 12, this.colors.secondary);
-        alternator.rotation.x = Math.PI / 2;
-        alternator.position.set(-0.2, 0.1, 0.4);
-        engine.add(alternator);
-        
-        // Radiator
-        const radiator = this.createWireBox(0.08, 0.45, 0.7, this.colors.secondary);
-        radiator.position.set(0.5, 0.05, 0);
-        engine.add(radiator);
-        
         engine.position.copy(engine.userData.originalPosition);
         this.parts.engine = engine;
         this.parts['engine'] = engine;
         this.vehicleGroup.add(engine);
     }
-    
     createTransmission() {
         const trans = new THREE.Group();
         trans.userData = { name: 'transmission', originalPosition: new THREE.Vector3(0.5, 0.55, 0) };
@@ -1810,6 +1983,32 @@ class LandCruiserBlueprint {
         
         document.getElementById('info-title').textContent = info.title;
         
+        // Show sub-components if available
+        const subContainer = document.getElementById('sub-components');
+        subContainer.innerHTML = '';
+        
+        // Check for engine sub-components
+        if (partName === 'engine' && this.engineParts) {
+            const baseUrl = 'https://www.japan-parts.eu/toyota/eu/2007/land-cruiser-100/uzj100l-gnaeka/3_791450_002_';
+            Object.values(this.engineParts).forEach(subPart => {
+                const data = subPart.userData;
+                if (data && data.label) {
+                    const btn = document.createElement('button');
+                    btn.className = 'sub-btn';
+                    btn.innerHTML = `<a class="sub-link" href="${baseUrl}/${data.japanPartsUrl}" target="_blank">${data.label}</a>`;
+                    btn.addEventListener('click', (e) => {
+                        if (!e.target.classList.contains('sub-link')) {
+                            e.preventDefault();
+                            this.highlightSubComponent(subPart);
+                            document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
+                            btn.classList.add('active');
+                        }
+                    });
+                    subContainer.appendChild(btn);
+                }
+            });
+        }
+        
         // Build description with parts list
         let html = info.description;
         
@@ -1896,6 +2095,41 @@ class LandCruiserBlueprint {
                 }
             });
         });
+    }
+    
+    highlightSubComponent(subPart) {
+        // First dim all engine parts
+        if (this.engineParts) {
+            Object.values(this.engineParts).forEach(part => {
+                part.traverse(child => {
+                    if (child.material) {
+                        child.material.color.setHex(this.colors.dim);
+                        child.material.opacity = 0.3;
+                        child.material.transparent = true;
+                        child.material.needsUpdate = true;
+                    }
+                });
+            });
+        }
+        
+        // Highlight the selected sub-component
+        subPart.traverse(child => {
+            if (child.material) {
+                child.material.color.setHex(this.colors.accent);
+                child.material.opacity = 1.0;
+                child.material.transparent = true;
+                child.material.needsUpdate = true;
+            }
+        });
+        
+        // Zoom to the sub-component
+        const box = new THREE.Box3().setFromObject(subPart);
+        const center = box.getCenter(new THREE.Vector3());
+        const worldCenter = subPart.parent.localToWorld(center.clone());
+        
+        const offset = new THREE.Vector3(2, 1.5, 2);
+        this.animateTo(this.camera.position, worldCenter.clone().add(offset), 600);
+        this.animateTo(this.controls.target, worldCenter, 600);
     }
     
     resetHighlight() {

@@ -291,6 +291,47 @@
             letter-spacing: 2px;
         }
         
+        #sub-components {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(74, 158, 255, 0.2);
+        }
+        
+        #sub-components:empty {
+            display: none;
+        }
+        
+        .sub-btn {
+            padding: 5px 10px;
+            font-size: 0.65rem;
+            border: 1px solid rgba(74, 158, 255, 0.5);
+            background: rgba(10, 22, 40, 0.8);
+            color: #4a9eff;
+            cursor: pointer;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.2s;
+        }
+        
+        .sub-btn:hover {
+            background: rgba(74, 158, 255, 0.2);
+            border-color: #4a9eff;
+        }
+        
+        .sub-btn.active {
+            background: rgba(0, 255, 170, 0.2);
+            border-color: #00ffaa;
+            color: #00ffaa;
+        }
+        
+        .sub-btn .sub-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+        
         #info-panel p {
             font-size: 0.75rem;
             line-height: 1.6;
@@ -688,6 +729,7 @@
         
         <div id="info-panel">
             <h3 id="info-title">Select Component</h3>
+            <div id="sub-components"></div>
             <p id="info-desc">Click on a component to view technical specifications and assembly diagrams.</p>
             <div id="info-image-container"></div>
         </div>
