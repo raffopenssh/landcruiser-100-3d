@@ -1723,12 +1723,17 @@ class LandCruiserBlueprint {
     selectPart(partName) {
         const part = this.parts[partName];
         const info = this.getPartInfo(partName);
-        // Part number for search
+        // Part number formatting
         const formatPartNumber = (num) => num.replace(/-/g, '');
-        // Google Shopping search - most reliable for finding LC100 parts from various vendors
-        const getBuyUrl = (partNum, partName) => {
-            const query = `Toyota ${partNum} Land Cruiser 100`;
-            return `https://www.google.com/search?tbm=shop&q=${encodeURIComponent(query)}`;
+        // Japan-Parts.eu - direct link to LC100 catalog with part search
+        const getBuyUrl = (partNum, partCode) => {
+            const baseUrl = 'https://www.japan-parts.eu/toyota/eu/2007/land-cruiser-100/uzj100l-gnaeka';
+            const pn = formatPartNumber(partNum);
+            // Use pnn (part name number) and pa (part actual) params if code available
+            if (partCode) {
+                return `${baseUrl}?pnn=${partCode}&pa=${pn}`;
+            }
+            return baseUrl;
         };
         
         document.getElementById('info-title').textContent = info.title;
@@ -1738,12 +1743,12 @@ class LandCruiserBlueprint {
         
         if (info.parts && info.parts.length > 0) {
             html += `<div class="part-list">
-                <div class="part-list-title">PART NUMBERS: (click part for details)</div>`;
+                <div class="part-list-title">PART NUMBERS: (click BUY for japan-parts.eu)</div>`;
             info.parts.forEach((p, idx) => {
                 html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}">
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
-                    <a href="${getBuyUrl(p.number, p.name)}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
+                    <a href="${getBuyUrl(p.number, p.code)}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
                 </div>`;
             });
             html += '</div>';
@@ -1780,68 +1785,17 @@ class LandCruiserBlueprint {
         });
         
         // Add click handlers for individual parts in the list
-        const self = this;
+        // Clicking a part row selects it and highlights it
         document.querySelectorAll('.part-item').forEach(item => {
             item.addEventListener('click', function(e) {
-                if (e.target.classList.contains('order-link')) return;
+                // If clicking the BUY link, let it handle the navigation
+                if (e.target.classList.contains('buy-link')) return;
                 
                 // Remove previous selection
                 document.querySelectorAll('.part-item').forEach(i => i.classList.remove('selected'));
                 this.classList.add('selected');
-                
-                const partName = this.dataset.partName;
-                const partNumber = this.dataset.partNumber;
-                
-                // Show part detail popup
-                self.showPartDetail(partName, partNumber);
             });
         });
-    }
-    
-    showPartDetail(partName, partNumber) {
-        // Create or update part detail popup
-        let popup = document.getElementById('part-detail-popup');
-        if (!popup) {
-            popup = document.createElement('div');
-            popup.id = 'part-detail-popup';
-            popup.innerHTML = `
-                <div class="popup-header">
-                    <span class="popup-title"></span>
-                    <button class="popup-close">×</button>
-                </div>
-                <div class="popup-content">
-                    <div class="popup-part-number"></div>
-                    <div class="popup-vehicle">Toyota Land Cruiser 100 Series (1998-2007)</div>
-                    <div class="popup-actions">
-                        <a class="popup-btn toyota-btn" target="_blank">🛒 FIND BEST PRICE</a>
-                        <a class="popup-btn ebay-btn" target="_blank">eBay</a>
-                        <a class="popup-btn rockauto-btn" target="_blank">RockAuto</a>
-                        <a class="popup-btn amazon-btn" target="_blank">Amazon</a>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(popup);
-            
-            popup.querySelector('.popup-close').addEventListener('click', () => {
-                popup.classList.remove('visible');
-            });
-        }
-        
-        // Part code is first 5 digits
-        const partCode = partNumber.split('-')[0];
-        const formatNum = partNumber.replace(/-/g, '');
-        
-        popup.querySelector('.popup-title').textContent = partName;
-        popup.querySelector('.popup-part-number').textContent = `Part Number: ${partNumber}`;
-        
-        // Google Shopping for best price comparison
-        const query = `Toyota ${partNumber} Land Cruiser 100`;
-        popup.querySelector('.toyota-btn').href = `https://www.google.com/search?tbm=shop&q=${encodeURIComponent(query)}`;
-        popup.querySelector('.ebay-btn').href = `https://www.ebay.com/sch/i.html?_nkw=toyota+${formatNum}+land+cruiser+100`;
-        popup.querySelector('.rockauto-btn').href = `https://www.rockauto.com/en/partsearch/?partnum=${formatNum}`;
-        popup.querySelector('.amazon-btn').href = `https://www.amazon.com/s?k=toyota+${formatNum}+land+cruiser`;
-        
-        popup.classList.add('visible');
     }
     
     highlightPart(selectedName) {
