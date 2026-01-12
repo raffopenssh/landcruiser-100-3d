@@ -363,18 +363,22 @@
             margin: 0 8px;
         }
         
-        .order-link {
-            color: #ffaa00;
+        .order-link, .buy-link {
+            color: #ff4444;
             text-decoration: none;
             font-size: 0.65rem;
-            padding: 3px 6px;
-            border: 1px solid #ffaa00;
+            padding: 3px 8px;
+            border: 1px solid #ff4444;
             transition: all 0.2s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background: rgba(255, 68, 68, 0.1);
         }
         
-        .order-link:hover {
-            background: #ffaa00;
-            color: #0a1628;
+        .order-link:hover, .buy-link:hover {
+            background: #ff4444;
+            color: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
         }
         
         #loading {
@@ -580,23 +584,29 @@
             background: rgba(255, 153, 0, 0.2);
         }
         
-        .popup-btn.google-btn {
-            color: #4a9eff;
-            border-color: #4a9eff;
+        .popup-btn.rockauto-btn {
+            color: #00cc00;
+            border-color: #00cc00;
         }
         
-        .popup-btn.google-btn:hover {
-            background: rgba(74, 158, 255, 0.2);
+        .popup-btn.rockauto-btn:hover {
+            background: rgba(0, 204, 0, 0.2);
         }
         
         .popup-btn.toyota-btn {
-            color: #ff3333;
+            color: #ffffff;
             border-color: #ff3333;
+            background: #ff3333;
             font-weight: bold;
+            font-size: 0.9rem;
+            padding: 12px 20px;
+            letter-spacing: 1px;
         }
         
         .popup-btn.toyota-btn:hover {
-            background: rgba(255, 51, 51, 0.2);
+            background: #cc0000;
+            border-color: #cc0000;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.5);
         }
         
         .popup-vehicle {

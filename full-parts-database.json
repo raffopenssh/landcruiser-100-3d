@@ -1,0 +1,7043 @@
+{
+  "total_parts": 1751,
+  "categories": {
+    "cooling": [
+      {
+        "name": "BLOWER W/FAN MOTOR SUB-ASSEMBLY",
+        "parts_id": "87103B"
+      },
+      {
+        "name": "FAN",
+        "parts_id": "16361"
+      },
+      {
+        "name": "FAN &amp; GENERATOR V BELT",
+        "parts_id": "16361A"
+      },
+      {
+        "name": "FAN PULLEY",
+        "parts_id": "16371"
+      },
+      {
+        "name": "FAN SHROUD",
+        "parts_id": "16711"
+      },
+      {
+        "name": "FAN SHROUD SUB-ASSEMBLY",
+        "parts_id": "16701"
+      },
+      {
+        "name": "HEATER RADIATOR UNIT SUB-ASSEMBLY",
+        "parts_id": "87107"
+      },
+      {
+        "name": "HEATER UNIT HEATER WATER OUTLET PIPE",
+        "parts_id": "87249E"
+      },
+      {
+        "name": "HEATER UNIT REAR HEATER WATER INLET HOSE",
+        "parts_id": "87255F"
+      },
+      {
+        "name": "HEATER UNIT REAR HEATER WATER OUTLET HOSE",
+        "parts_id": "87256F"
+      },
+      {
+        "name": "HEATER WATER INLET PIPE E",
+        "parts_id": "87248E"
+      },
+      {
+        "name": "HEATER WATER OUTLET PIPE B",
+        "parts_id": "87249B"
+      },
+      {
+        "name": "HOOD TO RADIATOR SUPPORT SEAL",
+        "parts_id": "53381"
+      },
+      {
+        "name": "RADIATOR ASSEMBLY",
+        "parts_id": "16400"
+      },
+      {
+        "name": "RADIATOR CAP SUB-ASSEMBLY",
+        "parts_id": "16401"
+      },
+      {
+        "name": "RADIATOR GRILLE",
+        "parts_id": "53111"
+      },
+      {
+        "name": "RADIATOR HOSE INLET",
+        "parts_id": "16571"
+      },
+      {
+        "name": "RADIATOR HOSE NO.1",
+        "parts_id": "16571C"
+      },
+      {
+        "name": "RADIATOR HOSE NO.2",
+        "parts_id": "16572D"
+      },
+      {
+        "name": "RADIATOR MOUNTING INSULATOR",
+        "parts_id": "16584"
+      },
+      {
+        "name": "RADIATOR RESERVE TANK ASSEMBLY",
+        "parts_id": "16470"
+      },
+      {
+        "name": "RADIATOR SIDE AIR SEAL LH",
+        "parts_id": "53286D"
+      },
+      {
+        "name": "RADIATOR SIDE AIR SEAL RH",
+        "parts_id": "53285M"
+      },
+      {
+        "name": "RADIATOR SIDE PLATE",
+        "parts_id": "16453"
+      },
+      {
+        "name": "RADIATOR SIDE PLATE",
+        "parts_id": "16454"
+      },
+      {
+        "name": "RADIATOR SUPPORT SUB-ASSEMBLY UPPER",
+        "parts_id": "53205"
+      },
+      {
+        "name": "RADIATOR TANK UPPER",
+        "parts_id": "16441"
+      },
+      {
+        "name": "REAR HEATER BLOWER FAN SUB-ASSEMBLY",
+        "parts_id": "87105R"
+      },
+      {
+        "name": "REAR HEATER WATER INLET HOSE E(TO HEATER UNIT)",
+        "parts_id": "87255E"
+      },
+      {
+        "name": "REAR HEATER WATER OUTLET HOSE A (FROM HEATER UNIT)",
+        "parts_id": "87256A"
+      },
+      {
+        "name": "THERMOSTAT",
+        "parts_id": "16331A"
+      },
+      {
+        "name": "W/THERMOSTAT WATER INLET SUB-ASSEMBLY",
+        "parts_id": "16031"
+      },
+      {
+        "name": "WATER INLET",
+        "parts_id": "16321"
+      },
+      {
+        "name": "WATER INLET HOSE",
+        "parts_id": "16262"
+      },
+      {
+        "name": "WATER INLET HOUSING",
+        "parts_id": "16323"
+      },
+      {
+        "name": "WATER OUTLET",
+        "parts_id": "16331"
+      },
+      {
+        "name": "WATER OUTLET PIPE NO.1",
+        "parts_id": "16332"
+      }
+    ],
+    "steering": [
+      {
+        "name": "AIR BAG SENSOR BRACKET",
+        "parts_id": "89175"
+      },
+      {
+        "name": "AUXILIARY FUEL TANK BRACKET ASSEMBLY",
+        "parts_id": "77130"
+      },
+      {
+        "name": "BACK DOOR STOPPER BRACKET SUB-ASSEMBLY",
+        "parts_id": "67206A"
+      },
+      {
+        "name": "BOOSTER BRACKET STOPPER RING",
+        "parts_id": "44735C"
+      },
+      {
+        "name": "BRAKE ACTUATOR BRACKET CUSHION",
+        "parts_id": "44547B"
+      },
+      {
+        "name": "BRAKE BOOSTER BRACKET",
+        "parts_id": "44731C"
+      },
+      {
+        "name": "BREAK AWAY BRACKET",
+        "parts_id": "45878A"
+      },
+      {
+        "name": "BREAK AWAY COLLAR SUB-ASSEMBLY",
+        "parts_id": "45804J"
+      },
+      {
+        "name": "CHAIN COVER &amp; COMPRESSOR BRACKET SUB-ASSEMBLY",
+        "parts_id": "12502"
+      },
+      {
+        "name": "COMPRESSOR MOUNTING BRACKET NO.1",
+        "parts_id": "88431"
+      },
+      {
+        "name": "CONSOLE DOOR STOPPER BRACKET",
+        "parts_id": "58968A"
+      },
+      {
+        "name": "DRIVE PINION COMPANION FLANGE REAR NUT",
+        "parts_id": "41204G"
+      },
+      {
+        "name": "FAN BRACKET SUB-ASSEMBLY",
+        "parts_id": "16307A"
+      },
+      {
+        "name": "FRONT BUMPER ARM MOUNTING BRACKET NO.3",
+        "parts_id": "52137F"
+      },
+      {
+        "name": "FRONT BUMPER ARM MOUNTING BRACKET NO.4",
+        "parts_id": "52138D"
+      },
+      {
+        "name": "FRONT BUMPER BRACKET LH",
+        "parts_id": "52134G"
+      },
+      {
+        "name": "FRONT BUMPER BRACKET RH",
+        "parts_id": "52133F"
+      },
+      {
+        "name": "FRONT BUMPER BRACKET SUB-ASSEMBLY LH",
+        "parts_id": "52016B"
+      },
+      {
+        "name": "FRONT BUMPER BRACKET SUB-ASSEMBLY RH",
+        "parts_id": "52015B"
+      },
+      {
+        "name": "FRONT BUMPER SIDE MOUNTING BRACKET ASSEMBLY RH",
+        "parts_id": "52130"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL DRIVE PINION BEARING SPACER",
+        "parts_id": "41231F"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL DRIVE PINION OIL SLINGER",
+        "parts_id": "41214C"
+      },
+      {
+        "name": "FRONT DRIVE PINION COMPANION FLANGE FRONT NUT",
+        "parts_id": "41204E"
+      },
+      {
+        "name": "FRONT DRIVE PINION COMPANION FLANGE SUB-ASSEMBLY FRONT",
+        "parts_id": "41204D"
+      },
+      {
+        "name": "FRONT DRIVE PINION FRONT TAPERED ROLLER BEARING",
+        "parts_id": "41211A"
+      },
+      {
+        "name": "FRONT DRIVE PINION REAR TAPERED ROLLER BEARING",
+        "parts_id": "41211B"
+      },
+      {
+        "name": "FRONT LICENSE PLATE BRACKET",
+        "parts_id": "75111"
+      },
+      {
+        "name": "FRONT SEAT TRACK ASSEMBLY INNER RH",
+        "parts_id": "72130A"
+      },
+      {
+        "name": "FRONT SEAT TRACK ASSEMBLY OUTER LH",
+        "parts_id": "72120"
+      },
+      {
+        "name": "FRONT SEAT TRACK ASSEMBLY OUTER RH",
+        "parts_id": "72110A"
+      },
+      {
+        "name": "FRONT STABILIZER BRACKET NO.1 LH",
+        "parts_id": "48829A"
+      },
+      {
+        "name": "FRONT STABILIZER BRACKET NO.1 RH",
+        "parts_id": "48824A"
+      },
+      {
+        "name": "FRONT WHEEL OPENING BRACKET NO.1",
+        "parts_id": "53861"
+      },
+      {
+        "name": "FRONT WHEEL OPENING BRACKET NO.2",
+        "parts_id": "53862"
+      },
+      {
+        "name": "FRONT WHEEL OPENING BRACKET NO.3",
+        "parts_id": "53865"
+      },
+      {
+        "name": "FUEL HOSE BRACKET",
+        "parts_id": "23881D"
+      },
+      {
+        "name": "HORN BUTTON ASSEMBLY",
+        "parts_id": "45130"
+      },
+      {
+        "name": "IDLE PULLEY BRACKET",
+        "parts_id": "88444"
+      },
+      {
+        "name": "IDLER PULLEY BRACKET",
+        "parts_id": "16631B"
+      },
+      {
+        "name": "INTERCOOLER SUPPORT BRACKET",
+        "parts_id": "17945"
+      },
+      {
+        "name": "INTERCOOLER SUPPORT BRACKET NO.2",
+        "parts_id": "17946"
+      },
+      {
+        "name": "INTERCOOLER SUPPORT BRACKET NO.3",
+        "parts_id": "17947B"
+      },
+      {
+        "name": "INTERMEDIATE LINK JOINT PROTECTOR",
+        "parts_id": "45636B"
+      },
+      {
+        "name": "JACK HANDLE BRACKET SUB-ASSEMBLY",
+        "parts_id": "58706"
+      },
+      {
+        "name": "LOAD SENSING SHACKLE BRACKET NO.1",
+        "parts_id": "47933"
+      },
+      {
+        "name": "OIL COOLER BRACKET NO.1",
+        "parts_id": "15781"
+      },
+      {
+        "name": "OIL FILTER BRACKET SUB-ASSEMBLY",
+        "parts_id": "15609"
+      },
+      {
+        "name": "PARKING BRAKE BELLCRANK BRACKET",
+        "parts_id": "47629"
+      },
+      {
+        "name": "PARKING BRAKE CABLE SUPPORT BRACKET NO.1",
+        "parts_id": "46451C"
+      },
+      {
+        "name": "POWER STEERING OIL PRESSURE SWITCH",
+        "parts_id": "89438A"
+      },
+      {
+        "name": "POWER STEERING OIL PRESSURE SWITCH",
+        "parts_id": "89438B"
+      },
+      {
+        "name": "POWER STEERING SUCTION PORT UNION",
+        "parts_id": "44337"
+      },
+      {
+        "name": "RADIATOR RESERVE TANK BRACKET",
+        "parts_id": "16611"
+      },
+      {
+        "name": "RADIO BRACKET NO.1",
+        "parts_id": "86211"
+      },
+      {
+        "name": "RADIO BRACKET NO.2",
+        "parts_id": "86212"
+      },
+      {
+        "name": "REAR BUMPER ARM MOUNTING BRACKET",
+        "parts_id": "52175"
+      },
+      {
+        "name": "REAR BUMPER ARM MOUNTING BRACKET LH",
+        "parts_id": "52176A"
+      },
+      {
+        "name": "REAR BUMPER BAR BRACKET LH",
+        "parts_id": "52174E"
+      },
+      {
+        "name": "REAR BUMPER BAR BRACKET RH",
+        "parts_id": "52173E"
+      },
+      {
+        "name": "REAR BUMPER EXTENSION MOUNTING BRACKET LH",
+        "parts_id": "52168B"
+      },
+      {
+        "name": "REAR BUMPER SIDE MOUNTING BRACKET LH",
+        "parts_id": "52186B"
+      },
+      {
+        "name": "REAR BUMPER SIDE MOUNTING BRACKET RH",
+        "parts_id": "52185B"
+      },
+      {
+        "name": "REAR COMBINATION LAMP BRACKET LH",
+        "parts_id": "81569A"
+      },
+      {
+        "name": "REAR COMBINATION LAMP BRACKET NO.1 LH",
+        "parts_id": "81563"
+      },
+      {
+        "name": "REAR DIFFERENTIAL DRIVE PINION BEARING SPACER",
+        "parts_id": "41231"
+      },
+      {
+        "name": "REAR DIFFERENTIAL DRIVE PINION OIL SLINGER",
+        "parts_id": "41214"
+      },
+      {
+        "name": "REAR DIFFERENTIAL DRIVE PINION PLATE WASHER",
+        "parts_id": "41201D"
+      },
+      {
+        "name": "REAR DRIVE PINION COMPANION FLANGE SUB-ASSEMBLY REAR",
+        "parts_id": "41204"
+      },
+      {
+        "name": "REAR DRIVE PINION FRONT BEARING",
+        "parts_id": "41201B"
+      },
+      {
+        "name": "REAR DRIVE PINION REAR BEARING",
+        "parts_id": "41201A"
+      },
+      {
+        "name": "REAR LICENSE BRACKET",
+        "parts_id": "75124A"
+      },
+      {
+        "name": "REAR LICENSE PLATE BRACKET SUB-ASSEMBLY",
+        "parts_id": "75102"
+      },
+      {
+        "name": "REAR OUTER SEAT TRACK BRACKET LOWER FRONT LH",
+        "parts_id": "72182"
+      },
+      {
+        "name": "REAR OUTER SEAT TRACK BRACKET LOWER FRONT RH",
+        "parts_id": "72181"
+      },
+      {
+        "name": "REAR SEAT CUSHION SET BRACKET LH",
+        "parts_id": "71382A"
+      },
+      {
+        "name": "REAR SEAT CUSHION SET BRACKET RH",
+        "parts_id": "71381A"
+      },
+      {
+        "name": "REAR SEAT TRACK COVER LH",
+        "parts_id": "72138A"
+      },
+      {
+        "name": "REAR SEAT TRACK COVER RH",
+        "parts_id": "72137D"
+      },
+      {
+        "name": "REAR WASHER BRACKET ASSEMBLY",
+        "parts_id": "85360R"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.1",
+        "parts_id": "53861B"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.1",
+        "parts_id": "61693D"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.1",
+        "parts_id": "61693E"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.1 LH",
+        "parts_id": "61684D"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.1 RH",
+        "parts_id": "61683D"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.2 LH",
+        "parts_id": "61696F"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.3",
+        "parts_id": "53865A"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.3",
+        "parts_id": "61695D"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.3 LH",
+        "parts_id": "61697F"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.4",
+        "parts_id": "61698F"
+      },
+      {
+        "name": "REAR WHEEL OPENING BRACKET NO.8",
+        "parts_id": "53872C"
+      },
+      {
+        "name": "SEAT TRACK ADJUSTING HANDLE",
+        "parts_id": "72211"
+      },
+      {
+        "name": "SEAT TRACK BRACKET COVER INNER LH",
+        "parts_id": "72158"
+      },
+      {
+        "name": "SEAT TRACK BRACKET COVER INNER RH",
+        "parts_id": "72157A"
+      },
+      {
+        "name": "SEAT TRACK BRACKET COVER OUTER FRONT",
+        "parts_id": "72123B"
+      },
+      {
+        "name": "SEAT TRACK COVER OUTER RH",
+        "parts_id": "72137"
+      },
+      {
+        "name": "SEAT TRACK COVER RH",
+        "parts_id": "72137B"
+      },
+      {
+        "name": "SECTOR SHAFT ADJUSTING SCREW",
+        "parts_id": "45357"
+      },
+      {
+        "name": "SIDE STEP BRACKET LH",
+        "parts_id": "51793B"
+      },
+      {
+        "name": "SIDE STEP BRACKET SUB-ASSEMBLY LH",
+        "parts_id": "51077B"
+      },
+      {
+        "name": "SIDE STEP BRACKET SUB-ASSEMBLY LH",
+        "parts_id": "51078B"
+      },
+      {
+        "name": "SPARE WHEEL CARRIER BRACKET SUB-ASSEMBLY",
+        "parts_id": "51908"
+      },
+      {
+        "name": "SPEAKER MOUNTING BRACKET NO.1",
+        "parts_id": "86161D"
+      },
+      {
+        "name": "STEERING COLUMN BRACKET ASSEMBLY UPPER",
+        "parts_id": "45280A"
+      },
+      {
+        "name": "STEERING COLUMN BRACKET SPACER",
+        "parts_id": "45877A"
+      },
+      {
+        "name": "STEERING COLUMN COVER LWR",
+        "parts_id": "45287"
+      },
+      {
+        "name": "STEERING COLUMN COVER UPR",
+        "parts_id": "45286B"
+      },
+      {
+        "name": "STEERING COLUMN RING NO.1",
+        "parts_id": "45263"
+      },
+      {
+        "name": "STEERING COLUMN TUBE ASSEMBLY LOWER",
+        "parts_id": "45204"
+      },
+      {
+        "name": "STEERING COLUMN TUBE STOPPER",
+        "parts_id": "45873"
+      },
+      {
+        "name": "STEERING DAMPER ASSEMBLY",
+        "parts_id": "45700"
+      },
+      {
+        "name": "STEERING DAMPER BRACKET",
+        "parts_id": "45721"
+      },
+      {
+        "name": "STEERING INTERMEDIATE SHAFT SUB-ASSEMBLY NO.2",
+        "parts_id": "45203"
+      },
+      {
+        "name": "STEERING KNUCKLE ARM BEARING",
+        "parts_id": "45611F"
+      },
+      {
+        "name": "STEERING KNUCKLE ARM NO.1",
+        "parts_id": "45611G"
+      },
+      {
+        "name": "STEERING KNUCKLE ARM NO.2",
+        "parts_id": "45612A"
+      },
+      {
+        "name": "STEERING KNUCKLE BEARING CAP",
+        "parts_id": "43232"
+      },
+      {
+        "name": "STEERING KNUCKLE BUSH",
+        "parts_id": "43211R"
+      },
+      {
+        "name": "STEERING KNUCKLE LH",
+        "parts_id": "43212"
+      },
+      {
+        "name": "STEERING KNUCKLE OIL SEAL SUB-ASSEMBLY",
+        "parts_id": "43204"
+      },
+      {
+        "name": "STEERING KNUCKLE SPINDLE SUB-ASSEMBLY",
+        "parts_id": "43401"
+      },
+      {
+        "name": "STEERING KUNCKLE OIL SEAL COVER",
+        "parts_id": "43241"
+      },
+      {
+        "name": "STEERING MAIN SHAFT ASSEMBLY",
+        "parts_id": "45210"
+      },
+      {
+        "name": "STEERING PAD COVER LH",
+        "parts_id": "84259"
+      },
+      {
+        "name": "STEERING PAD COVER RH",
+        "parts_id": "84258"
+      },
+      {
+        "name": "STEERING RELAY ROD",
+        "parts_id": "45451"
+      },
+      {
+        "name": "STEERING RELAY ROD ASSEMBLY",
+        "parts_id": "45450"
+      },
+      {
+        "name": "STEERING RELAY ROD END SUB-ASSEMBLY LH",
+        "parts_id": "45045"
+      },
+      {
+        "name": "STEERING RELAY ROD END SUB-ASSEMBLY RH",
+        "parts_id": "45044"
+      },
+      {
+        "name": "STEERING WHEEL ASSEMBLY",
+        "parts_id": "45100"
+      },
+      {
+        "name": "STEERING WHEEL BOSS COVER LOWER",
+        "parts_id": "45184"
+      },
+      {
+        "name": "STEERING WHEEL COVER LOWER NO.2",
+        "parts_id": "45186"
+      },
+      {
+        "name": "STEERING WHEEL COVER LOWER NO.3",
+        "parts_id": "45187"
+      },
+      {
+        "name": "TELESCOPIC STEERING GUIDE",
+        "parts_id": "45765"
+      },
+      {
+        "name": "TETHER ANCHOR BRACKET SUB-ASSEMBLY",
+        "parts_id": "73709"
+      },
+      {
+        "name": "TIE ROD ASSEMBLY",
+        "parts_id": "45460A"
+      },
+      {
+        "name": "TIE ROD END SUB-ASSEMBLY LH",
+        "parts_id": "45047"
+      },
+      {
+        "name": "TIE ROD END SUB-ASSEMBLY RH",
+        "parts_id": "45046"
+      },
+      {
+        "name": "TILT LEVER LOCK BOLT NO.1",
+        "parts_id": "45831"
+      },
+      {
+        "name": "TILT LEVER RETURN SPRING",
+        "parts_id": "45262A"
+      },
+      {
+        "name": "TILT STEERING ADJUSTING NUT NO.1",
+        "parts_id": "45833"
+      },
+      {
+        "name": "TILT STEERING JUMP UP SPRING",
+        "parts_id": "45261"
+      },
+      {
+        "name": "TILT STEERING PAWL ASSEMBLY",
+        "parts_id": "45890A"
+      },
+      {
+        "name": "TILT STEERING SUPPORT COLLAR NO.1",
+        "parts_id": "45813"
+      },
+      {
+        "name": "TILT STEERING SUPPORT REINFORCE NO.1",
+        "parts_id": "45821B"
+      }
+    ],
+    "body": [
+      {
+        "name": "AIR OUTLET GRILLE",
+        "parts_id": "87125A"
+      },
+      {
+        "name": "BACK DOOR CHECK ASSEMBLY LH",
+        "parts_id": "68660"
+      },
+      {
+        "name": "BACK DOOR CHECK ASSEMBLY RH",
+        "parts_id": "68650C"
+      },
+      {
+        "name": "BACK DOOR DOOR LOCK CONTROL KNOB HOLDER",
+        "parts_id": "69751D"
+      },
+      {
+        "name": "BACK DOOR GLASS",
+        "parts_id": "68131"
+      },
+      {
+        "name": "BACK DOOR GLASS LH",
+        "parts_id": "68131D"
+      },
+      {
+        "name": "BACK DOOR GLASS RH",
+        "parts_id": "68131C"
+      },
+      {
+        "name": "BACK DOOR GLASS WEATHERSTRIP LH",
+        "parts_id": "68291E"
+      },
+      {
+        "name": "BACK DOOR GLASS WEATHERSTRIP RH",
+        "parts_id": "68291D"
+      },
+      {
+        "name": "BACK DOOR HINGE COVER LOWER",
+        "parts_id": "68852B"
+      },
+      {
+        "name": "BACK DOOR HINGE COVER UPPER",
+        "parts_id": "68851D"
+      },
+      {
+        "name": "BACK DOOR INSIDE HANDLE",
+        "parts_id": "69212B"
+      },
+      {
+        "name": "BACK DOOR INSIDE HANDLE ASSEMBLY",
+        "parts_id": "69291"
+      },
+      {
+        "name": "BACK DOOR LOCK ASSEMBLY",
+        "parts_id": "69350"
+      },
+      {
+        "name": "BACK DOOR LOCK ASSEMBLY LOWER",
+        "parts_id": "69380C"
+      },
+      {
+        "name": "BACK DOOR LOCK ASSEMBLY UPPER",
+        "parts_id": "69350Q"
+      },
+      {
+        "name": "BACK DOOR LOCK CONTROL LINK COVER",
+        "parts_id": "69717"
+      },
+      {
+        "name": "BACK DOOR LOCK REMOTE CONTROL ROD SUB-ASSEMBLY",
+        "parts_id": "69706A"
+      },
+      {
+        "name": "BACK DOOR LOCK STRIKER PLATE ASSEMBLY",
+        "parts_id": "69410C"
+      },
+      {
+        "name": "BACK DOOR LOWER LOCK STRIKER ASSEMBLY",
+        "parts_id": "69430A"
+      },
+      {
+        "name": "BACK DOOR NAME PLATE",
+        "parts_id": "75441B"
+      },
+      {
+        "name": "BACK DOOR NAME PLATE NO.5",
+        "parts_id": "75445A"
+      },
+      {
+        "name": "BACK DOOR OPENING TRIM SUB-ASSEMBLY",
+        "parts_id": "64805"
+      },
+      {
+        "name": "BACK DOOR OUTSIDE HANDLE LH",
+        "parts_id": "69212"
+      },
+      {
+        "name": "BACK DOOR PANEL SUB-ASSEMBLY LH",
+        "parts_id": "67006A"
+      },
+      {
+        "name": "BACK DOOR PANEL SUB-ASSEMBLY RH",
+        "parts_id": "67005D"
+      },
+      {
+        "name": "BACK DOOR REMOTE CONTROL ASSEMBLY",
+        "parts_id": "69690"
+      },
+      {
+        "name": "BACK DOOR SEAL",
+        "parts_id": "67891A"
+      },
+      {
+        "name": "BACK DOOR SERVICE HOLE COVER LH",
+        "parts_id": "67848"
+      },
+      {
+        "name": "BACK DOOR SERVICE HOLE COVER RH",
+        "parts_id": "67847"
+      },
+      {
+        "name": "BACK DOOR STOPPER SUB-ASSEMBLY",
+        "parts_id": "67207C"
+      },
+      {
+        "name": "BACK DOOR TRIM PANEL ASSEMBLY LH",
+        "parts_id": "64790C"
+      },
+      {
+        "name": "BACK DOOR TRIM PANEL ASSEMBLY RH",
+        "parts_id": "64780C"
+      },
+      {
+        "name": "BACK DOOR UPPER LOCK STRIKER ASSEMBLY",
+        "parts_id": "69470C"
+      },
+      {
+        "name": "BACK DOOR WEATHERSTRIP",
+        "parts_id": "67881A"
+      },
+      {
+        "name": "BACK DOOR WEATHERSTRIP LOWER LH",
+        "parts_id": "67884C"
+      },
+      {
+        "name": "BACK DOOR WEATHERSTRIP LOWER RH",
+        "parts_id": "67883C"
+      },
+      {
+        "name": "BACK DOOR WEATHERSTRIP NO.2",
+        "parts_id": "67882C"
+      },
+      {
+        "name": "BACK DOOR WEATHERSTRIP UPPER LH",
+        "parts_id": "67882B"
+      },
+      {
+        "name": "BACK DOOR WEATHERSTRIP UPPER RH",
+        "parts_id": "67881B"
+      },
+      {
+        "name": "BACK WINDOW CHANNEL RUN LOWER",
+        "parts_id": "64826"
+      },
+      {
+        "name": "BACK WINDOW CHANNEL RUN UPPER",
+        "parts_id": "64825"
+      },
+      {
+        "name": "BACK WINDOW CORNER GLASS LH",
+        "parts_id": "64814"
+      },
+      {
+        "name": "BACK WINDOW CORNER GLASS RH",
+        "parts_id": "64813"
+      },
+      {
+        "name": "BACK WINDOW GLASS",
+        "parts_id": "64811"
+      },
+      {
+        "name": "BACK WINDOW GLASS RETAINER",
+        "parts_id": "56114A"
+      },
+      {
+        "name": "BACK WINDOW GLASS WEATHERSTRIP",
+        "parts_id": "64812C"
+      },
+      {
+        "name": "BACK WINDOW SLIDE GLASS LH",
+        "parts_id": "64822A"
+      },
+      {
+        "name": "BACK WINDOW SLIDE GLASS RH",
+        "parts_id": "64821A"
+      },
+      {
+        "name": "BACK WINDOW SLIDE GLASS STOP",
+        "parts_id": "64851"
+      },
+      {
+        "name": "CENTER PILLAR GARNISH LH",
+        "parts_id": "62412"
+      },
+      {
+        "name": "CENTER PILLAR GARNISH LOWER LH",
+        "parts_id": "62414A"
+      },
+      {
+        "name": "CENTER PILLAR GARNISH LOWER RH",
+        "parts_id": "62413A"
+      },
+      {
+        "name": "CENTER PILLAR GARNISH RH",
+        "parts_id": "62411"
+      },
+      {
+        "name": "CENTER TOP COVER TARPAULIN BOW",
+        "parts_id": "65831"
+      },
+      {
+        "name": "CENTER TOP COVER TARPAULIN BOW SUB-ASSEMBLY LH",
+        "parts_id": "65806A"
+      },
+      {
+        "name": "CENTER TOP COVER TARPAULIN BOW SUB-ASSEMBLY RH",
+        "parts_id": "65805A"
+      },
+      {
+        "name": "CONSOLE COMPARTMENT DOOR LOCK STRIKER",
+        "parts_id": "58976"
+      },
+      {
+        "name": "CONSOLE COMPARTMENT DOOR STOPPER NO.1",
+        "parts_id": "58964"
+      },
+      {
+        "name": "CONSOLE COMPARTMENT DOOR STOPPER NO.2",
+        "parts_id": "58965A"
+      },
+      {
+        "name": "CONSOLE COMPARTMENT DOOR SUB-ASSEMBLY",
+        "parts_id": "58905"
+      },
+      {
+        "name": "DOOR ASSIST GRIP ASSEMBLY LH",
+        "parts_id": "74640C"
+      },
+      {
+        "name": "DOOR CONTROL TRANSMITTER",
+        "parts_id": "89742"
+      },
+      {
+        "name": "DOOR INSIDE HANDLE BEZEL",
+        "parts_id": "68278B"
+      },
+      {
+        "name": "DOOR LOCK LINK SILENCER",
+        "parts_id": "69759J"
+      },
+      {
+        "name": "DOOR PULL HANDLE",
+        "parts_id": "74811B"
+      },
+      {
+        "name": "DOOR VENT WINDOW GLASS WEATHERSTRIP LH",
+        "parts_id": "68176A"
+      },
+      {
+        "name": "DOOR VENT WINDOW WEATHERSTRIP LH",
+        "parts_id": "68182A"
+      },
+      {
+        "name": "FENDER STRIPE LH",
+        "parts_id": "75982B"
+      },
+      {
+        "name": "FENDER STRIPE RH",
+        "parts_id": "75981B"
+      },
+      {
+        "name": "FRONT BUMPER BAR LH",
+        "parts_id": "52113"
+      },
+      {
+        "name": "FRONT BUMPER BAR RH",
+        "parts_id": "52112"
+      },
+      {
+        "name": "FRONT BUMPER COVER",
+        "parts_id": "52119A"
+      },
+      {
+        "name": "FRONT BUMPER GARNISH",
+        "parts_id": "52711A"
+      },
+      {
+        "name": "FRONT BUMPER HOLE COVER LH",
+        "parts_id": "52128B"
+      },
+      {
+        "name": "FRONT BUMPER HOLE COVER RH",
+        "parts_id": "52127D"
+      },
+      {
+        "name": "FRONT BUMPER REINFORCEMENT PLATE SUB-ASSEMBLY",
+        "parts_id": "52101B"
+      },
+      {
+        "name": "FRONT DOOR BELT SEAL FRONT LH",
+        "parts_id": "68193C"
+      },
+      {
+        "name": "FRONT DOOR CHECK ASSEMBLY",
+        "parts_id": "68610"
+      },
+      {
+        "name": "FRONT DOOR DIVISION BAR SEAL LH",
+        "parts_id": "67534E"
+      },
+      {
+        "name": "FRONT DOOR DIVISION BAR SUB-ASSEMBLY LH",
+        "parts_id": "67504A"
+      },
+      {
+        "name": "FRONT DOOR GLASS RUN",
+        "parts_id": "68141"
+      },
+      {
+        "name": "FRONT DOOR GLASS RUN NO.2",
+        "parts_id": "68143A"
+      },
+      {
+        "name": "FRONT DOOR GLASS SIDE RUN",
+        "parts_id": "68142A"
+      },
+      {
+        "name": "FRONT DOOR GLASS SUB-ASSEMBLY LH",
+        "parts_id": "68102"
+      },
+      {
+        "name": "FRONT DOOR GLASS WEATHERSTRIP ASSEMBLY INNER LH",
+        "parts_id": "68220A"
+      },
+      {
+        "name": "FRONT DOOR GLASS WEATHERSTRIP ASSEMBLY OUTER LH",
+        "parts_id": "68210C"
+      },
+      {
+        "name": "FRONT DOOR INSIDE HANDLE SUB-ASSEMBLY LH",
+        "parts_id": "69206B"
+      },
+      {
+        "name": "FRONT DOOR INSIDE HANDLE SUB-ASSEMBLY RH",
+        "parts_id": "69205"
+      },
+      {
+        "name": "FRONT DOOR LOCK ACTUATOR ASSEMBLY LH",
+        "parts_id": "69120A"
+      },
+      {
+        "name": "FRONT DOOR LOCK ACTUATOR ASSEMBLY RH",
+        "parts_id": "69110"
+      },
+      {
+        "name": "FRONT DOOR LOCK ASSEMBLY LH",
+        "parts_id": "69320"
+      },
+      {
+        "name": "FRONT DOOR LOCK ASSEMBLY RH",
+        "parts_id": "69310"
+      },
+      {
+        "name": "FRONT DOOR LOCK LINK SILENCER",
+        "parts_id": "69759V"
+      },
+      {
+        "name": "FRONT DOOR LOCK REMOTE CONTROL LINK LH",
+        "parts_id": "69712A"
+      },
+      {
+        "name": "FRONT DOOR LOCK REMOTE CONTROL ROD SUB-ASSEMBLY LH",
+        "parts_id": "69604A"
+      },
+      {
+        "name": "FRONT DOOR LOCK STRIKER PLATE ASSEMBLY",
+        "parts_id": "69410"
+      },
+      {
+        "name": "FRONT DOOR OPENING TRIM SUB-ASSEMBLY NO.3",
+        "parts_id": "62033C"
+      },
+      {
+        "name": "FRONT DOOR OPENING TRIM WEATHERSTRIP REAR LH",
+        "parts_id": "62316C"
+      },
+      {
+        "name": "FRONT DOOR OPENING TRIM WEATHERSTRIP REAR RH",
+        "parts_id": "62315E"
+      },
+      {
+        "name": "FRONT DOOR OUTSIDE HANDLE ASSEMBLY LH",
+        "parts_id": "69220"
+      },
+      {
+        "name": "FRONT DOOR PANEL SUB-ASSEMBLY LH",
+        "parts_id": "67002"
+      },
+      {
+        "name": "FRONT DOOR SCUFF PLATE LH",
+        "parts_id": "67914"
+      },
+      {
+        "name": "FRONT DOOR SCUFF PLATE RH",
+        "parts_id": "67913"
+      },
+      {
+        "name": "FRONT DOOR SERVICE HOLE COVER LH",
+        "parts_id": "67832"
+      },
+      {
+        "name": "FRONT DOOR STRIPE LH",
+        "parts_id": "75986"
+      },
+      {
+        "name": "FRONT DOOR STRIPE RH",
+        "parts_id": "75985"
+      },
+      {
+        "name": "FRONT DOOR TRIM BOARD SUB-ASSEMBLY LH",
+        "parts_id": "67602"
+      },
+      {
+        "name": "FRONT DOOR TRIM COVER SUB-ASSEMBLY LH",
+        "parts_id": "67702"
+      },
+      {
+        "name": "FRONT DOOR TRIM POCKET LH",
+        "parts_id": "67778"
+      },
+      {
+        "name": "FRONT DOOR WEATHERSTRIP LH",
+        "parts_id": "67862"
+      },
+      {
+        "name": "FRONT DOOR WEATHERSTRIP NO.2 LH",
+        "parts_id": "67864B"
+      },
+      {
+        "name": "FRONT DOOR WINDOW REGULATOR HANDLE ASSEMBLY",
+        "parts_id": "69260"
+      },
+      {
+        "name": "FRONT DOOR WINDOW REGULATOR SUB-ASSEMBLY LH",
+        "parts_id": "69802"
+      },
+      {
+        "name": "FRONT FENDER APRON SEAL LH",
+        "parts_id": "53737B"
+      },
+      {
+        "name": "FRONT FENDER APRON SEAL RH",
+        "parts_id": "53736"
+      },
+      {
+        "name": "FRONT FENDER EMBLEM",
+        "parts_id": "75365"
+      },
+      {
+        "name": "FRONT FENDER MUDGUARD SUB-ASSEMBLY LH",
+        "parts_id": "76604"
+      },
+      {
+        "name": "FRONT PILLAR GARNISH LH",
+        "parts_id": "62212"
+      },
+      {
+        "name": "FRONT PILLAR GARNISH RH",
+        "parts_id": "62211"
+      },
+      {
+        "name": "FRONT TOP COVER TARPAULIN BOW",
+        "parts_id": "65821"
+      },
+      {
+        "name": "FRONT VALANCE PANEL",
+        "parts_id": "53911"
+      },
+      {
+        "name": "GLOVE COMPARTMENT DOOR ASSEMBLY",
+        "parts_id": "55550"
+      },
+      {
+        "name": "HOOD BULGE",
+        "parts_id": "76181"
+      },
+      {
+        "name": "HOOD EMBLEM SUB-ASSEMBLY",
+        "parts_id": "75303A"
+      },
+      {
+        "name": "HOOD INSULATOR",
+        "parts_id": "53341B"
+      },
+      {
+        "name": "HOOD LOCK ASSEMBLY",
+        "parts_id": "53510"
+      },
+      {
+        "name": "HOOD LOCK CONTROL CABLE ASSEMBLY",
+        "parts_id": "53630"
+      },
+      {
+        "name": "HOOD LOCK CONTROL LEVER SUB-ASSEMBLY",
+        "parts_id": "53601"
+      },
+      {
+        "name": "HOOD LOCK SUPPORT BRACE",
+        "parts_id": "53217A"
+      },
+      {
+        "name": "HOOD SUB-ASSEMBLY",
+        "parts_id": "53301"
+      },
+      {
+        "name": "INNER REAR VIEW MIRROR ASSEMBLY",
+        "parts_id": "87810"
+      },
+      {
+        "name": "INNER REAR VIEW MIRROR SPRING",
+        "parts_id": "87816"
+      },
+      {
+        "name": "INNER REAR VIEW MIRROR STAY HOLDER COVER",
+        "parts_id": "87834"
+      },
+      {
+        "name": "INSTRUMENT PANEL BOX DOOR SUB-ASSEMBLY NO.1",
+        "parts_id": "55041B"
+      },
+      {
+        "name": "INSTRUMENT PANEL PASSENGER W/O DOOR AIR BAG ASSEMBLY",
+        "parts_id": "73960A"
+      },
+      {
+        "name": "OUTER REAR VIEW MIRROR ASSEMBLY LH",
+        "parts_id": "87940"
+      },
+      {
+        "name": "OUTER REAR VIEW MIRROR ASSEMBLY RH",
+        "parts_id": "87910"
+      },
+      {
+        "name": "OUTER REAR VIEW MIRROR GASKET LH",
+        "parts_id": "87941"
+      },
+      {
+        "name": "POWER WINDOW REGULATOR MOTOR ASSEMBLY FRONT LH",
+        "parts_id": "85720A"
+      },
+      {
+        "name": "POWER WINDOW REGULATOR MOTOR ASSEMBLY FRONT RH",
+        "parts_id": "85710A"
+      },
+      {
+        "name": "POWER WINDOW REGULATOR MOTOR ASSEMBLY REAR LH",
+        "parts_id": "85720B"
+      },
+      {
+        "name": "POWER WINDOW REGULATOR MOTOR ASSEMBLY REAR RH",
+        "parts_id": "85710B"
+      },
+      {
+        "name": "QUARTER PANEL MUDGUARD SUB-ASSEMBLY REAR LH",
+        "parts_id": "76608"
+      },
+      {
+        "name": "QUARTER PANEL MUDGUARD SUB-ASSEMBLY REAR RH",
+        "parts_id": "76607"
+      },
+      {
+        "name": "QUARTER PILLAR COVER UPPER LH",
+        "parts_id": "62584A"
+      },
+      {
+        "name": "QUARTER PILLAR GARNISH LH",
+        "parts_id": "62639A"
+      },
+      {
+        "name": "QUARTER PILLAR GARNISH RH",
+        "parts_id": "62638A"
+      },
+      {
+        "name": "QUARTER VENTILATOR DUCT SUB-ASSEMBLY RH",
+        "parts_id": "62903"
+      },
+      {
+        "name": "QUARTER WINDOW ASSEMBLY LH",
+        "parts_id": "62720A"
+      },
+      {
+        "name": "QUARTER WINDOW CLIP LH",
+        "parts_id": "62775B"
+      },
+      {
+        "name": "QUARTER WINDOW GLASS FRONT LH",
+        "parts_id": "62712L"
+      },
+      {
+        "name": "QUARTER WINDOW GLASS LH",
+        "parts_id": "62712"
+      },
+      {
+        "name": "QUARTER WINDOW GLASS REAR LH",
+        "parts_id": "62714"
+      },
+      {
+        "name": "QUARTER WINDOW HINGE LH",
+        "parts_id": "62731E"
+      },
+      {
+        "name": "QUARTER WINDOW LOCK ASSEMBLY LH",
+        "parts_id": "62920"
+      },
+      {
+        "name": "QUARTER WINDOW RUN LH",
+        "parts_id": "62756E"
+      },
+      {
+        "name": "QUARTER WINDOW WEATHERSTRIP LH",
+        "parts_id": "62742"
+      },
+      {
+        "name": "REAR BUMPER BAR",
+        "parts_id": "52151E"
+      },
+      {
+        "name": "REAR BUMPER BAR SUB-ASSEMBLY LH",
+        "parts_id": "52069"
+      },
+      {
+        "name": "REAR BUMPER BAR SUB-ASSEMBLY RH",
+        "parts_id": "52019A"
+      },
+      {
+        "name": "REAR BUMPER EXTENSION FILLER LH",
+        "parts_id": "52566"
+      },
+      {
+        "name": "REAR BUMPER EXTENSION FILLER RH",
+        "parts_id": "52565"
+      },
+      {
+        "name": "REAR BUMPER EXTENSION LH",
+        "parts_id": "52153B"
+      },
+      {
+        "name": "REAR BUMPER EXTENSION RH",
+        "parts_id": "52152B"
+      },
+      {
+        "name": "REAR BUMPER FILLER LH",
+        "parts_id": "52553"
+      },
+      {
+        "name": "REAR BUMPER FILLER PROTECTOR",
+        "parts_id": "52581A"
+      },
+      {
+        "name": "REAR BUMPER FILLER RH",
+        "parts_id": "52552"
+      },
+      {
+        "name": "REAR BUMPER PLATE LH",
+        "parts_id": "52164A"
+      },
+      {
+        "name": "REAR BUMPER PLATE RH",
+        "parts_id": "52163A"
+      },
+      {
+        "name": "REAR BUMPER SIDE EXTENSION SUB-ASSEMBLY RH",
+        "parts_id": "52108B"
+      },
+      {
+        "name": "REAR BUMPER SIDE STAY SUB-ASSEMBLY LH",
+        "parts_id": "52088"
+      },
+      {
+        "name": "REAR BUMPER SIDE STAY SUB-ASSEMBLY RH",
+        "parts_id": "52087"
+      },
+      {
+        "name": "REAR BUMPER STEP ASSEMBLY",
+        "parts_id": "52350"
+      },
+      {
+        "name": "REAR BUMPER STEP COVER LH",
+        "parts_id": "52359"
+      },
+      {
+        "name": "REAR BUMPER STEP COVER RH",
+        "parts_id": "52358B"
+      },
+      {
+        "name": "REAR BUMPER STEP SUB-ASSEMBLY",
+        "parts_id": "52302A"
+      },
+      {
+        "name": "REAR BUMPER STEP SUB-ASSEMBLY LH",
+        "parts_id": "52303A"
+      },
+      {
+        "name": "REAR DOOR CHECK ASSEMBLY",
+        "parts_id": "68630"
+      },
+      {
+        "name": "REAR DOOR GLASS RUN",
+        "parts_id": "68142"
+      },
+      {
+        "name": "REAR DOOR GLASS SUB-ASSEMBLY LH",
+        "parts_id": "68104"
+      },
+      {
+        "name": "REAR DOOR GLASS WEATHERSTRIP ASSEMBLY INNER LH",
+        "parts_id": "68240A"
+      },
+      {
+        "name": "REAR DOOR GLASS WEATHERSTRIP ASSEMBLY OUTER LH",
+        "parts_id": "68230C"
+      },
+      {
+        "name": "REAR DOOR INSIDE HANDLE SUB-ASSEMBLY LH",
+        "parts_id": "69206C"
+      },
+      {
+        "name": "REAR DOOR INSIDE LOCKING LINK ASSEMBLY LH",
+        "parts_id": "69780A"
+      },
+      {
+        "name": "REAR DOOR LOCK ACTUATOR ASSEMBLY LH",
+        "parts_id": "69140"
+      },
+      {
+        "name": "REAR DOOR LOCK ACTUATOR ASSEMBLY RH",
+        "parts_id": "69130"
+      },
+      {
+        "name": "REAR DOOR LOCK ASSEMBLY LH",
+        "parts_id": "69340"
+      },
+      {
+        "name": "REAR DOOR LOCK CHILD PROTECTION COVER RH",
+        "parts_id": "67836"
+      },
+      {
+        "name": "REAR DOOR LOCK REMOTE CONTROL LINK LH",
+        "parts_id": "69718B"
+      },
+      {
+        "name": "REAR DOOR LOCK STRIKER PLATE ASSEMBLY",
+        "parts_id": "69410B"
+      },
+      {
+        "name": "REAR DOOR OPENING TRIM LH",
+        "parts_id": "62334A"
+      },
+      {
+        "name": "REAR DOOR OPENING TRIM WEATHERSTRIP LH",
+        "parts_id": "62332C"
+      },
+      {
+        "name": "REAR DOOR OPENING TRIM WEATHERSTRIP RH",
+        "parts_id": "62331C"
+      },
+      {
+        "name": "REAR DOOR OUTSIDE HANDLE ASSEMBLY LH",
+        "parts_id": "69240"
+      },
+      {
+        "name": "REAR DOOR PANEL SUB-ASSEMBLY LH",
+        "parts_id": "67004"
+      },
+      {
+        "name": "REAR DOOR QUARTER WINDOW WEATHERSTRIP LH",
+        "parts_id": "68189"
+      },
+      {
+        "name": "REAR DOOR SCUFF PLATE LH",
+        "parts_id": "67918A"
+      },
+      {
+        "name": "REAR DOOR SCUFF PLATE RH",
+        "parts_id": "67917A"
+      },
+      {
+        "name": "REAR DOOR SERVICE HOLE COVER LH",
+        "parts_id": "67842E"
+      },
+      {
+        "name": "REAR DOOR STRIPE OUTSIDE LH",
+        "parts_id": "75988C"
+      },
+      {
+        "name": "REAR DOOR STRIPE RH",
+        "parts_id": "75987C"
+      },
+      {
+        "name": "REAR DOOR TRIM BOARD SUB-ASSEMBLY LH",
+        "parts_id": "67604"
+      },
+      {
+        "name": "REAR DOOR WEATHERSTRIP LH",
+        "parts_id": "67872"
+      },
+      {
+        "name": "REAR DOOR WINDOW DIVISION BAR SUB-ASSEMBLY LH",
+        "parts_id": "67408E"
+      },
+      {
+        "name": "REAR DOOR WINDOW REGULATOR HANDLE ASSEMBLY",
+        "parts_id": "69260E"
+      },
+      {
+        "name": "REAR DOOR WINDOW REGULATOR SUB-ASSEMBLY LH",
+        "parts_id": "69804"
+      },
+      {
+        "name": "REAR SIDE BUMPER SUB-ASSEMBLY LH",
+        "parts_id": "52109A"
+      },
+      {
+        "name": "REAR SIDE BUMPER SUB-ASSEMBLY RH",
+        "parts_id": "52108A"
+      },
+      {
+        "name": "REAR SPEAKER GRILLE ASSEMBLY",
+        "parts_id": "64370"
+      },
+      {
+        "name": "REAR TOP COVER TARPAULIN BOW SUB-ASSEMBLY",
+        "parts_id": "65809A"
+      },
+      {
+        "name": "ROLL OVER SIDE PANEL SUB-ASSEMBLY RH",
+        "parts_id": "66503"
+      },
+      {
+        "name": "ROOF DRIP MOULDING REAR",
+        "parts_id": "75586A"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING JOINT COVER LH",
+        "parts_id": "75597"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING JOINT COVER RH",
+        "parts_id": "75596"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING LH",
+        "parts_id": "75552"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING REAR LH",
+        "parts_id": "75554A"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING REAR RH",
+        "parts_id": "75553A"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING RH",
+        "parts_id": "75551"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING SUB-ASSEMBLY REAR LH",
+        "parts_id": "75056C"
+      },
+      {
+        "name": "ROOF DRIP SIDE FINISH MOULDING SUB-ASSEMBLY REAR RH",
+        "parts_id": "75055C"
+      },
+      {
+        "name": "ROOF HEADLINING ASSEMBLY",
+        "parts_id": "63310"
+      },
+      {
+        "name": "ROOF HEADLINING NO.2",
+        "parts_id": "63312A"
+      },
+      {
+        "name": "ROOF HEADLINING NO.3",
+        "parts_id": "63313A"
+      },
+      {
+        "name": "ROOF HEADLINING NO.4",
+        "parts_id": "63314A"
+      },
+      {
+        "name": "ROOF NO.1 HEADLINING",
+        "parts_id": "63311A"
+      },
+      {
+        "name": "ROOF PANEL REINFORCEMENT SUB-ASSEMBLY",
+        "parts_id": "63103A"
+      },
+      {
+        "name": "ROOF PANEL REINFORCEMENT SUB-ASSEMBLY NO.2",
+        "parts_id": "63104D"
+      },
+      {
+        "name": "ROOF SIDE RAIL GARNISH FRONT LH",
+        "parts_id": "62432C"
+      },
+      {
+        "name": "ROOF SIDE RAIL GARNISH FRONT RH",
+        "parts_id": "62431C"
+      },
+      {
+        "name": "ROOF SIDE RAIL GARNISH REAR",
+        "parts_id": "62451E"
+      },
+      {
+        "name": "ROOF SIDE RAIL INNER LH",
+        "parts_id": "61232"
+      },
+      {
+        "name": "ROOF SIDE RAIL SUB-ASSEMBLY INNER RH",
+        "parts_id": "61203"
+      },
+      {
+        "name": "SIDE DOOR STEP PLATE COVER FRONT LH",
+        "parts_id": "51774A"
+      },
+      {
+        "name": "SIDE DOOR STEP PLATE COVER REAR LH",
+        "parts_id": "51759A"
+      },
+      {
+        "name": "SIDE FRONT WINDOW GLASS STOP LH",
+        "parts_id": "62724D"
+      },
+      {
+        "name": "SIDE WINDOW CLIP NO.1",
+        "parts_id": "62375D"
+      },
+      {
+        "name": "SIDE WINDOW GLASS REAR LH",
+        "parts_id": "62211F"
+      },
+      {
+        "name": "SIDE WINDOW LOCK ASSEMBLY LH",
+        "parts_id": "62910J"
+      },
+      {
+        "name": "SIDE WINDOW PACKING NO.2",
+        "parts_id": "62229A"
+      },
+      {
+        "name": "SIDE WINDOW WEATHERSTRIP LH",
+        "parts_id": "62252A"
+      },
+      {
+        "name": "SPEAKER GRILLE REAR",
+        "parts_id": "86264B"
+      },
+      {
+        "name": "TAIL GATE SIDE CUSHION",
+        "parts_id": "66324"
+      },
+      {
+        "name": "TARPAULIN ASSEMBLY",
+        "parts_id": "65910A"
+      },
+      {
+        "name": "TOP BOW HOLDER",
+        "parts_id": "65871"
+      },
+      {
+        "name": "TOP BOW NO.1",
+        "parts_id": "65811B"
+      },
+      {
+        "name": "TOP BOW PLATE",
+        "parts_id": "65837"
+      },
+      {
+        "name": "TOP BOW SUB-ASSEMBLY NO.2",
+        "parts_id": "65802A"
+      },
+      {
+        "name": "VENT WINDOW GLASS LH",
+        "parts_id": "68122"
+      },
+      {
+        "name": "VENT WINDOW PIVOT SUB-ASSEMBLY UPPER LH",
+        "parts_id": "67508"
+      },
+      {
+        "name": "WINDSHIELD GLASS",
+        "parts_id": "56111"
+      },
+      {
+        "name": "WINDSHIELD GLASS RETAINER",
+        "parts_id": "56114"
+      },
+      {
+        "name": "WINDSHIELD GLASS STOPPER NO.1",
+        "parts_id": "56115A"
+      },
+      {
+        "name": "WINDSHIELD GLASS STOPPER NO.2",
+        "parts_id": "56116C"
+      },
+      {
+        "name": "WINDSHIELD REST CRADLE ASSEMBLY",
+        "parts_id": "53390"
+      },
+      {
+        "name": "WINDSHIELD WASHER JAR ASSEMBLY",
+        "parts_id": "85330"
+      },
+      {
+        "name": "WINDSHIELD WASHER MOTOR AND PUMP ASSEMBLY",
+        "parts_id": "85310"
+      },
+      {
+        "name": "WINDSHIELD WEATHERSTRIP",
+        "parts_id": "56121"
+      },
+      {
+        "name": "WINDSHIELD WIPER ARM ASSEMBLY",
+        "parts_id": "85190"
+      },
+      {
+        "name": "WINDSHIELD WIPER ARM COVER",
+        "parts_id": "85192"
+      },
+      {
+        "name": "WINDSHIELD WIPER BLADE ASSEMBLY",
+        "parts_id": "85220"
+      },
+      {
+        "name": "WINDSHIELD WIPER LINK ASSEMBLY",
+        "parts_id": "85160"
+      },
+      {
+        "name": "WINDSHIELD WIPER MOTOR ASSEMBLY",
+        "parts_id": "85110"
+      }
+    ],
+    "transmission": [
+      {
+        "name": "1ST GEAR",
+        "parts_id": "33335"
+      },
+      {
+        "name": "1ST GEAR BEARING SPACER",
+        "parts_id": "33335B"
+      },
+      {
+        "name": "1ST GEAR NEEDLE ROLLER BEARING",
+        "parts_id": "33335C"
+      },
+      {
+        "name": "1ST GEAR THRUST WASHER",
+        "parts_id": "33348"
+      },
+      {
+        "name": "1ST GEAR THRUST WASHER PIN OR BALL",
+        "parts_id": "33348A"
+      },
+      {
+        "name": "2ND GEAR",
+        "parts_id": "33332"
+      },
+      {
+        "name": "2ND GEAR NEEDLE ROLLER BEARING",
+        "parts_id": "33332B"
+      },
+      {
+        "name": "3RD GEAR",
+        "parts_id": "33333"
+      },
+      {
+        "name": "3RD GEAR NEEDLE ROLLER BEARING",
+        "parts_id": "33333A"
+      },
+      {
+        "name": "5TH GEAR",
+        "parts_id": "33336"
+      },
+      {
+        "name": "5TH GEAR THRUST WASHER",
+        "parts_id": "33349"
+      },
+      {
+        "name": "5TH GEAR THRUST WASHER PIN",
+        "parts_id": "33349C"
+      },
+      {
+        "name": "CLUTCH ACCUMULATOR ASSEMBLY",
+        "parts_id": "31490"
+      },
+      {
+        "name": "CLUTCH COVER ASSEMBLY",
+        "parts_id": "31210"
+      },
+      {
+        "name": "CLUTCH DISC ASSEMBLY",
+        "parts_id": "31250"
+      },
+      {
+        "name": "CLUTCH HOSE",
+        "parts_id": "31418"
+      },
+      {
+        "name": "CLUTCH HOUSING",
+        "parts_id": "31111"
+      },
+      {
+        "name": "CLUTCH HOUSING COVER NO.1",
+        "parts_id": "31121"
+      },
+      {
+        "name": "CLUTCH HUB NO.1 SHAFT SNAP RING",
+        "parts_id": "33361B"
+      },
+      {
+        "name": "CLUTCH HUB NO.2 SETTING SHAFT SNAP RING",
+        "parts_id": "33362A"
+      },
+      {
+        "name": "CLUTCH HUB SET SHAFT SNAP RING",
+        "parts_id": "33321D"
+      },
+      {
+        "name": "CLUTCH PEDAL BUSH",
+        "parts_id": "31301C"
+      },
+      {
+        "name": "CLUTCH PEDAL NO.1 CUSHION",
+        "parts_id": "31301B"
+      },
+      {
+        "name": "CLUTCH PEDAL PAD",
+        "parts_id": "31321"
+      },
+      {
+        "name": "CLUTCH PEDAL SHAFT COLLAR",
+        "parts_id": "31324A"
+      },
+      {
+        "name": "CLUTCH PEDAL SPRING",
+        "parts_id": "31301A"
+      },
+      {
+        "name": "CLUTCH PEDAL SPRING HOLDER",
+        "parts_id": "31353"
+      },
+      {
+        "name": "CLUTCH PEDAL STOPPER BOLT",
+        "parts_id": "31301F"
+      },
+      {
+        "name": "CLUTCH PEDAL SUB-ASSEMBLY",
+        "parts_id": "31301"
+      },
+      {
+        "name": "CLUTCH PEDAL SUPPORT SUB-ASSEMBLY",
+        "parts_id": "55107A"
+      },
+      {
+        "name": "CLUTCH PEDAL SUPPORT WAY",
+        "parts_id": "31331B"
+      },
+      {
+        "name": "CLUTCH PEDAL TURNOVER BUSH",
+        "parts_id": "31301P"
+      },
+      {
+        "name": "CLUTCH PLATE",
+        "parts_id": "41385"
+      },
+      {
+        "name": "CLUTCH RELEASE BEARING ASSEMBLY",
+        "parts_id": "31230"
+      },
+      {
+        "name": "CLUTCH RELEASE FORK BOOT",
+        "parts_id": "31126"
+      },
+      {
+        "name": "CLUTCH RELEASE FORK SUB-ASSEMBLY",
+        "parts_id": "31204"
+      },
+      {
+        "name": "CLUTCH RELEASE FORK SUPPORT BOOT",
+        "parts_id": "31237"
+      },
+      {
+        "name": "CLUTCH RESERVOIR TUBE",
+        "parts_id": "31434"
+      },
+      {
+        "name": "CLUTCH SWITCH ASSEMBLY",
+        "parts_id": "88280A"
+      },
+      {
+        "name": "COUNTER 5TH GEAR BEARING",
+        "parts_id": "33428B"
+      },
+      {
+        "name": "COUNTER GEAR",
+        "parts_id": "33421"
+      },
+      {
+        "name": "COUNTER GEAR FRONT BEARING OR ROLLER",
+        "parts_id": "33411A"
+      },
+      {
+        "name": "COUNTER GEAR FRONT BEARING SNAP RING NO.1",
+        "parts_id": "33411D"
+      },
+      {
+        "name": "COUNTER GEAR FRONT BEARING SNAP RING NO.2",
+        "parts_id": "33411Q"
+      },
+      {
+        "name": "COUNTER GEAR REAR SHAFT SNAP RING",
+        "parts_id": "33421R"
+      },
+      {
+        "name": "COUNTERSHAFT 5TH GEAR",
+        "parts_id": "33428"
+      },
+      {
+        "name": "DIFFERENTIAL LOCK SHIFT ACTUATOR",
+        "parts_id": "41450"
+      },
+      {
+        "name": "DIFFERENTIAL LOCK SHIFT ACTUATOR NO.2",
+        "parts_id": "41450A"
+      },
+      {
+        "name": "DUST DEFLECTOR",
+        "parts_id": "33309A"
+      },
+      {
+        "name": "FLOOR SHIFT CONTROL SHIFT LEVER RETAINER SUB-ASSEMBLY",
+        "parts_id": "33506F"
+      },
+      {
+        "name": "FLOOR SHIFT SHIFT LEVER ASSEMBLY",
+        "parts_id": "33530F"
+      },
+      {
+        "name": "FLYWHEEL RING GEAR",
+        "parts_id": "13453"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL LOCK SHIFT FORK SHAFT",
+        "parts_id": "41462"
+      },
+      {
+        "name": "FRONT DRIVE CLUTCH SLEEVE",
+        "parts_id": "36236"
+      },
+      {
+        "name": "FRONT DRIVE SHIFT LINK LEVER",
+        "parts_id": "36337"
+      },
+      {
+        "name": "FRONT DRIVE SHIFT VACUUM HOSE",
+        "parts_id": "36409C"
+      },
+      {
+        "name": "GEAR SHIFT FORK NO.1",
+        "parts_id": "33212A"
+      },
+      {
+        "name": "GEAR SHIFT FORK NO.2",
+        "parts_id": "33213G"
+      },
+      {
+        "name": "GEAR SHIFT FORK NO.3",
+        "parts_id": "33214G"
+      },
+      {
+        "name": "GEAR SHIFT FORK SHAFT NO.1",
+        "parts_id": "33242"
+      },
+      {
+        "name": "GEAR SHIFT FORK SHAFT NO.2",
+        "parts_id": "33243A"
+      },
+      {
+        "name": "GEAR SHIFT FORK SHAFT NO.3",
+        "parts_id": "33244D"
+      },
+      {
+        "name": "GEAR SPLINE PIECE NO.5",
+        "parts_id": "33318"
+      },
+      {
+        "name": "HIGH &amp; LOW SHIFT INNER LEVER OIL SEAL",
+        "parts_id": "36307A"
+      },
+      {
+        "name": "HIGH &amp; LOW SHIFT ROD SUB-ASSEMBLY",
+        "parts_id": "36308"
+      },
+      {
+        "name": "IDLE GEAR NO.1",
+        "parts_id": "13525"
+      },
+      {
+        "name": "IDLE GEAR SHAFT NO.1",
+        "parts_id": "13581"
+      },
+      {
+        "name": "INJECTION PUMP DRIVE GEAR",
+        "parts_id": "13613"
+      },
+      {
+        "name": "INJECTION PUMP SHAFT GEAR",
+        "parts_id": "13616"
+      },
+      {
+        "name": "INPUT SHAFT",
+        "parts_id": "33311"
+      },
+      {
+        "name": "MAGNET CLUTCH ASSEMBLY",
+        "parts_id": "88410"
+      },
+      {
+        "name": "MANUAL TRANSMISSION CASE",
+        "parts_id": "33111"
+      },
+      {
+        "name": "MANUAL TRANSMISSION CASE PLUG",
+        "parts_id": "33111A"
+      },
+      {
+        "name": "MANUAL TRANSMISSION CASE RECEIVER",
+        "parts_id": "33125B"
+      },
+      {
+        "name": "MANUAL TRANSMISSION CASE SUB-ASSEMBLY",
+        "parts_id": "33101"
+      },
+      {
+        "name": "MANUAL TRANSMISSION FILLER PLUG",
+        "parts_id": "33101A"
+      },
+      {
+        "name": "MANUAL TRANSMISSION OIL SEPARATOR NO.1",
+        "parts_id": "33176"
+      },
+      {
+        "name": "MANUAL TRANSMISSION OIL STRAINER SUB-ASSEMBLY",
+        "parts_id": "33408"
+      },
+      {
+        "name": "MTM SPEEDOMETER SHAFT SLEEVE OIL SEAL",
+        "parts_id": "33404E"
+      },
+      {
+        "name": "OIL (TRANSFER EXTENSION FRONT HOUSING SUB-ASSEMBLY) SEAL",
+        "parts_id": "36105A"
+      },
+      {
+        "name": "OIL (TRANSFER EXTENSION REAR HOUSING SUB-ASSEMBLY) SEAL",
+        "parts_id": "36109C"
+      },
+      {
+        "name": "OIL RECEIVER PIPE NO.1(MTM)",
+        "parts_id": "33124C"
+      },
+      {
+        "name": "OIL RECEIVER SEAL",
+        "parts_id": "33126A"
+      },
+      {
+        "name": "OUTPUT SHAFT",
+        "parts_id": "33321"
+      },
+      {
+        "name": "POWER STEERING GEAR ASSEMBLY",
+        "parts_id": "44110"
+      },
+      {
+        "name": "POWER STEERING GEAR HOUSING NEEDLE ROLLER BEARING",
+        "parts_id": "44107A"
+      },
+      {
+        "name": "POWER TAKE-OFF DRIVE GEAR",
+        "parts_id": "36215"
+      },
+      {
+        "name": "PUMP DRIVE SHAFT GEAR",
+        "parts_id": "13522"
+      },
+      {
+        "name": "PUMP DRIVE SHAFT GEAR",
+        "parts_id": "13522C"
+      },
+      {
+        "name": "REAR DIFFERENTIAL SIDE GEAR",
+        "parts_id": "41331"
+      },
+      {
+        "name": "REAR DIFFERENTIAL SIDE GEAR THRUST WASHER NO.2",
+        "parts_id": "41362"
+      },
+      {
+        "name": "RELEASE FORK SUPPORT",
+        "parts_id": "31236B"
+      },
+      {
+        "name": "REVERSE GEAR",
+        "parts_id": "33331"
+      },
+      {
+        "name": "REVERSE GEAR BEARING",
+        "parts_id": "33331A"
+      },
+      {
+        "name": "REVERSE IDLER GEAR",
+        "parts_id": "33461"
+      },
+      {
+        "name": "REVERSE IDLER GEAR BUSH OR BEARING",
+        "parts_id": "33402A"
+      },
+      {
+        "name": "REVERSE IDLER GEAR SHAFT",
+        "parts_id": "33451"
+      },
+      {
+        "name": "REVERSE IDLER GEAR SUB-ASSEMBLY",
+        "parts_id": "33402"
+      },
+      {
+        "name": "REVERSE RESTRICT PIN ASSEMBLY",
+        "parts_id": "33280"
+      },
+      {
+        "name": "REVERSE RESTRICT PIN ASSEMBLY",
+        "parts_id": "33280F"
+      },
+      {
+        "name": "REVERSE RESTRICT PIN NO.1",
+        "parts_id": "33283"
+      },
+      {
+        "name": "REVERSE SHIFT ARM BRACKET",
+        "parts_id": "33228"
+      },
+      {
+        "name": "REVERSE SHIFT FORK",
+        "parts_id": "33211"
+      },
+      {
+        "name": "REVERSE SHIFT FORK SHAFT",
+        "parts_id": "33241"
+      },
+      {
+        "name": "REVERSE SYNCHRONIZER RING SET",
+        "parts_id": "33049"
+      },
+      {
+        "name": "SHIFT &amp; SELECT LEVER BOOT NO.1",
+        "parts_id": "58286"
+      },
+      {
+        "name": "SHIFT &amp; SELECT LEVER SHAFT",
+        "parts_id": "33261C"
+      },
+      {
+        "name": "SHIFT DETENT BALL PLUG",
+        "parts_id": "33275F"
+      },
+      {
+        "name": "SHIFT DETENT BALL SPRING PLUG",
+        "parts_id": "36275"
+      },
+      {
+        "name": "SHIFT FORK SHAFT SHAFT SNAP RING",
+        "parts_id": "33244B"
+      },
+      {
+        "name": "SHIFT LEVER KNOB SUB-ASSEMBLY",
+        "parts_id": "36303"
+      },
+      {
+        "name": "SHIFT POSITION SWITCH",
+        "parts_id": "84225A"
+      },
+      {
+        "name": "SPEEDOMETER DRIVEN (MTM) GEAR SUB-ASSEMBLY",
+        "parts_id": "33403"
+      },
+      {
+        "name": "SPEEDOMETER DRIVEN HOLE COVER SUB-ASSEMBLY",
+        "parts_id": "33403D"
+      },
+      {
+        "name": "STARTER CLUTCH PINION",
+        "parts_id": "28213"
+      },
+      {
+        "name": "STARTER CLUTCH SUB-ASSEMBLY",
+        "parts_id": "28011"
+      },
+      {
+        "name": "STARTER INTERNAL GEAR",
+        "parts_id": "28256"
+      },
+      {
+        "name": "STIFFENER PLATE LH(MTM)",
+        "parts_id": "33119"
+      },
+      {
+        "name": "STIFFENER PLATE RH(MTM)",
+        "parts_id": "33118"
+      },
+      {
+        "name": "SYNCHROMESH SHIFTING KEY NO.3",
+        "parts_id": "33394B"
+      },
+      {
+        "name": "SYNCHRONIZER RING NO.1",
+        "parts_id": "33367"
+      },
+      {
+        "name": "SYNCHRONIZER RING NO.2",
+        "parts_id": "33368"
+      },
+      {
+        "name": "SYNCHRONIZER RING NO.3",
+        "parts_id": "33369"
+      },
+      {
+        "name": "SYNCHRONIZER RING OUTER NO.3",
+        "parts_id": "33384A"
+      },
+      {
+        "name": "SYNCHRONIZER RING SET NO.1",
+        "parts_id": "33037B"
+      },
+      {
+        "name": "SYNCHRONIZER RING SET NO.2",
+        "parts_id": "33038E"
+      },
+      {
+        "name": "SYNCHRONIZER RING SET NO.3",
+        "parts_id": "33039"
+      },
+      {
+        "name": "TRANSFER ADAPTER",
+        "parts_id": "36117"
+      },
+      {
+        "name": "TRANSFER ADAPTER STRAIGHT PIN",
+        "parts_id": "33112C"
+      },
+      {
+        "name": "TRANSFER ADAPTER SUB-ASSEMBLY",
+        "parts_id": "36107A"
+      },
+      {
+        "name": "TRANSFER ADAPTER W/HEAD STRAIGHT SCREW PLUG",
+        "parts_id": "33112E"
+      },
+      {
+        "name": "TRANSFER ASSEMBLY",
+        "parts_id": "36110"
+      },
+      {
+        "name": "TRANSFER CASE COVER NO.2",
+        "parts_id": "36122"
+      },
+      {
+        "name": "TRANSFER CASE OIL SEAL",
+        "parts_id": "36111B"
+      },
+      {
+        "name": "TRANSFER CASE PLUG",
+        "parts_id": "36111C"
+      },
+      {
+        "name": "TRANSFER CASE PLUG",
+        "parts_id": "36111F"
+      },
+      {
+        "name": "TRANSFER CASE PROTECTOR",
+        "parts_id": "51447C"
+      },
+      {
+        "name": "TRANSFER CASE REAR",
+        "parts_id": "36112"
+      },
+      {
+        "name": "TRANSFER CLUTCH HUB",
+        "parts_id": "36237"
+      },
+      {
+        "name": "TRANSFER DIAPHRAGM PLATE",
+        "parts_id": "36422"
+      },
+      {
+        "name": "TRANSFER DRIVE CLUTCH HUB",
+        "parts_id": "36239"
+      },
+      {
+        "name": "TRANSFER EXTENSION FRONT HOUSING DUST DEFLECTOR",
+        "parts_id": "33325B"
+      },
+      {
+        "name": "TRANSFER EXTENSION HOUSING SUB-ASSEMBLY FRONT",
+        "parts_id": "36105"
+      },
+      {
+        "name": "TRANSFER EXTENSION HOUSING SUB-ASSEMBLY REAR",
+        "parts_id": "36109B"
+      },
+      {
+        "name": "TRANSFER FRONT DRIVE GEAR PIECE",
+        "parts_id": "36245"
+      },
+      {
+        "name": "TRANSFER FRONT DRIVE SHIFT BOOT",
+        "parts_id": "36318"
+      },
+      {
+        "name": "TRANSFER FRONT DRIVE SHIFT LEVER",
+        "parts_id": "36321"
+      },
+      {
+        "name": "TRANSFER FRONT DRIVE SHIFT SHAFT OIL SEAL",
+        "parts_id": "36313J"
+      },
+      {
+        "name": "TRANSFER GEAR LOCK PLATE",
+        "parts_id": "36726"
+      },
+      {
+        "name": "TRANSFER GEAR SHIFT FORK NO.1",
+        "parts_id": "36311"
+      },
+      {
+        "name": "TRANSFER GEAR SHIFT FORK NO.1",
+        "parts_id": "36311F"
+      },
+      {
+        "name": "TRANSFER GEAR SHIFT FORK NO.2",
+        "parts_id": "36312F"
+      },
+      {
+        "name": "TRANSFER HEAT INSULATOR",
+        "parts_id": "36336"
+      },
+      {
+        "name": "TRANSFER HIGH &amp; LOW CLUTCH SLEEVE",
+        "parts_id": "36235"
+      },
+      {
+        "name": "TRANSFER HIGH &amp; LOW SHIFT LEVER",
+        "parts_id": "36322"
+      },
+      {
+        "name": "TRANSFER HIGH &amp; LOW SHIFT LEVER ASSEMBLY",
+        "parts_id": "36360G"
+      },
+      {
+        "name": "TRANSFER HIGH AND LOW SHIFT FORK SHAFT",
+        "parts_id": "36314"
+      },
+      {
+        "name": "TRANSFER HIGH AND LOW SHIFT OUTER LEVER",
+        "parts_id": "36362"
+      },
+      {
+        "name": "TRANSFER HIGH SPEED OUTPUT GEAR SUB-ASSEMBLY",
+        "parts_id": "36203"
+      },
+      {
+        "name": "TRANSFER IDLER GEAR",
+        "parts_id": "36221"
+      },
+      {
+        "name": "TRANSFER IDLER GEAR BEARING",
+        "parts_id": "36221B"
+      },
+      {
+        "name": "TRANSFER IDLER GEAR PLATE WASHER",
+        "parts_id": "36221D"
+      },
+      {
+        "name": "TRANSFER IDLER GEAR SHAFT",
+        "parts_id": "36225"
+      },
+      {
+        "name": "TRANSFER IDLER GEAR TRANSFER OIL RECEIVER",
+        "parts_id": "36119A"
+      },
+      {
+        "name": "TRANSFER ILDER GEAR BEARING",
+        "parts_id": "36221G"
+      },
+      {
+        "name": "TRANSFER ILDER GEAR BEARING",
+        "parts_id": "36221H"
+      },
+      {
+        "name": "TRANSFER INDICATOR SWITCH NO.1",
+        "parts_id": "84222"
+      },
+      {
+        "name": "TRANSFER INDICATOR SWITCH NO.4",
+        "parts_id": "84222D"
+      },
+      {
+        "name": "TRANSFER INPUT GEAR",
+        "parts_id": "36212"
+      },
+      {
+        "name": "TRANSFER INPUT GEAR RADIAL BALL BEARING",
+        "parts_id": "36212A"
+      },
+      {
+        "name": "TRANSFER INPUT SHAFT",
+        "parts_id": "36211"
+      },
+      {
+        "name": "TRANSFER INPUT SHAFT FRONT RADIAL BALL BEARING",
+        "parts_id": "36212F"
+      },
+      {
+        "name": "TRANSFER INPUT SHAFT NUT",
+        "parts_id": "36211B"
+      },
+      {
+        "name": "TRANSFER INPUT SHAFT REAR RADIAL BALL BEARING",
+        "parts_id": "36212G"
+      },
+      {
+        "name": "TRANSFER INPUT SHAFT SPACER",
+        "parts_id": "36251"
+      },
+      {
+        "name": "TRANSFER LOW GEAR",
+        "parts_id": "36242"
+      },
+      {
+        "name": "TRANSFER LOW SPEED OUTPUT GEAR SUB-ASSEMBLY",
+        "parts_id": "36204"
+      },
+      {
+        "name": "TRANSFER OIL RECEIVER PIPE",
+        "parts_id": "33124E"
+      },
+      {
+        "name": "TRANSFER OUTPUT FRONT SHAFT BEARING",
+        "parts_id": "36234A"
+      },
+      {
+        "name": "TRANSFER OUTPUT REAR CASE PLATE WASHER",
+        "parts_id": "36231K"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT COMPANION FLANGE",
+        "parts_id": "36104"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT COMPANION FLANGE SUB-ASSEMBLY",
+        "parts_id": "33309"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT DUST DEFLECTOR",
+        "parts_id": "36104B"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT FRONT",
+        "parts_id": "36209A"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT FRONT",
+        "parts_id": "36234"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT FRONT NEEDLE ROLLER BEARING",
+        "parts_id": "36231E"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT FRONT RADIAL BALL BEARING",
+        "parts_id": "36231H"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT NUT",
+        "parts_id": "36104D"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT SPACER NO.1",
+        "parts_id": "36255"
+      },
+      {
+        "name": "TRANSFER OUTPUT SHAFT TAPER ROLLER BEARING",
+        "parts_id": "36231C"
+      },
+      {
+        "name": "TRANSFER POWER TAKE-OFF COVER",
+        "parts_id": "36124"
+      },
+      {
+        "name": "TRANSFER REAR CASE NO.1 HOSE",
+        "parts_id": "36112B"
+      },
+      {
+        "name": "TRANSFER REAR CASE OIL RECEIVER PIPE",
+        "parts_id": "33124B"
+      },
+      {
+        "name": "TRANSFER SHIFT LEVER BOOT",
+        "parts_id": "36331"
+      },
+      {
+        "name": "TRANSFER SHIFT LEVER BOOT NO.2",
+        "parts_id": "36331A"
+      },
+      {
+        "name": "TRANSFER SHIFT LEVER CAP",
+        "parts_id": "33554B"
+      },
+      {
+        "name": "TRANSFER SHIFT LEVER GUIDE",
+        "parts_id": "36323"
+      },
+      {
+        "name": "TRANSFER SHIFT LEVER OUTER",
+        "parts_id": "36362A"
+      },
+      {
+        "name": "TRANSFER SHIFT LEVER SHAFT",
+        "parts_id": "36327"
+      },
+      {
+        "name": "TRANSFER SPEEDOMETER DRIVE GEAR",
+        "parts_id": "33481P"
+      },
+      {
+        "name": "TRANSFER SYNCHRONIZER RING",
+        "parts_id": "36247"
+      },
+      {
+        "name": "TRANSMISSION BREATHER SUB-ASSEMBLY",
+        "parts_id": "33019"
+      },
+      {
+        "name": "TRANSMISSION CLUTCH HUB NO.1",
+        "parts_id": "33361"
+      },
+      {
+        "name": "TRANSMISSION CLUTCH HUB NO.2",
+        "parts_id": "33362"
+      },
+      {
+        "name": "TRANSMISSION CLUTCH HUB NO.3 SHAFT SNAP RING",
+        "parts_id": "33393A"
+      },
+      {
+        "name": "TRANSMISSION CLUTCH HUB NO.4",
+        "parts_id": "33352B"
+      },
+      {
+        "name": "TRANSMISSION CONTROL SWITCH",
+        "parts_id": "84722F"
+      },
+      {
+        "name": "TRANSMISSION FRONT BEARING RETAINER OIL SEAL",
+        "parts_id": "33131A"
+      },
+      {
+        "name": "TRANSMISSION HUB SLEEVE NO.1",
+        "parts_id": "33363"
+      },
+      {
+        "name": "TRANSMISSION HUB SLEEVE NO.2",
+        "parts_id": "33364"
+      },
+      {
+        "name": "TRANSMISSION HUB SLEEVE NO.2",
+        "parts_id": "36235B"
+      },
+      {
+        "name": "TRANSMISSION HUB SLEEVE NO.3",
+        "parts_id": "33395"
+      },
+      {
+        "name": "TRANSMISSION HUB SLEEVE NO.4",
+        "parts_id": "33327"
+      },
+      {
+        "name": "TRANSMISSION MAGNET",
+        "parts_id": "33449B"
+      },
+      {
+        "name": "VACUUM MAGNET TYPE FR DRIVE SHIFT LINK LEVER SHOE",
+        "parts_id": "36343A"
+      },
+      {
+        "name": "VANE PUMP GEAR",
+        "parts_id": "44316"
+      }
+    ],
+    "electrical": [
+      {
+        "name": "AIR BAG ECU ASSEMBLY",
+        "parts_id": "89170A"
+      },
+      {
+        "name": "AIR BAG SENSOR ASSEMBLY",
+        "parts_id": "89170"
+      },
+      {
+        "name": "AIR BAG SENSOR COVER",
+        "parts_id": "89179A"
+      },
+      {
+        "name": "AIR BAG SENSOR FRONT LH",
+        "parts_id": "89174A"
+      },
+      {
+        "name": "AIR BAG SENSOR FRONT RH",
+        "parts_id": "89173A"
+      },
+      {
+        "name": "AIR FUEL RATIO SENSOR",
+        "parts_id": "89467B"
+      },
+      {
+        "name": "AIR FUEL RATIO SENSOR HEATER RELAY",
+        "parts_id": "85915S"
+      },
+      {
+        "name": "AIR FUEL RATIO SENSOR NO.2",
+        "parts_id": "89467C"
+      },
+      {
+        "name": "ANTENNA CORD SUB-ASSEMBLY",
+        "parts_id": "86101"
+      },
+      {
+        "name": "ANTENNA NUT",
+        "parts_id": "86396"
+      },
+      {
+        "name": "ANTENNA ORNAMENT",
+        "parts_id": "86392"
+      },
+      {
+        "name": "ANTENNA SWITCH ASSEMBLY",
+        "parts_id": "84760"
+      },
+      {
+        "name": "BACK DOOR COURTESY LAMP SWITCH ASSEMBLY",
+        "parts_id": "84235"
+      },
+      {
+        "name": "BACK-UP LAMP SWITCH ASSEMBLY",
+        "parts_id": "84210"
+      },
+      {
+        "name": "BATTERY",
+        "parts_id": "28800"
+      },
+      {
+        "name": "BATTERY CARRIER SUB-ASSEMBLY",
+        "parts_id": "74403A"
+      },
+      {
+        "name": "BATTERY HOLD DOWN CLAMP",
+        "parts_id": "74481"
+      },
+      {
+        "name": "CAM POSITION SENSOR",
+        "parts_id": "11301M"
+      },
+      {
+        "name": "CENTER DIFFERENTIAL LOCK SWITCH",
+        "parts_id": "84725"
+      },
+      {
+        "name": "CIGARETTE LIGHTER ASSEMBLY",
+        "parts_id": "85500"
+      },
+      {
+        "name": "CIGARETTE LIGHTER BEZEL STAY",
+        "parts_id": "85515"
+      },
+      {
+        "name": "CIGARETTE LIGHTER COVER",
+        "parts_id": "85513"
+      },
+      {
+        "name": "CIGARETTE LIGHTER INDICATOR LENS",
+        "parts_id": "85533"
+      },
+      {
+        "name": "CIGARETTE LIGHTER KNOB AND ELEMENT ASSEMBLY",
+        "parts_id": "85520"
+      },
+      {
+        "name": "CLOCK ASSEMBLY",
+        "parts_id": "83910"
+      },
+      {
+        "name": "COMBINATION METER ASSEMBLY",
+        "parts_id": "83100"
+      },
+      {
+        "name": "COMBINATION METER COVER NO.1",
+        "parts_id": "83821A"
+      },
+      {
+        "name": "COMMON RAIL ASSEMBLY",
+        "parts_id": "23810A"
+      },
+      {
+        "name": "COMMON RAIL ASSEMBLY",
+        "parts_id": "23820A"
+      },
+      {
+        "name": "COOLER RELAY ASSEMBLY",
+        "parts_id": "88630G"
+      },
+      {
+        "name": "COWL WIRE",
+        "parts_id": "82131"
+      },
+      {
+        "name": "COWL WIRE NO.2",
+        "parts_id": "82132"
+      },
+      {
+        "name": "CRANK POSITION SENSOR",
+        "parts_id": "11301K"
+      },
+      {
+        "name": "CRANK POSITION SENSOR",
+        "parts_id": "11401G"
+      },
+      {
+        "name": "CRANK POSITION SENSOR NO.2",
+        "parts_id": "11401M"
+      },
+      {
+        "name": "CRUISE CONTROL MAIN SWITCH",
+        "parts_id": "84632"
+      },
+      {
+        "name": "CRUISE CONTROL SWITCH WIRE",
+        "parts_id": "84633"
+      },
+      {
+        "name": "DECELERATION SENSOR",
+        "parts_id": "89441A"
+      },
+      {
+        "name": "DEFOGGER RELAY",
+        "parts_id": "85912"
+      },
+      {
+        "name": "DIFFERENTIAL PRESSURE SENSOR",
+        "parts_id": "89481B"
+      },
+      {
+        "name": "DIFFERENTIAL PRESSURE SENSOR ASSEMBLY",
+        "parts_id": "89480A"
+      },
+      {
+        "name": "DIFFERENTIAL WIRE",
+        "parts_id": "82127"
+      },
+      {
+        "name": "DOOR CONTROL RELAY ASSEMBLY",
+        "parts_id": "85980"
+      },
+      {
+        "name": "DOOR CONTROL SWITCH ASSEMBLY",
+        "parts_id": "84930"
+      },
+      {
+        "name": "DOOR CONTROL W/RECEIVER ECU ASSEMBLY",
+        "parts_id": "89740"
+      },
+      {
+        "name": "DOOR SIDE AIR BAG SENSOR LH",
+        "parts_id": "89835"
+      },
+      {
+        "name": "DOOR SIDE AIR BAG SENSOR RH",
+        "parts_id": "89865"
+      },
+      {
+        "name": "DPR SWITCH ASSEMBLY",
+        "parts_id": "84270K"
+      },
+      {
+        "name": "ECM",
+        "parts_id": "89661"
+      },
+      {
+        "name": "ECM",
+        "parts_id": "89661A"
+      },
+      {
+        "name": "ECM SEAL",
+        "parts_id": "89664A"
+      },
+      {
+        "name": "EFI CIRCUIT OPENING RELAY ASSEMBLY",
+        "parts_id": "85910A"
+      },
+      {
+        "name": "EMISSION CONTROL ECU",
+        "parts_id": "89551"
+      },
+      {
+        "name": "FLOOR WIRE",
+        "parts_id": "82161"
+      },
+      {
+        "name": "FOG LAMP RELAY",
+        "parts_id": "85916D"
+      },
+      {
+        "name": "FRONT COIL SPRING LH",
+        "parts_id": "48132"
+      },
+      {
+        "name": "FRONT DOOR COURTESY LAMP SWITCH ASSEMBLY",
+        "parts_id": "84233"
+      },
+      {
+        "name": "FRONT DRIVE RELAY",
+        "parts_id": "85917"
+      },
+      {
+        "name": "FRONT NO.1 SPEAKER ASSEMBLY",
+        "parts_id": "86160"
+      },
+      {
+        "name": "FUEL CONTROL SWITCH ASSEMBLY",
+        "parts_id": "84560A"
+      },
+      {
+        "name": "FUEL COOLER ASSEMBLY",
+        "parts_id": "23920A"
+      },
+      {
+        "name": "FUEL DELIVERY PIPE SUB-ASSEMBLY",
+        "parts_id": "23807"
+      },
+      {
+        "name": "FUEL HOSE NO.1",
+        "parts_id": "23239D"
+      },
+      {
+        "name": "FUEL HOSE NO.1",
+        "parts_id": "23271H"
+      },
+      {
+        "name": "FUEL HOSE NO.3",
+        "parts_id": "23274D"
+      },
+      {
+        "name": "FUEL HOSE NO.5",
+        "parts_id": "23284A"
+      },
+      {
+        "name": "FUEL PIPE NO.1",
+        "parts_id": "23811G"
+      },
+      {
+        "name": "FUEL PIPE NO.2",
+        "parts_id": "23812D"
+      },
+      {
+        "name": "FUEL PIPE SUB-ASSEMBLY NO.1",
+        "parts_id": "23801P"
+      },
+      {
+        "name": "FUEL PIPE SUB-ASSEMBLY NO.2",
+        "parts_id": "23802B"
+      },
+      {
+        "name": "FUEL PIPE SUB-ASSEMBLY NO.4",
+        "parts_id": "23804D"
+      },
+      {
+        "name": "FUEL PIPE SUB-ASSEMBLY NO.5",
+        "parts_id": "23805B"
+      },
+      {
+        "name": "FUEL PRESSURE PULSATION DAMPER ASSEMBLY",
+        "parts_id": "23270"
+      },
+      {
+        "name": "FUEL PRESSURE REGULATOR ASSEMBLY",
+        "parts_id": "23280"
+      },
+      {
+        "name": "FUEL TEMPERATURE SENSOR",
+        "parts_id": "89454"
+      },
+      {
+        "name": "FUEL TUBE SUB-ASSEMBLY",
+        "parts_id": "23901H"
+      },
+      {
+        "name": "FUSE BLOCK ASSEMBLY",
+        "parts_id": "82610A"
+      },
+      {
+        "name": "GAS FILTER NO.1",
+        "parts_id": "23265"
+      },
+      {
+        "name": "GENERATOR COIL ASSEMBLY",
+        "parts_id": "27360"
+      },
+      {
+        "name": "HAZARD WARNING SIGNAL SWITCH ASSEMBLY",
+        "parts_id": "84330"
+      },
+      {
+        "name": "HEADLAMP DIMMER RELAY",
+        "parts_id": "85926"
+      },
+      {
+        "name": "HEADLAMP DIMMER SWITCH ASSEMBLY",
+        "parts_id": "84140"
+      },
+      {
+        "name": "HEADLAMP LEVELING SWITCH",
+        "parts_id": "84152"
+      },
+      {
+        "name": "HEADLAMP RELAY",
+        "parts_id": "85916P"
+      },
+      {
+        "name": "HEATER BLOWER MOTOR RELAY ASSEMBLY",
+        "parts_id": "85910C"
+      },
+      {
+        "name": "HEATER BLOWER SWITCH ASSEMBLY",
+        "parts_id": "84730"
+      },
+      {
+        "name": "HIGH PITCHED HORN ASSEMBLY",
+        "parts_id": "86510"
+      },
+      {
+        "name": "HORN RELAY ASSEMBLY",
+        "parts_id": "86530"
+      },
+      {
+        "name": "IGNITION OR STARTER SWITCH ASSEMBLY",
+        "parts_id": "84450"
+      },
+      {
+        "name": "IGNITION RELAY NO.1",
+        "parts_id": "28371"
+      },
+      {
+        "name": "IGNITION RELAY NO.2",
+        "parts_id": "28371C"
+      },
+      {
+        "name": "INJECTION PIPE SUB-ASSEMBLY NO.1",
+        "parts_id": "23701"
+      },
+      {
+        "name": "INJECTION PIPE SUB-ASSEMBLY NO.2",
+        "parts_id": "23702"
+      },
+      {
+        "name": "INJECTION PIPE SUB-ASSEMBLY NO.5",
+        "parts_id": "23705"
+      },
+      {
+        "name": "INJECTION PIPE SUB-ASSEMBLY NO.6",
+        "parts_id": "23706"
+      },
+      {
+        "name": "INJECTOR ASSEMBLY",
+        "parts_id": "23670"
+      },
+      {
+        "name": "INJECTOR DRIVER",
+        "parts_id": "89871A"
+      },
+      {
+        "name": "KNOCK CONTROL SENSOR",
+        "parts_id": "89615"
+      },
+      {
+        "name": "LIMIT SWITCH ASSEMBLY",
+        "parts_id": "84290"
+      },
+      {
+        "name": "LOW PITCHED HORN ASSEMBLY",
+        "parts_id": "86520"
+      },
+      {
+        "name": "MAGNET STARTER SWITCH ASSEMBLY",
+        "parts_id": "28150"
+      },
+      {
+        "name": "MAGNET SWITCH WINCH COVER",
+        "parts_id": "38621B"
+      },
+      {
+        "name": "MAIN RELAY",
+        "parts_id": "85915A"
+      },
+      {
+        "name": "MOTOR ANTENNA CONTROL RELAY",
+        "parts_id": "85914A"
+      },
+      {
+        "name": "NOZZLE ASSEMBLY",
+        "parts_id": "23620"
+      },
+      {
+        "name": "NOZZLE HOLDER &amp; NOZZLE SET",
+        "parts_id": "23600"
+      },
+      {
+        "name": "NOZZLE HOLDER GASKET LH",
+        "parts_id": "23682B"
+      },
+      {
+        "name": "NOZZLE HOLDER GASKET RH",
+        "parts_id": "23682A"
+      },
+      {
+        "name": "NOZZLE HOLDER SEAL LH",
+        "parts_id": "23681E"
+      },
+      {
+        "name": "NOZZLE HOLDER SEAL RH",
+        "parts_id": "23681D"
+      },
+      {
+        "name": "NOZZLE LEAKAGE PIPE ASSEMBLY",
+        "parts_id": "23760"
+      },
+      {
+        "name": "NOZZLE LEAKAGE PIPE ASSEMBLY NO.2",
+        "parts_id": "23770"
+      },
+      {
+        "name": "NOZZLE LEAKAGE PIPE NO.1",
+        "parts_id": "23761A"
+      },
+      {
+        "name": "NOZZLE LEAKAGE PIPE NO.2",
+        "parts_id": "23762B"
+      },
+      {
+        "name": "NOZZLE LEAKAGE PIPE NO.3",
+        "parts_id": "23763"
+      },
+      {
+        "name": "NOZZLE LEAKAGE PIPE NO.4",
+        "parts_id": "23764A"
+      },
+      {
+        "name": "NOZZLE LEAKAGE PIPE NO.5",
+        "parts_id": "23765"
+      },
+      {
+        "name": "OIL PRESSURE SENDER GAGE ASSEMBLY",
+        "parts_id": "83520"
+      },
+      {
+        "name": "OUTER MIRROR SWITCH ASSEMBLY",
+        "parts_id": "84870A"
+      },
+      {
+        "name": "OXYGEN NO.2 SENSOR",
+        "parts_id": "89465A"
+      },
+      {
+        "name": "OXYGEN SENSOR",
+        "parts_id": "89465"
+      },
+      {
+        "name": "POWER WINDOW REGULATOR MASTER SWITCH ASSEMBLY",
+        "parts_id": "84820"
+      },
+      {
+        "name": "POWER WINDOW REGULATOR SWITCH ASSEMBLY",
+        "parts_id": "84810"
+      },
+      {
+        "name": "RADIO RECEIVER ASSEMBLY",
+        "parts_id": "86120"
+      },
+      {
+        "name": "REAR DOOR COURTESY LAMP SWITCH ASSEMBLY",
+        "parts_id": "84234"
+      },
+      {
+        "name": "REAR FOG LAMP RELAY",
+        "parts_id": "85916L"
+      },
+      {
+        "name": "REAR HEATER BLOWER SWITCH",
+        "parts_id": "84732A"
+      },
+      {
+        "name": "REAR HEATER RELAY",
+        "parts_id": "85910Y"
+      },
+      {
+        "name": "REAR SPEAKER ASSEMBLY",
+        "parts_id": "86160B"
+      },
+      {
+        "name": "REAR WASHER JAR ASSEMBLY",
+        "parts_id": "85330R"
+      },
+      {
+        "name": "REAR WASHER MOTOR ASSEMBLY",
+        "parts_id": "85310R"
+      },
+      {
+        "name": "REAR WASHER MOTOR SUPPORT",
+        "parts_id": "85316R"
+      },
+      {
+        "name": "REAR WASHER NOZZLE SUB-ASSEMBLY",
+        "parts_id": "85035R"
+      },
+      {
+        "name": "REAR WINDOW DEFOGGER SWITCH ASSEMBLY",
+        "parts_id": "84790"
+      },
+      {
+        "name": "REAR WIPER ARM COVER",
+        "parts_id": "85192R"
+      },
+      {
+        "name": "REAR WIPER BLADE ASSEMBLY",
+        "parts_id": "85220R"
+      },
+      {
+        "name": "REAR WIPER LINK PIVOT NUT NO.1",
+        "parts_id": "85168R"
+      },
+      {
+        "name": "REAR WIPER LINK PIVOT WASHER NO.1",
+        "parts_id": "85169R"
+      },
+      {
+        "name": "REAR WIPER MOTOR ASSEMBLY",
+        "parts_id": "85110R"
+      },
+      {
+        "name": "REAR WIPER RELAY ASSEMBLY",
+        "parts_id": "85940B"
+      },
+      {
+        "name": "REAR WIPER RUBBER",
+        "parts_id": "85214R"
+      },
+      {
+        "name": "REAR WIPER RUBBER BACKING PLATE NO.1",
+        "parts_id": "85224E"
+      },
+      {
+        "name": "REAR WIPER RUBBER BACKING PLATE NO.2",
+        "parts_id": "85224F"
+      },
+      {
+        "name": "SKID CONTROL SENSOR WIRE",
+        "parts_id": "89516B"
+      },
+      {
+        "name": "SKID CONTROL SENSOR WIRE LH",
+        "parts_id": "89516D"
+      },
+      {
+        "name": "SKID CONTROL SENSOR WIRE RH",
+        "parts_id": "89516C"
+      },
+      {
+        "name": "SPEAKER BOX",
+        "parts_id": "86151"
+      },
+      {
+        "name": "SPEAKER COVER REAR",
+        "parts_id": "86262B"
+      },
+      {
+        "name": "SPEED SENSOR FRONT LH",
+        "parts_id": "89543"
+      },
+      {
+        "name": "SPEED SENSOR FRONT RH",
+        "parts_id": "89542"
+      },
+      {
+        "name": "SPEED SENSOR REAR LH",
+        "parts_id": "89546"
+      },
+      {
+        "name": "SPEED SENSOR REAR RH",
+        "parts_id": "89545"
+      },
+      {
+        "name": "SPEEDOMETER GLASS",
+        "parts_id": "83138"
+      },
+      {
+        "name": "SPEEDOMETER SENSOR",
+        "parts_id": "83181A"
+      },
+      {
+        "name": "SPIRAL CABLE SUB-ASSEMBLY",
+        "parts_id": "84306"
+      },
+      {
+        "name": "SPIRAL W/SENSOR CABLE SUB-ASSEMBLY",
+        "parts_id": "84307"
+      },
+      {
+        "name": "STARTER ARMATURE ASSEMBLY",
+        "parts_id": "28160"
+      },
+      {
+        "name": "STARTER ASSEMBLY",
+        "parts_id": "28100"
+      },
+      {
+        "name": "STARTER BRUSH HOLDER ASSEMBLY",
+        "parts_id": "28140"
+      },
+      {
+        "name": "STARTER DRIVE HOUSING ASSEMBLY",
+        "parts_id": "28110"
+      },
+      {
+        "name": "STARTER RELAY ASSEMBLY",
+        "parts_id": "28300"
+      },
+      {
+        "name": "STARTER YOKE ASSEMBLY",
+        "parts_id": "28120"
+      },
+      {
+        "name": "STOP LAMP SWITCH ASSEMBLY",
+        "parts_id": "84340"
+      },
+      {
+        "name": "SWITCH HOLE BASE NO.1",
+        "parts_id": "55446A"
+      },
+      {
+        "name": "TAIL LAMP RELAY",
+        "parts_id": "85916N"
+      },
+      {
+        "name": "TRANSPONDER KEY AMPLIFIER",
+        "parts_id": "89783"
+      },
+      {
+        "name": "TRANSPONDER KEY ECU ASSEMBLY",
+        "parts_id": "89780"
+      },
+      {
+        "name": "TURN SIGNAL RELAY ASSEMBLY",
+        "parts_id": "81990"
+      },
+      {
+        "name": "UN-LOCK WARNING SWITCH ASSEMBLY",
+        "parts_id": "84052"
+      },
+      {
+        "name": "VACUUM WARNING SWITCH ASSEMBLY",
+        "parts_id": "83390"
+      },
+      {
+        "name": "VSC OFF SWITCH",
+        "parts_id": "84988L"
+      },
+      {
+        "name": "VSC OFF SWITCH BULB",
+        "parts_id": "84988M"
+      },
+      {
+        "name": "W/HOLDER ANTENNA ASSEMBLY",
+        "parts_id": "86300"
+      },
+      {
+        "name": "W/MAGNET SWITCH MOTOR ASSEMBLY WINCH",
+        "parts_id": "38600A"
+      },
+      {
+        "name": "WASHER NOZZLE SUB-ASSEMBLY",
+        "parts_id": "85035"
+      },
+      {
+        "name": "WASHER PACKING",
+        "parts_id": "85326"
+      },
+      {
+        "name": "WATER TEMPERATURE SENDER GAGE ASSEMBLY",
+        "parts_id": "83420"
+      },
+      {
+        "name": "WINCH CONTROL SWITCH ASSEMBLY",
+        "parts_id": "38640"
+      },
+      {
+        "name": "WINDSHIELD WASHER RELAY",
+        "parts_id": "85941"
+      },
+      {
+        "name": "WINDSHIELD WIPER RELAY",
+        "parts_id": "85948"
+      },
+      {
+        "name": "WINDSHIELD WIPER RELAY ASSEMBLY",
+        "parts_id": "85940"
+      },
+      {
+        "name": "WINDSHIELD WIPER RELAY ASSEMBLY NO.2",
+        "parts_id": "85940D"
+      },
+      {
+        "name": "WINDSHIELD WIPER SWITCH ASSEMBLY",
+        "parts_id": "84650"
+      },
+      {
+        "name": "WIPER RUBBER BACKING PLATE NO.1",
+        "parts_id": "85224A"
+      },
+      {
+        "name": "WIPER RUBBER BACKING PLATE NO.2",
+        "parts_id": "85224B"
+      },
+      {
+        "name": "WIPER RUBBER LH",
+        "parts_id": "85214B"
+      }
+    ],
+    "engine": [
+      {
+        "name": "AIR CLEANER ASSEMBLY",
+        "parts_id": "17700"
+      },
+      {
+        "name": "AIR CLEANER CAP SUB-ASSEMBLY",
+        "parts_id": "17705"
+      },
+      {
+        "name": "AIR CLEANER FILTER ELEMENT SUB-ASSEMBLY",
+        "parts_id": "17801"
+      },
+      {
+        "name": "AIR CLEANER HOSE NO.1",
+        "parts_id": "17881"
+      },
+      {
+        "name": "AIR HOSE NO.1",
+        "parts_id": "17341F"
+      },
+      {
+        "name": "AIR HOSE NO.3",
+        "parts_id": "17343D"
+      },
+      {
+        "name": "AIR TUBE NO.1",
+        "parts_id": "17361J"
+      },
+      {
+        "name": "AIR TUBE NO.2",
+        "parts_id": "17362B"
+      },
+      {
+        "name": "AIR W/HOSE PRECLEANER ASSEMBLY",
+        "parts_id": "17730"
+      },
+      {
+        "name": "BACK DOOR LOCK CYLINDER &amp; KEY SET",
+        "parts_id": "69054"
+      },
+      {
+        "name": "BRAKE MASTER CYLINDER BOLT",
+        "parts_id": "47210T"
+      },
+      {
+        "name": "BRAKE MASTER CYLINDER KIT",
+        "parts_id": "04493"
+      },
+      {
+        "name": "BRAKE MASTER CYLINDER PUSH ROD CLEVIS",
+        "parts_id": "47264D"
+      },
+      {
+        "name": "BRAKE MASTER CYLINDER RESERVOIR FILLER CAP ASSEMBLY",
+        "parts_id": "47230"
+      },
+      {
+        "name": "BRAKE MASTER CYLINDER RESERVOIR STRAINER",
+        "parts_id": "47299"
+      },
+      {
+        "name": "BRAKE MASTER CYLINDER RESERVOIR SUB-ASSEMBLY",
+        "parts_id": "47202"
+      },
+      {
+        "name": "BRAKE MASTER CYLINDER SUB-ASSEMBLY",
+        "parts_id": "47201"
+      },
+      {
+        "name": "BRAKE VACUUM CHECK VALVE ASSEMBLY",
+        "parts_id": "44730"
+      },
+      {
+        "name": "CAM TIMING OIL CONTROL VALVE ASSEMBLY LH",
+        "parts_id": "15340"
+      },
+      {
+        "name": "CAM TIMING OIL CONTROL VALVE ASSEMBLY RH",
+        "parts_id": "15330B"
+      },
+      {
+        "name": "CAMSHAFT",
+        "parts_id": "13511"
+      },
+      {
+        "name": "CAMSHAFT BEARING NO.1",
+        "parts_id": "11811"
+      },
+      {
+        "name": "CAMSHAFT BEARING NO.2",
+        "parts_id": "11821"
+      },
+      {
+        "name": "CAMSHAFT DRIVE GEAR",
+        "parts_id": "13528"
+      },
+      {
+        "name": "CAMSHAFT OIL SEAL RETAINER",
+        "parts_id": "11385"
+      },
+      {
+        "name": "CAMSHAFT TIMING GEAR ASSEMBLY",
+        "parts_id": "13050"
+      },
+      {
+        "name": "CAMSHAFT TIMING GEAR OR SPROCKET",
+        "parts_id": "13523"
+      },
+      {
+        "name": "CAMSHAFT TIMING PULLEY",
+        "parts_id": "13523P"
+      },
+      {
+        "name": "CAMSHAFT TIMING SPROCKET ASSEMBLY NO.2",
+        "parts_id": "13529G"
+      },
+      {
+        "name": "CHAIN SUB-ASSEMBLY",
+        "parts_id": "13506"
+      },
+      {
+        "name": "CHAIN TENSIONER ASSEMBLY NO.1",
+        "parts_id": "13540"
+      },
+      {
+        "name": "CHAIN TENSIONER ASSEMBLY NO.2",
+        "parts_id": "13550"
+      },
+      {
+        "name": "CHAIN TENSIONER ASSEMBLY NO.3",
+        "parts_id": "13560A"
+      },
+      {
+        "name": "CHAIN TENSIONER SLIPPER",
+        "parts_id": "13559"
+      },
+      {
+        "name": "CHAIN VIBRATION DAMPER NO.1",
+        "parts_id": "13561"
+      },
+      {
+        "name": "CHAIN VIBRATION DAMPER NO.2",
+        "parts_id": "13562"
+      },
+      {
+        "name": "CHECK VALVE GROMMET",
+        "parts_id": "44696"
+      },
+      {
+        "name": "CLINDER HEAD CONER GASKET NO.4",
+        "parts_id": "11239"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER ASSEMBLY",
+        "parts_id": "31410"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER PUSH ROD",
+        "parts_id": "31451"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER PUSH ROD CLEVIS",
+        "parts_id": "31453"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER PUSH ROD CLEVIS BUSH",
+        "parts_id": "31453B"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER RESERVOIR FILLER CAP ASSEMBLY",
+        "parts_id": "31440P"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER RESERVOIR FLOAT",
+        "parts_id": "31426"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER RESERVOIR SUB-ASSEMBLY",
+        "parts_id": "31402"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER TO 2 WAY TUBE",
+        "parts_id": "31481J"
+      },
+      {
+        "name": "CLUTCH MASTER CYLINDER TO FLEXIBLE HOSE TUBE",
+        "parts_id": "31481"
+      },
+      {
+        "name": "CLUTCH RELEASE CYLINDER ASSEMBLY",
+        "parts_id": "31470"
+      },
+      {
+        "name": "CLUTCH RELEASE CYLINDER KIT",
+        "parts_id": "04313"
+      },
+      {
+        "name": "CLUTCH RELEASE CYLINDER TO FLEXIBLE HOSE TUBE",
+        "parts_id": "31482"
+      },
+      {
+        "name": "COMBUSTION CHAMBER SHIM",
+        "parts_id": "11165"
+      },
+      {
+        "name": "COMBUSTION CHAMBER SUB-ASSEMBLY",
+        "parts_id": "11106"
+      },
+      {
+        "name": "COMPRESSOR INLET ELBOW",
+        "parts_id": "17274"
+      },
+      {
+        "name": "CONNECTING ROD BOLT",
+        "parts_id": "13265"
+      },
+      {
+        "name": "CONNECTING ROD SUB-ASSEMBLY",
+        "parts_id": "13201"
+      },
+      {
+        "name": "CONNECTOR TO CHECK VALVE HOSE",
+        "parts_id": "44778"
+      },
+      {
+        "name": "COOL AIR INLET NO.1",
+        "parts_id": "17971"
+      },
+      {
+        "name": "COOL AIR INLET NO.2",
+        "parts_id": "17972"
+      },
+      {
+        "name": "COOL AIR INTAKE DUCT",
+        "parts_id": "53299B"
+      },
+      {
+        "name": "COOL AIR INTAKE DUCT NO.2",
+        "parts_id": "53285G"
+      },
+      {
+        "name": "COOL AIR INTAKE PIPE",
+        "parts_id": "53297E"
+      },
+      {
+        "name": "COOLER EXPANSION VALVE",
+        "parts_id": "88515"
+      },
+      {
+        "name": "CRANKSHAFT",
+        "parts_id": "13411"
+      },
+      {
+        "name": "CRANKSHAFT BEARING",
+        "parts_id": "11711"
+      },
+      {
+        "name": "CRANKSHAFT BEARING CAP SET BOLT",
+        "parts_id": "11416"
+      },
+      {
+        "name": "CRANKSHAFT POSITION SENSOR PLATE NO.1",
+        "parts_id": "19315"
+      },
+      {
+        "name": "CRANKSHAFT PULLEY",
+        "parts_id": "13471"
+      },
+      {
+        "name": "CRANKSHAFT PULLEY NO.2",
+        "parts_id": "13477"
+      },
+      {
+        "name": "CRANKSHAFT STRAIGHT PIN",
+        "parts_id": "13411C"
+      },
+      {
+        "name": "CRANKSHAFT THRUST WASHER SET",
+        "parts_id": "11011"
+      },
+      {
+        "name": "CRANKSHAFT TIMING GEAR OR SPROCKET",
+        "parts_id": "13521"
+      },
+      {
+        "name": "CYLINDER BLOCK OIL HOLE GASKET",
+        "parts_id": "11497"
+      },
+      {
+        "name": "CYLINDER BLOCK OIL ORIFICE",
+        "parts_id": "11448"
+      },
+      {
+        "name": "CYLINDER BLOCK SUB-ASSEMBLY",
+        "parts_id": "11401"
+      },
+      {
+        "name": "CYLINDER BLOCK TIGHT PLUG",
+        "parts_id": "11431A"
+      },
+      {
+        "name": "CYLINDER BLOCK W/HEAD STRAIGHT SCREW PLUG",
+        "parts_id": "11432R"
+      },
+      {
+        "name": "CYLINDER BLOCK W/HEAD STRAIGHT SCREW PLUG",
+        "parts_id": "11432T"
+      },
+      {
+        "name": "CYLINDER BLOCK WATER DRAIN COCK SUB-ASSEMBLY",
+        "parts_id": "11415"
+      },
+      {
+        "name": "CYLINDER HEAD COVER GASKET",
+        "parts_id": "11213"
+      },
+      {
+        "name": "CYLINDER HEAD COVER GASKET NO.3",
+        "parts_id": "11229"
+      },
+      {
+        "name": "CYLINDER HEAD COVER SUB-ASSEMBLY",
+        "parts_id": "11201"
+      },
+      {
+        "name": "CYLINDER HEAD COVER SUB-ASSEMBLY LH",
+        "parts_id": "11202"
+      },
+      {
+        "name": "CYLINDER HEAD GASKET",
+        "parts_id": "11115"
+      },
+      {
+        "name": "CYLINDER HEAD GASKET NO.2",
+        "parts_id": "11116"
+      },
+      {
+        "name": "CYLINDER HEAD LH",
+        "parts_id": "11102"
+      },
+      {
+        "name": "CYLINDER HEAD SET BOLT",
+        "parts_id": "11101A"
+      },
+      {
+        "name": "CYLINDER HEAD SET STRAIGHT PIN",
+        "parts_id": "11434C"
+      },
+      {
+        "name": "CYLINDER HEAD SUB-ASSEMBLY",
+        "parts_id": "11101"
+      },
+      {
+        "name": "DIAPHRAGM CYLINDER ASSEMBLY",
+        "parts_id": "36410"
+      },
+      {
+        "name": "DIESEL ENGINE ENGINE COOLANT TEMPERATURE SENSOR",
+        "parts_id": "89422C"
+      },
+      {
+        "name": "DIESEL THROTTLE BODY ASSEMBLY",
+        "parts_id": "26100G"
+      },
+      {
+        "name": "DIESEL TURBO INTAKE AIR TEMPERATURE SENSOR",
+        "parts_id": "89424A"
+      },
+      {
+        "name": "DIESEL TURBO TURBO PRESSURE SENSOR",
+        "parts_id": "89421C"
+      },
+      {
+        "name": "DIFFERENTIAL LOCK CYLINDER PROTECTOR",
+        "parts_id": "41467"
+      },
+      {
+        "name": "DISC BRAKE CYLINDER ASSEMBLY LH",
+        "parts_id": "47750"
+      },
+      {
+        "name": "DISC BRAKE CYLINDER ASSEMBLY REAR LH",
+        "parts_id": "47750A"
+      },
+      {
+        "name": "DOOR LOCK CYLINDER &amp; KEY SET LH",
+        "parts_id": "69052"
+      },
+      {
+        "name": "DUTY VACUUM SWITCHING VALVE",
+        "parts_id": "17650G"
+      },
+      {
+        "name": "E.F.I. ENGINE COOLANT TEMPERATURE SENSOR",
+        "parts_id": "89422"
+      },
+      {
+        "name": "EGR VALVE ADAPTER",
+        "parts_id": "25624"
+      },
+      {
+        "name": "EGR VALVE ASSEMBLY",
+        "parts_id": "25620"
+      },
+      {
+        "name": "EGR VALVE ASSEMBLY NO.2",
+        "parts_id": "25630"
+      },
+      {
+        "name": "ELECTRIC EGR CONTROL VALVE ASSEMBLY",
+        "parts_id": "25800"
+      },
+      {
+        "name": "ELECTRIC VACUUM REGULATING VALVE ASSEMBLY",
+        "parts_id": "25850"
+      },
+      {
+        "name": "ENGINE COOLANT TEMPERATURE SENSOR",
+        "parts_id": "89422A"
+      },
+      {
+        "name": "ENGINE HANGER NO.1",
+        "parts_id": "12281A"
+      },
+      {
+        "name": "ENGINE MOUNTING BRACKET FRONT NO.1 LH",
+        "parts_id": "12315"
+      },
+      {
+        "name": "ENGINE MOUNTING BRACKET FRONT NO.1 RH",
+        "parts_id": "12311"
+      },
+      {
+        "name": "ENGINE MOUNTING BRACKET HEAT INSULATOR",
+        "parts_id": "12395"
+      },
+      {
+        "name": "ENGINE MOUNTING INSULATOR FRONT",
+        "parts_id": "12361"
+      },
+      {
+        "name": "ENGINE MOUNTING INSULATOR REAR NO.1",
+        "parts_id": "12371"
+      },
+      {
+        "name": "ENGINE OIL LEVEL SENSOR",
+        "parts_id": "89491"
+      },
+      {
+        "name": "ENGINE OIL PRESSURE SWITCH ASSEMBLY",
+        "parts_id": "83530"
+      },
+      {
+        "name": "ENGINE REAR OIL SEAL",
+        "parts_id": "11381A"
+      },
+      {
+        "name": "ENGINE REAR OIL SEAL RETAINER",
+        "parts_id": "11381"
+      },
+      {
+        "name": "ENGINE ROOM MAIN WIRE",
+        "parts_id": "82111"
+      },
+      {
+        "name": "ENGINE ROOM WIRE NO.2",
+        "parts_id": "82112"
+      },
+      {
+        "name": "ENGINE UNDER COVER NO.2",
+        "parts_id": "51442"
+      },
+      {
+        "name": "ENGINE WATER PUMP ASSEMBLY",
+        "parts_id": "16100"
+      },
+      {
+        "name": "ENGINE WIRE",
+        "parts_id": "82121"
+      },
+      {
+        "name": "ENGINE WIRE NO.2",
+        "parts_id": "82122"
+      },
+      {
+        "name": "EXHAUST MANIFOLD",
+        "parts_id": "17141"
+      },
+      {
+        "name": "EXHAUST MANIFOLD CASE NO.2",
+        "parts_id": "17142"
+      },
+      {
+        "name": "EXHAUST MANIFOLD CONVERTER SUB-ASSEMBLY",
+        "parts_id": "25051"
+      },
+      {
+        "name": "EXHAUST MANIFOLD HEAT INSULATOR NO.1",
+        "parts_id": "17167"
+      },
+      {
+        "name": "EXHAUST MANIFOLD HEAT INSULATOR NO.2",
+        "parts_id": "17168"
+      },
+      {
+        "name": "EXHAUST MANIFOLD PIPE NO.2",
+        "parts_id": "17192"
+      },
+      {
+        "name": "EXHAUST MANIFOLD SUB-ASSEMBLY LH",
+        "parts_id": "17105"
+      },
+      {
+        "name": "EXHAUST MANIFOLD SUB-ASSEMBLY RH",
+        "parts_id": "17104"
+      },
+      {
+        "name": "FLUID COUPLING ASSEMBLY",
+        "parts_id": "16210"
+      },
+      {
+        "name": "FRONT DISC BRAKE PISTON",
+        "parts_id": "47731"
+      },
+      {
+        "name": "FUEL CUT OFF VALVE ASSEMBLY",
+        "parts_id": "77380"
+      },
+      {
+        "name": "FUEL CUT OFF VALVE ASSEMBLY NO.2",
+        "parts_id": "77420"
+      },
+      {
+        "name": "FUEL INJECTOR ASSEMBLY",
+        "parts_id": "23250"
+      },
+      {
+        "name": "FUEL INJECTOR SEAL",
+        "parts_id": "23255B"
+      },
+      {
+        "name": "FUEL TANK SOLENOID MAIN VALVE ASSEMBLY",
+        "parts_id": "77710B"
+      },
+      {
+        "name": "FUEL TANK SOLENOID RETURN VALVE ASSEMBLY",
+        "parts_id": "77720E"
+      },
+      {
+        "name": "HEATER WATER VALVE ASSEMBLY",
+        "parts_id": "87240"
+      },
+      {
+        "name": "HOOD AIR INTAKE GUIDE RETAINER NO.1",
+        "parts_id": "76187"
+      },
+      {
+        "name": "HOOD AIR INTAKE GUIDE SUB-ASSEMBLY",
+        "parts_id": "76109"
+      },
+      {
+        "name": "HOSE AND VALVE ASSEMBLY",
+        "parts_id": "87250"
+      },
+      {
+        "name": "IDLE SPROCKET ASSEMBLY",
+        "parts_id": "13530"
+      },
+      {
+        "name": "IDLER PULLEY ASSEMBLY",
+        "parts_id": "16630H"
+      },
+      {
+        "name": "IDLER PULLEY SUB-ASSEMBLY",
+        "parts_id": "16603B"
+      },
+      {
+        "name": "IDLER PULLEY SUB-ASSEMBLY NO.1",
+        "parts_id": "16603"
+      },
+      {
+        "name": "IDLER PULLEY SUB-ASSEMBLY NO.2",
+        "parts_id": "16604"
+      },
+      {
+        "name": "IGNITION COIL ASSEMBLY",
+        "parts_id": "19500"
+      },
+      {
+        "name": "IGNITION SWITCH LOCK CYLINDER &amp; KEY SET",
+        "parts_id": "69057A"
+      },
+      {
+        "name": "INNER COMPRESSION SPRING",
+        "parts_id": "13711B"
+      },
+      {
+        "name": "INTAKE AIR CONNECTOR PIPE",
+        "parts_id": "17875"
+      },
+      {
+        "name": "INTAKE AIR CONNECTOR PIPE NO.3",
+        "parts_id": "17878"
+      },
+      {
+        "name": "INTAKE AIR CONNECTOR PIPE NO.3",
+        "parts_id": "17878A"
+      },
+      {
+        "name": "INTAKE AIR CONNECTOR SUB-ASSEMBLY",
+        "parts_id": "17805"
+      },
+      {
+        "name": "INTAKE AIR SURGE TANK",
+        "parts_id": "17129"
+      },
+      {
+        "name": "INTAKE AIR TEMPERATURE SENSOR",
+        "parts_id": "89424D"
+      },
+      {
+        "name": "INTAKE MANIFOLD",
+        "parts_id": "17111"
+      },
+      {
+        "name": "INTAKE MANIFOLD NO.2",
+        "parts_id": "17112"
+      },
+      {
+        "name": "INTAKE MANIFOLD NO.3",
+        "parts_id": "17114D"
+      },
+      {
+        "name": "INTAKE MANIFOLD OR VACUUM PUMP TO CONNECTOR TUBE",
+        "parts_id": "44761"
+      },
+      {
+        "name": "INTAKE MASS AIR FLOW METER SUB-ASSEMBLY",
+        "parts_id": "22204"
+      },
+      {
+        "name": "INTAKE PIPE",
+        "parts_id": "17113"
+      },
+      {
+        "name": "INTAKE PIPE STAY",
+        "parts_id": "17138A"
+      },
+      {
+        "name": "INTAKE VALVE",
+        "parts_id": "13711"
+      },
+      {
+        "name": "INTAKE VALVE GUIDE BUSH",
+        "parts_id": "11122"
+      },
+      {
+        "name": "INTAKE VALVE STEM OIL SEAL",
+        "parts_id": "13711E"
+      },
+      {
+        "name": "INTERCOOLER ASSEMBLY",
+        "parts_id": "17940D"
+      },
+      {
+        "name": "LH, FRONT OR UPPER REAR WHEEL BRAKE CYLINDER ASSEMBLY",
+        "parts_id": "47570"
+      },
+      {
+        "name": "LOAD SENSING PROPORTIONING VALVE ASSEMBLY",
+        "parts_id": "47910"
+      },
+      {
+        "name": "LOAD SENSING VALVE BRACKET",
+        "parts_id": "47931"
+      },
+      {
+        "name": "LOAD SENSING VALVE UNION BRACKET",
+        "parts_id": "47932A"
+      },
+      {
+        "name": "LOAD SENSING W/SPRING VALVE ASSEMBLY",
+        "parts_id": "47900"
+      },
+      {
+        "name": "MANIFOLD STAY",
+        "parts_id": "17118"
+      },
+      {
+        "name": "MANIFOLD STAY NO.2",
+        "parts_id": "17119"
+      },
+      {
+        "name": "MANUAL TRANSMISSION OIL PUMP COVER O-RING",
+        "parts_id": "33130N"
+      },
+      {
+        "name": "MANUAL TRANSMISSION OIL PUMP DRIVE ROTOR",
+        "parts_id": "33467A"
+      },
+      {
+        "name": "MANUAL TRANSMISSION OIL PUMP DRIVEN ROTOR",
+        "parts_id": "33468A"
+      },
+      {
+        "name": "MASTER CYLINDER ACCUMULATOR ASSEMBLY",
+        "parts_id": "31490F"
+      },
+      {
+        "name": "MASTER CYLINDER RESERVOIR GROMMET",
+        "parts_id": "47255"
+      },
+      {
+        "name": "NO.2 CAMSHAFT",
+        "parts_id": "13512"
+      },
+      {
+        "name": "NO.2 CHAIN SUB-ASSEMBLY",
+        "parts_id": "13507"
+      },
+      {
+        "name": "NO.3 CAMSHAFT SUB-ASSEMBLY",
+        "parts_id": "13053"
+      },
+      {
+        "name": "NO.4 CAMSHAFT SUB-ASSEMBLY",
+        "parts_id": "13054"
+      },
+      {
+        "name": "OIL BAFFLE PLATE",
+        "parts_id": "12216C"
+      },
+      {
+        "name": "OIL CHECK VALVE SUB-ASSEMBLY",
+        "parts_id": "15605A"
+      },
+      {
+        "name": "OIL CONTROL VALVE FILTER",
+        "parts_id": "15678A"
+      },
+      {
+        "name": "OIL COOLER ASSEMBLY",
+        "parts_id": "15710"
+      },
+      {
+        "name": "OIL COOLER COVER",
+        "parts_id": "15721"
+      },
+      {
+        "name": "OIL COOLER HOSE",
+        "parts_id": "15777"
+      },
+      {
+        "name": "OIL COOLER HOSE DRAIN COCK ASSEMBLY",
+        "parts_id": "15777K"
+      },
+      {
+        "name": "OIL COOLER HOSE NO.2",
+        "parts_id": "15778"
+      },
+      {
+        "name": "OIL COOLER PIPE",
+        "parts_id": "15769"
+      },
+      {
+        "name": "OIL COOLER RELIEF VALVE ASSEMBLY",
+        "parts_id": "15690"
+      },
+      {
+        "name": "OIL FILLER CAP GASKET",
+        "parts_id": "12108A"
+      },
+      {
+        "name": "OIL FILLER CAP HOUSING",
+        "parts_id": "12185"
+      },
+      {
+        "name": "OIL FILLER CAP SUB-ASSEMBLY",
+        "parts_id": "12108"
+      },
+      {
+        "name": "OIL FILTER CAP ASSEMBLY",
+        "parts_id": "15620"
+      },
+      {
+        "name": "OIL FILTER ELEMENT COVER LOWER",
+        "parts_id": "15614"
+      },
+      {
+        "name": "OIL FILTER OUTLET PIPE SUB-ASSEMBLY",
+        "parts_id": "15409F"
+      },
+      {
+        "name": "OIL FILTER SUB-ASSEMBLY",
+        "parts_id": "15601"
+      },
+      {
+        "name": "OIL FILTER UNION",
+        "parts_id": "15600A"
+      },
+      {
+        "name": "OIL JET",
+        "parts_id": "13516"
+      },
+      {
+        "name": "OIL LEVEL GAGE GUIDE",
+        "parts_id": "11452"
+      },
+      {
+        "name": "OIL LEVEL GAGE GUIDE NO.2",
+        "parts_id": "12142"
+      },
+      {
+        "name": "OIL LEVEL GAGE GUIDE SUPPORT",
+        "parts_id": "11459"
+      },
+      {
+        "name": "OIL LEVEL GAGE SUB-ASSEMBLY",
+        "parts_id": "15301"
+      },
+      {
+        "name": "OIL NOZZLE SUB-ASSEMBLY NO.1",
+        "parts_id": "15708"
+      },
+      {
+        "name": "OIL PAN BAFFLE PLATE NO.1",
+        "parts_id": "12121"
+      },
+      {
+        "name": "OIL PAN COVER",
+        "parts_id": "12140"
+      },
+      {
+        "name": "OIL PAN SUB-ASSEMBLY",
+        "parts_id": "12101"
+      },
+      {
+        "name": "OIL PAN SUB-ASSEMBLY NO.2",
+        "parts_id": "12102A"
+      },
+      {
+        "name": "OIL PUMP ASSEMBLY",
+        "parts_id": "15100"
+      },
+      {
+        "name": "OIL PUMP COVER",
+        "parts_id": "15115"
+      },
+      {
+        "name": "OIL PUMP OUTLET PIPE",
+        "parts_id": "15413"
+      },
+      {
+        "name": "OIL PUMP OUTLET PIPE SUB-ASSEMBLY",
+        "parts_id": "15403"
+      },
+      {
+        "name": "OIL PUMP RELIEF VALVE",
+        "parts_id": "15131"
+      },
+      {
+        "name": "OIL PUMP ROTOR SET",
+        "parts_id": "15102"
+      },
+      {
+        "name": "OIL REGULATOR ASSEMBLY",
+        "parts_id": "15310H"
+      },
+      {
+        "name": "OIL SEAL RETAINER, NO.2 OIL SEAL",
+        "parts_id": "11305A"
+      },
+      {
+        "name": "OIL SEPARATOR ASSEMBLY",
+        "parts_id": "12270"
+      },
+      {
+        "name": "OIL STRAINER SUB-ASSEMBLY",
+        "parts_id": "15104"
+      },
+      {
+        "name": "PARTIAL ENGINE ASSEMBLY",
+        "parts_id": "11000"
+      },
+      {
+        "name": "PISTON PIN HOLE SNAP RING",
+        "parts_id": "13101A"
+      },
+      {
+        "name": "PISTON RING SET",
+        "parts_id": "13011"
+      },
+      {
+        "name": "POWER PISTON NUT RING",
+        "parts_id": "44114A"
+      },
+      {
+        "name": "POWER PISTON PLUNGER GUIDE NUT",
+        "parts_id": "44154"
+      },
+      {
+        "name": "REAR DISC BRAKE CYLINDER HOLE PLUG",
+        "parts_id": "47713A"
+      },
+      {
+        "name": "REAR DISC BRAKE CYLINDER MOUNTING LH",
+        "parts_id": "47722A"
+      },
+      {
+        "name": "REAR DISC BRAKE CYLINDER SLIDE BUSH",
+        "parts_id": "47769A"
+      },
+      {
+        "name": "REAR DISC BRAKE PISTON",
+        "parts_id": "47731B"
+      },
+      {
+        "name": "REAR END PLATE",
+        "parts_id": "11355"
+      },
+      {
+        "name": "REGULATOR VALVE SUB-ASSEMBLY",
+        "parts_id": "22180"
+      },
+      {
+        "name": "RELEASE CYLINDER BLEEDER PLUG",
+        "parts_id": "31477"
+      },
+      {
+        "name": "RESERVE TANK CAP",
+        "parts_id": "16471B"
+      },
+      {
+        "name": "RING W/HEAD PIN",
+        "parts_id": "11155A"
+      },
+      {
+        "name": "SCAVENGING PUMP ASSEMBLY",
+        "parts_id": "151A0"
+      },
+      {
+        "name": "SCAVENGING PUMP PIPE",
+        "parts_id": "151C1"
+      },
+      {
+        "name": "SPARK PLUG",
+        "parts_id": "19100P"
+      },
+      {
+        "name": "SURGE TANK STAY NO.2",
+        "parts_id": "17126"
+      },
+      {
+        "name": "THROTTLE CONTROL CABLE ASSEMBLY",
+        "parts_id": "78410"
+      },
+      {
+        "name": "THROTTLE W/MOTOR BODY ASSEMBLY",
+        "parts_id": "22030"
+      },
+      {
+        "name": "TIMER PISTON ASSEMBLY",
+        "parts_id": "22582"
+      },
+      {
+        "name": "TIMING BELT",
+        "parts_id": "13568"
+      },
+      {
+        "name": "TIMING BELT COVER NO.1",
+        "parts_id": "11322A"
+      },
+      {
+        "name": "TIMING BELT IDLER SUB-ASSEMBLY NO.1",
+        "parts_id": "13505"
+      },
+      {
+        "name": "TIMING CHAIN COVER PLATE",
+        "parts_id": "11324"
+      },
+      {
+        "name": "TIMING CHAIN OR BELT COVER OIL SEAL",
+        "parts_id": "11302A"
+      },
+      {
+        "name": "TIMING CHAIN OR BELT COVER SUB-ASSEMBLY",
+        "parts_id": "11302"
+      },
+      {
+        "name": "TIMING CONTROL VALVE SUB-ASSEMBLY",
+        "parts_id": "22420C"
+      },
+      {
+        "name": "TIMING GEAR CASE OR TIMING CHAIN CASE OIL SEAL",
+        "parts_id": "11301C"
+      },
+      {
+        "name": "TIMING GEAR CASE SUB-ASSEMBLY",
+        "parts_id": "11301"
+      },
+      {
+        "name": "TIMING GEAR COVER NO.2",
+        "parts_id": "11322F"
+      },
+      {
+        "name": "TRANSMISSION OIL PUMP COVER",
+        "parts_id": "33130G"
+      },
+      {
+        "name": "TRANSMISSION OIL PUMP COVER OIL SEAL",
+        "parts_id": "33130H"
+      },
+      {
+        "name": "TRANSVERSE ENGINE ENGINE MOUNTING BRACKET",
+        "parts_id": "12315A"
+      },
+      {
+        "name": "TRANSVERSE ENGINE ENGINE MOUNTING BRACKET",
+        "parts_id": "12325A"
+      },
+      {
+        "name": "TURBO OIL INLET PIPE SUB-ASSEMBLY",
+        "parts_id": "15407"
+      },
+      {
+        "name": "TURBO OIL OUTLET HOSE",
+        "parts_id": "15474A"
+      },
+      {
+        "name": "TURBO OIL PIPE FLANGE",
+        "parts_id": "15479"
+      },
+      {
+        "name": "TURBO OIL PIPE NO.1",
+        "parts_id": "15481"
+      },
+      {
+        "name": "TURBO OIL PIPE NO.2",
+        "parts_id": "15482"
+      },
+      {
+        "name": "TURBO PRESSURE SENSOR",
+        "parts_id": "89421D"
+      },
+      {
+        "name": "TURBO WATER PIPE SUB-ASSEMBLY NO.1",
+        "parts_id": "16027"
+      },
+      {
+        "name": "TURBOCHARGER STAY",
+        "parts_id": "17293"
+      },
+      {
+        "name": "TURBOCHARGER SUB-ASSEMBLY",
+        "parts_id": "17201"
+      },
+      {
+        "name": "UNION TO CHECK VALVE HOSE",
+        "parts_id": "44773F"
+      },
+      {
+        "name": "V (COOLER COMPRESSOR TO CRANKSHAFT PULLEY) BELT NO.1",
+        "parts_id": "88310A"
+      },
+      {
+        "name": "V-BANK SILENCER",
+        "parts_id": "11248"
+      },
+      {
+        "name": "V-RIBBED BELT TENSIONER ASSEMBLY",
+        "parts_id": "16620"
+      },
+      {
+        "name": "V-RIBBED BELT TENSIONER ASSEMBLY",
+        "parts_id": "16620D"
+      },
+      {
+        "name": "VACUUM CONTROL VALVE SET",
+        "parts_id": "25804"
+      },
+      {
+        "name": "VACUUM REGULATING VALVE ASSEMBLY",
+        "parts_id": "25819"
+      },
+      {
+        "name": "VACUUM SWITCHING VALVE ASSEMBLY",
+        "parts_id": "17650"
+      },
+      {
+        "name": "VACUUM SWITCHING VALVE ASSEMBLY NO.1",
+        "parts_id": "25860"
+      },
+      {
+        "name": "VACUUM SWITCHING VALVE NO.1",
+        "parts_id": "25860A"
+      },
+      {
+        "name": "VALVE BODY HOUSING UNION SEAT",
+        "parts_id": "44105C"
+      },
+      {
+        "name": "VALVE LASH ADJUSTER ASSEMBLY",
+        "parts_id": "13750"
+      },
+      {
+        "name": "VALVE LIFTER",
+        "parts_id": "13751"
+      },
+      {
+        "name": "VALVE ROCKER ARM SUB-ASSEMBLY NO.1",
+        "parts_id": "13801"
+      },
+      {
+        "name": "VALVE SPRING SEAT",
+        "parts_id": "13734"
+      },
+      {
+        "name": "VALVE STEM OIL O SEAL OR RING",
+        "parts_id": "13711A"
+      },
+      {
+        "name": "VENTILATION HOSE NO.2",
+        "parts_id": "12262"
+      },
+      {
+        "name": "VENTILATION HOSE NO.3",
+        "parts_id": "12263"
+      },
+      {
+        "name": "VENTILATION TUBE SUB-ASSEMBLY",
+        "parts_id": "12201"
+      },
+      {
+        "name": "VENTILATION VALVE SUB-ASSEMBLY",
+        "parts_id": "12204"
+      },
+      {
+        "name": "W/BALL NUT VALVE ASSEMBLY",
+        "parts_id": "44120"
+      },
+      {
+        "name": "W/PIN PISTON SUB-ASSEMBLY",
+        "parts_id": "13101"
+      },
+      {
+        "name": "WATER BY-PASS HOSE",
+        "parts_id": "16261"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.11",
+        "parts_id": "16294"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.2",
+        "parts_id": "16264"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.2",
+        "parts_id": "16264D"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.3",
+        "parts_id": "16267"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.4",
+        "parts_id": "16281"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.6",
+        "parts_id": "16283"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.7",
+        "parts_id": "16295"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.8",
+        "parts_id": "16296"
+      },
+      {
+        "name": "WATER BY-PASS HOSE NO.9",
+        "parts_id": "16297B"
+      },
+      {
+        "name": "WATER BY-PASS JOINT REAR",
+        "parts_id": "16356"
+      },
+      {
+        "name": "WATER BY-PASS PIPE HOSE",
+        "parts_id": "16268A"
+      },
+      {
+        "name": "WATER BY-PASS PIPE NO.1",
+        "parts_id": "16268"
+      },
+      {
+        "name": "WATER BY-PASS PIPE NO.2",
+        "parts_id": "16278"
+      },
+      {
+        "name": "WATER BY-PASS PIPE NO.3",
+        "parts_id": "16279"
+      },
+      {
+        "name": "WATER BY-PASS PIPE NO.4",
+        "parts_id": "16288"
+      },
+      {
+        "name": "WATER BY-PASS PIPE NO.5",
+        "parts_id": "16289"
+      },
+      {
+        "name": "WATER BY-PASS PIPE NO.6",
+        "parts_id": "1628A"
+      },
+      {
+        "name": "WATER BY-PASS PIPE SUB-ASSEMBLY",
+        "parts_id": "16206"
+      },
+      {
+        "name": "WATER UNIT VALVE ASSEMBLY",
+        "parts_id": "87240H"
+      }
+    ],
+    "wheels": [
+      {
+        "name": "4 WHEEL DRIVE CONTROL ECU NO.2",
+        "parts_id": "89533A"
+      },
+      {
+        "name": "ASSIST GRIP PLUG",
+        "parts_id": "74617A"
+      },
+      {
+        "name": "ASSIST GRIP PLUG",
+        "parts_id": "74617C"
+      },
+      {
+        "name": "BEARING RETAINER FRONT(MTM)",
+        "parts_id": "33131"
+      },
+      {
+        "name": "BEARING SHAFT SNAP RING",
+        "parts_id": "33321M"
+      },
+      {
+        "name": "BREATHER PLUG",
+        "parts_id": "33101J"
+      },
+      {
+        "name": "CONNECTING ROD BEARING",
+        "parts_id": "13041"
+      },
+      {
+        "name": "COUNTER SHAFT CENTER BEARING",
+        "parts_id": "33411P"
+      },
+      {
+        "name": "DISTRIBUTIVE HEAD PLUG",
+        "parts_id": "22176"
+      },
+      {
+        "name": "DRAIN(MTM) PLUG SUB-ASSEMBLY",
+        "parts_id": "33104"
+      },
+      {
+        "name": "FLYWHEEL HOUSING SIDE COVER",
+        "parts_id": "11363A"
+      },
+      {
+        "name": "FLYWHEEL HOUSING UNDER COVER",
+        "parts_id": "11361J"
+      },
+      {
+        "name": "FLYWHEEL SUB-ASSEMBLY",
+        "parts_id": "13405"
+      },
+      {
+        "name": "FOUR WHEEL DRIVE CONTROL SOLENOID ASSEMBLY",
+        "parts_id": "85440A"
+      },
+      {
+        "name": "FREE WHEEL HUB ASSEMBLY",
+        "parts_id": "43530"
+      },
+      {
+        "name": "FRONT BEARING SHAFT SNAP RING",
+        "parts_id": "33311B"
+      },
+      {
+        "name": "FRONT BEARING SHAFT SNAP RING",
+        "parts_id": "33311G"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL BEARING ADJUSTING NUT",
+        "parts_id": "41315A"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL BEARING ADJUSTING NUT LOCK",
+        "parts_id": "41316A"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL CASE BEARING",
+        "parts_id": "41311A"
+      },
+      {
+        "name": "FRONT WHEEL ADJUSTING NUT LH",
+        "parts_id": "43521D"
+      },
+      {
+        "name": "FRONT WHEEL OPENING EXTENSION SUB-ASSEMBLY LH",
+        "parts_id": "53088A"
+      },
+      {
+        "name": "GENERATOR BEARING COVER PACKING",
+        "parts_id": "27444"
+      },
+      {
+        "name": "GLOW PLUG ASSEMBLY",
+        "parts_id": "19850"
+      },
+      {
+        "name": "GLOW PLUG NO.1 CONNECTOR",
+        "parts_id": "19871"
+      },
+      {
+        "name": "GLOW PLUG(SUB) RELAY ASSEMBLY",
+        "parts_id": "28610A"
+      },
+      {
+        "name": "INPUT SHAFT BEARING",
+        "parts_id": "33311D"
+      },
+      {
+        "name": "INPUT SHAFT BEARING",
+        "parts_id": "33311W"
+      },
+      {
+        "name": "INPUT SHAFT FRONT BEARING",
+        "parts_id": "33311A"
+      },
+      {
+        "name": "INPUT SHAFT REAR BEARING SHAFT SNAP RING",
+        "parts_id": "33311P"
+      },
+      {
+        "name": "OIL PAN DRAIN PLUG",
+        "parts_id": "12101A"
+      },
+      {
+        "name": "OUTPUT SHAFT BEARING FRONT RETAINER OIL SEAL",
+        "parts_id": "36134A"
+      },
+      {
+        "name": "OUTPUT SHAFT BEARING RETAINER FRONT",
+        "parts_id": "36134"
+      },
+      {
+        "name": "OUTPUT SHAFT BEARING RETAINER REAR NO.1",
+        "parts_id": "36132"
+      },
+      {
+        "name": "OUTPUT SHAFT BEARING SHAFT SNAP RING",
+        "parts_id": "33321B"
+      },
+      {
+        "name": "OUTPUT SHAFT BEARING SHAFT SNAP RING",
+        "parts_id": "33321C"
+      },
+      {
+        "name": "OUTPUT SHAFT CENTER BEARING",
+        "parts_id": "33321V"
+      },
+      {
+        "name": "OUTPUT SHAFT REAR BEARING",
+        "parts_id": "33321A"
+      },
+      {
+        "name": "OUTPUT SHAFT REAR BEARING(MTM) RETAINER",
+        "parts_id": "33151"
+      },
+      {
+        "name": "RADIAL BALL BEARING",
+        "parts_id": "13613D"
+      },
+      {
+        "name": "RADIATOR DRAIN COCK PLUG",
+        "parts_id": "16400B"
+      },
+      {
+        "name": "REAR DIFFERENTIAL BEARING ADJUSTING NUT",
+        "parts_id": "41315"
+      },
+      {
+        "name": "REAR DIFFERENTIAL BEARING ADJUSTING NUT LOCK",
+        "parts_id": "41316"
+      },
+      {
+        "name": "REAR DIFFERENTIAL CASE BEARING",
+        "parts_id": "41301A"
+      },
+      {
+        "name": "REAR WHEEL EXTENSION PROTECTOR LH",
+        "parts_id": "58742F"
+      },
+      {
+        "name": "REAR WHEEL EXTENSION PROTECTOR LH",
+        "parts_id": "58742J"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION SUB-ASSEMBLY LH",
+        "parts_id": "61608B"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION SUB-ASSEMBLY NO.1 LH",
+        "parts_id": "61062C"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION SUB-ASSEMBLY NO.2 LH",
+        "parts_id": "61064A"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION SUB-ASSEMBLY RH",
+        "parts_id": "61607B"
+      },
+      {
+        "name": "SEMICIRCULAR PLUG",
+        "parts_id": "11183"
+      },
+      {
+        "name": "SPARE TIRE",
+        "parts_id": "42652A"
+      },
+      {
+        "name": "W/HEAD STRAIGHT SCREW PLUG NO.1",
+        "parts_id": "11117E"
+      },
+      {
+        "name": "W/HEAD STRAIGHT SCREW PLUG NO.2",
+        "parts_id": "11117F"
+      },
+      {
+        "name": "W/HEAD TAPER SCREW PLUG NO.1",
+        "parts_id": "11432A"
+      },
+      {
+        "name": "WINCH MOTOR ARMATURE NO.1 BEARING",
+        "parts_id": "38603B"
+      },
+      {
+        "name": "WINCH MOTOR ARMATURE NO.2 BEARING",
+        "parts_id": "38603C"
+      }
+    ],
+    "lighting": [
+      {
+        "name": "CENTER STOP LAMP ASSEMBLY",
+        "parts_id": "81570"
+      },
+      {
+        "name": "CENTER STOP LAMP COVER",
+        "parts_id": "81977"
+      },
+      {
+        "name": "CENTER STOP LAMP GASKET",
+        "parts_id": "81572"
+      },
+      {
+        "name": "CLEARANCE LAMP BULB",
+        "parts_id": "81610F"
+      },
+      {
+        "name": "CLEARANCE LAMP SOCKET",
+        "parts_id": "81615D"
+      },
+      {
+        "name": "FOG LAMP ASSEMBLY LH",
+        "parts_id": "81220"
+      },
+      {
+        "name": "FOG LAMP ASSEMBLY RH",
+        "parts_id": "81210A"
+      },
+      {
+        "name": "FOG LAMP BULB",
+        "parts_id": "81210B"
+      },
+      {
+        "name": "FOG LAMP COVER LH",
+        "parts_id": "81482C"
+      },
+      {
+        "name": "FOG LAMP COVER RH",
+        "parts_id": "81481E"
+      },
+      {
+        "name": "FOG LAMP PROTECTOR",
+        "parts_id": "81483B"
+      },
+      {
+        "name": "FOG LAMP PROTECTOR LH",
+        "parts_id": "81484A"
+      },
+      {
+        "name": "FRONT TURN SIGNAL LAMP BULB",
+        "parts_id": "81510C"
+      },
+      {
+        "name": "FRONT TURN SIGNAL LAMP SOCKET",
+        "parts_id": "81515B"
+      },
+      {
+        "name": "FUEL PIPE CLAMP NO.1",
+        "parts_id": "23841C"
+      },
+      {
+        "name": "HEADLAMP COVER NO.1",
+        "parts_id": "81144"
+      },
+      {
+        "name": "HEADLAMP, NO.1 BULB",
+        "parts_id": "81110B"
+      },
+      {
+        "name": "JACK CLAMP HOOK",
+        "parts_id": "58796A"
+      },
+      {
+        "name": "LAMP WIRE",
+        "parts_id": "82214A"
+      },
+      {
+        "name": "LICENSE PLATE LAMP ASSEMBLY",
+        "parts_id": "81270"
+      },
+      {
+        "name": "LICENSE PLATE LAMP BULB",
+        "parts_id": "81270B"
+      },
+      {
+        "name": "LICENSE PLATE LAMP COVER",
+        "parts_id": "81278"
+      },
+      {
+        "name": "LICENSE PLATE LAMP COVER SUB-ASSEMBLY",
+        "parts_id": "81690"
+      },
+      {
+        "name": "LICENSE PLATE LAMP LENS",
+        "parts_id": "81271"
+      },
+      {
+        "name": "LICENSE PLATE LAMP LENS GASKET",
+        "parts_id": "81272"
+      },
+      {
+        "name": "LICENSE PLATE LAMP PLATE",
+        "parts_id": "81276A"
+      },
+      {
+        "name": "REAR COMBINATION LAMP ASSEMBLY LH",
+        "parts_id": "81560"
+      },
+      {
+        "name": "REAR COMBINATION LAMP ASSEMBLY RH",
+        "parts_id": "81550"
+      },
+      {
+        "name": "REAR COMBINATION LAMP BODY LH",
+        "parts_id": "81563C"
+      },
+      {
+        "name": "REAR COMBINATION LAMP BULB",
+        "parts_id": "81550B"
+      },
+      {
+        "name": "REAR COMBINATION LAMP BULB",
+        "parts_id": "81550D"
+      },
+      {
+        "name": "REAR COMBINATION LAMP COVER LH",
+        "parts_id": "81620D"
+      },
+      {
+        "name": "REAR COMBINATION LAMP GASKET LH",
+        "parts_id": "81562A"
+      },
+      {
+        "name": "REAR COMBINATION LAMP LENS GASKET LH",
+        "parts_id": "81562"
+      },
+      {
+        "name": "REAR COMBINATION LAMP LENS LH",
+        "parts_id": "81561A"
+      },
+      {
+        "name": "REAR COMBINATION LAMP PROTECTOR LH",
+        "parts_id": "81567B"
+      },
+      {
+        "name": "REAR COMBINATION LAMP RIM LH",
+        "parts_id": "81566"
+      },
+      {
+        "name": "REAR COMBINATION LAMP SOCKET &amp; WIRE SUB-ASSEMBLY LH",
+        "parts_id": "81565"
+      },
+      {
+        "name": "REFLEX REFLECTOR ASSEMBLY LH",
+        "parts_id": "81920"
+      },
+      {
+        "name": "REFLEX REFLECTOR ASSEMBLY RH",
+        "parts_id": "81910"
+      },
+      {
+        "name": "ROOM LAMP ASSEMBLY NO.1",
+        "parts_id": "81240"
+      },
+      {
+        "name": "ROOM LAMP ASSEMBLY NO.2",
+        "parts_id": "81240D"
+      },
+      {
+        "name": "ROOM LAMP ASSEMBLY NO.3",
+        "parts_id": "81290"
+      },
+      {
+        "name": "ROOM LAMP BULB NO.1",
+        "parts_id": "81240B"
+      },
+      {
+        "name": "ROOM LAMP BULB NO.2",
+        "parts_id": "81240E"
+      },
+      {
+        "name": "ROOM LAMP BULB NO.3",
+        "parts_id": "81290B"
+      },
+      {
+        "name": "ROOM LAMP LENS NO.1",
+        "parts_id": "81241"
+      },
+      {
+        "name": "ROOM LAMP LENS NO.2",
+        "parts_id": "81241A"
+      },
+      {
+        "name": "SIDE TURN SIGNAL LAMP ASSEMBLY LH",
+        "parts_id": "81740"
+      },
+      {
+        "name": "SIDE TURN SIGNAL LAMP BULB",
+        "parts_id": "81730B"
+      },
+      {
+        "name": "SIDE TURN SIGNAL LAMP LENS GASKET LH",
+        "parts_id": "81742"
+      },
+      {
+        "name": "SIDE TURN SIGNAL LAMP LENS LH",
+        "parts_id": "81741"
+      },
+      {
+        "name": "SIDE TURN SIGNAL LAMP SOCKET AND WIRE",
+        "parts_id": "81735"
+      },
+      {
+        "name": "TURN SIGNAL FLASHER ASSEMBLY",
+        "parts_id": "81980"
+      }
+    ],
+    "chassis": [
+      {
+        "name": "BACK DOOR FRAME MOULDING LH",
+        "parts_id": "68286"
+      },
+      {
+        "name": "BACK DOOR FRAME MOULDING RH",
+        "parts_id": "68285"
+      },
+      {
+        "name": "BACK DOOR WINDOW FRAME SUB-ASSEMBLY LH",
+        "parts_id": "68608F"
+      },
+      {
+        "name": "BACK DOOR WINDOW FRAME SUB-ASSEMBLY RH",
+        "parts_id": "68607F"
+      },
+      {
+        "name": "BACK WINDOW FRAME FILM",
+        "parts_id": "64829"
+      },
+      {
+        "name": "BACK WINDOW VERTICAL FRAME",
+        "parts_id": "64885"
+      },
+      {
+        "name": "FOLD SEAT LEG STOPPER FRAME",
+        "parts_id": "79929"
+      },
+      {
+        "name": "FOLD SEAT LEG STOPPER FRAME NO.2",
+        "parts_id": "79929A"
+      },
+      {
+        "name": "FRAME CROSSMEMBER SUB-ASSEMBLY NO.2",
+        "parts_id": "51203"
+      },
+      {
+        "name": "FRONT DOOR FRAME SUB-ASSEMBLY FRONT LOWER LH",
+        "parts_id": "67402F"
+      },
+      {
+        "name": "FRONT DOOR FRAME SUB-ASSEMBLY REAR LOWER LH",
+        "parts_id": "67404F"
+      },
+      {
+        "name": "FRONT DOOR FRONT LOWER FRAME SEAL LH",
+        "parts_id": "67482A"
+      },
+      {
+        "name": "FRONT DOOR WINDOW FRAME SUB-ASSEMBLY LH",
+        "parts_id": "67042"
+      },
+      {
+        "name": "GENERATOR DRIVE END FRAME BEARING",
+        "parts_id": "27310B"
+      },
+      {
+        "name": "LH STEP SUB-ASSEMBLY",
+        "parts_id": "51708"
+      },
+      {
+        "name": "SIDE FRONT WINDOW FRAME SUB-ASSEMBLY CENTER LH",
+        "parts_id": "67046"
+      },
+      {
+        "name": "SIDE WINDOW FRAME FILM LH",
+        "parts_id": "62269A"
+      },
+      {
+        "name": "SIDE WINDOW FRAME SPACER LH",
+        "parts_id": "62279B"
+      },
+      {
+        "name": "VENT WINDOW GLASS FRAME SUB-ASSEMBLY LH",
+        "parts_id": "67502"
+      },
+      {
+        "name": "WINCH MOTOR COMMUTATOR END FRAME",
+        "parts_id": "38618"
+      }
+    ],
+    "interior": [
+      {
+        "name": "AIR CONDITIONING TUBE &amp; ACCESSORY ASSEMBLY",
+        "parts_id": "88710E"
+      },
+      {
+        "name": "AIR DUCT REAR NO.1",
+        "parts_id": "87212A"
+      },
+      {
+        "name": "AIR DUCT SUB-ASSEMBLY",
+        "parts_id": "87201D"
+      },
+      {
+        "name": "AIR DUCT SUB-ASSEMBLY NO.2",
+        "parts_id": "87201B"
+      },
+      {
+        "name": "AIR FILTER",
+        "parts_id": "88568B"
+      },
+      {
+        "name": "AIRMIX DAMPER CONTROL CABLE SUB-ASSEMBLY",
+        "parts_id": "55909A"
+      },
+      {
+        "name": "ASSIST GRIP ASSEMBLY REAR",
+        "parts_id": "74620B"
+      },
+      {
+        "name": "ASSIST GRIP ASSEMBLY REAR LH",
+        "parts_id": "74630E"
+      },
+      {
+        "name": "ASSIST GRIP ASSEMBLY REAR RH",
+        "parts_id": "74620C"
+      },
+      {
+        "name": "ASSIST GRIP SUB-ASSEMBLY",
+        "parts_id": "74610A"
+      },
+      {
+        "name": "ASSIST GRIP SUB-ASSEMBLY FRONT",
+        "parts_id": "74603"
+      },
+      {
+        "name": "BENCH TYPE REAR SEAT BACK COVER",
+        "parts_id": "71077B"
+      },
+      {
+        "name": "BENCH TYPE REAR SEAT CUSHION COVER",
+        "parts_id": "71075B"
+      },
+      {
+        "name": "BLOWER RESISTOR",
+        "parts_id": "87138C"
+      },
+      {
+        "name": "CENTER PILLAR STRIPE NO.2",
+        "parts_id": "75942"
+      },
+      {
+        "name": "CONSOLE BOX",
+        "parts_id": "58811B"
+      },
+      {
+        "name": "CONSOLE BOX SUB-ASSEMBLY REAR",
+        "parts_id": "58901A"
+      },
+      {
+        "name": "CONSOLE COVER REAR",
+        "parts_id": "58944A"
+      },
+      {
+        "name": "COOLER COMPRESSOR ASSEMBLY",
+        "parts_id": "88320"
+      },
+      {
+        "name": "COOLER CONDENSER ASSEMBLY",
+        "parts_id": "88460"
+      },
+      {
+        "name": "COOLER CONDENSER CUSHION NO.1",
+        "parts_id": "88467"
+      },
+      {
+        "name": "COOLER CONDENSER MOUNTING INSULATOR",
+        "parts_id": "88467B"
+      },
+      {
+        "name": "COOLER DRYER",
+        "parts_id": "88474"
+      },
+      {
+        "name": "COOLER EVAPORATOR SUB-ASSEMBLY NO.1",
+        "parts_id": "88501"
+      },
+      {
+        "name": "COOLER REFRIGERANT LIQUID PIPE A",
+        "parts_id": "88716A"
+      },
+      {
+        "name": "COOLER REFRIGERANT LIQUID PIPE B",
+        "parts_id": "88716B"
+      },
+      {
+        "name": "COOLER REFRIGERANT LIQUID PIPE C",
+        "parts_id": "88716C"
+      },
+      {
+        "name": "COOLER REFRIGERANT SUCTION HOSE NO.1",
+        "parts_id": "88712"
+      },
+      {
+        "name": "COOLER REFRIGERANT SUCTION PIPE A",
+        "parts_id": "88717A"
+      },
+      {
+        "name": "COOLER REFRIGERANT SUCTION PIPE NO.1",
+        "parts_id": "88717"
+      },
+      {
+        "name": "COOLER STABILIZER AMPLIFIER ASSEMBLY",
+        "parts_id": "88650"
+      },
+      {
+        "name": "COOLER THERMISTOR NO.1",
+        "parts_id": "88625"
+      },
+      {
+        "name": "COOLER UNIT ASSEMBLY",
+        "parts_id": "88510"
+      },
+      {
+        "name": "COOLER UNIT DRAIN HOSE NO.1",
+        "parts_id": "88539"
+      },
+      {
+        "name": "COWL SIDE TRIM SUB-ASSEMBLY LH",
+        "parts_id": "62112A"
+      },
+      {
+        "name": "COWL SIDE TRIM SUB-ASSEMBLY RH",
+        "parts_id": "62111A"
+      },
+      {
+        "name": "COWL TOP VENTILATOR LOUVER",
+        "parts_id": "55781F"
+      },
+      {
+        "name": "CURTAIN SHIELD AIR BAG ASSEMBLY LH",
+        "parts_id": "62180A"
+      },
+      {
+        "name": "CURTAIN SHIELD AIR BAG ASSEMBLY RH",
+        "parts_id": "62170A"
+      },
+      {
+        "name": "DEFROSTER DAMPER CONTROL CABLE SUB-ASSEMBLY",
+        "parts_id": "55906A"
+      },
+      {
+        "name": "DEFROSTER NOZZLE ASSEMBLY",
+        "parts_id": "55950G"
+      },
+      {
+        "name": "DEFROSTER NOZZLE ASSEMBLY LOWER",
+        "parts_id": "55990B"
+      },
+      {
+        "name": "FOLD SEAT LOCK CONTROL CABLE ASSEMBLY NO.1",
+        "parts_id": "78910"
+      },
+      {
+        "name": "FOLD SEAT LOCK CONTROL CABLE ASSEMBLY NO.2",
+        "parts_id": "78920"
+      },
+      {
+        "name": "FOLD SEAT STOPPER BAND ASSEMBLY NO.1",
+        "parts_id": "78950"
+      },
+      {
+        "name": "FOLD SEAT STOPPER BAND ASSEMBLY NO.2",
+        "parts_id": "78960"
+      },
+      {
+        "name": "FRONT SEAT BACK PANEL",
+        "parts_id": "74841B"
+      },
+      {
+        "name": "FRONT SEAT BELT HOLE COVER LH",
+        "parts_id": "73174"
+      },
+      {
+        "name": "FRONT SEAT BELT HOLE COVER RH",
+        "parts_id": "73173"
+      },
+      {
+        "name": "FRONT SEAT CUSHION EDGE PROTECTOR RH",
+        "parts_id": "71537C"
+      },
+      {
+        "name": "FRONT SEAT CUSHION PROTECTOR",
+        "parts_id": "71537A"
+      },
+      {
+        "name": "FRONT SEAT CUSHION SHIELD INNER LH",
+        "parts_id": "71862"
+      },
+      {
+        "name": "FRONT SEAT CUSHION SHIELD INNER RH",
+        "parts_id": "71861"
+      },
+      {
+        "name": "FRONT SEAT CUSHION SHIELD LH",
+        "parts_id": "71812D"
+      },
+      {
+        "name": "FRONT SEAT CUSHION SHIELD RH",
+        "parts_id": "71811D"
+      },
+      {
+        "name": "FRONT SEAT CUSHION SILENCER",
+        "parts_id": "71148"
+      },
+      {
+        "name": "FRONT SEAT HEADREST ASSEMBLY",
+        "parts_id": "71910A"
+      },
+      {
+        "name": "FRONT SEAT HEADREST SUPPORT",
+        "parts_id": "71931"
+      },
+      {
+        "name": "FRONT SEAT INNER BELT ASSEMBLY LH",
+        "parts_id": "73240"
+      },
+      {
+        "name": "FRONT SEAT INNER BELT ASSEMBLY RH",
+        "parts_id": "73230"
+      },
+      {
+        "name": "FRONT SEAT LAP TYPE BELT ASSEMBLY CENTER",
+        "parts_id": "73150"
+      },
+      {
+        "name": "FRONT SEAT OUTER BELT ASSEMBLY LH",
+        "parts_id": "73220"
+      },
+      {
+        "name": "FRONT SEAT OUTER BELT ASSEMBLY RH",
+        "parts_id": "73210"
+      },
+      {
+        "name": "FRONT SHOULDER BELT ANCHOR ADJUSTER ASSEMBLY",
+        "parts_id": "73200A"
+      },
+      {
+        "name": "FRONT SHOULDER BELT ANCHOR PLATE SUB-ASSEMBLY LH",
+        "parts_id": "73024"
+      },
+      {
+        "name": "FRONT SHOULDER BELT ANCHOR PLATE SUB-ASSEMBLY RH",
+        "parts_id": "73023"
+      },
+      {
+        "name": "HEATER AIR DUCT HOLE COVER NO.2",
+        "parts_id": "55792E"
+      },
+      {
+        "name": "HEATER CONTROL NAME SHEET",
+        "parts_id": "81942"
+      },
+      {
+        "name": "HEATER DUCT HOLE COVER",
+        "parts_id": "55791E"
+      },
+      {
+        "name": "HEATER KNOB",
+        "parts_id": "87123"
+      },
+      {
+        "name": "HEATER OR BOOST VENTILATOR CONTROL ASSEMBLY",
+        "parts_id": "55910"
+      },
+      {
+        "name": "HEATER TO REGISTER CENTER SUB DUCT",
+        "parts_id": "55837C"
+      },
+      {
+        "name": "HEATER TO REGISTER DUCT NO.2",
+        "parts_id": "55844"
+      },
+      {
+        "name": "HEATER TO REGISTER DUCT NO.3",
+        "parts_id": "55845A"
+      },
+      {
+        "name": "HEATER TO REGISTER DUCT NO.4",
+        "parts_id": "55846B"
+      },
+      {
+        "name": "HEATER TO REGISTER DUCT SUB-ASSEMBLY NO.1",
+        "parts_id": "55084E"
+      },
+      {
+        "name": "HEATER TO REGISTER DUCT SUB-ASSEMBLY NO.6",
+        "parts_id": "55089"
+      },
+      {
+        "name": "HEATER WATER HOSE INLET A",
+        "parts_id": "87245A"
+      },
+      {
+        "name": "HEATER WATER HOSE OUTLET A",
+        "parts_id": "87246A"
+      },
+      {
+        "name": "IDLE-UP ACTUATOR SET",
+        "parts_id": "88031"
+      },
+      {
+        "name": "INNER BELT SUB-ASSEMBLY SEAT",
+        "parts_id": "73306"
+      },
+      {
+        "name": "INSTRUMENT ASSIST GRIP ASSEMBLY",
+        "parts_id": "74670"
+      },
+      {
+        "name": "INSTRUMENT CLUSTER FINISH PANEL CENTER",
+        "parts_id": "55412D"
+      },
+      {
+        "name": "INSTRUMENT CLUSTER FINISH PANEL CENTER LOWER",
+        "parts_id": "55413D"
+      },
+      {
+        "name": "INSTRUMENT CLUSTER FINISH PANEL NO.1",
+        "parts_id": "55411G"
+      },
+      {
+        "name": "INSTRUMENT CLUSTER FINISH PANEL UPPER",
+        "parts_id": "55421B"
+      },
+      {
+        "name": "INSTRUMENT FINISH PANEL LOWER SUB",
+        "parts_id": "55434A"
+      },
+      {
+        "name": "INSTRUMENT PANEL AIR BAG ASSEMBLY LOWER NO.1",
+        "parts_id": "73900"
+      },
+      {
+        "name": "INSTRUMENT PANEL ASH RECEPTACLE ASSEMBLY",
+        "parts_id": "74110"
+      },
+      {
+        "name": "INSTRUMENT PANEL BOX NO.2",
+        "parts_id": "55452A"
+      },
+      {
+        "name": "INSTRUMENT PANEL BRACE SUB-ASSEMBLY NO.1",
+        "parts_id": "55306A"
+      },
+      {
+        "name": "INSTRUMENT PANEL BRACE SUB-ASSEMBLY NO.2",
+        "parts_id": "55307C"
+      },
+      {
+        "name": "INSTRUMENT PANEL FINISH CUSHION NO.1",
+        "parts_id": "55448A"
+      },
+      {
+        "name": "INSTRUMENT PANEL FINISH PANEL ASSEMBLY LWR",
+        "parts_id": "55480D"
+      },
+      {
+        "name": "INSTRUMENT PANEL FINISH PANEL LOWER NO.1",
+        "parts_id": "55432D"
+      },
+      {
+        "name": "INSTRUMENT PANEL FINISH PANEL LOWER NO.2",
+        "parts_id": "55433B"
+      },
+      {
+        "name": "INSTRUMENT PANEL PASSENGER AIR BAG ASSEMBLY",
+        "parts_id": "73970A"
+      },
+      {
+        "name": "INSTRUMENT PANEL PLATE LH",
+        "parts_id": "55356B"
+      },
+      {
+        "name": "INSTRUMENT PANEL PLATE RH",
+        "parts_id": "55355B"
+      },
+      {
+        "name": "INSTRUMENT PANEL REGISTER ASSEMBLY NO.1",
+        "parts_id": "55650"
+      },
+      {
+        "name": "INSTRUMENT PANEL REGISTER ASSEMBLY NO.2",
+        "parts_id": "55660"
+      },
+      {
+        "name": "INSTRUMENT PANEL REGISTER ASSEMBLY NO.3",
+        "parts_id": "55670"
+      },
+      {
+        "name": "INSTRUMENT PANEL REGISTER ASSEMBLY NO.4",
+        "parts_id": "55680A"
+      },
+      {
+        "name": "INSTRUMENT PANEL REGISTER CONNECTOR NO.1",
+        "parts_id": "55833D"
+      },
+      {
+        "name": "INSTRUMENT PANEL REGISTER CONNECTOR NO.2",
+        "parts_id": "55834B"
+      },
+      {
+        "name": "INSTRUMENT PANEL REINFORCEMENT",
+        "parts_id": "55331"
+      },
+      {
+        "name": "INSTRUMENT PANEL SPEAKER PANEL SUB-ASSEMBLY NO.1",
+        "parts_id": "55408F"
+      },
+      {
+        "name": "INSTRUMENT PANEL SPEAKER PANEL SUB-ASSEMBLY NO.2",
+        "parts_id": "55409F"
+      },
+      {
+        "name": "INSTRUMENT PANEL STAY NO.4",
+        "parts_id": "55329B"
+      },
+      {
+        "name": "INSTRUMENT PANEL SUB-ASSEMBLY",
+        "parts_id": "55301"
+      },
+      {
+        "name": "INSTRUMENT PANEL WIRE",
+        "parts_id": "82141"
+      },
+      {
+        "name": "INSTRUMENT PANEL WIRE NO.3",
+        "parts_id": "82143"
+      },
+      {
+        "name": "INSTRUMENT RETAINER PLATE",
+        "parts_id": "55312C"
+      },
+      {
+        "name": "INSTRUMENT SIDE PANEL LH",
+        "parts_id": "55318C"
+      },
+      {
+        "name": "INSTRUMENT SIDE PANEL RH",
+        "parts_id": "55317A"
+      },
+      {
+        "name": "LH SEAT FRONT SEAT CUSHION EDGE PROTECTOR",
+        "parts_id": "71538B"
+      },
+      {
+        "name": "LH VISOR ASSEMBLY",
+        "parts_id": "74320"
+      },
+      {
+        "name": "NOZZLE HOLDER CLAMP SEAT",
+        "parts_id": "23699A"
+      },
+      {
+        "name": "QUARTER INSIDE TRIM BOARD LH",
+        "parts_id": "62512"
+      },
+      {
+        "name": "QUARTER INSIDE TRIM BOARD RH",
+        "parts_id": "62511"
+      },
+      {
+        "name": "QUARTER STRIP REAR LH",
+        "parts_id": "75994B"
+      },
+      {
+        "name": "QUARTER STRIPE LH",
+        "parts_id": "75992A"
+      },
+      {
+        "name": "QUARTER TRIM BELT HOLE COVER LH",
+        "parts_id": "73298B"
+      },
+      {
+        "name": "QUARTER TRIM BELT HOLE COVER NO.2 LH",
+        "parts_id": "73299"
+      },
+      {
+        "name": "QUARTER TRIM BELT HOLE COVER NO.2 RH",
+        "parts_id": "73298"
+      },
+      {
+        "name": "QUARTER TRIM BELT HOLE COVER RH",
+        "parts_id": "73297B"
+      },
+      {
+        "name": "QUARTER TRIM JACK COVER SUB-ASSEMBLY",
+        "parts_id": "64707D"
+      },
+      {
+        "name": "QUARTER TRIM PANEL ASSEMBLY REAR LH",
+        "parts_id": "62640P"
+      },
+      {
+        "name": "QUARTER TRIM PANEL ASSEMBLY REAR RH",
+        "parts_id": "62630P"
+      },
+      {
+        "name": "RADIO TUNER OPENING COVER",
+        "parts_id": "55522B"
+      },
+      {
+        "name": "REAR BODY MUDGUARD SUB-ASSEMBLY FRONT LH",
+        "parts_id": "76606C"
+      },
+      {
+        "name": "REAR BODY NAME PLATE NO.1",
+        "parts_id": "75471B"
+      },
+      {
+        "name": "REAR CONSOLE BOX NO.2",
+        "parts_id": "58912"
+      },
+      {
+        "name": "REAR DECK STRIPE FRONT LH",
+        "parts_id": "75989"
+      },
+      {
+        "name": "REAR DECK STRIPE FRONT RH",
+        "parts_id": "75988B"
+      },
+      {
+        "name": "REAR DECK STRIPE REAR LH",
+        "parts_id": "75999C"
+      },
+      {
+        "name": "REAR DECK STRIPE REAR RH",
+        "parts_id": "75998C"
+      },
+      {
+        "name": "REAR HEATER ASSEMBLY",
+        "parts_id": "87120"
+      },
+      {
+        "name": "REAR HEATER BLOWER MOTOR SUB-ASSEMBLY",
+        "parts_id": "87104R"
+      },
+      {
+        "name": "REAR HEATER BLOWER RESISTOR",
+        "parts_id": "87138R"
+      },
+      {
+        "name": "REAR HEATER UNIT SUB-ASSEMBLY",
+        "parts_id": "87107R"
+      },
+      {
+        "name": "REAR NAME PLATE NO.4 (GRADE MARK)",
+        "parts_id": "75463"
+      },
+      {
+        "name": "REAR NAME PLATE NO.5 (MECHANISM)",
+        "parts_id": "75465"
+      },
+      {
+        "name": "REAR SEAT 3 POINT TYPE BELT ASSEMBLY LH",
+        "parts_id": "73390"
+      },
+      {
+        "name": "REAR SEAT 3 POINT TYPE BELT ASSEMBLY OUTER LH",
+        "parts_id": "73370"
+      },
+      {
+        "name": "REAR SEAT 3 POINT TYPE BELT ASSEMBLY OUTER RH",
+        "parts_id": "73360"
+      },
+      {
+        "name": "REAR SEAT 3 POINT TYPE BELT ASSEMBLY RH",
+        "parts_id": "73380"
+      },
+      {
+        "name": "REAR SEAT BACK LOCK COVER LH",
+        "parts_id": "72666"
+      },
+      {
+        "name": "REAR SEAT BACK LOCK COVER RH",
+        "parts_id": "72665"
+      },
+      {
+        "name": "REAR SEAT BACK LOCK SUB-ASSEMBLY LH",
+        "parts_id": "72604"
+      },
+      {
+        "name": "REAR SEAT BACK LOCK SUB-ASSEMBLY RH",
+        "parts_id": "72603"
+      },
+      {
+        "name": "REAR SEAT CUSHION",
+        "parts_id": "71324A"
+      },
+      {
+        "name": "REAR SEAT CUSHION LEG SUB-ASSEMBLY",
+        "parts_id": "71033"
+      },
+      {
+        "name": "REAR SEAT CUSHION LINK STAY LH",
+        "parts_id": "71336A"
+      },
+      {
+        "name": "REAR SEAT CUSHION LINK STAY RH",
+        "parts_id": "71335C"
+      },
+      {
+        "name": "REAR SEAT CUSHION LOCK COVER",
+        "parts_id": "72694"
+      },
+      {
+        "name": "REAR SEAT CUSHION SUPPORT ASSEMBLY",
+        "parts_id": "72660A"
+      },
+      {
+        "name": "REAR SEAT HEADREST ASSEMBLY",
+        "parts_id": "71940A"
+      },
+      {
+        "name": "REAR SEAT HEADREST SUPPORT",
+        "parts_id": "71931A"
+      },
+      {
+        "name": "REAR SEAT HEADREST SUPPORT",
+        "parts_id": "71955A"
+      },
+      {
+        "name": "REAR SEAT LAP TYPE BELT ASSEMBLY CENTER",
+        "parts_id": "73350"
+      },
+      {
+        "name": "REAR SEAT LAP TYPE BELT ASSEMBLY LH",
+        "parts_id": "73040A"
+      },
+      {
+        "name": "REAR SEAT LAP TYPE BELT ASSEMBLY NO.2",
+        "parts_id": "73320B"
+      },
+      {
+        "name": "REAR SEAT LOCK ASSEMBLY LH",
+        "parts_id": "72660F"
+      },
+      {
+        "name": "REAR SEAT LOCK ASSEMBLY RH",
+        "parts_id": "72650F"
+      },
+      {
+        "name": "REAR SEAT OUTER BELT SUB-ASSEMBLY",
+        "parts_id": "73302"
+      },
+      {
+        "name": "REAR SEAT RECLINING COVER NO.1 LH",
+        "parts_id": "71834A"
+      },
+      {
+        "name": "REAR SEAT RECLINING COVER NO.1 RH",
+        "parts_id": "71833A"
+      },
+      {
+        "name": "REAR SEAT SIDE GARNISH LH",
+        "parts_id": "62552F"
+      },
+      {
+        "name": "REAR SEAT SIDE GARNISH RH",
+        "parts_id": "62551F"
+      },
+      {
+        "name": "REAR SIDE SEAT BACK COVER SUB-ASSEMBLY LH",
+        "parts_id": "71089B"
+      },
+      {
+        "name": "REAR SIDE SEAT BACK COVER SUB-ASSEMBLY NO.2 LH",
+        "parts_id": "71089C"
+      },
+      {
+        "name": "REAR SIDE SEAT CUSHION COVER SUB-ASSEMBLY LH",
+        "parts_id": "71086B"
+      },
+      {
+        "name": "REAR SIDE SEAT CUSHION COVER SUB-ASSEMBLY RH",
+        "parts_id": "71085B"
+      },
+      {
+        "name": "REAR SIDE SEAT CUSHION LEG SUB-ASSEMBLY NO.1 LH",
+        "parts_id": "71034A"
+      },
+      {
+        "name": "REAR SIDE SEAT CUSHION LEG SUB-ASSEMBLY NO.2 LH",
+        "parts_id": "71034B"
+      },
+      {
+        "name": "RECLINING ADJUSTER COVER RH",
+        "parts_id": "71811C"
+      },
+      {
+        "name": "RECLINING ADJUSTER INSIDE COVER LH",
+        "parts_id": "71876"
+      },
+      {
+        "name": "RECLINING ADJUSTER INSIDE COVER RH",
+        "parts_id": "71875A"
+      },
+      {
+        "name": "RECLINING ADJUSTER RELEASE HANDLE",
+        "parts_id": "72524"
+      },
+      {
+        "name": "RECLINING ADJUSTER RELEASE HANDLE LH",
+        "parts_id": "72526"
+      },
+      {
+        "name": "RECLINING ADJUSTER RELEASE HANDLE RH",
+        "parts_id": "72525A"
+      },
+      {
+        "name": "RECLINING CONNECTING PIPE SUB-ASSEMBLY",
+        "parts_id": "72501C"
+      },
+      {
+        "name": "RECLINING REMOTE CONTROL LEVER BEZEL LH",
+        "parts_id": "72598"
+      },
+      {
+        "name": "RECLINING REMOTE CONTROL LEVER BEZEL RH",
+        "parts_id": "72597A"
+      },
+      {
+        "name": "RECLINING REMOTE CONTROL LEVER SUB-ASSEMBLY RH",
+        "parts_id": "72053C"
+      },
+      {
+        "name": "RECLINING SEAT ADJUSTER ASSEMBLY OUTER RH",
+        "parts_id": "72510D"
+      },
+      {
+        "name": "REMOTE CONTROL LEVER KNOB LH",
+        "parts_id": "72594"
+      },
+      {
+        "name": "REMOTE CONTROL LEVER KNOB RH",
+        "parts_id": "72593A"
+      },
+      {
+        "name": "RH VISOR ASSEMBLY",
+        "parts_id": "74310"
+      },
+      {
+        "name": "ROLL OVER PANEL TRIM SUB-ASSEMBLY",
+        "parts_id": "62403"
+      },
+      {
+        "name": "SEAT BACK FELT",
+        "parts_id": "79977"
+      },
+      {
+        "name": "SEAT LAP TYPE BELT ASSEMBLY NO.1",
+        "parts_id": "73330B"
+      },
+      {
+        "name": "SEAT LAP TYPE BELT ASSEMBLY NO.2",
+        "parts_id": "73340B"
+      },
+      {
+        "name": "SEAT LAP TYPE BELT ASSEMBLY NO.3",
+        "parts_id": "73350B"
+      },
+      {
+        "name": "SEAT LAP TYPE BELT ASSEMBLY NO.4",
+        "parts_id": "73380B"
+      },
+      {
+        "name": "SEPARATE TYPE FRONT SEAT BACK COVER",
+        "parts_id": "71073S"
+      },
+      {
+        "name": "SEPARATE TYPE FRONT SEAT CUSHION COVER",
+        "parts_id": "71071S"
+      },
+      {
+        "name": "SEPARATE TYPE FRONT SEAT CUSHION COVER",
+        "parts_id": "71072S"
+      },
+      {
+        "name": "SIDE HEATER COVER LOWER",
+        "parts_id": "62588A"
+      },
+      {
+        "name": "SIDE MUDGUARD REAR LH",
+        "parts_id": "76918C"
+      },
+      {
+        "name": "THERMISTOR ASSEMBLY",
+        "parts_id": "88790F"
+      },
+      {
+        "name": "TONGUE PLATE STOPPER",
+        "parts_id": "73219"
+      },
+      {
+        "name": "TURN OVER SPRING SEAT COMPRESSION SPRING",
+        "parts_id": "31301R"
+      },
+      {
+        "name": "VISOR HOLDER",
+        "parts_id": "74348"
+      },
+      {
+        "name": "WATER HOSE SUB-ASSEMBLY",
+        "parts_id": "87209"
+      }
+    ],
+    "front_axle": [
+      {
+        "name": "FRONT ARMREST ASSEMBLY LH",
+        "parts_id": "74220"
+      },
+      {
+        "name": "FRONT ARMREST BASE PANEL UPPER RH",
+        "parts_id": "74231"
+      },
+      {
+        "name": "FRONT AXLE HUB LH OIL SEAL",
+        "parts_id": "43502F"
+      },
+      {
+        "name": "FRONT AXLE HUB SUB-ASSEMBLY LH",
+        "parts_id": "43502C"
+      },
+      {
+        "name": "FRONT AXLE HUB SUB-ASSEMBLY RH",
+        "parts_id": "43501C"
+      },
+      {
+        "name": "FRONT AXLE LH HUB BOLT",
+        "parts_id": "43502D"
+      },
+      {
+        "name": "FRONT AXLE OUTER SHAFT FLANGE CAP",
+        "parts_id": "43423"
+      },
+      {
+        "name": "FRONT AXLE OUTER SHAFT FLANGE LH",
+        "parts_id": "43421F"
+      },
+      {
+        "name": "FRONT AXLE OUTER SHAFT SUB-ASSEMBLY",
+        "parts_id": "43405"
+      },
+      {
+        "name": "FRONT LATERAL CONTROL ROD ASSEMBLY",
+        "parts_id": "48740A"
+      },
+      {
+        "name": "FRONT LATERAL CONTROL ROD BUSH SUB-ASSEMBLY",
+        "parts_id": "48706"
+      },
+      {
+        "name": "FRONT SPRING BUMPER LH",
+        "parts_id": "48331C"
+      },
+      {
+        "name": "FRONT STABILIZER BAR BUSH NO.1",
+        "parts_id": "48815"
+      },
+      {
+        "name": "FRONT STABILIZER LINK SUB-ASSEMBLY",
+        "parts_id": "48802F"
+      },
+      {
+        "name": "FRONT SUSPENSION HOLLOW SPRING ASSEMBLY LH",
+        "parts_id": "48310A"
+      },
+      {
+        "name": "LEADING ARM ASSEMBLY FRONT",
+        "parts_id": "48610A"
+      },
+      {
+        "name": "LEAF SPRING DYNAMIC DAMPER",
+        "parts_id": "48375"
+      },
+      {
+        "name": "LOWER ARM BUSH",
+        "parts_id": "48654"
+      },
+      {
+        "name": "REAR DISTANCE PLATE",
+        "parts_id": "48475R"
+      },
+      {
+        "name": "REAR LH SPRING ASSEMBLY",
+        "parts_id": "48220"
+      },
+      {
+        "name": "REAR STABILIZER BAR PROTECTOR",
+        "parts_id": "48826B"
+      },
+      {
+        "name": "REAR STABILIZER BUSH",
+        "parts_id": "48815R"
+      },
+      {
+        "name": "STABILIZER BAR FRONT",
+        "parts_id": "48811"
+      },
+      {
+        "name": "STABILIZER BAR REAR",
+        "parts_id": "48812"
+      },
+      {
+        "name": "STABILIZER LINK SUB-ASSEMBLY",
+        "parts_id": "48802"
+      }
+    ],
+    "brakes": [
+      {
+        "name": "ANTI SQUEAL SHIM KIT FRONT",
+        "parts_id": "04945"
+      },
+      {
+        "name": "AUXILIARY FUEL TANK CARRIER PAD",
+        "parts_id": "77196A"
+      },
+      {
+        "name": "BENCH TYPE REAR SEAT BACK PAD",
+        "parts_id": "71651B"
+      },
+      {
+        "name": "BRAKE ACTUATOR ASSEMBLY",
+        "parts_id": "44510"
+      },
+      {
+        "name": "BRAKE BOOSTER ASSEMBLY",
+        "parts_id": "44610"
+      },
+      {
+        "name": "BRAKE BOOSTER GASKET",
+        "parts_id": "44785"
+      },
+      {
+        "name": "BRAKE FLUID INFORMATION LABEL",
+        "parts_id": "47287"
+      },
+      {
+        "name": "BRAKE PEDAL PAD",
+        "parts_id": "47121"
+      },
+      {
+        "name": "BRAKE PEDAL RETURN SPRING",
+        "parts_id": "47101A"
+      },
+      {
+        "name": "BRAKE PEDAL SUPPORT ASSEMBLY",
+        "parts_id": "47110"
+      },
+      {
+        "name": "COOLER REFRIGERANT DISCHARGE HOSE NO.1",
+        "parts_id": "88711"
+      },
+      {
+        "name": "CROSS SHAFT",
+        "parts_id": "44111"
+      },
+      {
+        "name": "DISC BRAKE PAD KIT FRONT",
+        "parts_id": "04465"
+      },
+      {
+        "name": "DISC BRAKE PAD KIT REAR",
+        "parts_id": "04466"
+      },
+      {
+        "name": "DRUM BRAKE, REAR BLEEDER PLUG",
+        "parts_id": "47547R"
+      },
+      {
+        "name": "DRUM BRAKE, REAR BLEEDER PLUG CAP",
+        "parts_id": "47548R"
+      },
+      {
+        "name": "FRONT BRAKE TUBE NO.1",
+        "parts_id": "47311"
+      },
+      {
+        "name": "FRONT DISC",
+        "parts_id": "43512"
+      },
+      {
+        "name": "FRONT DISC BRAKE BLEEDER PLUG",
+        "parts_id": "47713"
+      },
+      {
+        "name": "FRONT DISC BRAKE BLEEDER PLUG CAP",
+        "parts_id": "47714"
+      },
+      {
+        "name": "FRONT SEAT CUSHION SILENCER PAD",
+        "parts_id": "71521A"
+      },
+      {
+        "name": "FRONT WHEEL OPENING EXTENSION PAD NO.1",
+        "parts_id": "53851C"
+      },
+      {
+        "name": "GENERATOR ROTOR ASSEMBLY",
+        "parts_id": "27330"
+      },
+      {
+        "name": "INNER REAR VIEW MIRROR ABSORBER",
+        "parts_id": "87827"
+      },
+      {
+        "name": "OIL RESERVOIR TO PUMP HOSE NO.1",
+        "parts_id": "44348A"
+      },
+      {
+        "name": "PARKING BRAKE BELL CRANK LH",
+        "parts_id": "47625A"
+      },
+      {
+        "name": "PARKING BRAKE BELL CRANK LH",
+        "parts_id": "47625B"
+      },
+      {
+        "name": "PARKING BRAKE BELL CRANK RETURN TENSION SPRING",
+        "parts_id": "47623B"
+      },
+      {
+        "name": "PARKING BRAKE BELLCRANK BOOT",
+        "parts_id": "47634"
+      },
+      {
+        "name": "PARKING BRAKE BELLCRANK STOPPER BOLT",
+        "parts_id": "47639A"
+      },
+      {
+        "name": "PARKING BRAKE CABLE ASSEMBLY NO.1",
+        "parts_id": "46410"
+      },
+      {
+        "name": "PARKING BRAKE EQUALIZER",
+        "parts_id": "46341"
+      },
+      {
+        "name": "PARKING BRAKE LEVER ASSEMBLY",
+        "parts_id": "46210"
+      },
+      {
+        "name": "PARKING BRAKE LEVER COVER",
+        "parts_id": "46243"
+      },
+      {
+        "name": "PARKING BRAKE SHOE ADJUSTING HOLE PLUG",
+        "parts_id": "42491"
+      },
+      {
+        "name": "PARKING BRAKE SHOE ADJUSTING SCREW SET",
+        "parts_id": "47406A"
+      },
+      {
+        "name": "PARKING BRAKE SHOE ASSEMBLY LH NO.1",
+        "parts_id": "46580"
+      },
+      {
+        "name": "PARKING BRAKE SHOE ASSEMBLY LH NO.2",
+        "parts_id": "46590"
+      },
+      {
+        "name": "PARKING BRAKE SHOE GUIDE PLATE SET BOLT",
+        "parts_id": "47459B"
+      },
+      {
+        "name": "PARKING BRAKE SHOE HOLD DOWN SPRING PIN",
+        "parts_id": "47447E"
+      },
+      {
+        "name": "PARKING BRAKE SHOE HOLD DOWN SPRING PIN",
+        "parts_id": "47447F"
+      },
+      {
+        "name": "PARKING BRAKE SHOE LEVER LH",
+        "parts_id": "47612"
+      },
+      {
+        "name": "PARKING BRAKE SHOE LEVER LH",
+        "parts_id": "47612A"
+      },
+      {
+        "name": "PARKING BRAKE SHOE RETURN TENSION SPRING",
+        "parts_id": "46550A"
+      },
+      {
+        "name": "PARKING BRAKE SHOE RETURN TENSION SPRING",
+        "parts_id": "46550E"
+      },
+      {
+        "name": "PARKING BRAKE SHOE RETURN TENSION SPRING",
+        "parts_id": "46550G"
+      },
+      {
+        "name": "PARKING BRAKE SHOE STRUT LH",
+        "parts_id": "47614"
+      },
+      {
+        "name": "PARKING BRAKE SHOE STRUT SET LH",
+        "parts_id": "47062"
+      },
+      {
+        "name": "PARKING BRAKE SWITCH ASSEMBLY",
+        "parts_id": "84550"
+      },
+      {
+        "name": "PARKING BRAKE WIRE",
+        "parts_id": "47616A"
+      },
+      {
+        "name": "PARKING BRAKE WIRE LH",
+        "parts_id": "47619"
+      },
+      {
+        "name": "PITMAN ARM",
+        "parts_id": "44251"
+      },
+      {
+        "name": "PRESSURE FEED TUBE ASSEMBLY",
+        "parts_id": "44410"
+      },
+      {
+        "name": "REAR BRAKE AUTOMATIC ADJUST LEVER",
+        "parts_id": "47664"
+      },
+      {
+        "name": "REAR BRAKE AUTOMATIC ADJUST LEVER TENSION SPRING",
+        "parts_id": "47430G"
+      },
+      {
+        "name": "REAR BRAKE DRUM SUB-ASSEMBLY",
+        "parts_id": "42403"
+      },
+      {
+        "name": "REAR BRAKE SHOE KIT",
+        "parts_id": "04495"
+      },
+      {
+        "name": "REAR BRAKE TUBE NO.2",
+        "parts_id": "47322"
+      },
+      {
+        "name": "REAR BUMPER PAD LH",
+        "parts_id": "52463"
+      },
+      {
+        "name": "REAR BUMPER PAD RH",
+        "parts_id": "52462"
+      },
+      {
+        "name": "REAR DISC",
+        "parts_id": "42431"
+      },
+      {
+        "name": "REAR DISC BRAKE ANTI SQUEAL SHIM KIT",
+        "parts_id": "04946"
+      },
+      {
+        "name": "REAR DISC BRAKE BLEEDER PLUG",
+        "parts_id": "47547C"
+      },
+      {
+        "name": "REAR DISC BRAKE BLEEDER PLUG CAP",
+        "parts_id": "31478C"
+      },
+      {
+        "name": "REAR DISC BRAKE BUSH DUST BOOT",
+        "parts_id": "47775D"
+      },
+      {
+        "name": "REAR DISC BRAKE PAD SUPPORT PLATE",
+        "parts_id": "47716A"
+      },
+      {
+        "name": "REAR DISC BRAKE PAD SUPPORT PLATE",
+        "parts_id": "47717A"
+      },
+      {
+        "name": "REAR DISC BRAKE PAD WEAR INDICATOR PLATE",
+        "parts_id": "47771A"
+      },
+      {
+        "name": "REAR NO.1 SEAT BACK PAD",
+        "parts_id": "71651"
+      },
+      {
+        "name": "REAR SEAT BACK PAD LOWER",
+        "parts_id": "71663"
+      },
+      {
+        "name": "REAR SEAT BACK SILENCER PAD A",
+        "parts_id": "71671"
+      },
+      {
+        "name": "REAR SEAT CUSHION PAD",
+        "parts_id": "71611"
+      },
+      {
+        "name": "REAR SIDE SEAT BACK PAD LH",
+        "parts_id": "71761B"
+      },
+      {
+        "name": "REAR SIDE SEAT CUSHION PAD LH",
+        "parts_id": "71722"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION PAD NO.1",
+        "parts_id": "61783D"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION PAD NO.1",
+        "parts_id": "61783E"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION PAD NO.2",
+        "parts_id": "61784"
+      },
+      {
+        "name": "REAR WHEEL OPENING EXTENSION PAD NO.3",
+        "parts_id": "61785C"
+      },
+      {
+        "name": "SEPARATE TYPE FRONT SEAT BACK PAD",
+        "parts_id": "71551S"
+      },
+      {
+        "name": "SEPARATE TYPE FRONT SEAT CUSHION PAD",
+        "parts_id": "71511S"
+      },
+      {
+        "name": "SEPARATE TYPE FRONT SEAT CUSHION PAD",
+        "parts_id": "71512S"
+      },
+      {
+        "name": "SHOCK ABSORBER ASSEMBLY FRONT LH",
+        "parts_id": "48520"
+      },
+      {
+        "name": "SHOCK ABSORBER ASSEMBLY FRONT RH",
+        "parts_id": "48510"
+      },
+      {
+        "name": "SHOCK ABSORBER ASSEMBLY REAR LH",
+        "parts_id": "48540"
+      },
+      {
+        "name": "SIDE COVER SUB-ASSEMBLY",
+        "parts_id": "44108"
+      },
+      {
+        "name": "UNION TO CONNECTOR TUBE HOSE",
+        "parts_id": "44774"
+      },
+      {
+        "name": "VACUUM RESERVOIR ASSEMBLY",
+        "parts_id": "44740"
+      },
+      {
+        "name": "VACUUM RESERVOIR CONNECT TUBE",
+        "parts_id": "44769"
+      },
+      {
+        "name": "VANE PUMP ASSEMBLY",
+        "parts_id": "44310"
+      },
+      {
+        "name": "VANE PUMP OIL RESERVOIR ASSEMBLY",
+        "parts_id": "44360"
+      },
+      {
+        "name": "WAY TO CONNECTOR HOSE",
+        "parts_id": "44775E"
+      }
+    ],
+    "driveshafts": [
+      {
+        "name": "COMPRESSION SPRING",
+        "parts_id": "41331A"
+      },
+      {
+        "name": "DIFFERENTIAL CARRIER ASSEMBLY FRONT",
+        "parts_id": "41110F"
+      },
+      {
+        "name": "DIFFERENTIAL CARRIER ASSEMBLY REAR",
+        "parts_id": "41110"
+      },
+      {
+        "name": "DIFFERENTIAL CARRIER SUB-ASSEMBLY REAR",
+        "parts_id": "41101"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL CARRIER OIL SEAL",
+        "parts_id": "41101D"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL CASE",
+        "parts_id": "41311"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL DUST DEFLECTOR",
+        "parts_id": "41252A"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL LOCK SLEEVE",
+        "parts_id": "41453A"
+      },
+      {
+        "name": "FRONT DIFFERENTIAL OIL STORAGE RING",
+        "parts_id": "41115F"
+      },
+      {
+        "name": "FRONT DRIVE SHAFT TYPE T OIL SEAL",
+        "parts_id": "43411D"
+      },
+      {
+        "name": "PROPELLER SHAFT ASSEMBLY",
+        "parts_id": "37110"
+      },
+      {
+        "name": "PROPELLER SHAFT ASSEMBLY FRONT",
+        "parts_id": "37140"
+      },
+      {
+        "name": "REAR DIFFERENTIAL CARRIER OIL SEAL",
+        "parts_id": "41201C"
+      },
+      {
+        "name": "REAR DIFFERENTIAL CASE SUB-ASSEMBLY",
+        "parts_id": "41302"
+      },
+      {
+        "name": "REAR DIFFERENTIAL LOCK COVER",
+        "parts_id": "41456"
+      }
+    ],
+    "exhaust": [
+      {
+        "name": "CATALYTIC CONVERTER INSULATOR UPPER",
+        "parts_id": "18431"
+      },
+      {
+        "name": "EXHAUST CROSSOVER PIPE SUB-ASSEMBLY",
+        "parts_id": "17106"
+      },
+      {
+        "name": "EXHAUST FORKED PIPE SUB-ASSEMBLY",
+        "parts_id": "17404"
+      },
+      {
+        "name": "EXHAUST FUEL ADDITION INJECTOR ASSEMBLY",
+        "parts_id": "23710B"
+      },
+      {
+        "name": "EXHAUST GAS TEMPERATURE SENSOR",
+        "parts_id": "89425"
+      },
+      {
+        "name": "EXHAUST GAS TEMPERATURE SENSOR NO.2",
+        "parts_id": "89425A"
+      },
+      {
+        "name": "EXHAUST GAS TEMPERATURE SENSOR NO.3",
+        "parts_id": "89425B"
+      },
+      {
+        "name": "EXHAUST PIPE ASSEMBLY CENTER",
+        "parts_id": "17420"
+      },
+      {
+        "name": "EXHAUST PIPE ASSEMBLY FRONT",
+        "parts_id": "17410"
+      },
+      {
+        "name": "EXHAUST PIPE ASSEMBLY NO.5",
+        "parts_id": "17450"
+      },
+      {
+        "name": "EXHAUST PIPE ASSEMBLY TAIL",
+        "parts_id": "17430"
+      },
+      {
+        "name": "EXHAUST PIPE SUB-ASSEMBLY CENTER NO.3",
+        "parts_id": "17407"
+      },
+      {
+        "name": "EXHAUST PIPE SUB-ASSEMBLY FRONT NO.2",
+        "parts_id": "17402"
+      },
+      {
+        "name": "EXHAUST PIPE SUB-ASSEMBLY FRONT NO.3",
+        "parts_id": "17403"
+      },
+      {
+        "name": "FRONT EXHAUST TAIL PIPE CUSHION",
+        "parts_id": "17430B"
+      }
+    ],
+    "other": [
+      {
+        "name": "CONNECTING WIRE",
+        "parts_id": "27148B"
+      },
+      {
+        "name": "CONVERTER PROTECTOR STAY CENTER",
+        "parts_id": "18421C"
+      },
+      {
+        "name": "DUST BOOT PROTECTOR LH",
+        "parts_id": "47787A"
+      },
+      {
+        "name": "EGR COOLER ASSEMBLY",
+        "parts_id": "25680"
+      },
+      {
+        "name": "EGR COOLER GASKET NO.1",
+        "parts_id": "25685"
+      },
+      {
+        "name": "EGR COOLER NO.1",
+        "parts_id": "25681"
+      },
+      {
+        "name": "EGR PIPE NO.3",
+        "parts_id": "25613"
+      },
+      {
+        "name": "EGR PIPE NO.4",
+        "parts_id": "25614"
+      },
+      {
+        "name": "EGR PIPE SUB-ASSEMBLY NO.1",
+        "parts_id": "25601"
+      },
+      {
+        "name": "EGR PIPE SUB-ASSEMBLY NO.2",
+        "parts_id": "25602"
+      },
+      {
+        "name": "EGR W/COOLER PIPE SUB-ASSEMBLY",
+        "parts_id": "25601L"
+      },
+      {
+        "name": "FRONT FLEXIBLE HOSE",
+        "parts_id": "47313A"
+      },
+      {
+        "name": "FRONT FLOOR FOOTREST",
+        "parts_id": "58191"
+      },
+      {
+        "name": "GENERATOR ASSEMBLY",
+        "parts_id": "27020"
+      },
+      {
+        "name": "GENERATOR BRUSH HOLDER ASSEMBLY",
+        "parts_id": "27370"
+      },
+      {
+        "name": "GENERATOR HOLDER W/RECTIFIER",
+        "parts_id": "27357"
+      },
+      {
+        "name": "GENERATOR PULLEY",
+        "parts_id": "27411"
+      },
+      {
+        "name": "GENERATOR REAR END COVER",
+        "parts_id": "27039"
+      },
+      {
+        "name": "GENERATOR REGULATOR ASSEMBLY",
+        "parts_id": "27700A"
+      },
+      {
+        "name": "GENERATOR SPLASH GUARD COVER ASSEMBLY",
+        "parts_id": "27280"
+      },
+      {
+        "name": "JACK HANDLE EXTENSION SUB-ASSEMBLY",
+        "parts_id": "09114"
+      },
+      {
+        "name": "JACK HANDLE LEVER",
+        "parts_id": "09116"
+      },
+      {
+        "name": "JACK HANDLE ROD SUB-ASSEMBLY",
+        "parts_id": "09115"
+      },
+      {
+        "name": "JACK HOLDER SUB-ASSEMBLY",
+        "parts_id": "58707A"
+      },
+      {
+        "name": "LOAD SENSING SPRING ASSEMBLY",
+        "parts_id": "47920"
+      },
+      {
+        "name": "LOAD SENSING SPRING SHACKLE NO.1",
+        "parts_id": "47935"
+      },
+      {
+        "name": "LOAD SENSING SPRING SHACKLE NO.2",
+        "parts_id": "47936"
+      },
+      {
+        "name": "MONOLITHIC CONVERTER ASSEMBLY",
+        "parts_id": "18450A"
+      },
+      {
+        "name": "OIL RECEIVER PIPE",
+        "parts_id": "36111Q"
+      },
+      {
+        "name": "OUTPUT SHAFT RETAINER OIL SEAL",
+        "parts_id": "36132A"
+      },
+      {
+        "name": "PREHEATING TIMER ASSEMBLY",
+        "parts_id": "28520"
+      },
+      {
+        "name": "PUSH ROD PIN",
+        "parts_id": "47264A"
+      },
+      {
+        "name": "REAR FLOOR MAT SUPPORT PLATE",
+        "parts_id": "58573A"
+      },
+      {
+        "name": "REAR FLOOR SERVICE HOLE COVER",
+        "parts_id": "58325E"
+      },
+      {
+        "name": "REAR FLOOR SERVICE HOLE COVER",
+        "parts_id": "58325F"
+      },
+      {
+        "name": "REAR FLOOR SIDE MEMBER COVER RH",
+        "parts_id": "57627C"
+      },
+      {
+        "name": "REAR LH FLEXIBLE HOSE",
+        "parts_id": "47319F"
+      },
+      {
+        "name": "SUCTION TUBE",
+        "parts_id": "36486"
+      },
+      {
+        "name": "TERMINAL INSULATOR",
+        "parts_id": "27387"
+      },
+      {
+        "name": "VACUUM PUMP ASSEMBLY",
+        "parts_id": "29300"
+      },
+      {
+        "name": "VACUUM TRANSMITTING PIPE SUB-ASSEMBLY NO.2",
+        "parts_id": "25707"
+      },
+      {
+        "name": "VACUUM TRANSMITTING PIPE SUB-ASSEMBLY NO.3",
+        "parts_id": "25708"
+      },
+      {
+        "name": "VENTURI ASSEMBLY",
+        "parts_id": "26100"
+      },
+      {
+        "name": "WINCH ASSEMBLY",
+        "parts_id": "38110"
+      },
+      {
+        "name": "WINCH CONTROL WIRE",
+        "parts_id": "38649"
+      },
+      {
+        "name": "WINCH MOTOR ARMATURE SUB-ASSEMBLY",
+        "parts_id": "38603A"
+      },
+      {
+        "name": "WINCH MOTOR BRUSH",
+        "parts_id": "38613A"
+      },
+      {
+        "name": "WINCH MOTOR BRUSH HOLDER ASSEMBLY",
+        "parts_id": "38604A"
+      },
+      {
+        "name": "WINCH MOTOR BRUSH SPRING",
+        "parts_id": "38613B"
+      },
+      {
+        "name": "WINCH MOTOR O-RING",
+        "parts_id": "38614A"
+      },
+      {
+        "name": "WINCH MOTOR YOKE SUB-ASSEMBLY",
+        "parts_id": "38601A"
+      }
+    ],
+    "fuel": [
+      {
+        "name": "ACCELERATOR CONNECTING ROD SUB-ASSEMBLY NO.1",
+        "parts_id": "78103"
+      },
+      {
+        "name": "ACCELERATOR CONNECTING ROD SUB-ASSEMBLY NO.2",
+        "parts_id": "78104"
+      },
+      {
+        "name": "ACCELERATOR CONTROL CABLE ASSEMBLY",
+        "parts_id": "78180P"
+      },
+      {
+        "name": "ACCELERATOR PEDAL ROD ASSEMBLY",
+        "parts_id": "78120G"
+      },
+      {
+        "name": "ACCELERATOR PEDAL SENSOR ASSEMBLY",
+        "parts_id": "78110K"
+      },
+      {
+        "name": "ADJUSTING LEVER SUB-ASSEMBLY",
+        "parts_id": "22701"
+      },
+      {
+        "name": "AUXILIARY FUEL TANK CARRIER COVER",
+        "parts_id": "77197B"
+      },
+      {
+        "name": "AUXILIARY FUEL TANK CARRIER SUB-ASSEMBLY",
+        "parts_id": "77107A"
+      },
+      {
+        "name": "BOOST COMPENSATOR SUB-ASSEMBLY",
+        "parts_id": "22540"
+      },
+      {
+        "name": "CHARCOAL CANISTER ASSEMBLY",
+        "parts_id": "77740"
+      },
+      {
+        "name": "DISTRIBUTIVE PUMP HEAD SUB-ASSEMBLY",
+        "parts_id": "22140"
+      },
+      {
+        "name": "EFI FUEL FILTER",
+        "parts_id": "23300P"
+      },
+      {
+        "name": "FUEL CUT SOLENOID ASSEMBLY",
+        "parts_id": "22390A"
+      },
+      {
+        "name": "FUEL EVAPORATION TUBE SUB-ASSEMBLY NO.1",
+        "parts_id": "77026A"
+      },
+      {
+        "name": "FUEL FILLER OPENING LID LOCK RETAINER",
+        "parts_id": "77377"
+      },
+      {
+        "name": "FUEL FILLER OPENING LID STRIPE",
+        "parts_id": "75979"
+      },
+      {
+        "name": "FUEL FILTER ASSEMBLY",
+        "parts_id": "23300"
+      },
+      {
+        "name": "FUEL FILTER ELEMENT ASSEMBLY",
+        "parts_id": "23390"
+      },
+      {
+        "name": "FUEL FILTER TO INJECTION PUMP FUEL PIPE",
+        "parts_id": "23811"
+      },
+      {
+        "name": "FUEL FILTER TO INJECTION PUMP FUEL PIPE SUB-ASSEMBLY",
+        "parts_id": "23801L"
+      },
+      {
+        "name": "FUEL LID LOCK CONTROL CABLE SUB-ASSEMBLY",
+        "parts_id": "77035"
+      },
+      {
+        "name": "FUEL LID LOCK OPEN LEVER SUB-ASSEMBLY",
+        "parts_id": "77306"
+      },
+      {
+        "name": "FUEL MAIN TUBE SUB-ASSEMBLY NO.2",
+        "parts_id": "77206C"
+      },
+      {
+        "name": "FUEL MAIN TUBE SUB-ASSEMBLY NO.3",
+        "parts_id": "77207B"
+      },
+      {
+        "name": "FUEL PUMP",
+        "parts_id": "23221"
+      },
+      {
+        "name": "FUEL PUMP FILTER",
+        "parts_id": "23217D"
+      },
+      {
+        "name": "FUEL PUMP MOTOR WIRE",
+        "parts_id": "23243C"
+      },
+      {
+        "name": "FUEL PUMP RELAY ASSEMBLY",
+        "parts_id": "28380"
+      },
+      {
+        "name": "FUEL PUMP RESISTER",
+        "parts_id": "28380A"
+      },
+      {
+        "name": "FUEL PUMP SELECT RELAY ASSEMBLY",
+        "parts_id": "28380F"
+      },
+      {
+        "name": "FUEL SENDER GAGE ASSEMBLY",
+        "parts_id": "83320"
+      },
+      {
+        "name": "FUEL SUCTION TUBE SUB-ASSEMBLY",
+        "parts_id": "77203B"
+      },
+      {
+        "name": "FUEL TANK ASSEMBLY",
+        "parts_id": "77100"
+      },
+      {
+        "name": "FUEL TANK CAP ASSEMBLY",
+        "parts_id": "77031"
+      },
+      {
+        "name": "FUEL TANK FILLER PIPE PROTECTOR",
+        "parts_id": "77277R"
+      },
+      {
+        "name": "FUEL TANK FILLER PIPE SUB-ASSEMBLY LOWER",
+        "parts_id": "77011"
+      },
+      {
+        "name": "FUEL TANK FUEL HOSE",
+        "parts_id": "77100D"
+      },
+      {
+        "name": "FUEL TANK SUB INLET HOSE",
+        "parts_id": "77213"
+      },
+      {
+        "name": "FUEL TUBE PROTECTOR NO.1",
+        "parts_id": "77266A"
+      },
+      {
+        "name": "FUEL TUBE PROTECTOR NO.2",
+        "parts_id": "77267A"
+      },
+      {
+        "name": "FUEL TUBE PROTECTOR NO.3",
+        "parts_id": "77268A"
+      },
+      {
+        "name": "FUEL TUBE PROTECTOR SUB-ASSEMBLY",
+        "parts_id": "77406"
+      },
+      {
+        "name": "FUEL TUBE PROTECTOR SUPPORT NO.1",
+        "parts_id": "77296B"
+      },
+      {
+        "name": "GOVERNOR ADJUSTING SHAFT SUB-ASSEMBLY",
+        "parts_id": "22740"
+      },
+      {
+        "name": "GOVERNOR COVER",
+        "parts_id": "22703B"
+      },
+      {
+        "name": "INJECTION OR SUPPLY PUMP ASSEMBLY",
+        "parts_id": "22100"
+      },
+      {
+        "name": "INJECTION PUMP STAY NO.1",
+        "parts_id": "22811"
+      },
+      {
+        "name": "RETURN TUBE, NO.2 FUEL HOSE",
+        "parts_id": "77278A"
+      },
+      {
+        "name": "ROLLER RING SUB-ASSEMBLY",
+        "parts_id": "22108A"
+      },
+      {
+        "name": "SUB FUEL PUMP DRIVE RELAY",
+        "parts_id": "28380G"
+      }
+    ],
+    "rear_axle": [
+      {
+        "name": "REAR ARMREST ASSEMBLY LH",
+        "parts_id": "74240"
+      },
+      {
+        "name": "REAR AXLE BEARING LOCK NUT",
+        "parts_id": "42427"
+      },
+      {
+        "name": "REAR AXLE HUB &amp; BEARING ASSEMBLY LH",
+        "parts_id": "42440"
+      },
+      {
+        "name": "REAR AXLE HUB &amp; BEARING ASSEMBLY RH",
+        "parts_id": "42410"
+      },
+      {
+        "name": "REAR AXLE HUB LH OIL SEAL",
+        "parts_id": "42402E"
+      },
+      {
+        "name": "REAR AXLE LH HUB BOLT",
+        "parts_id": "42312E"
+      },
+      {
+        "name": "REAR AXLE SHAFT INNER LH BEARING",
+        "parts_id": "42312G"
+      },
+      {
+        "name": "REAR AXLE SHAFT LH",
+        "parts_id": "42312"
+      },
+      {
+        "name": "REAR AXLE SHAFT LH OIL SEAL",
+        "parts_id": "42312C"
+      },
+      {
+        "name": "REAR AXLE SHAFT OIL SEAL",
+        "parts_id": "42311A"
+      },
+      {
+        "name": "REAR AXLE SHAFT OUTER LH BEARING",
+        "parts_id": "42312F"
+      },
+      {
+        "name": "REAR SPRING BUMPER SUB-ASSEMBLY",
+        "parts_id": "48306"
+      },
+      {
+        "name": "REAR SPRING PIN BUSH",
+        "parts_id": "48210B"
+      },
+      {
+        "name": "REAR SPRING SHACKLE BUSH",
+        "parts_id": "48210Q"
+      },
+      {
+        "name": "REAR SPRING U BOLT",
+        "parts_id": "48046A"
+      }
+    ]
+  }
+}
