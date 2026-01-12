@@ -318,6 +318,23 @@
             margin-top: 12px;
             border-top: 1px solid rgba(74, 158, 255, 0.3);
             padding-top: 10px;
+            max-height: 280px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #4a9eff #0a1628;
+        }
+        
+        .part-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .part-list::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+        
+        .part-list::-webkit-scrollbar-thumb {
+            background: #4a9eff;
+            border-radius: 3px;
         }
         
         .part-list-title {
