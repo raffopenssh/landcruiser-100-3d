@@ -271,7 +271,7 @@ class LandCruiserBlueprint {
         chassis.add(rearBox);
         
         chassis.position.copy(chassis.userData.originalPosition);
-        this.parts.chassis = chassis;
+        this.parts['chassis'] = chassis;
         this.vehicleGroup.add(chassis);
     }
     
@@ -282,41 +282,42 @@ class LandCruiserBlueprint {
         const color = this.colors.primary;
         const W = 0.97; // Half width - LC100 is wider
         
-        // LC100 proportions - curved SUV styling
-        // Real dimensions: ~4.9m long, ~1.94m wide, ~1.87m tall
+        // LC100 proportions - tall SUV styling
+        // Real dimensions: ~4.89m long, ~1.94m wide, ~1.85m tall
         // Wheelbase: 2850mm, Ground clearance: 220mm
         
         // === SIDE PROFILE - Left side ===
-        const bodyBottom = 0.15;  // Lower sill line than J70
-        const beltLine = 0.95;    // Character line height
-        const hoodTop = 1.05;     // Hood height (lower than J70)
-        const roofTop = 1.75;     // Roof height
-        const cowlX = 0.6;        // Windshield base
+        const bodyBottom = 0.18;
+        const beltLine = 1.05;    // Character/window sill line
+        const hoodTop = 1.15;     // Hood height - taller
+        const roofTop = 1.85;     // Roof height - taller
+        const cowlX = 0.55;       // Windshield base
         
-        // LC100 has curved lines - simulate with more points
+        // LC100 profile - SUV wagon body style
         const sideLeft = [
-            // Lower body line with wheel arch cutouts
-            [-2.4, bodyBottom, -W],
-            [-1.2, bodyBottom, -W],  // Rear wheel arch start
-            [-1.0, bodyBottom + 0.1, -W],  // Arch rise
-            [-0.6, bodyBottom, -W],  // Between arches
-            [1.2, bodyBottom, -W],   // Front wheel arch start
-            [1.4, bodyBottom + 0.1, -W],  // Arch rise
-            [2.5, bodyBottom, -W],   // Front end
-            // Front bumper/fascia (curved)
-            [2.6, 0.35, -W],
-            [2.55, 0.55, -W],        // Lower grille
-            [2.5, hoodTop, -W],      // Hood front edge
-            // Hood (slopes down toward cowl)
-            [cowlX, hoodTop - 0.1, -W],
-            // Windshield (more raked than J70)
-            [-0.1, roofTop - 0.05, -W],   // Windshield top
-            // Roof (slight curve)
-            [-1.6, roofTop, -W],     // Roof peak
-            // Rear glass and tailgate
-            [-2.2, roofTop - 0.15, -W],
-            [-2.45, 0.8, -W],        // Tailgate
-            [-2.45, bodyBottom, -W]  // Back to start
+            // Lower body line
+            [-2.45, bodyBottom, -W],
+            [-1.15, bodyBottom, -W],  // Rear wheel arch
+            [-0.95, bodyBottom + 0.12, -W],
+            [-0.5, bodyBottom, -W],
+            [1.1, bodyBottom, -W],    // Front wheel arch
+            [1.35, bodyBottom + 0.12, -W],
+            [2.3, bodyBottom, -W],
+            // Front end - more vertical
+            [2.45, 0.35, -W],         // Lower bumper
+            [2.5, 0.5, -W],           // Upper bumper
+            [2.5, hoodTop, -W],       // Hood/grille top (flat front)
+            // Hood (nearly flat)
+            [cowlX, hoodTop, -W],     // Cowl
+            // Windshield (moderate rake)
+            [-0.05, roofTop, -W],     // Windshield top
+            // Roof (extends all the way back for wagon body)
+            [-1.9, roofTop, -W],      // Roof line - extended back
+            // Rear tailgate (wagon style - nearly vertical)
+            [-2.2, roofTop, -W],      // Rear roof corner
+            [-2.45, roofTop - 0.15, -W], // Rear glass top
+            [-2.45, beltLine, -W],    // Rear window bottom
+            [-2.45, bodyBottom, -W]   // Rear bumper
         ];
         
         for (let i = 0; i < sideLeft.length - 1; i++) {
@@ -347,69 +348,95 @@ class LandCruiserBlueprint {
         body.add(this.createLine(new THREE.Vector3(cowlX, hoodTop - 0.1, -W), new THREE.Vector3(cowlX, hoodTop - 0.1, W), color));
         // Windshield top
         body.add(this.createLine(new THREE.Vector3(-0.1, roofTop - 0.05, -W), new THREE.Vector3(-0.1, roofTop - 0.05, W), color));
-        // Roof
-        body.add(this.createLine(new THREE.Vector3(-1.6, roofTop, -W), new THREE.Vector3(-1.6, roofTop, W), color));
-        // Rear glass top
-        body.add(this.createLine(new THREE.Vector3(-2.2, roofTop - 0.15, -W), new THREE.Vector3(-2.2, roofTop - 0.15, W), color));
-        // Tailgate
+        // Roof cross members
+        body.add(this.createLine(new THREE.Vector3(-1.0, roofTop, -W), new THREE.Vector3(-1.0, roofTop, W), color));
+        body.add(this.createLine(new THREE.Vector3(-1.9, roofTop, -W), new THREE.Vector3(-1.9, roofTop, W), color));
+        // Rear roof corner
+        body.add(this.createLine(new THREE.Vector3(-2.2, roofTop, -W), new THREE.Vector3(-2.2, roofTop, W), color));
+        // Rear glass top (tailgate window frame)
+        body.add(this.createLine(new THREE.Vector3(-2.45, roofTop - 0.15, -W), new THREE.Vector3(-2.45, roofTop - 0.15, W), color));
+        // Belt line at rear
+        body.add(this.createLine(new THREE.Vector3(-2.45, beltLine, -W), new THREE.Vector3(-2.45, beltLine, W), color));
+        // Tailgate bottom
         body.add(this.createLine(new THREE.Vector3(-2.45, bodyBottom, -W), new THREE.Vector3(-2.45, bodyBottom, W), color));
-        body.add(this.createLine(new THREE.Vector3(-2.45, 0.8, -W), new THREE.Vector3(-2.45, 0.8, W), color));
         
-        // === LC100 GRILLE (large chrome grille with horizontal bars) ===
-        const grilleLeft = -0.45;
-        const grilleRight = 0.45;
+        // === LC100 GRILLE (large prominent chrome grille) ===
+        const grilleLeft = -0.5;
+        const grilleRight = 0.5;
         const grilleBottom = 0.55;
-        const grilleTop = hoodTop - 0.02;
+        const grilleTop = hoodTop;
         
-        // Grille outer frame
-        body.add(this.createLine(new THREE.Vector3(2.55, grilleBottom, grilleLeft), new THREE.Vector3(2.55, grilleBottom, grilleRight), color));
-        body.add(this.createLine(new THREE.Vector3(2.52, grilleTop, grilleLeft - 0.1), new THREE.Vector3(2.52, grilleTop, grilleRight + 0.1), color));
-        body.add(this.createLine(new THREE.Vector3(2.55, grilleBottom, grilleLeft), new THREE.Vector3(2.52, grilleTop, grilleLeft - 0.1), color));
-        body.add(this.createLine(new THREE.Vector3(2.55, grilleBottom, grilleRight), new THREE.Vector3(2.52, grilleTop, grilleRight + 0.1), color));
+        // Grille outer frame (tall rectangular shape)
+        body.add(this.createLine(new THREE.Vector3(2.52, grilleBottom, grilleLeft), new THREE.Vector3(2.52, grilleBottom, grilleRight), color));
+        body.add(this.createLine(new THREE.Vector3(2.52, grilleTop, grilleLeft), new THREE.Vector3(2.52, grilleTop, grilleRight), color));
+        body.add(this.createLine(new THREE.Vector3(2.52, grilleBottom, grilleLeft), new THREE.Vector3(2.52, grilleTop, grilleLeft), color));
+        body.add(this.createLine(new THREE.Vector3(2.52, grilleBottom, grilleRight), new THREE.Vector3(2.52, grilleTop, grilleRight), color));
         
-        // Horizontal grille bars (3 main bars LC100 style)
-        [0.62, 0.72, 0.82, 0.92].forEach(y => {
+        // Thick horizontal chrome bars (LC100 signature)
+        [0.65, 0.8, 0.95, 1.08].forEach(y => {
             body.add(this.createLine(
-                new THREE.Vector3(2.54, y, grilleLeft + 0.05),
-                new THREE.Vector3(2.54, y, grilleRight - 0.05),
+                new THREE.Vector3(2.52, y, grilleLeft + 0.03),
+                new THREE.Vector3(2.52, y, grilleRight - 0.03),
                 this.colors.secondary
             ));
-        });
-        
-        // Toyota emblem area (center)
-        const emblem = this.createWireCylinder(0.1, 0.1, 0.02, 16, this.colors.accent);
-        emblem.rotation.z = Math.PI / 2;
-        emblem.position.set(2.56, 0.77, 0);
-        body.add(emblem);
-        
-        // === HEADLIGHTS (LC100 rectangular with rounded corners) ===
-        [-0.7, 0.7].forEach(z => {
-            // Main headlight housing
-            const headlight = this.createWireBox(0.1, 0.22, 0.3, color);
-            headlight.position.set(2.52, 0.75, z);
-            body.add(headlight);
-            
-            // Inner projector
-            const projector = this.createWireCylinder(0.06, 0.06, 0.04, 12, this.colors.accent);
-            projector.rotation.z = Math.PI / 2;
-            projector.position.set(2.54, 0.75, z);
-            body.add(projector);
-            
-            // Turn signal (wraparound to side)
+            // Double line for thick bar effect
             body.add(this.createLine(
-                new THREE.Vector3(2.52, 0.62, z > 0 ? z + 0.15 : z - 0.15),
-                new THREE.Vector3(2.4, 0.62, z > 0 ? z + 0.2 : z - 0.2),
-                this.colors.accent
+                new THREE.Vector3(2.52, y + 0.02, grilleLeft + 0.03),
+                new THREE.Vector3(2.52, y + 0.02, grilleRight - 0.03),
+                this.colors.dim
             ));
         });
         
-        // Fog lights (lower bumper)
-        [-0.35, 0.35].forEach(z => {
-            const fog = this.createWireCylinder(0.06, 0.06, 0.03, 10, this.colors.dim);
+        // Toyota emblem (prominent, centered)
+        const emblem = this.createWireCylinder(0.12, 0.12, 0.03, 20, this.colors.accent);
+        emblem.rotation.z = Math.PI / 2;
+        emblem.position.set(2.54, 0.87, 0);
+        body.add(emblem);
+        // Inner emblem ring
+        const emblemInner = this.createWireCylinder(0.08, 0.08, 0.02, 16, color);
+        emblemInner.rotation.z = Math.PI / 2;
+        emblemInner.position.set(2.55, 0.87, 0);
+        body.add(emblemInner);
+        
+        // === HEADLIGHTS (large rectangular beside grille) ===
+        [-0.72, 0.72].forEach(z => {
+            // Main headlight housing (taller)
+            const headlight = this.createWireBox(0.1, 0.28, 0.32, color);
+            headlight.position.set(2.48, 0.82, z);
+            body.add(headlight);
+            
+            // Multi-reflector units inside
+            const mainBeam = this.createWireCylinder(0.07, 0.07, 0.04, 12, this.colors.accent);
+            mainBeam.rotation.z = Math.PI / 2;
+            mainBeam.position.set(2.5, 0.85, z);
+            body.add(mainBeam);
+            
+            const lowBeam = this.createWireCylinder(0.05, 0.05, 0.03, 10, this.colors.secondary);
+            lowBeam.rotation.z = Math.PI / 2;
+            lowBeam.position.set(2.5, 0.75, z > 0 ? z - 0.08 : z + 0.08);
+            body.add(lowBeam);
+            
+            // Turn signal (amber, below headlight)
+            const signal = this.createWireBox(0.05, 0.08, 0.25, this.colors.accent);
+            signal.position.set(2.48, 0.62, z);
+            body.add(signal);
+        });
+        
+        // Front bumper chrome strip
+        body.add(this.createLine(new THREE.Vector3(2.48, 0.42, -0.85), new THREE.Vector3(2.48, 0.42, 0.85), this.colors.secondary));
+        body.add(this.createLine(new THREE.Vector3(2.48, 0.48, -0.85), new THREE.Vector3(2.48, 0.48, 0.85), this.colors.secondary));
+        
+        // Fog lights (in bumper)
+        [-0.4, 0.4].forEach(z => {
+            const fog = this.createWireCylinder(0.07, 0.07, 0.04, 10, this.colors.dim);
             fog.rotation.z = Math.PI / 2;
-            fog.position.set(2.58, 0.38, z);
+            fog.position.set(2.5, 0.38, z);
             body.add(fog);
         });
+        
+        // Lower air intake
+        body.add(this.createLine(new THREE.Vector3(2.48, 0.28, -0.6), new THREE.Vector3(2.48, 0.28, 0.6), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(2.48, 0.22, -0.5), new THREE.Vector3(2.48, 0.22, 0.5), this.colors.dim));
         
         // === LC100 WINDSHIELD (more raked than J70) ===
         const wsBottom = hoodTop - 0.1;
@@ -460,9 +487,28 @@ class LandCruiserBlueprint {
         body.add(this.createLine(new THREE.Vector3(-0.85, sillHeight, -W), new THREE.Vector3(-1.0, roofTop - 0.05, -W), this.colors.dim));
         body.add(this.createLine(new THREE.Vector3(-0.85, sillHeight, W), new THREE.Vector3(-1.0, roofTop - 0.05, W), this.colors.dim));
         
-        // D-pillar (quarter panel)
-        body.add(this.createLine(new THREE.Vector3(-1.5, sillHeight, -W), new THREE.Vector3(-1.6, roofTop, -W), this.colors.dim));
-        body.add(this.createLine(new THREE.Vector3(-1.5, sillHeight, W), new THREE.Vector3(-1.6, roofTop, W), this.colors.dim));
+        // D-pillar (quarter panel area)
+        body.add(this.createLine(new THREE.Vector3(-1.5, sillHeight, -W), new THREE.Vector3(-1.9, roofTop, -W), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-1.5, sillHeight, W), new THREE.Vector3(-1.9, roofTop, W), this.colors.dim));
+        
+        // Quarter window (small rear window behind C-pillar)
+        body.add(this.createLine(new THREE.Vector3(-1.0, sillHeight + 0.08, -W), new THREE.Vector3(-1.0, roofTop - 0.1, -W), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-1.0, sillHeight + 0.08, W), new THREE.Vector3(-1.0, roofTop - 0.1, W), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-1.5, sillHeight + 0.08, -W), new THREE.Vector3(-1.5, roofTop - 0.08, -W), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-1.5, sillHeight + 0.08, W), new THREE.Vector3(-1.5, roofTop - 0.08, W), this.colors.dim));
+        // Quarter window top edge
+        body.add(this.createLine(new THREE.Vector3(-1.0, roofTop - 0.1, -W), new THREE.Vector3(-1.5, roofTop - 0.08, -W), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-1.0, roofTop - 0.1, W), new THREE.Vector3(-1.5, roofTop - 0.08, W), this.colors.dim));
+        // Quarter window bottom edge
+        body.add(this.createLine(new THREE.Vector3(-1.0, sillHeight + 0.08, -W), new THREE.Vector3(-1.5, sillHeight + 0.08, -W), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-1.0, sillHeight + 0.08, W), new THREE.Vector3(-1.5, sillHeight + 0.08, W), this.colors.dim));
+        
+        // Rear side panel (behind quarter window to tailgate)
+        body.add(this.createLine(new THREE.Vector3(-1.9, roofTop, -W), new THREE.Vector3(-2.2, roofTop, -W), color));
+        body.add(this.createLine(new THREE.Vector3(-1.9, roofTop, W), new THREE.Vector3(-2.2, roofTop, W), color));
+        // Vertical connection to rear
+        body.add(this.createLine(new THREE.Vector3(-2.2, sillHeight, -W), new THREE.Vector3(-2.2, roofTop, -W), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-2.2, sillHeight, W), new THREE.Vector3(-2.2, roofTop, W), this.colors.dim));
         
         // === FENDER FLARES (boxy) ===
         // Front fenders
@@ -510,12 +556,18 @@ class LandCruiserBlueprint {
             body.add(mirror);
         });
         
-        // === REAR SECTION ===
-        // Rear window
-        body.add(this.createLine(new THREE.Vector3(-2.0, sillHeight + 0.1, -0.7), new THREE.Vector3(-2.0, roofTop - 0.2, -0.7), this.colors.dim));
-        body.add(this.createLine(new THREE.Vector3(-2.0, sillHeight + 0.1, 0.7), new THREE.Vector3(-2.0, roofTop - 0.2, 0.7), this.colors.dim));
-        body.add(this.createLine(new THREE.Vector3(-2.0, sillHeight + 0.1, -0.7), new THREE.Vector3(-2.0, sillHeight + 0.1, 0.7), this.colors.dim));
-        body.add(this.createLine(new THREE.Vector3(-2.0, roofTop - 0.2, -0.7), new THREE.Vector3(-2.0, roofTop - 0.2, 0.7), this.colors.dim));
+        // === REAR SECTION (TAILGATE) ===
+        // Tailgate window frame (LC100 has large rear window in swing-out tailgate)
+        body.add(this.createLine(new THREE.Vector3(-2.45, beltLine + 0.15, -0.7), new THREE.Vector3(-2.45, roofTop - 0.2, -0.7), this.colors.secondary));
+        body.add(this.createLine(new THREE.Vector3(-2.45, beltLine + 0.15, 0.7), new THREE.Vector3(-2.45, roofTop - 0.2, 0.7), this.colors.secondary));
+        body.add(this.createLine(new THREE.Vector3(-2.45, beltLine + 0.15, -0.7), new THREE.Vector3(-2.45, beltLine + 0.15, 0.7), this.colors.secondary));
+        body.add(this.createLine(new THREE.Vector3(-2.45, roofTop - 0.2, -0.7), new THREE.Vector3(-2.45, roofTop - 0.2, 0.7), this.colors.secondary));
+        
+        // Lower tailgate section (horizontal split like LC100)
+        body.add(this.createLine(new THREE.Vector3(-2.45, beltLine - 0.1, -0.8), new THREE.Vector3(-2.45, beltLine - 0.1, 0.8), this.colors.dim));
+        // Toyota lettering area
+        body.add(this.createLine(new THREE.Vector3(-2.45, 0.7, -0.35), new THREE.Vector3(-2.45, 0.7, 0.35), this.colors.dim));
+        body.add(this.createLine(new THREE.Vector3(-2.45, 0.55, -0.35), new THREE.Vector3(-2.45, 0.55, 0.35), this.colors.dim));
         
         // Tail lights (vertical rectangles)
         [-0.75, 0.75].forEach(z => {
@@ -587,7 +639,7 @@ class LandCruiserBlueprint {
         body.add(this.createLine(new THREE.Vector3(2.8, 0.5, 0.7), new THREE.Vector3(2.95, 0.5, 0.75), this.colors.dim));
         
         body.position.copy(body.userData.originalPosition);
-        this.parts.body = body;
+        this.parts['body'] = body;
         this.vehicleGroup.add(body);
     }
 
@@ -662,6 +714,7 @@ class LandCruiserBlueprint {
         
         engine.position.copy(engine.userData.originalPosition);
         this.parts.engine = engine;
+        this.parts['engine'] = engine;
         this.vehicleGroup.add(engine);
     }
     
@@ -711,6 +764,7 @@ class LandCruiserBlueprint {
         
         trans.position.copy(trans.userData.originalPosition);
         this.parts.transmission = trans;
+        this.parts['transmission'] = trans;
         this.vehicleGroup.add(trans);
     }
     
@@ -972,6 +1026,7 @@ class LandCruiserBlueprint {
         
         steering.position.copy(steering.userData.originalPosition);
         this.parts.steering = steering;
+        this.parts['steering'] = steering;
         this.vehicleGroup.add(steering);
     }
     
@@ -1046,6 +1101,7 @@ class LandCruiserBlueprint {
         
         brakes.position.copy(brakes.userData.originalPosition);
         this.parts.brakes = brakes;
+        this.parts['brakes'] = brakes;
         this.vehicleGroup.add(brakes);
     }
     
@@ -1069,6 +1125,7 @@ class LandCruiserBlueprint {
         
         wheels.position.copy(wheels.userData.originalPosition);
         this.parts.wheels = wheels;
+        this.parts['wheels'] = wheels;
         this.vehicleGroup.add(wheels);
     }
     
@@ -1308,12 +1365,13 @@ class LandCruiserBlueprint {
         interior.add(mirror);
         
         interior.position.copy(interior.userData.originalPosition);
-        this.parts.interior = interior;
+        this.parts['interior'] = interior;
         this.vehicleGroup.add(interior);
     }
     
     createExhaust() {
         const exhaust = new THREE.Group();
+        exhaust.userData = { name: 'exhaust', originalPosition: new THREE.Vector3(0, 0.4, 0) };
         const color = this.colors.secondary;
         
         // Exhaust manifold (from engine)
@@ -1343,12 +1401,14 @@ class LandCruiserBlueprint {
         tailPipe.position.set(-2.55, 0.35, 0.62);
         exhaust.add(tailPipe);
         
-        exhaust.position.set(0, 0.4, 0);
+        exhaust.position.copy(exhaust.userData.originalPosition);
+        this.parts['exhaust'] = exhaust;
         this.vehicleGroup.add(exhaust);
     }
     
     createFuelTank() {
         const tank = new THREE.Group();
+        tank.userData = { name: 'fuel-tank', originalPosition: new THREE.Vector3(0, 0.4, 0) };
         const color = this.colors.primary;
         
         // Main fuel tank (under rear)
@@ -1365,12 +1425,14 @@ class LandCruiserBlueprint {
         // Filler neck
         tank.add(this.createLine(new THREE.Vector3(-1.5, 0.4, -0.35), new THREE.Vector3(-1.8, 0.9, -0.85), this.colors.secondary));
         
-        tank.position.set(0, 0.4, 0);
+        tank.position.copy(tank.userData.originalPosition);
+        this.parts['fuel-tank'] = tank;
         this.vehicleGroup.add(tank);
     }
     
     createDriveshafts() {
         const ds = new THREE.Group();
+        ds.userData = { name: 'driveshafts', originalPosition: new THREE.Vector3(0, 0, 0) };
         const color = this.colors.primary;
         
         // Front driveshaft
@@ -1401,12 +1463,14 @@ class LandCruiserBlueprint {
             ds.add(uj);
         });
         
-        ds.position.set(0, 0, 0);
+        ds.position.copy(ds.userData.originalPosition);
+        this.parts['driveshafts'] = ds;
         this.vehicleGroup.add(ds);
     }
     
     createCooling() {
         const cooling = new THREE.Group();
+        cooling.userData = { name: 'cooling', originalPosition: new THREE.Vector3(0, 0, 0) };
         const color = this.colors.secondary;
         
         // Radiator (larger, at front)
@@ -1436,7 +1500,8 @@ class LandCruiserBlueprint {
         shroud.position.set(2.5, 1.0, 0);
         cooling.add(shroud);
         
-        cooling.position.set(0, 0, 0);
+        cooling.position.copy(cooling.userData.originalPosition);
+        this.parts['cooling'] = cooling;
         this.vehicleGroup.add(cooling);
     }
 
@@ -1486,6 +1551,10 @@ class LandCruiserBlueprint {
             'steering': new THREE.Vector3(2.5, 2, 1.5),
             'brakes': new THREE.Vector3(0, -2.5, 2),
             'wheels': new THREE.Vector3(0, 0, 2.5),
+            'driveshafts': new THREE.Vector3(0, -2, -2),
+            'exhaust': new THREE.Vector3(0, -1, 3),
+            'fuel-tank': new THREE.Vector3(-2, -2, -2),
+            'cooling': new THREE.Vector3(3, 1, 0),
             'interior': new THREE.Vector3(0, 4, 0)
         };
         
@@ -1591,102 +1660,105 @@ class LandCruiserBlueprint {
         const baseUrl = '/home/exedev/manual/manual/repair/img/png/';
         const data = {
             'chassis': {
-                title: 'CHASSIS FRAME',
+                title: 'CHASSIS FRAME - J100',
                 description: `
                     <strong>TYPE:</strong> Ladder frame, box-section steel<br><br>
                     <strong>SPECIFICATIONS:</strong><br>
-                    • Wheelbase: 2,730mm (SWB) / 2,980mm (LWB)<br>
-                    • Overall length: 4,430-5,150mm<br>
-                    • Frame width: 890mm<br>
-                    • Ground clearance: 225mm<br><br>
+                    • Wheelbase: 2,850mm<br>
+                    • Overall length: 4,890mm<br>
+                    • Overall width: 1,940mm<br>
+                    • Ground clearance: 220mm<br><br>
                     <strong>CONSTRUCTION:</strong><br>
                     • High-tensile steel rails<br>
-                    • 8 cross-members<br>
+                    • 7 cross-members<br>
                     • E-coat corrosion protection<br>
                     • Body mount isolation bushings
                 `,
                 image: '../manual/manual/repair/img/png/A075599.png'
             },
             'body': {
-                title: 'BODY PANELS',
+                title: 'BODY PANELS - J100',
                 description: `
-                    <strong>TYPE:</strong> Steel body-on-frame<br><br>
+                    <strong>TYPE:</strong> Steel body-on-frame SUV<br><br>
                     <strong>VARIANTS:</strong><br>
-                    • 70 Series: 2-door short wheelbase<br>
-                    • 76 Series: 5-door wagon<br>
-                    • 78 Series: Troop carrier<br>
-                    • 79 Series: Single/dual cab pickup<br><br>
+                    • UZJ100: V8 Petrol (2UZ-FE)<br>
+                    • HDJ100: Diesel (1HD-FTE)<br>
+                    • FZJ100: 6-cyl Petrol (1FZ-FE)<br><br>
+                    <strong>DIMENSIONS:</strong><br>
+                    • Length: 4,890mm<br>
+                    • Width: 1,940mm<br>
+                    • Height: 1,890mm<br><br>
                     <strong>FEATURES:</strong><br>
-                    • Galvanized steel panels<br>
-                    • Bull bar compatible<br>
-                    • Snorkel provisions<br>
-                    • Full-size spare mount
+                    • 5-door wagon body<br>
+                    • Rear swing-out spare<br>
+                    • Split tailgate
                 `
             },
             'engine': {
-                title: 'ENGINE - 2UZ-FE',
+                title: 'ENGINE - 2UZ-FE V8',
                 description: `
-                    <strong>TYPE:</strong> 4.7L V8 Petrol<br><br>
+                    <strong>TYPE:</strong> 4.7L DOHC V8 Petrol<br><br>
                     <strong>SPECIFICATIONS:</strong><br>
                     • Displacement: 4,664cc<br>
-                    • Bore x Stroke: 86 x 96mm<br>
-                    • Compression: 16.8:1<br>
-                    • Power: 175kW<br>
-                    • Torque: 434Nm<br><br>
+                    • Bore x Stroke: 94 x 84mm<br>
+                    • Compression: 10.0:1<br>
+                    • Power: 175kW @ 4,800rpm<br>
+                    • Torque: 434Nm @ 3,400rpm<br><br>
                     <strong>SYSTEMS:</strong><br>
-                    • Common-rail direct injection<br>
-                    • Sequential twin turbo<br>
-                    • Intercooled<br>
-                    • DPF (selected markets)
+                    • Sequential multi-port injection<br>
+                    • VVT-i variable timing<br>
+                    • Coil-on-plug ignition<br>
+                    • Aluminum heads, iron block
                 `
             },
             'transmission': {
-                title: 'TRANSMISSION',
+                title: 'TRANSMISSION - A750F',
                 description: `
-                    <strong>MANUAL:</strong> H151F 5-speed<br>
-                    • 1st: 4.313 | 2nd: 2.330<br>
-                    • 3rd: 1.436 | 4th: 1.000<br>
-                    • 5th: 0.838 | Rev: 4.220<br><br>
-                    <strong>AUTOMATIC:</strong> AB60F 6-speed<br>
-                    • Lock-up torque converter<br><br>
-                    <strong>TRANSFER CASE:</strong> HF2AV<br>
-                    • Part-time 4WD<br>
-                    • Hi/Lo range<br>
+                    <strong>AUTOMATIC:</strong> A750F 5-speed<br>
+                    • 1st: 3.520 | 2nd: 2.042<br>
+                    • 3rd: 1.400 | 4th: 1.000<br>
+                    • 5th: 0.716 | Rev: 3.224<br><br>
+                    <strong>TORQUE CONVERTER:</strong><br>
+                    • Lock-up in 3rd-5th<br>
+                    • Stall ratio: 2.0:1<br><br>
+                    <strong>TRANSFER CASE:</strong> VF2A<br>
+                    • Full-time 4WD standard<br>
+                    • Center diff lock<br>
                     • Low ratio: 2.488:1
                 `
             },
             'front-axle': {
-                title: 'FRONT AXLE',
+                title: 'FRONT AXLE - IFS',
                 description: `
-                    <strong>TYPE:</strong> Live axle, coil spring<br><br>
+                    <strong>TYPE:</strong> Independent front suspension<br><br>
                     <strong>DIFFERENTIAL:</strong><br>
-                    • Semi-floating design<br>
-                    • Ratio: 4.100:1 or 4.300:1<br>
-                    • Manual locking hubs (optional)<br><br>
+                    • Aluminum housing<br>
+                    • Ratio: 3.909:1 or 4.100:1<br>
+                    • Automatic ADD (Auto Disconnecting Diff)<br><br>
                     <strong>SUSPENSION:</strong><br>
-                    • Double wishbone<br>
-                    • Panhard rod lateral location<br>
-                    • Radius arms (leading)<br>
+                    • Double wishbone (high-mount)<br>
+                    • Torsion bar springs<br>
                     • Gas shock absorbers<br>
                     • Stabilizer bar<br><br>
-                    <strong>TRAVEL:</strong> 220mm
+                    <strong>TRAVEL:</strong> 185mm
                 `
             },
             'rear-axle': {
-                title: 'REAR AXLE',
+                title: 'REAR AXLE - LIVE',
                 description: `
-                    <strong>TYPE:</strong> Full-floating, leaf spring<br><br>
+                    <strong>TYPE:</strong> Semi-floating live axle<br><br>
                     <strong>DIFFERENTIAL:</strong><br>
-                    • Full-floating axle shafts<br>
-                    • Ratio: 4.100:1 or 4.300:1<br>
-                    • LSD or locker available<br><br>
+                    • Cast iron housing<br>
+                    • Ratio: 3.909:1 or 4.100:1<br>
+                    • Electric rear locker (option)<br><br>
                     <strong>SUSPENSION:</strong><br>
-                    • 4-link coil (7+)<br>
-                    • Progressive rate<br>
-                    • Gas shock absorbers<br><br>
+                    • 4-link coil spring<br>
+                    • Lateral rod (Panhard)<br>
+                    • Gas shock absorbers<br>
+                    • Stabilizer bar<br><br>
                     <strong>CAPACITY:</strong><br>
-                    • GVM: 3,150-3,350kg<br>
-                    • Payload: 850-1,200kg
+                    • GVM: 3,350kg<br>
+                    • Towing: 3,500kg
                 `
             },
             'steering': {
@@ -1742,16 +1814,82 @@ class LandCruiserBlueprint {
                 description: `
                     <strong>SEATING:</strong><br>
                     • 5-8 passengers (variant)<br>
-                    • Vinyl or cloth upholstery<br>
-                    • Driver lumbar support<br><br>
+                    • Leather or cloth upholstery<br>
+                    • Power driver seat<br><br>
                     <strong>CONTROLS:</strong><br>
-                    • Floor-mounted gear lever<br>
-                    • Floor-mounted transfer lever<br>
-                    • Analog instrument cluster<br><br>
+                    • Console-mounted gear lever<br>
+                    • Center diff lock switch<br>
+                    • Digital climate control<br><br>
                     <strong>FEATURES:</strong><br>
-                    • Manual A/C (standard)<br>
-                    • Power windows (optional)<br>
-                    • Basic audio system
+                    • Dual-zone A/C<br>
+                    • Power windows/mirrors<br>
+                    • Premium audio system
+                `
+            },
+            'driveshafts': {
+                title: 'DRIVESHAFTS',
+                description: `
+                    <strong>FRONT DRIVESHAFT:</strong><br>
+                    • 2-piece with center bearing<br>
+                    • Double cardan joints<br>
+                    • Splined slip yoke<br><br>
+                    <strong>REAR DRIVESHAFT:</strong><br>
+                    • Single piece design<br>
+                    • U-joint connections<br>
+                    • Balanced and phased<br><br>
+                    <strong>SPECIFICATIONS:</strong><br>
+                    • Material: Steel tube<br>
+                    • Joint angle: < 3° max<br>
+                    • Greaseable U-joints
+                `
+            },
+            'exhaust': {
+                title: 'EXHAUST SYSTEM',
+                description: `
+                    <strong>COMPONENTS:</strong><br>
+                    • Cast iron manifolds<br>
+                    • Catalytic converters (3-way)<br>
+                    • Resonator chamber<br>
+                    • Main muffler<br><br>
+                    <strong>SPECIFICATIONS:</strong><br>
+                    • Pipe diameter: 2.5"<br>
+                    • Stainless steel construction<br>
+                    • Rear exit configuration<br><br>
+                    <strong>EMISSIONS:</strong><br>
+                    • O2 sensors (4)<br>
+                    • LEV compliant
+                `
+            },
+            'fuel-tank': {
+                title: 'FUEL SYSTEM',
+                description: `
+                    <strong>MAIN TANK:</strong><br>
+                    • Capacity: 96 liters<br>
+                    • Steel construction<br>
+                    • Skid plate protected<br><br>
+                    <strong>SUB TANK (Optional):</strong><br>
+                    • Capacity: 45 liters<br>
+                    • Automatic transfer pump<br><br>
+                    <strong>FUEL DELIVERY:</strong><br>
+                    • Electric in-tank pump<br>
+                    • Return-less system<br>
+                    • Fuel filter: 10 micron
+                `
+            },
+            'cooling': {
+                title: 'COOLING SYSTEM',
+                description: `
+                    <strong>RADIATOR:</strong><br>
+                    • Aluminum core, plastic tanks<br>
+                    • Cross-flow design<br>
+                    • Capacity: ~12 liters<br><br>
+                    <strong>COMPONENTS:</strong><br>
+                    • Viscous fan clutch<br>
+                    • Electric auxiliary fan<br>
+                    • Thermostat: 82°C<br>
+                    • Coolant overflow tank<br><br>
+                    <strong>TRANSMISSION COOLER:</strong><br>
+                    • Integrated in radiator
                 `
             }
         };
