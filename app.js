@@ -1713,6 +1713,10 @@ class LandCruiserBlueprint {
                     • Length: 4,890mm<br>
                     • Width: 1,940mm<br>
                     • Height: 1,890mm<br><br>
+                    <strong>WINCH (Optional):</strong><br>
+                    • Type: Electric 12V<br>
+                    • Capacity: 4,500kg (10,000lb)<br>
+                    • Bull bar mounting required<br><br>
                     <strong>FEATURES:</strong><br>
                     • 5-door wagon body<br>
                     • Rear swing-out spare<br>
@@ -1737,19 +1741,24 @@ class LandCruiserBlueprint {
                 `
             },
             'transmission': {
-                title: 'TRANSMISSION - A750F',
+                title: 'TRANSMISSION & TRANSFER',
                 description: `
-                    <strong>AUTOMATIC:</strong> A750F 5-speed<br>
+                    <strong>AUTO (A750F/A750E) 5-Speed:</strong><br>
                     • 1st: 3.520 | 2nd: 2.042<br>
                     • 3rd: 1.400 | 4th: 1.000<br>
                     • 5th: 0.716 | Rev: 3.224<br><br>
-                    <strong>TORQUE CONVERTER:</strong><br>
-                    • Lock-up in 3rd-5th<br>
-                    • Stall ratio: 2.0:1<br><br>
-                    <strong>TRANSFER CASE:</strong> VF2A<br>
-                    • Full-time 4WD standard<br>
-                    • Center diff lock<br>
-                    • Low ratio: 2.488:1
+                    <strong>MANUAL (H151F) 5-Speed:</strong><br>
+                    • 1st: 4.313 | 2nd: 2.330<br>
+                    • 3rd: 1.436 | 4th: 1.000<br>
+                    • 5th: 0.838 | Rev: 4.220<br><br>
+                    <strong>TRANSFER (Full-Time 4WD):</strong><br>
+                    • Type: VF2A / VF2BM<br>
+                    • Center diff lock: Viscous/Electric<br>
+                    • Low range: 2.488:1<br>
+                    • High range: 1.000:1<br><br>
+                    <strong>CLUTCH (Manual):</strong><br>
+                    • Disc diameter: 300mm<br>
+                    • Hydraulic release
                 `
             },
             'front-axle': {
@@ -1835,20 +1844,26 @@ class LandCruiserBlueprint {
                 `
             },
             'interior': {
-                title: 'INTERIOR',
+                title: 'INTERIOR & SYSTEMS',
                 description: `
                     <strong>SEATING:</strong><br>
                     • 5-8 passengers (variant)<br>
                     • Leather or cloth upholstery<br>
                     • Power driver seat<br><br>
-                    <strong>CONTROLS:</strong><br>
-                    • Console-mounted gear lever<br>
-                    • Center diff lock switch<br>
-                    • Digital climate control<br><br>
-                    <strong>FEATURES:</strong><br>
-                    • Dual-zone A/C<br>
-                    • Power windows/mirrors<br>
-                    • Premium audio system
+                    <strong>AIR CONDITIONING:</strong><br>
+                    • Dual-zone automatic climate<br>
+                    • R-134a refrigerant<br>
+                    • Rear A/C (option)<br>
+                    • Cabin air filter<br><br>
+                    <strong>SRS (AIRBAGS):</strong><br>
+                    • Driver front airbag<br>
+                    • Passenger front airbag<br>
+                    • Side airbags (option)<br>
+                    • Curtain airbags (option)<br><br>
+                    <strong>BODY ELECTRICAL:</strong><br>
+                    • 12V system, 80A alternator<br>
+                    • Multiplex wiring system<br>
+                    • OBD-II diagnostic port
                 `
             },
             'driveshafts': {
