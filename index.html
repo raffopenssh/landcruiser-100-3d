@@ -197,7 +197,7 @@
             background: rgba(10, 22, 40, 0.98);
             border: 1px solid rgba(74, 158, 255, 0.5);
             border-top: none;
-            max-height: 200px;
+            max-height: 350px;
             overflow-y: auto;
             z-index: 100;
             display: none;
@@ -212,10 +212,54 @@
             cursor: pointer;
             border-bottom: 1px solid rgba(74, 158, 255, 0.2);
             font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
         .search-result-item:hover {
             background: rgba(74, 158, 255, 0.2);
+        }
+        
+        .search-result-icon {
+            font-size: 0.8rem;
+            width: 16px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .search-result-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .search-result-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .search-result-desc {
+            font-size: 0.6rem;
+            color: rgba(74, 158, 255, 0.6);
+            text-transform: capitalize;
+        }
+        
+        .search-result-number {
+            font-size: 0.6rem;
+            color: #00ffaa;
+        }
+        
+        .search-result-component .search-result-icon {
+            color: #4a9eff;
+        }
+        
+        .search-result-subcomponent .search-result-icon {
+            color: #00ffaa;
+        }
+        
+        .search-result-part .search-result-icon {
+            color: rgba(74, 158, 255, 0.5);
         }
         
         .search-result-item .part-number {
@@ -326,10 +370,23 @@
             color: #00ffaa;
         }
         
-        .sub-btn .sub-link {
-            color: inherit;
+        .sub-btn .sub-label {
+            pointer-events: none;
+        }
+        
+        .sub-btn .sub-link-icon {
+            color: rgba(74, 158, 255, 0.6);
             text-decoration: none;
-            display: block;
+            margin-left: 6px;
+            font-size: 0.7rem;
+        }
+        
+        .sub-btn .sub-link-icon:hover {
+            color: #00ffaa;
+        }
+        
+        .sub-btn.active .sub-link-icon {
+            color: rgba(0, 255, 170, 0.6);
         }
         
         #info-panel p {

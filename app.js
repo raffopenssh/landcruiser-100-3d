@@ -3220,6 +3220,7 @@ class LandCruiserBlueprint {
             if (info.parts) {
                 info.parts.forEach(part => {
                     allParts.push({
+                        type: 'part',
                         category: cat,
                         categoryTitle: info.title,
                         name: part.name,
@@ -3231,14 +3232,116 @@ class LandCruiserBlueprint {
         return allParts;
     }
     
+    // Get all components for search
+    getAllComponents() {
+        const components = [
+            { key: 'chassis', title: 'Chassis Frame', desc: 'Ladder frame, box-section steel' },
+            { key: 'body', title: 'Body Panels', desc: 'Steel body-on-frame SUV' },
+            { key: 'engine', title: 'Engine Assembly', desc: '2UZ-FE 4.7L V8' },
+            { key: 'transmission', title: 'Transmission', desc: 'A750F 5-speed auto / manual' },
+            { key: 'front-axle', title: 'Front Axle (IFS)', desc: 'Independent front suspension' },
+            { key: 'rear-axle', title: 'Rear Axle (Live)', desc: 'Solid axle with coil springs' },
+            { key: 'steering', title: 'Steering System', desc: 'Recirculating ball, power assisted' },
+            { key: 'brakes', title: 'Brake System', desc: 'Disc brakes with ABS' },
+            { key: 'wheels', title: 'Wheels & Tires', desc: '16x8J wheels, 275/70R16' },
+            { key: 'driveshafts', title: 'Propeller Shafts', desc: 'Front and rear driveshafts' },
+            { key: 'exhaust', title: 'Exhaust System', desc: 'Dual catalytic converters' },
+            { key: 'fuel-tank', title: 'Fuel System', desc: 'Main 96L + Sub 45L tanks' },
+            { key: 'cooling', title: 'Cooling System', desc: 'Aluminum radiator, ~12L capacity' },
+            { key: 'interior', title: 'Interior', desc: 'Dashboard, seats, A/C' }
+        ];
+        return components;
+    }
+    
+    // Get all sub-components for search
+    getAllSubComponents() {
+        const subComponents = [];
+        
+        // Map of sub-component collections
+        const subComponentsMap = {
+            'engine': this.engineParts,
+            'transmission': this.transmissionParts,
+            'steering': this.steeringParts,
+            'brakes': this.brakesParts,
+            'exhaust': this.exhaustParts,
+            'fuel-tank': this.fuelTankParts,
+            'driveshafts': this.driveshaftsParts,
+            'cooling': this.coolingParts
+        };
+        
+        Object.entries(subComponentsMap).forEach(([parentKey, subParts]) => {
+            if (subParts) {
+                Object.entries(subParts).forEach(([key, subPart]) => {
+                    const data = subPart.userData;
+                    if (data && data.label) {
+                        subComponents.push({
+                            type: 'subcomponent',
+                            key: key,
+                            parentKey: parentKey,
+                            label: data.label,
+                            category: data.category || parentKey
+                        });
+                    }
+                });
+            }
+        });
+        
+        return subComponents;
+    }
+    
     searchParts(query) {
         if (!query || query.length < 2) return [];
         query = query.toLowerCase();
-        return this.getAllParts().filter(part => 
+        
+        const results = [];
+        
+        // Search components first
+        const components = this.getAllComponents().filter(comp =>
+            comp.title.toLowerCase().includes(query) ||
+            comp.desc.toLowerCase().includes(query) ||
+            comp.key.toLowerCase().includes(query)
+        );
+        components.forEach(comp => {
+            results.push({
+                type: 'component',
+                category: comp.key,
+                name: comp.title,
+                desc: comp.desc
+            });
+        });
+        
+        // Search sub-components
+        const subComponents = this.getAllSubComponents().filter(sub =>
+            sub.label.toLowerCase().includes(query) ||
+            sub.key.toLowerCase().includes(query)
+        );
+        subComponents.forEach(sub => {
+            results.push({
+                type: 'subcomponent',
+                category: sub.parentKey,
+                subKey: sub.key,
+                name: sub.label,
+                desc: sub.category.replace(/-/g, ' ')
+            });
+        });
+        
+        // Search parts
+        const parts = this.getAllParts().filter(part => 
             part.name.toLowerCase().includes(query) || 
             part.number.toLowerCase().includes(query) ||
             part.categoryTitle.toLowerCase().includes(query)
-        ).slice(0, 10);
+        );
+        parts.forEach(part => {
+            results.push({
+                type: 'part',
+                category: part.category,
+                name: part.name,
+                number: part.number,
+                desc: part.categoryTitle
+            });
+        });
+        
+        return results.slice(0, 12);
     }
     
     setupSearch() {
@@ -3249,19 +3352,55 @@ class LandCruiserBlueprint {
         searchInput.addEventListener('input', function() {
             const results = self.searchParts(this.value);
             if (results.length > 0) {
-                searchResults.innerHTML = results.map(r => `
-                    <div class="search-result-item" data-category="${r.category}">
-                        <div>${r.name}</div>
-                        <div class="part-number">${r.number}</div>
-                    </div>
-                `).join('');
+                searchResults.innerHTML = results.map(r => {
+                    if (r.type === 'component') {
+                        return `<div class="search-result-item search-result-component" data-category="${r.category}" data-type="component">
+                            <div class="search-result-icon">■</div>
+                            <div class="search-result-content">
+                                <div class="search-result-name">${r.name}</div>
+                                <div class="search-result-desc">${r.desc}</div>
+                            </div>
+                        </div>`;
+                    } else if (r.type === 'subcomponent') {
+                        return `<div class="search-result-item search-result-subcomponent" data-category="${r.category}" data-subkey="${r.subKey}" data-type="subcomponent">
+                            <div class="search-result-icon">◦</div>
+                            <div class="search-result-content">
+                                <div class="search-result-name">${r.name}</div>
+                                <div class="search-result-desc">${r.desc}</div>
+                            </div>
+                        </div>`;
+                    } else {
+                        return `<div class="search-result-item search-result-part" data-category="${r.category}" data-type="part">
+                            <div class="search-result-icon">•</div>
+                            <div class="search-result-content">
+                                <div class="search-result-name">${r.name}</div>
+                                <div class="search-result-number">${r.number}</div>
+                            </div>
+                        </div>`;
+                    }
+                }).join('');
                 searchResults.classList.add('visible');
                 
                 // Add click handlers
                 searchResults.querySelectorAll('.search-result-item').forEach(item => {
                     item.addEventListener('click', function() {
                         const cat = this.dataset.category;
+                        const type = this.dataset.type;
+                        const subKey = this.dataset.subkey;
+                        
+                        // Select the component first
                         self.selectPart(cat);
+                        
+                        // If it's a sub-component, also select that after a short delay
+                        if (type === 'subcomponent' && subKey) {
+                            setTimeout(() => {
+                                const subBtn = document.querySelector(`.sub-btn[data-sub-key="${subKey}"]`);
+                                if (subBtn) {
+                                    subBtn.click();
+                                }
+                            }, 100);
+                        }
+                        
                         searchResults.classList.remove('visible');
                         searchInput.value = '';
                     });
