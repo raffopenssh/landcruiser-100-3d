@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Land Cruiser 100 - Technical Blueprint</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: #0a1628;
+            overflow: hidden;
+            color: #4a9eff;
+        }
+        
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        /* Blueprint grid overlay */
+        #blueprint-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                linear-gradient(rgba(74, 158, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74, 158, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(74, 158, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(74, 158, 255, 0.06) 1px, transparent 1px);
+            background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+        }
+        
+        #ui-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        #header {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            pointer-events: auto;
+        }
+        
+        #header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #4a9eff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(74, 158, 255, 0.5);
+        }
+        
+        #header p {
+            font-size: 0.7rem;
+            color: #4a9eff;
+            opacity: 0.7;
+            margin-top: 3px;
+            letter-spacing: 2px;
+        }
+        
+        .blueprint-border {
+            position: fixed;
+            border: 1px solid rgba(74, 158, 255, 0.3);
+            pointer-events: none;
+        }
+        
+        .border-outer {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+        
+        .border-inner {
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-width: 2px;
+        }
+        
+        /* Corner decorations */
+        .corner {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border-color: #4a9eff;
+            border-style: solid;
+            border-width: 0;
+            pointer-events: none;
+            z-index: 11;
+        }
+        
+        .corner-tl { top: 15px; left: 15px; border-top-width: 3px; border-left-width: 3px; }
+        .corner-tr { top: 15px; right: 15px; border-top-width: 3px; border-right-width: 3px; }
+        .corner-bl { bottom: 15px; left: 15px; border-bottom-width: 3px; border-left-width: 3px; }
+        .corner-br { bottom: 15px; right: 15px; border-bottom-width: 3px; border-right-width: 3px; }
+        
+        #controls {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            display: flex;
+            gap: 10px;
+            pointer-events: auto;
+        }
+        
+        .control-btn {
+            padding: 8px 16px;
+            border: 1px solid #4a9eff;
+            background: rgba(10, 22, 40, 0.8);
+            color: #4a9eff;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .control-btn:hover {
+            background: rgba(74, 158, 255, 0.2);
+            box-shadow: 0 0 15px rgba(74, 158, 255, 0.3);
+        }
+        
+        .control-btn.active {
+            background: rgba(74, 158, 255, 0.3);
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.5), inset 0 0 10px rgba(74, 158, 255, 0.2);
+        }
+        
+        #part-selector {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            pointer-events: auto;
+        }
+        
+        .part-btn {
+            padding: 8px 14px;
+            border: 1px solid rgba(74, 158, 255, 0.4);
+            background: rgba(10, 22, 40, 0.9);
+            color: #4a9eff;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            position: relative;
+        }
+        
+        .part-btn::before {
+            content: '▸';
+            margin-right: 8px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .part-btn:hover::before,
+        .part-btn.selected::before {
+            opacity: 1;
+        }
+        
+        .part-btn:hover {
+            background: rgba(74, 158, 255, 0.1);
+            border-color: #4a9eff;
+            padding-left: 18px;
+        }
+        
+        .part-btn.selected {
+            background: rgba(74, 158, 255, 0.2);
+            border-color: #4a9eff;
+            box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+        }
+        
+        #info-panel {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            max-height: 70vh;
+            background: rgba(10, 22, 40, 0.95);
+            border: 1px solid #4a9eff;
+            padding: 15px;
+            pointer-events: auto;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        #info-panel.visible {
+            opacity: 1;
+        }
+        
+        #info-panel h3 {
+            color: #4a9eff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(74, 158, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        #info-panel p {
+            font-size: 0.75rem;
+            line-height: 1.6;
+            color: rgba(74, 158, 255, 0.85);
+        }
+        
+        #info-panel strong {
+            color: #6db3ff;
+        }
+        
+        #info-image-container {
+            margin-top: 12px;
+            padding: 10px;
+            background: rgba(0, 20, 40, 0.5);
+            border: 1px solid rgba(74, 158, 255, 0.3);
+        }
+        
+        #info-image-container img {
+            width: 100%;
+            filter: brightness(1.2) contrast(1.1);
+            opacity: 0.9;
+        }
+        
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a1628;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+        
+        #loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(74, 158, 255, 0.2);
+            border-top-color: #4a9eff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        #loading p {
+            margin-top: 20px;
+            color: #4a9eff;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+        
+        #stats {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 0.65rem;
+            color: rgba(74, 158, 255, 0.5);
+            pointer-events: none;
+        }
+        
+        #title-block {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            border: 1px solid rgba(74, 158, 255, 0.5);
+            padding: 10px 15px;
+            background: rgba(10, 22, 40, 0.9);
+            pointer-events: none;
+            text-align: right;
+        }
+        
+        #title-block .drawing-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            color: #4a9eff;
+            letter-spacing: 2px;
+        }
+        
+        #title-block .drawing-info {
+            font-size: 0.6rem;
+            color: rgba(74, 158, 255, 0.6);
+            margin-top: 3px;
+        }
+        
+        /* Scanline effect */
+        #scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.1) 0px,
+                rgba(0, 0, 0, 0.1) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            opacity: 0.3;
+        }
+        
+        /* Dimension lines style */
+        .dimension-label {
+            position: absolute;
+            font-size: 0.6rem;
+            color: rgba(74, 158, 255, 0.7);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="loader"></div>
+        <p>LOADING BLUEPRINT DATA...</p>
+    </div>
+    
+    <div id="blueprint-grid"></div>
+    <div id="scanlines"></div>
+    
+    <div class="blueprint-border border-outer"></div>
+    <div class="blueprint-border border-inner"></div>
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+    
+    <div id="canvas-container"></div>
+    
+    <div id="ui-overlay">
+        <div id="header">
+            <h1>Land Cruiser 100</h1>
+            <p>Technical Assembly Blueprint</p>
+        </div>
+        
+        <div id="controls">
+            <button class="control-btn" id="btn-explode">Explode</button>
+            <button class="control-btn" id="btn-rotate">Rotate</button>
+            <button class="control-btn" id="btn-ortho">Ortho</button>
+            <button class="control-btn" id="btn-reset">Reset</button>
+        </div>
+        
+        <div id="part-selector">
+            <button class="part-btn" data-part="chassis">Chassis Frame</button>
+            <button class="part-btn" data-part="body">Body Panels</button>
+            <button class="part-btn" data-part="engine">Engine Assembly</button>
+            <button class="part-btn" data-part="transmission">Transmission</button>
+            <button class="part-btn" data-part="front-axle">Front Axle</button>
+            <button class="part-btn" data-part="rear-axle">Rear Axle</button>
+            <button class="part-btn" data-part="steering">Steering</button>
+            <button class="part-btn" data-part="brakes">Brakes</button>
+            <button class="part-btn" data-part="wheels">Wheels</button>
+            <button class="part-btn" data-part="interior">Interior</button>
+        </div>
+        
+        <div id="info-panel">
+            <h3 id="info-title">Select Component</h3>
+            <p id="info-desc">Click on a component to view technical specifications and assembly diagrams.</p>
+            <div id="info-image-container"></div>
+        </div>
+        
+        <div id="stats">
+            <span id="fps">60 FPS</span> | 
+            SCALE 1:15 | 
+            UNITS: MM
+        </div>
+        
+        <div id="title-block">
+            <div class="drawing-title">UZJ100/FZJ100 SERIES</div>
+            <div class="drawing-info">REV 2024.01 | SHEET 1 OF 1</div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
