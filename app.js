@@ -1723,7 +1723,11 @@ class LandCruiserBlueprint {
     selectPart(partName) {
         const part = this.parts[partName];
         const info = this.getPartInfo(partName);
-        const toyotaPartsUrl = 'https://autoparts.toyota.com/search?searchTerm=';
+        // Part number without dash for search
+        const formatPartNumber = (num) => num.replace(/-/g, '');
+        // Search URL - uses eBay for reliable results
+        const getSearchUrl = (partNum) => 
+            `https://www.ebay.com/sch/i.html?_nkw=toyota+${formatPartNumber(partNum)}+land+cruiser+100`;
         
         document.getElementById('info-title').textContent = info.title;
         
@@ -1737,7 +1741,7 @@ class LandCruiserBlueprint {
                 html += `<div class="part-item">
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
-                    <a href="${toyotaPartsUrl}${p.number}" target="_blank" class="order-link">ORDER</a>
+                    <a href="${getSearchUrl(p.number)}" target="_blank" class="order-link">FIND</a>
                 </div>`;
             });
             html += '</div>';
@@ -1817,7 +1821,6 @@ class LandCruiserBlueprint {
     }
     
     getPartInfo(name) {
-        const toyotaPartsUrl = 'https://autoparts.toyota.com/search?searchTerm=';
         const data = {
             'chassis': {
                 title: 'CHASSIS FRAME - J100',
