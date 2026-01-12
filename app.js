@@ -638,6 +638,31 @@ class LandCruiserBlueprint {
         body.add(this.createLine(new THREE.Vector3(2.8, 0.5, -0.7), new THREE.Vector3(2.95, 0.5, -0.75), this.colors.dim));
         body.add(this.createLine(new THREE.Vector3(2.8, 0.5, 0.7), new THREE.Vector3(2.95, 0.5, 0.75), this.colors.dim));
         
+        // === RUNNING BOARDS / SIDE STEPS ===
+        // LC100 has chrome/aluminum running boards
+        [-W - 0.1, W + 0.1].forEach(z => {
+            // Main running board tube
+            body.add(this.createLine(new THREE.Vector3(1.0, 0.3, z), new THREE.Vector3(-1.4, 0.3, z), this.colors.secondary));
+            body.add(this.createLine(new THREE.Vector3(1.0, 0.22, z), new THREE.Vector3(-1.4, 0.22, z), this.colors.secondary));
+            // End caps
+            body.add(this.createLine(new THREE.Vector3(1.0, 0.22, z), new THREE.Vector3(1.0, 0.3, z), this.colors.dim));
+            body.add(this.createLine(new THREE.Vector3(-1.4, 0.22, z), new THREE.Vector3(-1.4, 0.3, z), this.colors.dim));
+            // Support brackets
+            [0.5, -0.3, -0.9].forEach(x => {
+                body.add(this.createLine(new THREE.Vector3(x, 0.3, z), new THREE.Vector3(x, 0.4, z > 0 ? W : -W), this.colors.dim));
+            });
+        });
+        
+        // === ROOF RAILS ===
+        // Longitudinal rails on roof
+        [-0.8, 0.8].forEach(z => {
+            body.add(this.createLine(new THREE.Vector3(0.0, roofTop + 0.02, z), new THREE.Vector3(-1.9, roofTop + 0.02, z), this.colors.secondary));
+            // Rail supports
+            [0.0, -0.6, -1.2, -1.8].forEach(x => {
+                body.add(this.createLine(new THREE.Vector3(x, roofTop, z), new THREE.Vector3(x, roofTop + 0.05, z), this.colors.dim));
+            });
+        });
+        
         body.position.copy(body.userData.originalPosition);
         this.parts['body'] = body;
         this.vehicleGroup.add(body);
