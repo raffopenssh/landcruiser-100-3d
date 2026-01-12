@@ -1736,12 +1736,12 @@ class LandCruiserBlueprint {
         
         if (info.parts && info.parts.length > 0) {
             html += `<div class="part-list">
-                <div class="part-list-title">PART NUMBERS:</div>`;
-            info.parts.forEach(p => {
-                html += `<div class="part-item">
+                <div class="part-list-title">PART NUMBERS: (click part for details)</div>`;
+            info.parts.forEach((p, idx) => {
+                html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}">
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
-                    <a href="${getSearchUrl(p.number)}" target="_blank" class="order-link">FIND</a>
+                    <a href="${getSearchUrl(p.number)}" target="_blank" class="order-link" onclick="event.stopPropagation()">FIND</a>
                 </div>`;
             });
             html += '</div>';
@@ -1776,6 +1776,61 @@ class LandCruiserBlueprint {
         document.querySelectorAll('.part-btn').forEach(btn => {
             btn.classList.toggle('selected', btn.dataset.part === partName);
         });
+        
+        // Add click handlers for individual parts in the list
+        const self = this;
+        document.querySelectorAll('.part-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (e.target.classList.contains('order-link')) return;
+                
+                // Remove previous selection
+                document.querySelectorAll('.part-item').forEach(i => i.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                const partName = this.dataset.partName;
+                const partNumber = this.dataset.partNumber;
+                
+                // Show part detail popup
+                self.showPartDetail(partName, partNumber);
+            });
+        });
+    }
+    
+    showPartDetail(partName, partNumber) {
+        // Create or update part detail popup
+        let popup = document.getElementById('part-detail-popup');
+        if (!popup) {
+            popup = document.createElement('div');
+            popup.id = 'part-detail-popup';
+            popup.innerHTML = `
+                <div class="popup-header">
+                    <span class="popup-title"></span>
+                    <button class="popup-close">×</button>
+                </div>
+                <div class="popup-content">
+                    <div class="popup-part-number"></div>
+                    <div class="popup-actions">
+                        <a class="popup-btn ebay-btn" target="_blank">Search eBay</a>
+                        <a class="popup-btn amazon-btn" target="_blank">Search Amazon</a>
+                        <a class="popup-btn google-btn" target="_blank">Google Search</a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(popup);
+            
+            popup.querySelector('.popup-close').addEventListener('click', () => {
+                popup.classList.remove('visible');
+            });
+        }
+        
+        const formatNum = partNumber.replace(/-/g, '');
+        popup.querySelector('.popup-title').textContent = partName;
+        popup.querySelector('.popup-part-number').textContent = `Part Number: ${partNumber}`;
+        popup.querySelector('.ebay-btn').href = `https://www.ebay.com/sch/i.html?_nkw=toyota+${formatNum}+land+cruiser+100`;
+        popup.querySelector('.amazon-btn').href = `https://www.amazon.com/s?k=toyota+${formatNum}+land+cruiser`;
+        popup.querySelector('.google-btn').href = `https://www.google.com/search?q=toyota+${partNumber}+land+cruiser+100+buy`;
+        
+        popup.classList.add('visible');
     }
     
     highlightPart(selectedName) {
