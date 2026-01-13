@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://landcruiser-spares.exe.xyz:8001/sitemap.xml
