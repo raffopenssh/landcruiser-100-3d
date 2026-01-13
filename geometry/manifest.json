@@ -11,8 +11,8 @@
   },
   "fuel-tank": {
     "file": "fuel-tank.json",
-    "count": 56,
-    "size": 73442
+    "count": 61,
+    "size": 81636
   },
   "body": {
     "file": "body.json",
@@ -21,42 +21,47 @@
   },
   "brakes": {
     "file": "brakes.json",
-    "count": 97,
-    "size": 142536
+    "count": 99,
+    "size": 151427
   },
   "transmission": {
     "file": "transmission.json",
-    "count": 221,
-    "size": 387817
+    "count": 187,
+    "size": 300045
   },
   "exhaust": {
     "file": "exhaust.json",
-    "count": 39,
-    "size": 75211
+    "count": 48,
+    "size": 90674
   },
   "rear-axle": {
     "file": "rear-axle.json",
-    "count": 44,
-    "size": 209495
+    "count": 49,
+    "size": 218062
   },
   "cooling": {
     "file": "cooling.json",
-    "count": 46,
-    "size": 73105
+    "count": 52,
+    "size": 75779
   },
   "steering": {
     "file": "steering.json",
     "count": 135,
-    "size": 150244
+    "size": 146084
   },
   "front-axle": {
     "file": "front-axle.json",
-    "count": 26,
-    "size": 41656
+    "count": 37,
+    "size": 53197
   },
   "wheels": {
     "file": "wheels.json",
     "count": 9,
     "size": 61374
+  },
+  "driveshafts": {
+    "file": "driveshafts.json",
+    "count": 7,
+    "size": 14115
   }
 }
