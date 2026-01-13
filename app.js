@@ -2787,7 +2787,7 @@ class LandCruiserBlueprint {
         
         // Show individual part geometry
         const displayPos = this.getPartDisplayPosition(category);
-        this.showPartGeometry(partNumber, displayPos);
+        this.showPartGeometry(partNumber, displayPos, category);
         
         // Try to find a specific sub-component for this part
         const mapping = this.getSubComponentForPart(cleanNumber);
@@ -2889,38 +2889,66 @@ class LandCruiserBlueprint {
     
     // ========== INDIVIDUAL PART GEOMETRY DISPLAY ==========
     
-    async loadPartGeometries() {
-        if (this.partGeometries) return this.partGeometries;
+    async loadGeometryManifest() {
+        if (this.geometryManifest) return this.geometryManifest;
         
         try {
-            const response = await fetch('parts-geometry.min.json');
-            const data = await response.json();
-            
-            // Index by part number for fast lookup
+            const response = await fetch('geometry/manifest.json');
+            this.geometryManifest = await response.json();
             this.partGeometries = new Map();
-            for (const part of data) {
-                this.partGeometries.set(part.partNumber, part);
-            }
-            
-            console.log(`Loaded ${this.partGeometries.size} part geometries`);
-            return this.partGeometries;
+            this.loadedCategories = new Set();
+            return this.geometryManifest;
         } catch (e) {
-            console.warn('Failed to load part geometries:', e);
+            console.warn('Failed to load geometry manifest:', e);
             return null;
         }
     }
     
-    async showPartGeometry(partNumber, position) {
-        // Load geometries if not loaded
-        if (!this.partGeometries) {
-            await this.loadPartGeometries();
+    async loadCategoryGeometries(category) {
+        if (!this.geometryManifest) {
+            await this.loadGeometryManifest();
+        }
+        
+        if (!this.geometryManifest || this.loadedCategories.has(category)) {
+            return;
+        }
+        
+        const catInfo = this.geometryManifest[category];
+        if (!catInfo) {
+            console.log(`No geometry file for category: ${category}`);
+            return;
+        }
+        
+        try {
+            const response = await fetch(`geometry/${catInfo.file}`);
+            const data = await response.json();
+            
+            for (const part of data) {
+                this.partGeometries.set(part.partNumber, part);
+            }
+            
+            this.loadedCategories.add(category);
+            console.log(`Loaded ${data.length} geometries for ${category}`);
+        } catch (e) {
+            console.warn(`Failed to load geometries for ${category}:`, e);
+        }
+    }
+    
+    async showPartGeometry(partNumber, position, category) {
+        // Load manifest if needed
+        if (!this.geometryManifest) {
+            await this.loadGeometryManifest();
         }
         
         if (!this.partGeometries) return;
         
+        // Load category geometries if not loaded
+        if (category && !this.loadedCategories.has(category)) {
+            await this.loadCategoryGeometries(category);
+        }
+        
         const partData = this.partGeometries.get(partNumber);
         if (!partData) {
-            console.log(`No geometry for part: ${partNumber}`);
             return;
         }
         
@@ -2951,13 +2979,15 @@ class LandCruiserBlueprint {
         // Create mesh
         this.currentPartMesh = new THREE.LineSegments(geometry, material);
         
-        // Scale up for visibility (parts are small)
-        this.currentPartMesh.scale.setScalar(3);
+        // Scale up for visibility (parts are small, scale based on geometry size)
+        geometry.computeBoundingSphere();
+        const targetSize = 2.5; // Target visual size in scene units
+        const actualSize = geometry.boundingSphere.radius * 2;
+        const scale = Math.max(Math.min(targetSize / actualSize, 15), 2); // Between 2x and 15x
+        this.currentPartMesh.scale.setScalar(scale);
         
-        // Position near the component
-        if (position) {
-            this.currentPartMesh.position.copy(position);
-        }
+        // Position above the vehicle center for visibility
+        this.currentPartMesh.position.set(0, 3.5, 0);
         
         // Add to scene
         this.scene.add(this.currentPartMesh);
@@ -3024,6 +3054,41 @@ class LandCruiserBlueprint {
             'interior': new THREE.Vector3(0, 2.2, 0)
         };
         return positions[category] || new THREE.Vector3(0, 2, 0);
+    }
+    
+    // Get shape icon for part based on name
+    getShapeIcon(partName) {
+        const name = partName.toLowerCase();
+        
+        // Shape icons mapping
+        if (/spring/i.test(name)) return '∿'; // wave
+        if (/bearing/i.test(name)) return '◎'; // bullseye
+        if (/gasket|seal|shim/i.test(name)) return '▭'; // rectangle
+        if (/bolt|screw|stud/i.test(name)) return '⌘'; // place of interest
+        if (/nut/i.test(name)) return '⬡'; // hexagon
+        if (/washer/i.test(name)) return '○'; // circle
+        if (/pipe|tube|hose/i.test(name)) return '│'; // line
+        if (/filter/i.test(name)) return '▦'; // grid
+        if (/pump/i.test(name)) return '▨'; // hatched
+        if (/sensor/i.test(name)) return '◈'; // diamond
+        if (/bracket|mount/i.test(name)) return '└'; // corner
+        if (/cover|housing|case/i.test(name)) return '□'; // square
+        if (/rotor|disc|disk/i.test(name)) return '◎'; // bullseye
+        if (/pad/i.test(name)) return '▬'; // rectangle
+        if (/piston/i.test(name)) return '▣'; // square with fill
+        if (/valve/i.test(name)) return '△'; // triangle
+        if (/gear/i.test(name)) return '⚙'; // gear
+        if (/shaft/i.test(name)) return '┃'; // thick line
+        if (/pulley|belt/i.test(name)) return '◯'; // large circle
+        if (/motor|alternator/i.test(name)) return '⚡'; // lightning
+        if (/switch|relay/i.test(name)) return '▤'; // small square
+        if (/cable|wire/i.test(name)) return '〜'; // wave dash
+        if (/lamp|bulb/i.test(name)) return '●'; // filled circle
+        if (/mirror/i.test(name)) return '▯'; // tall rectangle
+        if (/handle/i.test(name)) return '⊂'; // subset
+        if (/knob/i.test(name)) return '●'; // dot
+        
+        return '■'; // default filled square
     }
     
     highlightSubComponent(subPart, partName) {
@@ -3787,8 +3852,9 @@ class LandCruiserBlueprint {
                             </div>
                         </div>`;
                     } else {
-                        return `<div class="search-result-item search-result-part" data-category="${r.category}" data-type="part">
-                            <div class="search-result-icon">•</div>
+                        const shapeIcon = self.getShapeIcon(r.name);
+                        return `<div class="search-result-item search-result-part" data-category="${r.category}" data-type="part" data-part-number="${r.number}">
+                            <div class="search-result-preview"><span class="shape-icon">${shapeIcon}</span></div>
                             <div class="search-result-content">
                                 <div class="search-result-name">${r.name}</div>
                                 <div class="search-result-number">${r.number}</div>
@@ -4293,7 +4359,7 @@ class LandCruiserBlueprint {
 // Initialize with error handling
 window.addEventListener('DOMContentLoaded', function() {
     try {
-        new LandCruiserBlueprint();
+        window.viewer = new LandCruiserBlueprint();
     } catch(e) {
         console.error('Failed to initialize:', e);
         var loading = document.getElementById('loading');
