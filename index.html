@@ -155,25 +155,28 @@
         .starred-btn {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
             padding: 8px 12px;
             color: #ffaa00;
+            border-color: rgba(255, 170, 0, 0.5);
         }
         
         .starred-btn .star-icon {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #ffaa00;
         }
         
         .starred-btn .star-count {
-            background: rgba(255, 170, 0, 0.15);
             color: #ffaa00;
-            padding: 2px 6px;
-            border-radius: 0;
-            font-size: 0.7rem;
-            min-width: 18px;
+            font-size: 0.75rem;
+            min-width: 14px;
             text-align: center;
-            border: 1px solid rgba(255, 170, 0, 0.3);
+        }
+        
+        .starred-btn .download-icon {
+            font-size: 0.9rem;
+            color: #ffaa00;
+            margin-left: 2px;
         }
         
         .starred-btn.has-items {
@@ -181,9 +184,9 @@
             color: #ffaa00;
         }
         
-        .starred-btn.has-items .star-count {
-            background: rgba(255, 170, 0, 0.25);
-            border-color: #ffaa00;
+        .starred-btn:hover {
+            background: rgba(255, 170, 0, 0.15);
+            box-shadow: 0 0 15px rgba(255, 170, 0, 0.3);
         }
         
         /* Star button on part items */
@@ -988,11 +991,11 @@
             <button class="control-btn" id="btn-explode">Explode</button>
             <button class="control-btn" id="btn-rotate">Rotate</button>
             <button class="control-btn" id="btn-ortho">Ortho</button>
-            <button class="control-btn starred-btn" id="btn-starred" title="Starred parts">
+            <button class="control-btn starred-btn" id="btn-export" title="Export starred parts">
                 <span class="star-icon">★</span>
                 <span class="star-count">0</span>
+                <span class="download-icon">⤓</span>
             </button>
-            <button class="control-btn" id="btn-export" title="Export starred parts">Export</button>
             <button class="control-btn" id="btn-reset">Reset</button>
         </div>
         
