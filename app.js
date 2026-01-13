@@ -2198,10 +2198,17 @@ class LandCruiserBlueprint {
     setupEventListeners() {
         window.addEventListener('resize', () => this.onResize());
         
-        document.getElementById('btn-explode').addEventListener('click', () => this.toggleExplode());
-        document.getElementById('btn-rotate').addEventListener('click', () => this.toggleRotate());
-        document.getElementById('btn-ortho').addEventListener('click', () => this.toggleOrtho());
-        document.getElementById('btn-reset').addEventListener('click', () => this.resetView());
+        // Safe event binding helper
+        const bindClick = (id, handler) => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('click', handler);
+        };
+        
+        bindClick('btn-explode', () => this.toggleExplode());
+        bindClick('btn-rotate', () => this.toggleRotate());
+        bindClick('btn-ortho', () => this.toggleOrtho());
+        bindClick('btn-reset', () => this.resetView());
+        bindClick('btn-export', () => this.exportFlaggedPDF());
         
         document.querySelectorAll('.part-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -3503,11 +3510,6 @@ class LandCruiserBlueprint {
     setupFlaggedUI() {
         // Initialize count display
         this.updateFlaggedCount();
-        
-        // Export button exports PDF directly
-        document.getElementById('btn-export').addEventListener('click', () => {
-            this.exportFlaggedPDF();
-        });
     }
     
     clearAllStarredParts() {
