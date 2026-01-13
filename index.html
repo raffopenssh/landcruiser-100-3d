@@ -1130,21 +1130,26 @@
             position: fixed;
             bottom: 20px;
             left: 20px;
-            z-index: 100;
-            width: 50px;
-            height: 50px;
+            z-index: 10000;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             border: 2px solid #4a9eff;
-            background: rgba(10, 22, 40, 0.95);
+            background: rgba(10, 22, 40, 0.98);
             color: #4a9eff;
             font-size: 1.5rem;
             cursor: pointer;
             pointer-events: auto;
-            box-shadow: 0 0 20px rgba(74, 158, 255, 0.3);
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.4);
+            -webkit-tap-highlight-color: rgba(74, 158, 255, 0.3);
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
         }
         
-        #mobile-menu-toggle:hover {
-            background: rgba(74, 158, 255, 0.2);
+        #mobile-menu-toggle:hover,
+        #mobile-menu-toggle:active {
+            background: rgba(74, 158, 255, 0.3);
         }
         
         #mobile-menu-toggle.active {
@@ -1159,17 +1164,26 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: 100;
-            width: 50px;
-            height: 50px;
+            z-index: 10000;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             border: 2px solid #00ffaa;
-            background: rgba(10, 22, 40, 0.95);
+            background: rgba(10, 22, 40, 0.98);
             color: #00ffaa;
             font-size: 1.2rem;
             cursor: pointer;
             pointer-events: auto;
-            box-shadow: 0 0 20px rgba(0, 255, 170, 0.3);
+            box-shadow: 0 0 20px rgba(0, 255, 170, 0.4);
+            -webkit-tap-highlight-color: rgba(0, 255, 170, 0.3);
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        
+        #mobile-info-toggle:hover,
+        #mobile-info-toggle:active {
+            background: rgba(0, 255, 170, 0.3);
         }
         
         #mobile-info-toggle.hidden {
@@ -1265,7 +1279,7 @@
                 background: rgba(10, 22, 40, 0.98);
                 padding: 60px 15px 100px 15px;
                 max-height: 100vh;
-                z-index: 90;
+                z-index: 9000;
                 transition: transform 0.3s ease;
                 border-right: 1px solid rgba(74, 158, 255, 0.5);
             }
@@ -1311,7 +1325,7 @@
                 border-top: 2px solid #4a9eff;
                 border-radius: 15px 15px 0 0;
                 padding: 20px 15px 100px 15px;
-                z-index: 80;
+                z-index: 8000;
                 transition: transform 0.3s ease, opacity 0.3s ease;
             }
             
@@ -1443,8 +1457,9 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.5);
-            z-index: 75;
+            z-index: 7000;
             pointer-events: auto;
+            touch-action: manipulation;
         }
         
         #mobile-overlay.visible {
@@ -1501,10 +1516,11 @@
     
     <div id="mobile-overlay"></div>
     
+    <!-- Mobile toggle buttons - outside ui-overlay for better touch handling -->
+    <button id="mobile-menu-toggle" title="Toggle menu">☰</button>
+    <button id="mobile-info-toggle" class="hidden" title="Toggle info panel">ℹ</button>
+    
     <div id="ui-overlay">
-        <button id="mobile-menu-toggle" title="Toggle menu">☰</button>
-        <button id="mobile-info-toggle" class="hidden" title="Toggle info panel">ℹ</button>
-        
         <div id="header">
             <h1>Land Cruiser 100</h1>
             <p>Technical Assembly Blueprint</p>
@@ -1634,8 +1650,10 @@
             menuToggle.classList.remove('active');
         }
         
-        // Menu toggle
-        menuToggle.addEventListener('click', function() {
+        // Menu toggle handler
+        function handleMenuToggle(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const isOpen = partSelector.classList.contains('mobile-visible');
             closeAllPanels();
             
@@ -1644,10 +1662,12 @@
                 mobileOverlay.classList.add('visible');
                 menuToggle.classList.add('active');
             }
-        });
+        }
         
-        // Info toggle
-        infoToggle.addEventListener('click', function() {
+        // Info toggle handler
+        function handleInfoToggle(e) {
+            e.preventDefault();
+            e.stopPropagation();
             const isOpen = infoPanel.classList.contains('mobile-visible');
             closeAllPanels();
             
@@ -1655,10 +1675,21 @@
                 infoPanel.classList.add('mobile-visible');
                 mobileOverlay.classList.add('visible');
             }
-        });
+        }
         
-        // Overlay click to close
+        // Add both click and touch handlers for mobile compatibility
+        menuToggle.addEventListener('click', handleMenuToggle);
+        menuToggle.addEventListener('touchend', handleMenuToggle);
+        
+        infoToggle.addEventListener('click', handleInfoToggle);
+        infoToggle.addEventListener('touchend', handleInfoToggle);
+        
+        // Overlay click/touch to close
         mobileOverlay.addEventListener('click', closeAllPanels);
+        mobileOverlay.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            closeAllPanels();
+        });
         
         // Close menu when selecting a component (on mobile)
         partSelector.addEventListener('click', function(e) {
