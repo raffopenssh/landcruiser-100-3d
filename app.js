@@ -13,6 +13,9 @@ class LandCruiserBlueprint {
         this.mouse = new THREE.Vector2();
         this.raycaster = new THREE.Raycaster();
         
+        // Flagged parts storage: { partNumber: { name, number, category, buyUrl } }
+        this.flaggedParts = this.loadFlaggedParts();
+        
         // Blueprint colors
         this.colors = {
             primary: 0x4a9eff,
@@ -2210,6 +2213,9 @@ class LandCruiserBlueprint {
         // Setup search functionality
         this.setupSearch();
         
+        // Setup flagged parts functionality
+        this.setupFlaggedUI();
+        
         // Click detection on 3D model
         this.renderer.domElement.addEventListener('click', (event) => this.onCanvasClick(event));
         
@@ -2532,10 +2538,13 @@ class LandCruiserBlueprint {
             html += `<div class="part-list">
                 <div class="part-list-title">PART NUMBERS:</div>`;
             info.parts.forEach((p, idx) => {
-                html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}">
+                const buyUrl = getBuyUrl(p.number, p.code);
+                const isFlagged = this.isPartFlagged(p.number);
+                html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}" data-category="${partName}" data-buy-url="${buyUrl}">
+                    <button class="part-flag-btn${isFlagged ? ' flagged' : ''}" data-part-number="${p.number}" data-part-name="${p.name}" data-category="${partName}" data-buy-url="${buyUrl}" onclick="event.stopPropagation()">${isFlagged ? '★' : '☆'}</button>
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
-                    <a href="${getBuyUrl(p.number, p.code)}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
+                    <a href="${buyUrl}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
                 </div>`;
             });
             html += '</div>';
@@ -2581,6 +2590,18 @@ class LandCruiserBlueprint {
                 // Remove previous selection
                 document.querySelectorAll('.part-item').forEach(i => i.classList.remove('selected'));
                 this.classList.add('selected');
+            });
+        });
+        
+        // Add click handlers for flag buttons
+        document.querySelectorAll('.part-flag-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const partNumber = this.dataset.partNumber;
+                const partName = this.dataset.partName;
+                const category = this.dataset.category;
+                const buyUrl = this.dataset.buyUrl;
+                self.toggleFlagPart(partNumber, partName, category, buyUrl);
             });
         });
     }
@@ -2878,15 +2899,19 @@ class LandCruiserBlueprint {
         };
         
         let html = '';
+        const categoryName = this.selectedPart || 'unknown';
         if (info.parts && info.parts.length > 0) {
             const title = subKey ? `PARTS (${info.parts.length} items):` : 'PART NUMBERS:';
             html = `<div class="part-list">
                 <div class="part-list-title">${title}</div>`;
             info.parts.forEach((p, idx) => {
-                html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}">
+                const buyUrl = getBuyUrl(p.number, p.code);
+                const isFlagged = this.isPartFlagged(p.number);
+                html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}" data-category="${categoryName}" data-buy-url="${buyUrl}">
+                    <button class="part-flag-btn${isFlagged ? ' flagged' : ''}" data-part-number="${p.number}" data-part-name="${p.name}" data-category="${categoryName}" data-buy-url="${buyUrl}" onclick="event.stopPropagation()">${isFlagged ? '★' : '☆'}</button>
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
-                    <a href="${getBuyUrl(p.number, p.code)}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
+                    <a href="${buyUrl}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
                 </div>`;
             });
             html += '</div>';
@@ -3415,6 +3440,262 @@ class LandCruiserBlueprint {
         });
     }
     
+    // ========== FLAGGING FUNCTIONALITY ==========
+    
+    loadFlaggedParts() {
+        try {
+            const saved = localStorage.getItem('lc100-flagged-parts');
+            return saved ? JSON.parse(saved) : {};
+        } catch (e) {
+            console.warn('Failed to load flagged parts:', e);
+            return {};
+        }
+    }
+    
+    saveFlaggedParts() {
+        try {
+            localStorage.setItem('lc100-flagged-parts', JSON.stringify(this.flaggedParts));
+            this.updateFlaggedCount();
+        } catch (e) {
+            console.warn('Failed to save flagged parts:', e);
+        }
+    }
+    
+    updateFlaggedCount() {
+        const count = Object.keys(this.flaggedParts).length;
+        const btn = document.getElementById('btn-flagged');
+        const countEl = btn.querySelector('.flag-count');
+        countEl.textContent = count;
+        btn.classList.toggle('has-items', count > 0);
+    }
+    
+    toggleFlagPart(partNumber, partName, category, buyUrl) {
+        if (this.flaggedParts[partNumber]) {
+            delete this.flaggedParts[partNumber];
+        } else {
+            this.flaggedParts[partNumber] = {
+                name: partName,
+                number: partNumber,
+                category: category,
+                buyUrl: buyUrl
+            };
+        }
+        this.saveFlaggedParts();
+        this.updatePartFlagButtons();
+    }
+    
+    isPartFlagged(partNumber) {
+        return !!this.flaggedParts[partNumber];
+    }
+    
+    updatePartFlagButtons() {
+        document.querySelectorAll('.part-flag-btn').forEach(btn => {
+            const partNumber = btn.dataset.partNumber;
+            btn.classList.toggle('flagged', this.isPartFlagged(partNumber));
+            btn.innerHTML = this.isPartFlagged(partNumber) ? '★' : '☆';
+        });
+    }
+    
+    setupFlaggedUI() {
+        // Initialize count display
+        this.updateFlaggedCount();
+        
+        // Flagged button opens modal
+        const flaggedBtn = document.getElementById('btn-flagged');
+        const flaggedModal = document.getElementById('flagged-modal');
+        const closeBtn = document.getElementById('close-flagged-modal');
+        
+        flaggedBtn.addEventListener('click', () => {
+            this.renderFlaggedModal();
+            flaggedModal.classList.add('visible');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            flaggedModal.classList.remove('visible');
+        });
+        
+        // Close on background click
+        flaggedModal.addEventListener('click', (e) => {
+            if (e.target === flaggedModal) {
+                flaggedModal.classList.remove('visible');
+            }
+        });
+        
+        // Clear all button
+        document.getElementById('clear-flagged-btn').addEventListener('click', () => {
+            if (confirm('Remove all flagged parts?')) {
+                this.clearAllFlaggedParts();
+            }
+        });
+        
+        // Export PDF button
+        document.getElementById('export-pdf-btn').addEventListener('click', () => {
+            this.exportFlaggedPDF();
+        });
+    }
+    
+    renderFlaggedModal() {
+        const listContainer = document.getElementById('flagged-list');
+        const flaggedEntries = Object.values(this.flaggedParts);
+        
+        if (flaggedEntries.length === 0) {
+            listContainer.innerHTML = '<div class="flagged-empty">No flagged parts yet.<br>Click the ☆ star icon next to any part to flag it.</div>';
+            return;
+        }
+        
+        // Group by category
+        const grouped = {};
+        flaggedEntries.forEach(part => {
+            const cat = part.category || 'other';
+            if (!grouped[cat]) grouped[cat] = [];
+            grouped[cat].push(part);
+        });
+        
+        // Category display names
+        const categoryNames = {
+            'chassis': 'Chassis Frame',
+            'body': 'Body Panels',
+            'engine': 'Engine',
+            'transmission': 'Transmission',
+            'suspension': 'Suspension',
+            'brakes': 'Brakes',
+            'steering': 'Steering',
+            'electrical': 'Electrical',
+            'interior': 'Interior',
+            'exhaust': 'Exhaust',
+            'fuel': 'Fuel System',
+            'cooling': 'Cooling',
+            'driveline': 'Driveline',
+            'wheels': 'Wheels & Tires',
+            'other': 'Other'
+        };
+        
+        let html = '';
+        Object.entries(grouped).forEach(([cat, parts]) => {
+            const catName = categoryNames[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
+            html += `<div class="flagged-group">
+                <div class="flagged-group-title">${catName}</div>
+                <div class="flagged-group-subtitle">${parts.length} part${parts.length !== 1 ? 's' : ''}</div>`;
+            
+            parts.forEach(p => {
+                html += `<div class="flagged-part-row" data-part-number="${p.number}">
+                    <div class="flagged-part-info">
+                        <span class="flagged-part-name">${p.name}</span>
+                        <span class="flagged-part-number">${p.number}</span>
+                    </div>
+                    <div class="flagged-part-actions">
+                        <a href="${p.buyUrl}" target="_blank" class="flagged-part-link">BUY</a>
+                        <button class="flagged-part-remove" data-part-number="${p.number}">✕</button>
+                    </div>
+                </div>`;
+            });
+            html += '</div>';
+        });
+        
+        listContainer.innerHTML = html;
+        
+        // Show/hide action buttons based on whether we have items
+        document.getElementById('flagged-actions').style.display = flaggedEntries.length > 0 ? 'flex' : 'none';
+        
+        // Add remove handlers
+        const self = this;
+        listContainer.querySelectorAll('.flagged-part-remove').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const partNumber = this.dataset.partNumber;
+                self.removeFlaggedPart(partNumber);
+            });
+        });
+    }
+    
+    removeFlaggedPart(partNumber) {
+        delete this.flaggedParts[partNumber];
+        this.saveFlaggedParts();
+        this.renderFlaggedModal();
+        this.updatePartFlagButtons();
+    }
+    
+    clearAllFlaggedParts() {
+        this.flaggedParts = {};
+        this.saveFlaggedParts();
+        this.renderFlaggedModal();
+        this.updatePartFlagButtons();
+    }
+    
+    exportFlaggedPDF() {
+        // Simple PDF generation using browser print
+        const flaggedEntries = Object.values(this.flaggedParts);
+        if (flaggedEntries.length === 0) {
+            alert('No parts to export');
+            return;
+        }
+        
+        // Group by category
+        const grouped = {};
+        flaggedEntries.forEach(part => {
+            const cat = part.category || 'other';
+            if (!grouped[cat]) grouped[cat] = [];
+            grouped[cat].push(part);
+        });
+        
+        const categoryNames = {
+            'chassis': 'Chassis Frame',
+            'body': 'Body Panels',
+            'engine': 'Engine',
+            'transmission': 'Transmission',
+            'suspension': 'Suspension',
+            'brakes': 'Brakes',
+            'steering': 'Steering',
+            'electrical': 'Electrical',
+            'interior': 'Interior',
+            'exhaust': 'Exhaust',
+            'fuel': 'Fuel System',
+            'cooling': 'Cooling',
+            'driveline': 'Driveline',
+            'wheels': 'Wheels & Tires',
+            'other': 'Other'
+        };
+        
+        let content = `
+            <html>
+            <head>
+                <title>Land Cruiser 100 - Flagged Parts List</title>
+                <style>
+                    body { font-family: Arial, sans-serif; padding: 20px; }
+                    h1 { color: #333; border-bottom: 2px solid #4a9eff; padding-bottom: 10px; }
+                    h2 { color: #4a9eff; margin-top: 30px; }
+                    .part { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+                    .part-name { font-weight: bold; }
+                    .part-number { color: #666; font-family: monospace; }
+                    .buy-link { color: #4a9eff; }
+                    .date { color: #999; font-size: 12px; margin-top: 30px; }
+                    @media print { .no-print { display: none; } }
+                </style>
+            </head>
+            <body>
+                <h1>Land Cruiser 100 (J100) - Parts List</h1>
+                <p>Total parts: ${flaggedEntries.length}</p>
+        `;
+        
+        Object.entries(grouped).forEach(([cat, parts]) => {
+            const catName = categoryNames[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
+            content += `<h2>${catName} (${parts.length})</h2>`;
+            parts.forEach(p => {
+                content += `<div class="part">
+                    <span class="part-name">${p.name}</span>
+                    <span class="part-number">${p.number}</span>
+                    <a href="${p.buyUrl}" class="buy-link">${p.buyUrl}</a>
+                </div>`;
+            });
+        });
+        
+        content += `<p class="date">Generated: ${new Date().toLocaleString()}</p>
+            </body></html>`;
+        
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(content);
+        printWindow.document.close();
+        printWindow.print();
+    }
     
     animate() {
         requestAnimationFrame(() => this.animate());
