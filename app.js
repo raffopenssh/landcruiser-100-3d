@@ -16,6 +16,10 @@ class LandCruiserBlueprint {
         // Flagged parts storage: { partNumber: { name, number, category, buyUrl } }
         this.flaggedParts = this.loadFlaggedParts();
         
+        // Part geometries for individual part display
+        this.partGeometries = null; // Loaded on demand
+        this.currentPartMesh = null; // Currently displayed part geometry
+        
         // Blueprint colors
         this.colors = {
             primary: 0x4a9eff,
@@ -2372,6 +2376,9 @@ class LandCruiserBlueprint {
         this.resetHighlight();
         this.selectedPart = null;
         
+        // Hide individual part geometry
+        this.hidePartGeometry();
+        
         // Clear starred parts list
         this.clearAllStarredParts();
     }
@@ -2778,6 +2785,10 @@ class LandCruiserBlueprint {
         // Clean the part number
         const cleanNumber = partNumber.replace(/-/g, '');
         
+        // Show individual part geometry
+        const displayPos = this.getPartDisplayPosition(category);
+        this.showPartGeometry(partNumber, displayPos);
+        
         // Try to find a specific sub-component for this part
         const mapping = this.getSubComponentForPart(cleanNumber);
         
@@ -2874,6 +2885,145 @@ class LandCruiserBlueprint {
         };
         
         animate();
+    }
+    
+    // ========== INDIVIDUAL PART GEOMETRY DISPLAY ==========
+    
+    async loadPartGeometries() {
+        if (this.partGeometries) return this.partGeometries;
+        
+        try {
+            const response = await fetch('parts-geometry.min.json');
+            const data = await response.json();
+            
+            // Index by part number for fast lookup
+            this.partGeometries = new Map();
+            for (const part of data) {
+                this.partGeometries.set(part.partNumber, part);
+            }
+            
+            console.log(`Loaded ${this.partGeometries.size} part geometries`);
+            return this.partGeometries;
+        } catch (e) {
+            console.warn('Failed to load part geometries:', e);
+            return null;
+        }
+    }
+    
+    async showPartGeometry(partNumber, position) {
+        // Load geometries if not loaded
+        if (!this.partGeometries) {
+            await this.loadPartGeometries();
+        }
+        
+        if (!this.partGeometries) return;
+        
+        const partData = this.partGeometries.get(partNumber);
+        if (!partData) {
+            console.log(`No geometry for part: ${partNumber}`);
+            return;
+        }
+        
+        // Remove existing part mesh
+        this.hidePartGeometry();
+        
+        // Create geometry from vertices and edges
+        const geometry = new THREE.BufferGeometry();
+        const positions = [];
+        
+        for (const edge of partData.geometry.edges) {
+            const v1 = partData.geometry.vertices[edge[0]];
+            const v2 = partData.geometry.vertices[edge[1]];
+            positions.push(v1[0], v1[1], v1[2]);
+            positions.push(v2[0], v2[1], v2[2]);
+        }
+        
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+        
+        // Create material with glow effect
+        const material = new THREE.LineBasicMaterial({
+            color: 0x00ffaa,
+            linewidth: 2,
+            transparent: true,
+            opacity: 1.0
+        });
+        
+        // Create mesh
+        this.currentPartMesh = new THREE.LineSegments(geometry, material);
+        
+        // Scale up for visibility (parts are small)
+        this.currentPartMesh.scale.setScalar(3);
+        
+        // Position near the component
+        if (position) {
+            this.currentPartMesh.position.copy(position);
+        }
+        
+        // Add to scene
+        this.scene.add(this.currentPartMesh);
+        
+        // Animate the part (rotation + pulse)
+        this.animatePartGeometry();
+        
+        return this.currentPartMesh;
+    }
+    
+    hidePartGeometry() {
+        if (this.currentPartMesh) {
+            this.scene.remove(this.currentPartMesh);
+            this.currentPartMesh.geometry.dispose();
+            this.currentPartMesh.material.dispose();
+            this.currentPartMesh = null;
+        }
+        if (this.partGeomAnimation) {
+            cancelAnimationFrame(this.partGeomAnimation);
+            this.partGeomAnimation = null;
+        }
+    }
+    
+    animatePartGeometry() {
+        if (!this.currentPartMesh) return;
+        
+        const startTime = Date.now();
+        const mesh = this.currentPartMesh;
+        
+        const animate = () => {
+            if (!this.currentPartMesh || this.currentPartMesh !== mesh) return;
+            
+            const elapsed = (Date.now() - startTime) / 1000;
+            
+            // Slow rotation
+            mesh.rotation.y = elapsed * 0.5;
+            
+            // Gentle pulse
+            const pulse = 0.8 + Math.sin(elapsed * 3) * 0.2;
+            mesh.material.opacity = pulse;
+            
+            this.partGeomAnimation = requestAnimationFrame(animate);
+        };
+        
+        animate();
+    }
+    
+    // Get position for part based on category
+    getPartDisplayPosition(category) {
+        const positions = {
+            'engine': new THREE.Vector3(2.5, 2, 0),
+            'transmission': new THREE.Vector3(0.5, 2, 0),
+            'chassis': new THREE.Vector3(0, 1.5, 1.5),
+            'body': new THREE.Vector3(0, 2.5, 0),
+            'front-axle': new THREE.Vector3(1.8, 1.5, 0),
+            'rear-axle': new THREE.Vector3(-1.8, 1.5, 0),
+            'steering': new THREE.Vector3(1.5, 2, 0.5),
+            'brakes': new THREE.Vector3(1.8, 1.2, 1),
+            'wheels': new THREE.Vector3(1.8, 1, 1.2),
+            'driveshafts': new THREE.Vector3(0, 1.5, 0),
+            'exhaust': new THREE.Vector3(0, 1.2, 0.8),
+            'fuel-tank': new THREE.Vector3(-1.2, 1.5, 0),
+            'cooling': new THREE.Vector3(2.6, 2, 0),
+            'interior': new THREE.Vector3(0, 2.2, 0)
+        };
+        return positions[category] || new THREE.Vector3(0, 2, 0);
     }
     
     highlightSubComponent(subPart, partName) {
