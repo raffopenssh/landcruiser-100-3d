@@ -2979,15 +2979,23 @@ class LandCruiserBlueprint {
         // Create mesh
         this.currentPartMesh = new THREE.LineSegments(geometry, material);
         
-        // Scale up for visibility (parts are small, scale based on geometry size)
-        geometry.computeBoundingSphere();
-        const targetSize = 2.5; // Target visual size in scene units
-        const actualSize = geometry.boundingSphere.radius * 2;
-        const scale = Math.max(Math.min(targetSize / actualSize, 15), 2); // Between 2x and 15x
-        this.currentPartMesh.scale.setScalar(scale);
+        // Get positioning info for this part
+        const partPlacement = this.getPartPlacement(partNumber, partData.name, category);
         
-        // Position above the vehicle center for visibility
-        this.currentPartMesh.position.set(0, 3.5, 0);
+        // Apply scale - use realistic scale for in-situ display
+        this.currentPartMesh.scale.setScalar(partPlacement.scale);
+        
+        // Position at correct location on vehicle
+        this.currentPartMesh.position.copy(partPlacement.position);
+        
+        // Apply rotation for correct orientation
+        if (partPlacement.rotation) {
+            this.currentPartMesh.rotation.set(
+                partPlacement.rotation.x || 0,
+                partPlacement.rotation.y || 0,
+                partPlacement.rotation.z || 0
+            );
+        }
         
         // Add to scene
         this.scene.add(this.currentPartMesh);
@@ -3016,18 +3024,28 @@ class LandCruiserBlueprint {
         
         const startTime = Date.now();
         const mesh = this.currentPartMesh;
+        const baseRotation = {
+            x: mesh.rotation.x,
+            y: mesh.rotation.y,
+            z: mesh.rotation.z
+        };
+        const baseScale = mesh.scale.x;
         
         const animate = () => {
             if (!this.currentPartMesh || this.currentPartMesh !== mesh) return;
             
             const elapsed = (Date.now() - startTime) / 1000;
             
-            // Slow rotation
-            mesh.rotation.y = elapsed * 0.5;
-            
-            // Gentle pulse
-            const pulse = 0.8 + Math.sin(elapsed * 3) * 0.2;
+            // Gentle pulsing glow effect
+            const pulse = 0.7 + Math.sin(elapsed * 4) * 0.3;
             mesh.material.opacity = pulse;
+            
+            // Subtle scale pulse for attention
+            const scalePulse = 1 + Math.sin(elapsed * 3) * 0.05;
+            mesh.scale.setScalar(baseScale * scalePulse);
+            
+            // Very subtle wobble (keep mostly in position)
+            mesh.rotation.y = baseRotation.y + Math.sin(elapsed * 2) * 0.1;
             
             this.partGeomAnimation = requestAnimationFrame(animate);
         };
@@ -3036,6 +3054,136 @@ class LandCruiserBlueprint {
     }
     
     // Get position for part based on category
+    // Get correct placement (position, scale, rotation) for a part on the vehicle
+    getPartPlacement(partNumber, partName, category) {
+        const name = partName.toLowerCase();
+        const PI = Math.PI;
+        
+        // Default scale factor (parts are defined in meters, vehicle is ~5m long)
+        const baseScale = 8;
+        
+        // Specific part placements by part number or name pattern
+        const placements = {
+            // BRAKES - at each wheel
+            '43512-60150': { pos: [2.0, 0.5, 1.1], rot: [0, 0, PI/2], scale: baseScale }, // Front Brake Rotor - front right
+            '04465-60280': { pos: [2.0, 0.5, 1.0], rot: [0, 0, PI/2], scale: baseScale }, // Front Brake Pad
+            '47730-60280': { pos: [2.0, 0.5, 1.2], rot: [0, 0, 0], scale: baseScale }, // Front Caliper RH
+            '47750-60200': { pos: [2.0, 0.5, -1.2], rot: [0, PI, 0], scale: baseScale }, // Front Caliper LH
+            '42431-60290': { pos: [-1.8, 0.5, 1.1], rot: [0, 0, PI/2], scale: baseScale }, // Rear Brake Rotor
+            '04466-60090': { pos: [-1.8, 0.5, 1.0], rot: [0, 0, PI/2], scale: baseScale }, // Rear Brake Pad
+            '47830-60061': { pos: [-1.8, 0.5, 1.2], rot: [0, 0, 0], scale: baseScale }, // Rear Caliper
+            '47201-60570': { pos: [1.0, 1.2, 0.3], rot: [PI/2, 0, 0], scale: baseScale }, // Master Cylinder
+            '44610-60760': { pos: [0.8, 1.2, 0.3], rot: [PI/2, 0, 0], scale: baseScale }, // Brake Booster
+            '44050-60100': { pos: [1.5, 0.8, 0.2], rot: [0, 0, 0], scale: baseScale }, // ABS Actuator
+            
+            // WHEELS - at corners
+            '42611-60A00': { pos: [2.0, 0.5, 1.3], rot: [0, 0, PI/2], scale: baseScale }, // Alloy Wheel FR
+            '42601-60490': { pos: [2.0, 0.5, 1.3], rot: [0, 0, PI/2], scale: baseScale }, // Steel Wheel
+            '90942-01058': { pos: [2.0, 0.5, 1.4], rot: [0, 0, PI/2], scale: baseScale*2 }, // Wheel Nut
+            '43502-60120': { pos: [2.0, 0.5, 1.1], rot: [0, 0, PI/2], scale: baseScale }, // Wheel Hub RH
+            '43512-60070': { pos: [2.0, 0.5, -1.1], rot: [0, 0, PI/2], scale: baseScale }, // Wheel Hub LH
+            
+            // STEERING - front center
+            '44200-60150': { pos: [1.2, 0.6, 0], rot: [0, 0, 0], scale: baseScale }, // Steering Gear Box
+            '45503-60020': { pos: [1.8, 0.5, 0.8], rot: [0, PI/4, 0], scale: baseScale }, // Tie Rod RH
+            '45503-60010': { pos: [1.8, 0.5, -0.8], rot: [0, -PI/4, 0], scale: baseScale }, // Tie Rod LH
+            '45460-60020': { pos: [1.3, 0.6, 0.3], rot: [0, 0, 0], scale: baseScale }, // Pitman Arm
+            '45440-60010': { pos: [1.3, 0.6, -0.3], rot: [0, 0, 0], scale: baseScale }, // Idler Arm
+            '44310-60650': { pos: [2.2, 1.0, 0.3], rot: [0, 0, 0], scale: baseScale }, // Power Steering Pump
+            '45046-60020': { pos: [0.5, 1.5, 0.3], rot: [PI/6, 0, 0], scale: baseScale }, // Steering Column
+            
+            // FRONT AXLE
+            '41110-60820': { pos: [1.8, 0.5, 0], rot: [0, 0, 0], scale: baseScale }, // Front Diff Carrier
+            '43030-60040': { pos: [1.8, 0.5, 0.5], rot: [0, 0, PI/2], scale: baseScale }, // Front Axle Shaft RH
+            '43040-60020': { pos: [1.8, 0.5, -0.5], rot: [0, 0, PI/2], scale: baseScale }, // Front Axle Shaft LH
+            '48610-60050': { pos: [1.9, 0.9, 0.7], rot: [0, 0, 0], scale: baseScale }, // Upper Control Arm RH
+            '48640-60010': { pos: [1.9, 0.9, -0.7], rot: [0, 0, 0], scale: baseScale }, // Upper Control Arm LH
+            '48068-60030': { pos: [1.9, 0.3, 0.7], rot: [0, 0, 0], scale: baseScale }, // Lower Control Arm RH
+            '48069-60020': { pos: [1.9, 0.3, -0.7], rot: [0, 0, 0], scale: baseScale }, // Lower Control Arm LH
+            '48510-69505': { pos: [1.9, 0.8, 0.9], rot: [PI/6, 0, 0], scale: baseScale }, // Front Shock
+            
+            // REAR AXLE
+            '42110-60760': { pos: [-1.8, 0.5, 0], rot: [0, 0, PI/2], scale: baseScale }, // Rear Axle Housing
+            '41110-60770': { pos: [-1.8, 0.5, 0], rot: [0, 0, 0], scale: baseScale }, // Rear Diff Carrier
+            '42311-60200': { pos: [-1.8, 0.5, 0.5], rot: [0, 0, PI/2], scale: baseScale }, // Rear Axle Shaft RH
+            '42312-60160': { pos: [-1.8, 0.5, -0.5], rot: [0, 0, PI/2], scale: baseScale }, // Rear Axle Shaft LH
+            '48231-60730': { pos: [-1.6, 0.8, 0.8], rot: [0, 0, 0], scale: baseScale }, // Rear Coil Spring
+            '48531-69445': { pos: [-1.7, 0.8, 0.9], rot: [PI/10, 0, 0], scale: baseScale }, // Rear Shock
+            
+            // TRANSMISSION - center
+            '35010-60560': { pos: [0.8, 0.6, 0], rot: [0, 0, 0], scale: baseScale }, // Auto Transmission
+            '36110-60590': { pos: [0.3, 0.6, 0], rot: [0, 0, 0], scale: baseScale }, // Transfer Case HF2A
+            '36100-60590': { pos: [0.3, 0.6, 0], rot: [0, 0, 0], scale: baseScale }, // Transfer Case VF2A
+            '32000-60050': { pos: [1.2, 0.6, 0], rot: [0, 0, PI/2], scale: baseScale }, // Torque Converter
+            
+            // DRIVESHAFTS - along center
+            '37140-60390': { pos: [1.0, 0.5, 0], rot: [0, 0, PI/2], scale: baseScale }, // Front Prop Shaft
+            '37110-60820': { pos: [-0.8, 0.5, 0], rot: [0, 0, PI/2], scale: baseScale }, // Rear Prop Shaft
+            '37230-60130': { pos: [0, 0.5, 0], rot: [0, 0, 0], scale: baseScale }, // Center Bearing
+            
+            // EXHAUST - under vehicle
+            '17104-50140': { pos: [2.2, 0.8, 0.4], rot: [0, 0, 0], scale: baseScale }, // Exhaust Manifold RH
+            '17105-50110': { pos: [2.2, 0.8, -0.4], rot: [0, PI, 0], scale: baseScale }, // Exhaust Manifold LH
+            '17410-50290': { pos: [1.5, 0.3, 0.4], rot: [0, 0, PI/2], scale: baseScale }, // Cat Converter RH
+            '17420-50170': { pos: [1.5, 0.3, -0.4], rot: [0, 0, PI/2], scale: baseScale }, // Cat Converter LH
+            '17420-50210': { pos: [0, 0.2, 0.5], rot: [0, 0, PI/2], scale: baseScale }, // Center Pipe
+            '17430-50310': { pos: [-1.5, 0.3, 0.5], rot: [0, 0, 0], scale: baseScale }, // Muffler
+            '17405-50170': { pos: [-2.3, 0.3, 0.5], rot: [0, 0, PI/2], scale: baseScale }, // Tail Pipe
+            
+            // FUEL TANK - rear under
+            '77001-60590': { pos: [-1.0, 0.4, 0], rot: [0, 0, 0], scale: baseScale }, // Fuel Tank
+            '23220-50130': { pos: [-1.0, 0.5, 0.2], rot: [0, 0, 0], scale: baseScale }, // Fuel Pump
+            
+            // COOLING - front
+            '16400-50200': { pos: [2.8, 1.2, 0], rot: [0, 0, 0], scale: baseScale }, // Radiator
+            '16100-50180': { pos: [2.4, 1.0, 0], rot: [0, 0, 0], scale: baseScale }, // Water Pump
+            '16361-50100': { pos: [2.3, 1.2, 0.2], rot: [0, 0, 0], scale: baseScale }, // Thermostat
+        };
+        
+        // Check for specific part placement
+        if (placements[partNumber]) {
+            const p = placements[partNumber];
+            return {
+                position: new THREE.Vector3(p.pos[0], p.pos[1], p.pos[2]),
+                rotation: { x: p.rot[0], y: p.rot[1], z: p.rot[2] },
+                scale: p.scale
+            };
+        }
+        
+        // Fall back to category-based placement with name-based adjustments
+        const categoryPositions = {
+            'engine': { pos: [2.3, 1.0, 0], rot: [0, 0, 0] },
+            'transmission': { pos: [0.5, 0.6, 0], rot: [0, 0, 0] },
+            'chassis': { pos: [0, 0.5, 0], rot: [0, 0, 0] },
+            'body': { pos: [0, 1.8, 0], rot: [0, 0, 0] },
+            'front-axle': { pos: [1.8, 0.5, 0], rot: [0, 0, 0] },
+            'rear-axle': { pos: [-1.8, 0.5, 0], rot: [0, 0, 0] },
+            'steering': { pos: [1.2, 0.8, 0], rot: [0, 0, 0] },
+            'brakes': { pos: [1.8, 0.5, 1.0], rot: [0, 0, PI/2] },
+            'wheels': { pos: [1.8, 0.5, 1.2], rot: [0, 0, PI/2] },
+            'driveshafts': { pos: [0, 0.5, 0], rot: [0, 0, PI/2] },
+            'exhaust': { pos: [0, 0.3, 0.5], rot: [0, 0, 0] },
+            'fuel-tank': { pos: [-1.0, 0.4, 0], rot: [0, 0, 0] },
+            'cooling': { pos: [2.6, 1.2, 0], rot: [0, 0, 0] },
+            'interior': { pos: [0, 1.5, 0], rot: [0, 0, 0] }
+        };
+        
+        const catPos = categoryPositions[category] || { pos: [0, 1, 0], rot: [0, 0, 0] };
+        
+        // Adjust position based on part name (LH/RH, Front/Rear)
+        let x = catPos.pos[0], y = catPos.pos[1], z = catPos.pos[2];
+        if (/\bLH\b|\bleft\b/i.test(name)) z = -Math.abs(z || 0.5);
+        if (/\bRH\b|\bright\b/i.test(name)) z = Math.abs(z || 0.5);
+        if (/\brear\b/i.test(name) && category !== 'rear-axle') x -= 1.5;
+        if (/\bfront\b/i.test(name) && category !== 'front-axle') x += 0.5;
+        
+        return {
+            position: new THREE.Vector3(x, y, z),
+            rotation: { x: catPos.rot[0], y: catPos.rot[1], z: catPos.rot[2] },
+            scale: baseScale
+        };
+    }
+    
     getPartDisplayPosition(category) {
         const positions = {
             'engine': new THREE.Vector3(2.5, 2, 0),
