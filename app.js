@@ -2364,6 +2364,9 @@ class LandCruiserBlueprint {
         // Reset all part colors
         this.resetHighlight();
         this.selectedPart = null;
+        
+        // Clear starred parts list
+        this.clearAllStarredParts();
     }
     
     animateTo(obj, target, duration = 800) {
@@ -2541,10 +2544,10 @@ class LandCruiserBlueprint {
                 const buyUrl = getBuyUrl(p.number, p.code);
                 const isFlagged = this.isPartFlagged(p.number);
                 html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}" data-category="${partName}" data-buy-url="${buyUrl}">
-                    <button class="part-flag-btn${isFlagged ? ' flagged' : ''}" data-part-number="${p.number}" data-part-name="${p.name}" data-category="${partName}" data-buy-url="${buyUrl}" onclick="event.stopPropagation()">${isFlagged ? '★' : '☆'}</button>
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
                     <a href="${buyUrl}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
+                    <button class="part-flag-btn${isFlagged ? ' flagged' : ''}" data-part-number="${p.number}" data-part-name="${p.name}" data-category="${partName}" data-buy-url="${buyUrl}" onclick="event.stopPropagation()">${isFlagged ? '★' : '☆'}</button>
                 </div>`;
             });
             html += '</div>';
@@ -2908,10 +2911,10 @@ class LandCruiserBlueprint {
                 const buyUrl = getBuyUrl(p.number, p.code);
                 const isFlagged = this.isPartFlagged(p.number);
                 html += `<div class="part-item" data-part-idx="${idx}" data-part-name="${p.name}" data-part-number="${p.number}" data-category="${categoryName}" data-buy-url="${buyUrl}">
-                    <button class="part-flag-btn${isFlagged ? ' flagged' : ''}" data-part-number="${p.number}" data-part-name="${p.name}" data-category="${categoryName}" data-buy-url="${buyUrl}" onclick="event.stopPropagation()">${isFlagged ? '★' : '☆'}</button>
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
                     <a href="${buyUrl}" target="_blank" class="buy-link" onclick="event.stopPropagation()">BUY</a>
+                    <button class="part-flag-btn${isFlagged ? ' flagged' : ''}" data-part-number="${p.number}" data-part-name="${p.name}" data-category="${categoryName}" data-buy-url="${buyUrl}" onclick="event.stopPropagation()">${isFlagged ? '★' : '☆'}</button>
                 </div>`;
             });
             html += '</div>';
@@ -3463,8 +3466,8 @@ class LandCruiserBlueprint {
     
     updateFlaggedCount() {
         const count = Object.keys(this.flaggedParts).length;
-        const btn = document.getElementById('btn-flagged');
-        const countEl = btn.querySelector('.flag-count');
+        const btn = document.getElementById('btn-starred');
+        const countEl = btn.querySelector('.star-count');
         countEl.textContent = count;
         btn.classList.toggle('has-items', count > 0);
     }
@@ -3500,124 +3503,15 @@ class LandCruiserBlueprint {
         // Initialize count display
         this.updateFlaggedCount();
         
-        // Flagged button opens modal
-        const flaggedBtn = document.getElementById('btn-flagged');
-        const flaggedModal = document.getElementById('flagged-modal');
-        const closeBtn = document.getElementById('close-flagged-modal');
-        
-        flaggedBtn.addEventListener('click', () => {
-            this.renderFlaggedModal();
-            flaggedModal.classList.add('visible');
-        });
-        
-        closeBtn.addEventListener('click', () => {
-            flaggedModal.classList.remove('visible');
-        });
-        
-        // Close on background click
-        flaggedModal.addEventListener('click', (e) => {
-            if (e.target === flaggedModal) {
-                flaggedModal.classList.remove('visible');
-            }
-        });
-        
-        // Clear all button
-        document.getElementById('clear-flagged-btn').addEventListener('click', () => {
-            if (confirm('Remove all flagged parts?')) {
-                this.clearAllFlaggedParts();
-            }
-        });
-        
-        // Export PDF button
-        document.getElementById('export-pdf-btn').addEventListener('click', () => {
+        // Export button exports PDF directly
+        document.getElementById('btn-export').addEventListener('click', () => {
             this.exportFlaggedPDF();
         });
     }
     
-    renderFlaggedModal() {
-        const listContainer = document.getElementById('flagged-list');
-        const flaggedEntries = Object.values(this.flaggedParts);
-        
-        if (flaggedEntries.length === 0) {
-            listContainer.innerHTML = '<div class="flagged-empty">No flagged parts yet.<br>Click the ☆ star icon next to any part to flag it.</div>';
-            return;
-        }
-        
-        // Group by category
-        const grouped = {};
-        flaggedEntries.forEach(part => {
-            const cat = part.category || 'other';
-            if (!grouped[cat]) grouped[cat] = [];
-            grouped[cat].push(part);
-        });
-        
-        // Category display names
-        const categoryNames = {
-            'chassis': 'Chassis Frame',
-            'body': 'Body Panels',
-            'engine': 'Engine',
-            'transmission': 'Transmission',
-            'suspension': 'Suspension',
-            'brakes': 'Brakes',
-            'steering': 'Steering',
-            'electrical': 'Electrical',
-            'interior': 'Interior',
-            'exhaust': 'Exhaust',
-            'fuel': 'Fuel System',
-            'cooling': 'Cooling',
-            'driveline': 'Driveline',
-            'wheels': 'Wheels & Tires',
-            'other': 'Other'
-        };
-        
-        let html = '';
-        Object.entries(grouped).forEach(([cat, parts]) => {
-            const catName = categoryNames[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
-            html += `<div class="flagged-group">
-                <div class="flagged-group-title">${catName}</div>
-                <div class="flagged-group-subtitle">${parts.length} part${parts.length !== 1 ? 's' : ''}</div>`;
-            
-            parts.forEach(p => {
-                html += `<div class="flagged-part-row" data-part-number="${p.number}">
-                    <div class="flagged-part-info">
-                        <span class="flagged-part-name">${p.name}</span>
-                        <span class="flagged-part-number">${p.number}</span>
-                    </div>
-                    <div class="flagged-part-actions">
-                        <a href="${p.buyUrl}" target="_blank" class="flagged-part-link">BUY</a>
-                        <button class="flagged-part-remove" data-part-number="${p.number}">✕</button>
-                    </div>
-                </div>`;
-            });
-            html += '</div>';
-        });
-        
-        listContainer.innerHTML = html;
-        
-        // Show/hide action buttons based on whether we have items
-        document.getElementById('flagged-actions').style.display = flaggedEntries.length > 0 ? 'flex' : 'none';
-        
-        // Add remove handlers
-        const self = this;
-        listContainer.querySelectorAll('.flagged-part-remove').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const partNumber = this.dataset.partNumber;
-                self.removeFlaggedPart(partNumber);
-            });
-        });
-    }
-    
-    removeFlaggedPart(partNumber) {
-        delete this.flaggedParts[partNumber];
-        this.saveFlaggedParts();
-        this.renderFlaggedModal();
-        this.updatePartFlagButtons();
-    }
-    
-    clearAllFlaggedParts() {
+    clearAllStarredParts() {
         this.flaggedParts = {};
         this.saveFlaggedParts();
-        this.renderFlaggedModal();
         this.updatePartFlagButtons();
     }
     
@@ -3658,37 +3552,162 @@ class LandCruiserBlueprint {
         let content = `
             <html>
             <head>
-                <title>Land Cruiser 100 - Flagged Parts List</title>
+                <title>Land Cruiser 100 - Starred Parts List</title>
                 <style>
-                    body { font-family: Arial, sans-serif; padding: 20px; }
-                    h1 { color: #333; border-bottom: 2px solid #4a9eff; padding-bottom: 10px; }
-                    h2 { color: #4a9eff; margin-top: 30px; }
-                    .part { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-                    .part-name { font-weight: bold; }
-                    .part-number { color: #666; font-family: monospace; }
-                    .buy-link { color: #4a9eff; }
-                    .date { color: #999; font-size: 12px; margin-top: 30px; }
-                    @media print { .no-print { display: none; } }
+                    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap');
+                    
+                    body {
+                        font-family: 'Share Tech Mono', monospace;
+                        background: #0a1628;
+                        color: #4a9eff;
+                        padding: 40px;
+                        margin: 0;
+                    }
+                    
+                    .header {
+                        border: 1px solid #4a9eff;
+                        padding: 20px 30px;
+                        margin-bottom: 30px;
+                        position: relative;
+                    }
+                    
+                    .header::before {
+                        content: '';
+                        position: absolute;
+                        top: -1px;
+                        left: 20px;
+                        right: 20px;
+                        height: 3px;
+                        background: #4a9eff;
+                    }
+                    
+                    h1 {
+                        font-family: 'Orbitron', sans-serif;
+                        color: #4a9eff;
+                        margin: 0 0 10px 0;
+                        font-size: 24px;
+                        letter-spacing: 2px;
+                    }
+                    
+                    .subtitle {
+                        color: #2a6ecc;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                    }
+                    
+                    .stats {
+                        display: flex;
+                        gap: 30px;
+                        margin-top: 15px;
+                        font-size: 11px;
+                    }
+                    
+                    .stat-item {
+                        color: #00ffaa;
+                    }
+                    
+                    .category {
+                        margin: 25px 0;
+                        border: 1px solid rgba(74, 158, 255, 0.3);
+                        padding: 15px 20px;
+                    }
+                    
+                    .category-title {
+                        font-family: 'Orbitron', sans-serif;
+                        color: #00ffaa;
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid rgba(0, 255, 170, 0.3);
+                        letter-spacing: 1px;
+                    }
+                    
+                    .part-row {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 8px 0;
+                        border-bottom: 1px solid rgba(74, 158, 255, 0.1);
+                        font-size: 12px;
+                    }
+                    
+                    .part-row:last-child {
+                        border-bottom: none;
+                    }
+                    
+                    .part-name {
+                        color: #88ccff;
+                        flex: 1;
+                    }
+                    
+                    .part-number {
+                        color: #4a9eff;
+                        font-family: 'Share Tech Mono', monospace;
+                        margin: 0 20px;
+                    }
+                    
+                    .buy-link {
+                        color: #00ffaa;
+                        text-decoration: none;
+                        font-size: 10px;
+                        word-break: break-all;
+                        max-width: 300px;
+                    }
+                    
+                    .footer {
+                        margin-top: 30px;
+                        padding-top: 15px;
+                        border-top: 1px solid rgba(74, 158, 255, 0.3);
+                        font-size: 10px;
+                        color: #2a6ecc;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    
+                    @media print {
+                        body { background: white; color: #333; }
+                        .header { border-color: #333; }
+                        .header::before { background: #333; }
+                        h1, .category-title { color: #333; }
+                        .subtitle, .footer { color: #666; }
+                        .stat-item, .buy-link { color: #0066cc; }
+                        .part-name { color: #333; }
+                        .part-number { color: #666; }
+                        .category { border-color: #ccc; }
+                        .part-row { border-color: #eee; }
+                    }
                 </style>
             </head>
             <body>
-                <h1>Land Cruiser 100 (J100) - Parts List</h1>
-                <p>Total parts: ${flaggedEntries.length}</p>
+                <div class="header">
+                    <h1>LAND CRUISER 100</h1>
+                    <div class="subtitle">TECHNICAL ASSEMBLY BLUEPRINT - PARTS LIST</div>
+                    <div class="stats">
+                        <span class="stat-item">TOTAL PARTS: ${flaggedEntries.length}</span>
+                        <span class="stat-item">CATEGORIES: ${Object.keys(grouped).length}</span>
+                    </div>
+                </div>
         `;
         
         Object.entries(grouped).forEach(([cat, parts]) => {
             const catName = categoryNames[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
-            content += `<h2>${catName} (${parts.length})</h2>`;
+            content += `<div class="category">
+                <div class="category-title">▶ ${catName.toUpperCase()} (${parts.length})</div>`;
             parts.forEach(p => {
-                content += `<div class="part">
+                content += `<div class="part-row">
                     <span class="part-name">${p.name}</span>
                     <span class="part-number">${p.number}</span>
                     <a href="${p.buyUrl}" class="buy-link">${p.buyUrl}</a>
                 </div>`;
             });
+            content += '</div>';
         });
         
-        content += `<p class="date">Generated: ${new Date().toLocaleString()}</p>
+        content += `
+                <div class="footer">
+                    <span>UZJ100/FZJ100 SERIES</span>
+                    <span>Generated: ${new Date().toLocaleString()}</span>
+                </div>
             </body></html>`;
         
         const printWindow = window.open('', '_blank');
