@@ -207,75 +207,150 @@ const SHAPE_TEMPLATES = {
     }
 };
 
-// Part name patterns to shape mappings
+// Part name patterns to shape mappings (order matters - first match wins)
 const SHAPE_PATTERNS = [
-    // Gaskets and seals - flat
-    { pattern: /gasket|seal|packing|shim/i, shape: 'plate', params: [0.15, 0.15, 0.005] },
+    // === SPECIFIC ASSEMBLIES (check first) ===
+    { pattern: /alternator/i, shape: 'cylinder', params: [0.08, 0.12, 12] },
+    { pattern: /starter.*motor|motor.*starter/i, shape: 'cylinder', params: [0.06, 0.2, 12] },
+    { pattern: /compressor/i, shape: 'cylinder', params: [0.1, 0.15, 12] },
+    { pattern: /caliper/i, shape: 'box', params: [0.12, 0.08, 0.06] },
+    { pattern: /shock.*absorber|absorber/i, shape: 'cylinder', params: [0.04, 0.35, 12] },
+    { pattern: /strut/i, shape: 'cylinder', params: [0.05, 0.4, 12] },
+    { pattern: /muffler/i, shape: 'cylinder', params: [0.12, 0.4, 16] },
+    { pattern: /catalytic|converter/i, shape: 'box', params: [0.15, 0.1, 0.25] },
+    { pattern: /manifold/i, shape: 'box', params: [0.3, 0.12, 0.15] },
+    { pattern: /cylinder head/i, shape: 'box', params: [0.35, 0.12, 0.2] },
+    { pattern: /oil pan/i, shape: 'box', params: [0.4, 0.1, 0.25] },
+    { pattern: /timing chain|timing belt/i, shape: 'ring', params: [0.1, 0.09, 0.02, 36] },
+    { pattern: /flywheel|flex.*plate/i, shape: 'ring', params: [0.18, 0.05, 0.03, 24] },
+    { pattern: /clutch.*disc|disc.*clutch/i, shape: 'ring', params: [0.12, 0.04, 0.01, 24] },
+    { pattern: /pressure.*plate/i, shape: 'ring', params: [0.13, 0.06, 0.025, 16] },
+    { pattern: /torque.*converter/i, shape: 'cylinder', params: [0.15, 0.1, 24] },
+    { pattern: /differential/i, shape: 'sphere', params: [0.12, 12] },
+    { pattern: /transfer.*case/i, shape: 'box', params: [0.25, 0.2, 0.2] },
+    { pattern: /steering.*wheel/i, shape: 'ring', params: [0.18, 0.16, 0.03, 24] },
+    { pattern: /steering.*column/i, shape: 'cylinder', params: [0.03, 0.5, 8] },
+    { pattern: /tie.*rod/i, shape: 'cylinder', params: [0.015, 0.35, 8] },
+    { pattern: /control.*arm|arm.*control/i, shape: 'bracket', params: [0.3, 0.05, 0.06, 0.02] },
+    { pattern: /axle.*shaft/i, shape: 'cylinder', params: [0.03, 0.5, 12] },
+    { pattern: /cv.*joint|joint.*cv/i, shape: 'sphere', params: [0.05, 12] },
+    { pattern: /u-joint|universal.*joint/i, shape: 'box', params: [0.05, 0.05, 0.05] },
+    { pattern: /wheel.*hub|hub.*wheel/i, shape: 'cylinder', params: [0.08, 0.06, 16] },
+    { pattern: /knuckle/i, shape: 'box', params: [0.15, 0.2, 0.1] },
+    { pattern: /ball.*joint/i, shape: 'sphere', params: [0.03, 10] },
+    { pattern: /sway.*bar|stabilizer.*bar/i, shape: 'cylinder', params: [0.015, 0.8, 8] },
+    { pattern: /leaf.*spring/i, shape: 'plate', params: [0.5, 0.06, 0.01] },
+    { pattern: /coil.*spring/i, shape: 'spring', params: [0.05, 0.2, 8] },
+    { pattern: /torsion.*bar/i, shape: 'cylinder', params: [0.02, 0.6, 8] },
     
-    // Bearings - rings
-    { pattern: /bearing/i, shape: 'ring', params: [0.04, 0.02, 0.02] },
+    // === GASKETS AND SEALS ===
+    { pattern: /head.*gasket/i, shape: 'plate', params: [0.35, 0.2, 0.003] },
+    { pattern: /gasket|seal|packing|shim/i, shape: 'plate', params: [0.12, 0.12, 0.003] },
+    { pattern: /o-ring|o ring/i, shape: 'ring', params: [0.025, 0.022, 0.003, 24] },
     
-    // Bolts and screws
-    { pattern: /bolt|screw/i, shape: 'bolt', params: [0.008, 0.04, 0.012, 0.01] },
+    // === BEARINGS ===
+    { pattern: /wheel.*bearing/i, shape: 'ring', params: [0.06, 0.035, 0.025, 16] },
+    { pattern: /bearing/i, shape: 'ring', params: [0.035, 0.02, 0.015, 16] },
     
-    // Nuts
-    { pattern: /nut(?!.*donut)/i, shape: 'cylinder', params: [0.012, 0.01, 6] },
+    // === FASTENERS ===
+    { pattern: /bolt|screw/i, shape: 'bolt', params: [0.006, 0.03, 0.01, 0.008] },
+    { pattern: /stud/i, shape: 'cylinder', params: [0.006, 0.05, 8] },
+    { pattern: /nut(?!.*donut)/i, shape: 'cylinder', params: [0.01, 0.008, 6] },
+    { pattern: /washer/i, shape: 'ring', params: [0.012, 0.005, 0.002, 16] },
+    { pattern: /pin/i, shape: 'cylinder', params: [0.004, 0.03, 8] },
+    { pattern: /rivet/i, shape: 'cylinder', params: [0.004, 0.015, 8] },
     
-    // Washers
-    { pattern: /washer/i, shape: 'ring', params: [0.015, 0.006, 0.003] },
+    // === SPRINGS ===
+    { pattern: /valve.*spring/i, shape: 'spring', params: [0.015, 0.04, 5] },
+    { pattern: /spring/i, shape: 'spring', params: [0.025, 0.06, 6] },
     
-    // Springs
-    { pattern: /spring/i, shape: 'spring', params: [0.03, 0.08, 6] },
+    // === PIPES AND HOSES ===
+    { pattern: /exhaust.*pipe/i, shape: 'pipe', params: [0.04, 0.035, 0.5, 12] },
+    { pattern: /brake.*line|brake.*hose/i, shape: 'pipe', params: [0.006, 0.004, 0.4, 8] },
+    { pattern: /fuel.*line|fuel.*hose/i, shape: 'pipe', params: [0.008, 0.006, 0.3, 8] },
+    { pattern: /pipe|tube|hose/i, shape: 'pipe', params: [0.02, 0.015, 0.25, 12] },
     
-    // Pipes and tubes
-    { pattern: /pipe|tube|hose/i, shape: 'pipe', params: [0.025, 0.02, 0.2] },
+    // === FILTERS ===
+    { pattern: /oil.*filter/i, shape: 'cylinder', params: [0.04, 0.1, 16] },
+    { pattern: /air.*filter/i, shape: 'cylinder', params: [0.12, 0.08, 24] },
+    { pattern: /fuel.*filter/i, shape: 'cylinder', params: [0.035, 0.12, 12] },
+    { pattern: /filter/i, shape: 'cylinder', params: [0.05, 0.1, 16] },
     
-    // Filters
-    { pattern: /filter/i, shape: 'cylinder', params: [0.06, 0.12] },
+    // === ELECTRICAL ===
+    { pattern: /spark.*plug/i, shape: 'cylinder', params: [0.01, 0.06, 6] },
+    { pattern: /ignition.*coil/i, shape: 'cylinder', params: [0.025, 0.08, 8] },
+    { pattern: /sensor/i, shape: 'cylinder', params: [0.012, 0.035, 8] },
+    { pattern: /switch/i, shape: 'box', params: [0.03, 0.02, 0.015] },
+    { pattern: /relay/i, shape: 'box', params: [0.025, 0.025, 0.03] },
+    { pattern: /fuse/i, shape: 'box', params: [0.02, 0.008, 0.006] },
+    { pattern: /bulb|lamp/i, shape: 'sphere', params: [0.02, 8] },
+    { pattern: /motor(?!.*starter)/i, shape: 'cylinder', params: [0.04, 0.06, 12] },
+    { pattern: /solenoid/i, shape: 'cylinder', params: [0.025, 0.05, 8] },
+    { pattern: /cable|wire|harness/i, shape: 'cylinder', params: [0.004, 0.4, 6] },
+    { pattern: /connector/i, shape: 'box', params: [0.025, 0.015, 0.02] },
     
-    // Pumps
-    { pattern: /pump/i, shape: 'box', params: [0.12, 0.1, 0.08] },
+    // === PUMPS ===
+    { pattern: /water.*pump/i, shape: 'cylinder', params: [0.08, 0.06, 12] },
+    { pattern: /fuel.*pump/i, shape: 'cylinder', params: [0.04, 0.1, 12] },
+    { pattern: /oil.*pump/i, shape: 'box', params: [0.1, 0.08, 0.06] },
+    { pattern: /power.*steering.*pump/i, shape: 'cylinder', params: [0.06, 0.1, 12] },
+    { pattern: /pump/i, shape: 'box', params: [0.1, 0.08, 0.07] },
     
-    // Sensors
-    { pattern: /sensor/i, shape: 'cylinder', params: [0.015, 0.04] },
+    // === BRAKES ===
+    { pattern: /brake.*rotor|rotor.*brake/i, shape: 'ring', params: [0.15, 0.08, 0.025, 24] },
+    { pattern: /brake.*drum/i, shape: 'ring', params: [0.14, 0.12, 0.08, 24] },
+    { pattern: /brake.*pad/i, shape: 'plate', params: [0.08, 0.04, 0.012] },
+    { pattern: /brake.*shoe/i, shape: 'plate', params: [0.12, 0.04, 0.008] },
+    { pattern: /master.*cylinder/i, shape: 'cylinder', params: [0.03, 0.15, 12] },
+    { pattern: /wheel.*cylinder/i, shape: 'cylinder', params: [0.025, 0.06, 8] },
+    { pattern: /rotor|disc|disk/i, shape: 'ring', params: [0.12, 0.06, 0.02, 24] },
+    { pattern: /pad/i, shape: 'plate', params: [0.06, 0.04, 0.01] },
     
-    // Brackets and mounts
-    { pattern: /bracket|mount|stay/i, shape: 'bracket', params: [0.08, 0.06, 0.03, 0.008] },
+    // === DRIVETRAIN ===
+    { pattern: /gear/i, shape: 'cylinder', params: [0.05, 0.025, 24] },
+    { pattern: /sprocket/i, shape: 'cylinder', params: [0.04, 0.01, 20] },
+    { pattern: /shaft/i, shape: 'cylinder', params: [0.02, 0.25, 12] },
+    { pattern: /pulley/i, shape: 'ring', params: [0.05, 0.015, 0.02, 20] },
+    { pattern: /belt/i, shape: 'ring', params: [0.06, 0.055, 0.012, 32] },
+    { pattern: /chain/i, shape: 'ring', params: [0.05, 0.045, 0.008, 40] },
     
-    // Covers and housings
-    { pattern: /cover|housing|case/i, shape: 'box', params: [0.15, 0.08, 0.12] },
+    // === BODY/INTERIOR ===
+    { pattern: /mirror/i, shape: 'plate', params: [0.15, 0.1, 0.02] },
+    { pattern: /glass|window/i, shape: 'plate', params: [0.4, 0.3, 0.005] },
+    { pattern: /handle/i, shape: 'box', params: [0.12, 0.03, 0.025] },
+    { pattern: /knob/i, shape: 'cylinder', params: [0.015, 0.02, 12] },
+    { pattern: /pedal/i, shape: 'plate', params: [0.08, 0.06, 0.015] },
+    { pattern: /lever/i, shape: 'box', params: [0.02, 0.15, 0.02] },
+    { pattern: /panel/i, shape: 'plate', params: [0.3, 0.2, 0.01] },
+    { pattern: /trim/i, shape: 'plate', params: [0.2, 0.05, 0.008] },
+    { pattern: /molding|moulding/i, shape: 'box', params: [0.3, 0.02, 0.015] },
+    { pattern: /weatherstrip/i, shape: 'pipe', params: [0.01, 0.008, 0.5, 8] },
+    { pattern: /cushion/i, shape: 'box', params: [0.15, 0.08, 0.1] },
+    { pattern: /seat/i, shape: 'box', params: [0.4, 0.15, 0.4] },
     
-    // Rotors and discs
-    { pattern: /rotor|disc|disk/i, shape: 'ring', params: [0.15, 0.08, 0.025] },
+    // === MISC ===
+    { pattern: /bushing|bush/i, shape: 'ring', params: [0.02, 0.012, 0.03, 12] },
+    { pattern: /mount/i, shape: 'box', params: [0.08, 0.05, 0.06] },
+    { pattern: /bracket|stay/i, shape: 'bracket', params: [0.06, 0.05, 0.025, 0.006] },
+    { pattern: /cover|cap/i, shape: 'box', params: [0.1, 0.05, 0.08] },
+    { pattern: /housing|case/i, shape: 'box', params: [0.12, 0.08, 0.1] },
+    { pattern: /clip|clamp/i, shape: 'box', params: [0.025, 0.012, 0.015] },
+    { pattern: /tank|reservoir/i, shape: 'box', params: [0.2, 0.12, 0.15] },
+    { pattern: /radiator/i, shape: 'box', params: [0.35, 0.3, 0.035] },
+    { pattern: /cooler/i, shape: 'box', params: [0.2, 0.15, 0.03] },
+    { pattern: /heater/i, shape: 'box', params: [0.15, 0.12, 0.06] },
+    { pattern: /fan/i, shape: 'ring', params: [0.15, 0.03, 0.02, 6] },
+    { pattern: /thermostat/i, shape: 'cylinder', params: [0.035, 0.04, 12] },
     
-    // Pads
-    { pattern: /pad/i, shape: 'plate', params: [0.08, 0.05, 0.015] },
+    // === ASSEMBLIES (generic) ===
+    { pattern: /assembly|assy/i, shape: 'box', params: [0.12, 0.08, 0.1] },
+    { pattern: /kit/i, shape: 'box', params: [0.1, 0.06, 0.08] },
+    { pattern: /set/i, shape: 'box', params: [0.08, 0.05, 0.06] },
     
-    // Pistons
-    { pattern: /piston/i, shape: 'cylinder', params: [0.045, 0.06] },
+    // === DEFAULT ===
+    { pattern: /./, shape: 'box', params: [0.06, 0.04, 0.05] },
     
-    // Valves
-    { pattern: /valve/i, shape: 'cylinder', params: [0.015, 0.08] },
-    
-    // Gears
-    { pattern: /gear/i, shape: 'cylinder', params: [0.06, 0.03, 24] },
-    
-    // Shafts
-    { pattern: /shaft/i, shape: 'cylinder', params: [0.025, 0.3] },
-    
-    // Bushings
-    { pattern: /bush|bushing/i, shape: 'ring', params: [0.025, 0.015, 0.04] },
-    
-    // O-rings
-    { pattern: /o-ring|o ring/i, shape: 'ring', params: [0.03, 0.025, 0.004] },
-    
-    // Clips and clamps
-    { pattern: /clip|clamp/i, shape: 'box', params: [0.03, 0.015, 0.02] },
-    
-    // Belts
-    { pattern: /belt/i, shape: 'ring', params: [0.08, 0.075, 0.015] },
-    
-    // Pulleys
+    // Keep old patterns as fallbacks
     { pattern: /pulley/i, shape: 'ring', params: [0.06, 0.02, 0.025] },
     
     // Connectors
