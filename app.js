@@ -2753,6 +2753,27 @@ class LandCruiserBlueprint {
         return null;
     }
     
+    scrollToAndHighlightPart(partNumber) {
+        // Find the part item in the list
+        const partItem = document.querySelector(`.part-item[data-part-number="${partNumber}"]`);
+        if (!partItem) return;
+        
+        // Remove previous selections
+        document.querySelectorAll('.part-item').forEach(i => i.classList.remove('selected'));
+        
+        // Add selection to this part
+        partItem.classList.add('selected');
+        
+        // Scroll the part into view within the info panel
+        partItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Also highlight in 3D
+        const category = partItem.dataset.category;
+        if (category) {
+            this.highlightPartByNumber(partNumber, category);
+        }
+    }
+    
     highlightPartByNumber(partNumber, category) {
         // Clean the part number
         const cleanNumber = partNumber.replace(/-/g, '');
@@ -3633,6 +3654,7 @@ class LandCruiserBlueprint {
                         const cat = this.dataset.category;
                         const type = this.dataset.type;
                         const subKey = this.dataset.subkey;
+                        const partNumber = this.querySelector('.search-result-number')?.textContent;
                         
                         // Select the component first
                         self.selectPart(cat);
@@ -3645,6 +3667,13 @@ class LandCruiserBlueprint {
                                     subBtn.click();
                                 }
                             }, 100);
+                        }
+                        
+                        // If it's a part, scroll to and highlight it in the parts list
+                        if (type === 'part' && partNumber) {
+                            setTimeout(() => {
+                                self.scrollToAndHighlightPart(partNumber);
+                            }, 300);
                         }
                         
                         searchResults.classList.remove('visible');
