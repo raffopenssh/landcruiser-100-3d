@@ -3467,8 +3467,9 @@ class LandCruiserBlueprint {
     updateFlaggedCount() {
         const count = Object.keys(this.flaggedParts).length;
         const btn = document.getElementById('btn-starred');
+        if (!btn) return; // DOM not ready yet
         const countEl = btn.querySelector('.star-count');
-        countEl.textContent = count;
+        if (countEl) countEl.textContent = count;
         btn.classList.toggle('has-items', count > 0);
     }
     
