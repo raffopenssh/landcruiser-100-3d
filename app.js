@@ -2591,15 +2591,23 @@ class LandCruiserBlueprint {
         });
         
         // Add click handlers for individual parts in the list
-        // Clicking a part row selects it and highlights it
+        // Clicking a part row selects it and highlights it in 3D
         document.querySelectorAll('.part-item').forEach(item => {
             item.addEventListener('click', function(e) {
                 // If clicking the BUY link, let it handle the navigation
                 if (e.target.classList.contains('buy-link')) return;
+                if (e.target.classList.contains('part-flag-btn')) return;
                 
                 // Remove previous selection
                 document.querySelectorAll('.part-item').forEach(i => i.classList.remove('selected'));
                 this.classList.add('selected');
+                
+                // Get part info
+                const partNumber = this.dataset.partNumber;
+                const category = this.dataset.category;
+                
+                // Highlight the relevant component/sub-component in 3D
+                self.highlightPartByNumber(partNumber, category);
             });
         });
         
@@ -2642,6 +2650,209 @@ class LandCruiserBlueprint {
                 }
             });
         });
+    }
+    
+    // Map part number prefixes to sub-components within each component
+    getSubComponentForPart(partNumber) {
+        const prefix = partNumber.substring(0, 2);
+        const prefix3 = partNumber.substring(0, 3);
+        const prefix4 = partNumber.substring(0, 4);
+        const prefix5 = partNumber.substring(0, 5);
+        
+        // Engine sub-components (based on part number prefixes)
+        const engineSubMap = {
+            '11': 'cylinder-block', // Cylinder block
+            '12': 'cylinder-block', // Ventilation
+            '13': 'oil-pan',        // Crankshaft/piston
+            '15': 'oil-pan',        // Oil pump
+            '16': 'water-pump',     // Water pump
+            '17': 'intake-manifold', // Manifolds
+            '19': 'ignition-coils', // Ignition
+            '22': 'fuel-injection', // Fuel injection
+            '27': 'alternator',     // Alternator
+            '28': 'starter',        // Starter
+        };
+        
+        // Transmission sub-components
+        const transSubMap = {
+            '31': 'clutch-housing', // Clutch
+            '32': 'clutch-housing', // Clutch pedal
+            '33': 'gear-box',       // Manual trans
+            '35': 'gear-box',       // Auto trans
+            '36': 'transfer-case',  // Transfer case
+        };
+        
+        // Steering sub-components
+        const steeringSubMap = {
+            '44': 'steering-gearbox', // Steering gear
+            '45': 'steering-linkage', // Steering link
+        };
+        
+        // Brake sub-components
+        const brakeSubMap = {
+            '47': 'front-rotors',    // Disc brake
+            '46': 'front-rotors',    // Disc brake (alt)
+            '44130': 'master-cylinder', // Master cylinder specific
+            '44610': 'brake-booster',   // Brake booster specific
+        };
+        
+        // Axle/suspension sub-components
+        const axleSubMap = {
+            '41': 'front-axle',     // Front axle
+            '42': 'rear-axle',      // Rear axle
+            '43': 'front-axle',     // Front suspension
+            '48': 'rear-axle',      // Rear suspension
+        };
+        
+        // Exhaust sub-components
+        const exhaustSubMap = {
+            '17': 'exhaust-manifolds', // Manifold
+            '17410': 'catalytic-converter', // Cat specific
+            '17420': 'exhaust-pipe',  // Front pipe
+            '17430': 'muffler',       // Muffler
+        };
+        
+        // Fuel sub-components
+        const fuelSubMap = {
+            '77': 'main-tank',      // Fuel tank
+            '23': 'fuel-pump',      // Fuel pump
+        };
+        
+        // Driveshaft sub-components
+        const driveSubMap = {
+            '37': 'front-propshaft', // Propeller shaft
+            '371': 'front-propshaft',
+            '372': 'rear-propshaft',
+        };
+        
+        // Cooling sub-components
+        const coolSubMap = {
+            '16': 'radiator',       // Radiator/Water pump
+            '164': 'radiator-hoses', // Hoses
+        };
+        
+        // Check by prefix length (more specific first)
+        if (prefix5 in brakeSubMap) return { component: 'brakes', sub: brakeSubMap[prefix5] };
+        if (prefix5 in exhaustSubMap) return { component: 'exhaust', sub: exhaustSubMap[prefix5] };
+        if (prefix4 in brakeSubMap) return { component: 'brakes', sub: brakeSubMap[prefix4] };
+        if (prefix4 in exhaustSubMap) return { component: 'exhaust', sub: exhaustSubMap[prefix4] };
+        if (prefix3 in driveSubMap) return { component: 'driveshafts', sub: driveSubMap[prefix3] };
+        if (prefix3 in coolSubMap) return { component: 'cooling', sub: coolSubMap[prefix3] };
+        
+        // Check by 2-digit prefix
+        if (prefix in engineSubMap) return { component: 'engine', sub: engineSubMap[prefix] };
+        if (prefix in transSubMap) return { component: 'transmission', sub: transSubMap[prefix] };
+        if (prefix in steeringSubMap) return { component: 'steering', sub: steeringSubMap[prefix] };
+        if (prefix in brakeSubMap) return { component: 'brakes', sub: brakeSubMap[prefix] };
+        if (prefix in axleSubMap) return { component: axleSubMap[prefix], sub: null };
+        if (prefix in exhaustSubMap) return { component: 'exhaust', sub: exhaustSubMap[prefix] };
+        if (prefix in fuelSubMap) return { component: 'fuel-tank', sub: fuelSubMap[prefix] };
+        if (prefix in driveSubMap) return { component: 'driveshafts', sub: driveSubMap[prefix] };
+        if (prefix in coolSubMap) return { component: 'cooling', sub: coolSubMap[prefix] };
+        
+        return null;
+    }
+    
+    highlightPartByNumber(partNumber, category) {
+        // Clean the part number
+        const cleanNumber = partNumber.replace(/-/g, '');
+        
+        // Try to find a specific sub-component for this part
+        const mapping = this.getSubComponentForPart(cleanNumber);
+        
+        if (mapping && mapping.sub) {
+            // We have a specific sub-component to highlight
+            const subComponentsMap = {
+                'engine': this.engineParts,
+                'transmission': this.transmissionParts,
+                'steering': this.steeringParts,
+                'brakes': this.brakesParts,
+                'exhaust': this.exhaustParts,
+                'fuel-tank': this.fuelTankParts,
+                'driveshafts': this.driveshaftsParts,
+                'cooling': this.coolingParts
+            };
+            
+            const subParts = subComponentsMap[mapping.component];
+            if (subParts && subParts[mapping.sub]) {
+                this.highlightSubComponent(subParts[mapping.sub], mapping.component);
+                // Pulse the sub-component to draw attention
+                this.pulseHighlight(subParts[mapping.sub]);
+                return;
+            }
+        }
+        
+        // Fall back to highlighting the whole component based on category
+        const categoryMap = {
+            'chassis': 'chassis',
+            'body': 'body',
+            'engine': 'engine',
+            'transmission': 'transmission',
+            'front-axle': 'front-axle',
+            'rear-axle': 'rear-axle',
+            'steering': 'steering',
+            'brakes': 'brakes',
+            'wheels': 'wheels',
+            'driveshafts': 'driveshafts',
+            'exhaust': 'exhaust',
+            'fuel-tank': 'fuel-tank',
+            'cooling': 'cooling',
+            'interior': 'interior'
+        };
+        
+        const componentName = categoryMap[category] || category;
+        if (this.parts[componentName]) {
+            this.highlightPart(componentName);
+            this.pulseHighlight(this.parts[componentName]);
+        }
+    }
+    
+    pulseHighlight(object) {
+        // Create a pulsing effect to draw attention to the highlighted part
+        if (this.pulseAnimation) {
+            cancelAnimationFrame(this.pulseAnimation);
+        }
+        
+        const startTime = Date.now();
+        const duration = 1500; // 1.5 seconds
+        const originalColors = [];
+        
+        // Store original colors
+        object.traverse(child => {
+            if (child.material) {
+                originalColors.push({
+                    material: child.material,
+                    color: child.material.color.getHex()
+                });
+            }
+        });
+        
+        const animate = () => {
+            const elapsed = Date.now() - startTime;
+            if (elapsed > duration) {
+                // Restore colors and stop
+                originalColors.forEach(item => {
+                    item.material.color.setHex(item.color);
+                    item.material.needsUpdate = true;
+                });
+                return;
+            }
+            
+            // Pulse between accent and highlight color
+            const t = (Math.sin(elapsed / 100) + 1) / 2; // 0-1 oscillation
+            const pulseColor = t > 0.5 ? 0x00ffaa : this.colors.accent;
+            
+            object.traverse(child => {
+                if (child.material) {
+                    child.material.color.setHex(pulseColor);
+                    child.material.needsUpdate = true;
+                }
+            });
+            
+            this.pulseAnimation = requestAnimationFrame(animate);
+        };
+        
+        animate();
     }
     
     highlightSubComponent(subPart, partName) {
