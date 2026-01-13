@@ -1,0 +1,14 @@
+[Unit]
+Description=Land Cruiser 100 3D Parts Catalog
+After=network.target
+
+[Service]
+Type=simple
+User=exedev
+WorkingDirectory=/home/exedev/landcruiser-100-3d
+ExecStart=/home/exedev/landcruiser-100-3d/server
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

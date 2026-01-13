@@ -1223,7 +1223,7 @@
         
         <div id="title-block">
             <div class="drawing-title">UZJ100/FZJ100 SERIES</div>
-            <div class="drawing-info"><a href="#" class="info-link" id="link-src">SRC</a> | <a href="#" class="info-link" id="link-data">DATA</a> | REV 2024.01 | SHEET 1 OF 1</div>
+            <div class="drawing-info"><a href="#" class="info-link" id="link-src">SRC</a> | <a href="#" class="info-link" id="link-data">DATA</a> | REV 2024.01 | OPENED: <span id="visit-count">-</span>x</div>
         </div>
     </div>
     
@@ -1247,6 +1247,16 @@
                     '<p style="color: #ff6666;">WebGL is not supported by your browser.<br>Please try Chrome, Firefox, or Edge.</p>';
                 return;
             }
+            
+            // Track visit and update counter
+            fetch('/api/visit', { method: 'GET' })
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('visit-count').textContent = data.count;
+                })
+                .catch(() => {
+                    document.getElementById('visit-count').textContent = '?';
+                });
         });
         
         window.onerror = function(msg, url, line) {
