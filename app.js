@@ -2695,12 +2695,22 @@ class LandCruiserBlueprint {
             '45': 'steering-linkage', // Steering link
         };
         
-        // Brake sub-components
+        // Brake sub-components - more specific mappings
         const brakeSubMap = {
-            '47': 'front-rotors',    // Disc brake
-            '46': 'front-rotors',    // Disc brake (alt)
-            '44130': 'master-cylinder', // Master cylinder specific
-            '44610': 'brake-booster',   // Brake booster specific
+            '4351260150': 'front-rotors',  // Front Brake Rotor
+            '4243160290': 'rear-rotors',   // Rear Brake Rotor
+            '0446560280': 'front-rotors',  // Front Brake Pad Set
+            '0446660090': 'rear-rotors',   // Rear Brake Pad Set
+            '4773060280': 'front-calipers', // Front Caliper RH
+            '4775060200': 'front-calipers', // Front Caliper LH
+            '4783060061': 'rear-calipers',  // Rear Brake Caliper
+            '4720160570': 'master-cylinder', // Master Cylinder
+            '4461060760': 'brake-booster',   // Brake Booster
+            '4405060100': 'abs-actuator',    // ABS Actuator
+            '47': 'front-calipers',    // Disc brake general
+            '46': 'front-calipers',    // Disc brake (alt)
+            '44050': 'abs-actuator',   // ABS specific
+            '44610': 'brake-booster',  // Brake booster specific
         };
         
         // Axle/suspension sub-components
@@ -2737,6 +2747,9 @@ class LandCruiserBlueprint {
             '16': 'radiator',       // Radiator/Water pump
             '164': 'radiator-hoses', // Hoses
         };
+        
+        // Check full part number first (most specific)
+        if (partNumber in brakeSubMap) return { component: 'brakes', sub: brakeSubMap[partNumber] };
         
         // Check by prefix length (more specific first)
         if (prefix5 in brakeSubMap) return { component: 'brakes', sub: brakeSubMap[prefix5] };
@@ -2785,9 +2798,8 @@ class LandCruiserBlueprint {
         // Clean the part number
         const cleanNumber = partNumber.replace(/-/g, '');
         
-        // Show individual part geometry
-        const displayPos = this.getPartDisplayPosition(category);
-        this.showPartGeometry(partNumber, displayPos, category);
+        // Hide any existing part geometry overlay
+        this.hidePartGeometry();
         
         // Try to find a specific sub-component for this part
         const mapping = this.getSubComponentForPart(cleanNumber);
@@ -2840,51 +2852,20 @@ class LandCruiserBlueprint {
     }
     
     pulseHighlight(object) {
-        // Create a pulsing effect to draw attention to the highlighted part
+        // Highlight the part with a bright color - no animation, just solid highlight
         if (this.pulseAnimation) {
             cancelAnimationFrame(this.pulseAnimation);
         }
         
-        const startTime = Date.now();
-        const duration = 1500; // 1.5 seconds
-        const originalColors = [];
-        
-        // Store original colors
+        // Set bright highlight color
         object.traverse(child => {
             if (child.material) {
-                originalColors.push({
-                    material: child.material,
-                    color: child.material.color.getHex()
-                });
+                child.material.color.setHex(0x00ffaa); // Bright cyan/green
+                child.material.opacity = 1.0;
+                child.material.transparent = true;
+                child.material.needsUpdate = true;
             }
         });
-        
-        const animate = () => {
-            const elapsed = Date.now() - startTime;
-            if (elapsed > duration) {
-                // Restore colors and stop
-                originalColors.forEach(item => {
-                    item.material.color.setHex(item.color);
-                    item.material.needsUpdate = true;
-                });
-                return;
-            }
-            
-            // Pulse between accent and highlight color
-            const t = (Math.sin(elapsed / 100) + 1) / 2; // 0-1 oscillation
-            const pulseColor = t > 0.5 ? 0x00ffaa : this.colors.accent;
-            
-            object.traverse(child => {
-                if (child.material) {
-                    child.material.color.setHex(pulseColor);
-                    child.material.needsUpdate = true;
-                }
-            });
-            
-            this.pulseAnimation = requestAnimationFrame(animate);
-        };
-        
-        animate();
     }
     
     // ========== INDIVIDUAL PART GEOMETRY DISPLAY ==========
@@ -3106,13 +3087,13 @@ class LandCruiserBlueprint {
         
         const subParts = subComponentsMap[partName];
         
-        // First dim all sub-parts of this component
+        // First dim all sub-parts of this component (but keep them somewhat visible)
         if (subParts) {
             Object.values(subParts).forEach(part => {
                 part.traverse(child => {
                     if (child.material) {
-                        child.material.color.setHex(this.colors.dim);
-                        child.material.opacity = 0.3;
+                        child.material.color.setHex(this.colors.secondary);
+                        child.material.opacity = 0.4;
                         child.material.transparent = true;
                         child.material.needsUpdate = true;
                     }
@@ -3120,10 +3101,10 @@ class LandCruiserBlueprint {
             });
         }
         
-        // Highlight the selected sub-component
+        // Highlight the selected sub-component with bright color
         subPart.traverse(child => {
             if (child.material) {
-                child.material.color.setHex(this.colors.accent);
+                child.material.color.setHex(0x00ffaa); // Bright cyan/green
                 child.material.opacity = 1.0;
                 child.material.transparent = true;
                 child.material.needsUpdate = true;
