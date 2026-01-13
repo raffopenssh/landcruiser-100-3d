@@ -3684,7 +3684,15 @@ class LandCruiserBlueprint {
             }
         };
         
-        // Use external PARTS_DATABASE if available, otherwise fall back to inline data
+        // For specific categories, prefer inline data which is more curated
+        const preferInlineCategories = ['front-axle', 'rear-axle', 'transmission', 'steering', 'brakes', 
+                                         'wheels', 'driveshafts', 'exhaust', 'fuel-tank', 'cooling'];
+        
+        if (data[name] && preferInlineCategories.includes(name)) {
+            return data[name];
+        }
+        
+        // Use external PARTS_DATABASE for other categories
         if (typeof PARTS_DATABASE !== 'undefined' && PARTS_DATABASE[name]) {
             return PARTS_DATABASE[name];
         }
