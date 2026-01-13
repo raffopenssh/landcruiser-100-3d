@@ -3518,13 +3518,62 @@ class LandCruiserBlueprint {
         this.updatePartFlagButtons();
     }
     
-    exportFlaggedPDF() {
-        // Simple PDF generation using browser print
+    exportStarredParts(format = 'html') {
         const flaggedEntries = Object.values(this.flaggedParts);
         if (flaggedEntries.length === 0) {
-            alert('No parts to export');
+            alert('No parts starred. Star parts using the ★ button next to part numbers.');
             return;
         }
+        
+        if (format === 'csv') {
+            this.downloadCSV(flaggedEntries);
+            return;
+        }
+        
+        if (format === 'json') {
+            this.downloadJSON(flaggedEntries);
+            return;
+        }
+        
+        // HTML/Print format
+        this.openPrintableHTML(flaggedEntries);
+    }
+    
+    downloadCSV(flaggedEntries) {
+        let csv = 'Part Name,Part Number,Category,Buy URL\n';
+        flaggedEntries.forEach(p => {
+            const name = `"${(p.name || '').replace(/"/g, '""')}"`;
+            const number = p.number || '';
+            const category = p.category || '';
+            const url = p.buyUrl || '';
+            csv += `${name},${number},${category},${url}\n`;
+        });
+        
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `lc100-parts-${new Date().toISOString().split('T')[0]}.csv`;
+        link.click();
+        URL.revokeObjectURL(link.href);
+    }
+    
+    downloadJSON(flaggedEntries) {
+        const data = {
+            exportDate: new Date().toISOString(),
+            vehicle: 'Land Cruiser 100 Series (UZJ100/FZJ100)',
+            totalParts: flaggedEntries.length,
+            parts: flaggedEntries
+        };
+        
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `lc100-parts-${new Date().toISOString().split('T')[0]}.json`;
+        link.click();
+        URL.revokeObjectURL(link.href);
+    }
+    
+    openPrintableHTML(flaggedEntries) {
         
         // Group by category
         const grouped = {};
@@ -3714,9 +3763,122 @@ class LandCruiserBlueprint {
             </body></html>`;
         
         const printWindow = window.open('', '_blank');
-        printWindow.document.write(content);
-        printWindow.document.close();
-        printWindow.print();
+        if (printWindow) {
+            printWindow.document.write(content);
+            printWindow.document.close();
+            // Give user option to print
+        } else {
+            // Popup blocked - download as HTML file instead
+            const blob = new Blob([content], { type: 'text/html' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `lc100-parts-${new Date().toISOString().split('T')[0]}.html`;
+            link.click();
+            URL.revokeObjectURL(link.href);
+        }
+    }
+    
+    exportFlaggedPDF() {
+        // Backwards compatibility - show export modal
+        this.showExportModal();
+    }
+    
+    showExportModal() {
+        const flaggedEntries = Object.values(this.flaggedParts);
+        if (flaggedEntries.length === 0) {
+            alert('No parts starred. Star parts using the ★ button next to part numbers.');
+            return;
+        }
+        
+        // Create modal if it doesn't exist
+        let modal = document.getElementById('export-modal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'export-modal';
+            modal.innerHTML = `
+                <div class="export-modal-overlay"></div>
+                <div class="export-modal-content">
+                    <h3>EXPORT STARRED PARTS</h3>
+                    <p class="export-count"></p>
+                    <div class="export-options">
+                        <button class="export-option-btn" data-format="html">
+                            <span class="export-icon">📄</span>
+                            <span class="export-label">HTML / Print</span>
+                            <span class="export-desc">Opens printable page</span>
+                        </button>
+                        <button class="export-option-btn" data-format="csv">
+                            <span class="export-icon">📊</span>
+                            <span class="export-label">CSV Download</span>
+                            <span class="export-desc">For spreadsheets</span>
+                        </button>
+                        <button class="export-option-btn" data-format="json">
+                            <span class="export-icon">{ }</span>
+                            <span class="export-label">JSON Download</span>
+                            <span class="export-desc">For developers</span>
+                        </button>
+                    </div>
+                    <button class="export-cancel-btn">Cancel</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // Add styles
+            const style = document.createElement('style');
+            style.textContent = `
+                #export-modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; }
+                #export-modal.visible { display: block; }
+                .export-modal-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); }
+                .export-modal-content {
+                    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                    background: rgba(10, 22, 40, 0.95); border: 2px solid #4a9eff;
+                    padding: 30px; min-width: 350px; font-family: 'Share Tech Mono', monospace;
+                }
+                .export-modal-content h3 {
+                    font-family: 'Orbitron', sans-serif; color: #4a9eff; margin: 0 0 10px 0;
+                    font-size: 18px; letter-spacing: 2px;
+                }
+                .export-count { color: #00ffaa; font-size: 12px; margin-bottom: 20px; }
+                .export-options { display: flex; flex-direction: column; gap: 10px; }
+                .export-option-btn {
+                    display: flex; align-items: center; gap: 15px; padding: 15px;
+                    background: rgba(74, 158, 255, 0.1); border: 1px solid rgba(74, 158, 255, 0.3);
+                    color: #4a9eff; cursor: pointer; text-align: left; transition: all 0.2s;
+                }
+                .export-option-btn:hover {
+                    background: rgba(74, 158, 255, 0.2); border-color: #4a9eff;
+                }
+                .export-icon { font-size: 24px; width: 40px; text-align: center; }
+                .export-label { font-size: 14px; flex: 1; }
+                .export-desc { font-size: 10px; color: #2a6ecc; }
+                .export-cancel-btn {
+                    margin-top: 20px; padding: 10px 20px; background: transparent;
+                    border: 1px solid #ff6666; color: #ff6666; cursor: pointer;
+                    font-family: 'Share Tech Mono', monospace; width: 100%;
+                }
+                .export-cancel-btn:hover { background: rgba(255, 102, 102, 0.1); }
+            `;
+            document.head.appendChild(style);
+            
+            // Event handlers
+            modal.querySelector('.export-modal-overlay').addEventListener('click', () => this.hideExportModal());
+            modal.querySelector('.export-cancel-btn').addEventListener('click', () => this.hideExportModal());
+            modal.querySelectorAll('.export-option-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const format = btn.dataset.format;
+                    this.hideExportModal();
+                    this.exportStarredParts(format);
+                });
+            });
+        }
+        
+        // Update count and show
+        modal.querySelector('.export-count').textContent = `${flaggedEntries.length} part${flaggedEntries.length !== 1 ? 's' : ''} starred`;
+        modal.classList.add('visible');
+    }
+    
+    hideExportModal() {
+        const modal = document.getElementById('export-modal');
+        if (modal) modal.classList.remove('visible');
     }
     
     animate() {
