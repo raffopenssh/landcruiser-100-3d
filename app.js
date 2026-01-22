@@ -2597,38 +2597,8 @@ class LandCruiserBlueprint {
             btn.classList.toggle('selected', btn.dataset.part === partName);
         });
         
-        // Add click handlers for individual parts in the list
-        // Clicking a part row selects it and highlights it in 3D
-        document.querySelectorAll('.part-item').forEach(item => {
-            item.addEventListener('click', function(e) {
-                // If clicking the BUY link, let it handle the navigation
-                if (e.target.classList.contains('buy-link')) return;
-                if (e.target.classList.contains('part-flag-btn')) return;
-                
-                // Remove previous selection
-                document.querySelectorAll('.part-item').forEach(i => i.classList.remove('selected'));
-                this.classList.add('selected');
-                
-                // Get part info
-                const partNumber = this.dataset.partNumber;
-                const category = this.dataset.category;
-                
-                // Highlight the relevant component/sub-component in 3D
-                self.highlightPartByNumber(partNumber, category);
-            });
-        });
-        
-        // Add click handlers for flag buttons
-        document.querySelectorAll('.part-flag-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const partNumber = this.dataset.partNumber;
-                const partName = this.dataset.partName;
-                const category = this.dataset.category;
-                const buyUrl = this.dataset.buyUrl;
-                self.toggleFlagPart(partNumber, partName, category, buyUrl);
-            });
-        });
+        // Add click handlers for parts list and flag buttons
+        this.attachPartListHandlers();
     }
     
     highlightPart(selectedName) {
@@ -3365,6 +3335,9 @@ class LandCruiserBlueprint {
         } else {
             descEl.innerHTML += html;
         }
+        
+        // Re-attach click handlers for flag buttons after rebuilding the list
+        this.attachPartListHandlers();
     }
     
     getPartInfo(name) {
@@ -3949,6 +3922,45 @@ class LandCruiserBlueprint {
             const partNumber = btn.dataset.partNumber;
             btn.classList.toggle('flagged', this.isPartFlagged(partNumber));
             btn.innerHTML = this.isPartFlagged(partNumber) ? '★' : '☆';
+        });
+    }
+    
+    attachPartListHandlers() {
+        const self = this;
+        
+        // Add click handlers for individual parts in the list
+        document.querySelectorAll('.part-item').forEach(item => {
+            // Remove any existing listeners by cloning
+            const newItem = item.cloneNode(true);
+            item.parentNode.replaceChild(newItem, item);
+            
+            newItem.addEventListener('click', function(e) {
+                if (e.target.classList.contains('buy-link')) return;
+                if (e.target.classList.contains('part-flag-btn')) return;
+                
+                document.querySelectorAll('.part-item').forEach(i => i.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                const partNumber = this.dataset.partNumber;
+                const category = this.dataset.category;
+                self.highlightPartByNumber(partNumber, category);
+            });
+        });
+        
+        // Add click handlers for flag buttons
+        document.querySelectorAll('.part-flag-btn').forEach(btn => {
+            // Remove any existing listeners by cloning
+            const newBtn = btn.cloneNode(true);
+            btn.parentNode.replaceChild(newBtn, btn);
+            
+            newBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const partNumber = this.dataset.partNumber;
+                const partName = this.dataset.partName;
+                const category = this.dataset.category;
+                const buyUrl = this.dataset.buyUrl;
+                self.toggleFlagPart(partNumber, partName, category, buyUrl);
+            });
         });
     }
     
