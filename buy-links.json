@@ -1,0 +1,2487 @@
+{
+  "total_parts": 310,
+  "direct_links": 0,
+  "search_links": 310,
+  "parts": {
+    "87201-60652": {
+      "name": "AIR DUCT SUB-ASSEMBLY",
+      "number": "87201-60652",
+      "code": "87201D",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=87201-60652",
+      "direct_link": false
+    },
+    "88568-60961": {
+      "name": "AIR FILTER",
+      "number": "88568-60961",
+      "code": "88568B",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=88568-60961",
+      "direct_link": false
+    },
+    "87125-60005": {
+      "name": "AIR OUTLET GRILLE",
+      "number": "87125-60005",
+      "code": "87125A",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=87125-60005",
+      "direct_link": false
+    },
+    "89175-60197": {
+      "name": "AIRBAG SENSOR BRACKET",
+      "number": "89175-60197",
+      "code": "89175",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89175-60197",
+      "direct_link": false
+    },
+    "87107-60615": {
+      "name": "AIRBAG SENSOR COVER (w/ Airbag System)",
+      "number": "87107-60615",
+      "code": "87107",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=87107-60615",
+      "direct_link": false
+    },
+    "55909-60669": {
+      "name": "AIRMIX DAMPER CONTROL CABLE SUB-ASSEMBLY (w/ Heater)",
+      "number": "55909-60669",
+      "code": "55909A",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=55909-60669",
+      "direct_link": false
+    },
+    "86300-60699": {
+      "name": "ANTENNA ASSEMBLY (for Manual Type Antenna)",
+      "number": "86300-60699",
+      "code": "86300",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=86300-60699",
+      "direct_link": false
+    },
+    "85914-60467": {
+      "name": "ANTENNA MOTOR CONTROL RELAY",
+      "number": "85914-60467",
+      "code": "85914A",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=85914-60467",
+      "direct_link": false
+    },
+    "86396-60899": {
+      "name": "ANTENNA NUT",
+      "number": "86396-60899",
+      "code": "86396",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=86396-60899",
+      "direct_link": false
+    },
+    "86392-60316": {
+      "name": "ANTENNA ORNAMENT",
+      "number": "86392-60316",
+      "code": "86392",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=86392-60316",
+      "direct_link": false
+    },
+    "84760-60876": {
+      "name": "ANTENNA SWITCH ASSEMBLY",
+      "number": "84760-60876",
+      "code": "84760",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84760-60876",
+      "direct_link": false
+    },
+    "74617-60104": {
+      "name": "ASSIST GRIP PLUG",
+      "number": "74617-60104",
+      "code": "74617A",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=74617-60104",
+      "direct_link": false
+    },
+    "74617-60823": {
+      "name": "ASSIST GRIP PLUG",
+      "number": "74617-60823",
+      "code": "74617C",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=74617-60823",
+      "direct_link": false
+    },
+    "74610-60007": {
+      "name": "ASSIST GRIP SUB-ASSEMBLY",
+      "number": "74610-60007",
+      "code": "74610A",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=74610-60007",
+      "direct_link": false
+    },
+    "69291-60647": {
+      "name": "BACK DOOR INSIDE HANDLE ASSEMBLY",
+      "number": "69291-60647",
+      "code": "69291",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69291-60647",
+      "direct_link": false
+    },
+    "64805-60112": {
+      "name": "BACK DOOR OPENING TRIM SUB-ASSEMBLY",
+      "number": "64805-60112",
+      "code": "64805",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=64805-60112",
+      "direct_link": false
+    },
+    "67848-60169": {
+      "name": "BACK DOOR SERVICE HOLE COVER LH",
+      "number": "67848-60169",
+      "code": "67848",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67848-60169",
+      "direct_link": false
+    },
+    "67847-60628": {
+      "name": "BACK DOOR SERVICE HOLE COVER RH",
+      "number": "67847-60628",
+      "code": "67847",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67847-60628",
+      "direct_link": false
+    },
+    "64790-60201": {
+      "name": "BACK DOOR TRIM PANEL ASSEMBLY LH",
+      "number": "64790-60201",
+      "code": "64790C",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=64790-60201",
+      "direct_link": false
+    },
+    "64780-60816": {
+      "name": "BACK DOOR TRIM PANEL ASSEMBLY RH",
+      "number": "64780-60816",
+      "code": "64780C",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=64780-60816",
+      "direct_link": false
+    },
+    "82610-60622": {
+      "name": "BATTERY CARRIER SUB-ASSEMBLY (for 1HZ, 1VD-FTV)",
+      "number": "82610-60622",
+      "code": "82610A",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=82610-60622",
+      "direct_link": false
+    },
+    "71071-60149": {
+      "name": "BENCH TYPE FRONT SEAT CUSHION COVER",
+      "number": "71071-60149",
+      "code": "71071S",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=71071-60149",
+      "direct_link": false
+    },
+    "71512-60714": {
+      "name": "BENCH TYPE FRONT SEAT CUSHION PAD",
+      "number": "71512-60714",
+      "code": "71512S",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=71512-60714",
+      "direct_link": false
+    },
+    "71073-60159": {
+      "name": "BENCH TYPE FRONT SEATBACK COVER",
+      "number": "71073-60159",
+      "code": "71073S",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=71073-60159",
+      "direct_link": false
+    },
+    "71551-60750": {
+      "name": "BENCH TYPE FRONT SEATBACK PAD",
+      "number": "71551-60750",
+      "code": "71551S",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=71551-60750",
+      "direct_link": false
+    },
+    "78920-60387": {
+      "name": "BENCH TYPE REAR SEAT CUSHION COVER",
+      "number": "78920-60387",
+      "code": "78920",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=78920-60387",
+      "direct_link": false
+    },
+    "72665-60385": {
+      "name": "BENCH TYPE REAR SEAT CUSHION COVER",
+      "number": "72665-60385",
+      "code": "72665",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=72665-60385",
+      "direct_link": false
+    },
+    "72666-60445": {
+      "name": "BENCH TYPE REAR SEAT CUSHION COVER WITH PAD",
+      "number": "72666-60445",
+      "code": "72666",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=72666-60445",
+      "direct_link": false
+    },
+    "73380-60239": {
+      "name": "BENCH TYPE REAR SEATBACK ASSEMBLY",
+      "number": "73380-60239",
+      "code": "73380",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=73380-60239",
+      "direct_link": false
+    },
+    "71931-60575": {
+      "name": "BENCH TYPE REAR SEATBACK COVER",
+      "number": "71931-60575",
+      "code": "71931A",
+      "category": "interior",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=71931-60575",
+      "direct_link": false
+    },
+    "78110-60458": {
+      "name": "ACCELERATOR PEDAL SENSOR ASSEMBLY",
+      "number": "78110-60458",
+      "code": "78110K",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=78110-60458",
+      "direct_link": false
+    },
+    "89467-60828": {
+      "name": "AIR FUEL RATIO SENSOR (for Bank 2 Sensor 1)",
+      "number": "89467-60828",
+      "code": "89467C",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89467-60828",
+      "direct_link": false
+    },
+    "85915-60846": {
+      "name": "AIR FUEL RATIO SENSOR HEATER RELAY (A/F)",
+      "number": "85915-60846",
+      "code": "85915S",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=85915-60846",
+      "direct_link": false
+    },
+    "44775-60791": {
+      "name": "AND ADJUST CLUTCH COVER ASSEMBLY",
+      "number": "44775-60791",
+      "code": "44775E",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44775-60791",
+      "direct_link": false
+    },
+    "23271-60583": {
+      "name": "BATTERY",
+      "number": "23271-60583",
+      "code": "23271H",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23271-60583",
+      "direct_link": false
+    },
+    "28800-60141": {
+      "name": "BATTERY CARRIER SUB-ASSEMBLY",
+      "number": "28800-60141",
+      "code": "28800",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=28800-60141",
+      "direct_link": false
+    },
+    "13560-60378": {
+      "name": "CAMSHAFT",
+      "number": "13560-60378",
+      "code": "13560A",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13560-60378",
+      "direct_link": false
+    },
+    "19850-60828": {
+      "name": "CAMSHAFT",
+      "number": "19850-60828",
+      "code": "19850",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=19850-60828",
+      "direct_link": false
+    },
+    "11183-60817": {
+      "name": "CAMSHAFT",
+      "number": "11183-60817",
+      "code": "11183",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=11183-60817",
+      "direct_link": false
+    },
+    "13507-60455": {
+      "name": "CAMSHAFT",
+      "number": "13507-60455",
+      "code": "13507",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13507-60455",
+      "direct_link": false
+    },
+    "13550-60425": {
+      "name": "CAMSHAFT BEARING CAP (for Bank 1)",
+      "number": "13550-60425",
+      "code": "13550",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13550-60425",
+      "direct_link": false
+    },
+    "11821-60113": {
+      "name": "CAMSHAFT BEARING CAP (for Bank 2)",
+      "number": "11821-60113",
+      "code": "11821",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=11821-60113",
+      "direct_link": false
+    },
+    "13528-60496": {
+      "name": "CAMSHAFT DRIVE GEAR",
+      "number": "13528-60496",
+      "code": "13528",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13528-60496",
+      "direct_link": false
+    },
+    "11385-60538": {
+      "name": "CAMSHAFT OIL SEAL RETAINER",
+      "number": "11385-60538",
+      "code": "11385",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=11385-60538",
+      "direct_link": false
+    },
+    "13477-60307": {
+      "name": "CAMSHAFT OIL SEAL RETAINER",
+      "number": "13477-60307",
+      "code": "13477",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13477-60307",
+      "direct_link": false
+    },
+    "13050-60733": {
+      "name": "CAMSHAFT THRUST CLEARANCE",
+      "number": "13050-60733",
+      "code": "13050",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13050-60733",
+      "direct_link": false
+    },
+    "13540-60059": {
+      "name": "CAMSHAFT TIMING GEARS AND NO. 2 CHAIN (for Bank 1)",
+      "number": "13540-60059",
+      "code": "13540",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13540-60059",
+      "direct_link": false
+    },
+    "13521-60202": {
+      "name": "CAMSHAFT TIMING GEARS AND NO. 2 CHAIN (for Bank 2)",
+      "number": "13521-60202",
+      "code": "13521",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13521-60202",
+      "direct_link": false
+    },
+    "15330-60311": {
+      "name": "CAMSHAFT TIMING OIL CONTROL VALVE ASSEMBLY (for Bank 1)",
+      "number": "15330-60311",
+      "code": "15330B",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=15330-60311",
+      "direct_link": false
+    },
+    "15340-60097": {
+      "name": "CAMSHAFT TIMING OIL CONTROL VALVE ASSEMBLY (for Bank 2)",
+      "number": "15340-60097",
+      "code": "15340",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=15340-60097",
+      "direct_link": false
+    },
+    "16356-60318": {
+      "name": "CAMSHAFT TIMING OIL CONTROL VALVE ASSEMBLY RH (for Bank 2)",
+      "number": "16356-60318",
+      "code": "16356",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16356-60318",
+      "direct_link": false
+    },
+    "13523-60077": {
+      "name": "CAMSHAFT TIMING PULLEY",
+      "number": "13523-60077",
+      "code": "13523P",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13523-60077",
+      "direct_link": false
+    },
+    "11302-60458": {
+      "name": "CHAIN COVER AND COMPRESSOR BRACKET SUB-ASSEMBLY",
+      "number": "11302-60458",
+      "code": "11302A",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=11302-60458",
+      "direct_link": false
+    },
+    "23763-60244": {
+      "name": "CHAIN COVER AND COMPRESSOR BRACKET SUB-ASSEMBLY",
+      "number": "23763-60244",
+      "code": "23763",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23763-60244",
+      "direct_link": false
+    },
+    "13530-60659": {
+      "name": "CHAIN TENSIONER SLIPPER",
+      "number": "13530-60659",
+      "code": "13530",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13530-60659",
+      "direct_link": false
+    },
+    "16100-60052": {
+      "name": "CHAIN TENSIONER SLIPPER",
+      "number": "16100-60052",
+      "code": "16100",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16100-60052",
+      "direct_link": false
+    },
+    "85910-60160": {
+      "name": "CIRCUIT OPENING RELAY (C/OPN)",
+      "number": "85910-60160",
+      "code": "85910A",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=85910-60160",
+      "direct_link": false
+    },
+    "11401-60616": {
+      "name": "CLEAN CYLINDER BLOCK SUB-ASSEMBLY",
+      "number": "11401-60616",
+      "code": "11401",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=11401-60616",
+      "direct_link": false
+    },
+    "13265-60579": {
+      "name": "CLEAN PISTON SUB-ASSEMBLY WITH PIN",
+      "number": "13265-60579",
+      "code": "13265",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=13265-60579",
+      "direct_link": false
+    },
+    "31250-60241": {
+      "name": "CLUTCH COVER ASSEMBLY",
+      "number": "31250-60241",
+      "code": "31250",
+      "category": "engine",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31250-60241",
+      "direct_link": false
+    },
+    "22811-60920": {
+      "name": "ADJUSTING LEVER (w/ BACS)",
+      "number": "22811-60920",
+      "code": "22811",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=22811-60920",
+      "direct_link": false
+    },
+    "22420-60463": {
+      "name": "ADJUSTING LEVER (w/o BACS)",
+      "number": "22420-60463",
+      "code": "22420C",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=22420-60463",
+      "direct_link": false
+    },
+    "74481-60463": {
+      "name": "BATTERY HOLD DOWN CLAMP",
+      "number": "74481-60463",
+      "code": "74481",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=74481-60463",
+      "direct_link": false
+    },
+    "55412-60901": {
+      "name": "CENTER INSTRUMENT CLUSTER FINISH PANEL",
+      "number": "55412-60901",
+      "code": "55412D",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=55412-60901",
+      "direct_link": false
+    },
+    "55413-60754": {
+      "name": "CENTER LOWER INSTRUMENT CLUSTER FINISH PANEL",
+      "number": "55413-60754",
+      "code": "55413D",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=55413-60754",
+      "direct_link": false
+    },
+    "23811-60311": {
+      "name": "DRIVE PULLEY SET KEY",
+      "number": "23811-60311",
+      "code": "23811",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23811-60311",
+      "direct_link": false
+    },
+    "77296-60035": {
+      "name": "EXHAUST PIPE (w/o DPF)",
+      "number": "77296-60035",
+      "code": "77296B",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77296-60035",
+      "direct_link": false
+    },
+    "23920-60217": {
+      "name": "FUEL COOLER",
+      "number": "23920-60217",
+      "code": "23920A",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23920-60217",
+      "direct_link": false
+    },
+    "77380-60206": {
+      "name": "FUEL CUT OFF VALVE ASSEMBLY",
+      "number": "77380-60206",
+      "code": "77380",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77380-60206",
+      "direct_link": false
+    },
+    "23390-60466": {
+      "name": "FUEL FILTER ELEMENT ASSEMBLY",
+      "number": "23390-60466",
+      "code": "23390",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23390-60466",
+      "direct_link": false
+    },
+    "22390-60811": {
+      "name": "FUEL FILTER TO INJECTION PUMP FUEL PIPE",
+      "number": "22390-60811",
+      "code": "22390A",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=22390-60811",
+      "direct_link": false
+    },
+    "22108-60321": {
+      "name": "FUEL INLET HOLLOW SCREW",
+      "number": "22108-60321",
+      "code": "22108A",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=22108-60321",
+      "direct_link": false
+    },
+    "23270-60114": {
+      "name": "FUEL PRESSURE PULSATION DAMPER ASSEMBLY",
+      "number": "23270-60114",
+      "code": "23270",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23270-60114",
+      "direct_link": false
+    },
+    "23280-60286": {
+      "name": "FUEL PRESSURE REGULATOR ASSEMBLY",
+      "number": "23280-60286",
+      "code": "23280",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23280-60286",
+      "direct_link": false
+    },
+    "23221-60429": {
+      "name": "FUEL PUMP",
+      "number": "23221-60429",
+      "code": "23221",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23221-60429",
+      "direct_link": false
+    },
+    "23217-60345": {
+      "name": "FUEL PUMP FILTER",
+      "number": "23217-60345",
+      "code": "23217D",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23217-60345",
+      "direct_link": false
+    },
+    "28380-60779": {
+      "name": "FUEL PUMP RESISTOR",
+      "number": "28380-60779",
+      "code": "28380A",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=28380-60779",
+      "direct_link": false
+    },
+    "83320-60593": {
+      "name": "FUEL SENDER GAUGE ASSEMBLY",
+      "number": "83320-60593",
+      "code": "83320",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=83320-60593",
+      "direct_link": false
+    },
+    "77203-60708": {
+      "name": "FUEL SUCTION TUBE SUB-ASSEMBLY",
+      "number": "77203-60708",
+      "code": "77203B",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77203-60708",
+      "direct_link": false
+    },
+    "22100-60857": {
+      "name": "FUEL SUPPLY PUMP ASSEMBLY",
+      "number": "22100-60857",
+      "code": "22100",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=22100-60857",
+      "direct_link": false
+    },
+    "77278-60183": {
+      "name": "FUEL TANK ASSEMBLY",
+      "number": "77278-60183",
+      "code": "77278A",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77278-60183",
+      "direct_link": false
+    },
+    "77100-60416": {
+      "name": "FUEL TANK ASSEMBLY",
+      "number": "77100-60416",
+      "code": "77100D",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77100-60416",
+      "direct_link": false
+    },
+    "77213-60777": {
+      "name": "FUEL TANK ASSEMBLY",
+      "number": "77213-60777",
+      "code": "77213",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77213-60777",
+      "direct_link": false
+    },
+    "77100-60219": {
+      "name": "FUEL TANK ASSEMBLY (for Model Code #J79 Series)",
+      "number": "77100-60219",
+      "code": "77100",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77100-60219",
+      "direct_link": false
+    },
+    "77011-60458": {
+      "name": "FUEL TANK FILLER LOWER PIPE SUB-ASSEMBLY",
+      "number": "77011-60458",
+      "code": "77011",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77011-60458",
+      "direct_link": false
+    },
+    "77206-60659": {
+      "name": "FUEL TANK FILLER PIPE PROTECTOR",
+      "number": "77206-60659",
+      "code": "77206C",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77206-60659",
+      "direct_link": false
+    },
+    "84560-60807": {
+      "name": "FUEL TANK SELECT SWITCH",
+      "number": "84560-60807",
+      "code": "84560A",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84560-60807",
+      "direct_link": false
+    },
+    "77710-60255": {
+      "name": "FUEL TANK SOLENOID MAIN VALVE ASSEMBLY",
+      "number": "77710-60255",
+      "code": "77710B",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77710-60255",
+      "direct_link": false
+    },
+    "77720-60554": {
+      "name": "FUEL TANK SOLENOID RETURN VALVE ASSEMBLY",
+      "number": "77720-60554",
+      "code": "77720E",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77720-60554",
+      "direct_link": false
+    },
+    "77406-60907": {
+      "name": "FUEL TANK SOLENOID VALVE WITH BRACKET",
+      "number": "77406-60907",
+      "code": "77406",
+      "category": "fuel-tank",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77406-60907",
+      "direct_link": false
+    },
+    "75124-60059": {
+      "name": "AUXILIARY FUEL TANK BRACKET ASSEMBLY (w/ Auxiliary Fuel Tank)",
+      "number": "75124-60059",
+      "code": "75124A",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=75124-60059",
+      "direct_link": false
+    },
+    "67882-60284": {
+      "name": "BACK DOOR CHECK ASSEMBLY LH",
+      "number": "67882-60284",
+      "code": "67882C",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67882-60284",
+      "direct_link": false
+    },
+    "67883-60042": {
+      "name": "BACK DOOR CHECK ASSEMBLY RH",
+      "number": "67883-60042",
+      "code": "67883C",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67883-60042",
+      "direct_link": false
+    },
+    "84235-60209": {
+      "name": "BACK DOOR COURTESY LIGHT SWITCH ASSEMBLY",
+      "number": "84235-60209",
+      "code": "84235",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84235-60209",
+      "direct_link": false
+    },
+    "67881-60206": {
+      "name": "BACK DOOR DOOR LOCK CONTROL KNOB HOLDER",
+      "number": "67881-60206",
+      "code": "67881B",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67881-60206",
+      "direct_link": false
+    },
+    "68131-60326": {
+      "name": "BACK DOOR GLASS LH",
+      "number": "68131-60326",
+      "code": "68131D",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=68131-60326",
+      "direct_link": false
+    },
+    "68131-60949": {
+      "name": "BACK DOOR GLASS RH",
+      "number": "68131-60949",
+      "code": "68131C",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=68131-60949",
+      "direct_link": false
+    },
+    "68291-60212": {
+      "name": "BACK DOOR GLASS WEATHERSTRIP LH",
+      "number": "68291-60212",
+      "code": "68291E",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=68291-60212",
+      "direct_link": false
+    },
+    "68291-60613": {
+      "name": "BACK DOOR GLASS WEATHERSTRIP RH",
+      "number": "68291-60613",
+      "code": "68291D",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=68291-60613",
+      "direct_link": false
+    },
+    "68650-60260": {
+      "name": "BACK DOOR INSIDE HANDLE",
+      "number": "68650-60260",
+      "code": "68650C",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=68650-60260",
+      "direct_link": false
+    },
+    "81690-60791": {
+      "name": "BACK DOOR LOCK ASSEMBLY",
+      "number": "81690-60791",
+      "code": "81690",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=81690-60791",
+      "direct_link": false
+    },
+    "69717-60004": {
+      "name": "BACK DOOR LOCK CONTROL LINK COVER",
+      "number": "69717-60004",
+      "code": "69717",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69717-60004",
+      "direct_link": false
+    },
+    "69212-60191": {
+      "name": "BACK DOOR LOCK CYLINDER ASSEMBLY LH",
+      "number": "69212-60191",
+      "code": "69212",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69212-60191",
+      "direct_link": false
+    },
+    "69054-60908": {
+      "name": "BACK DOOR LOCK REMOTE CONTROL ROD SUB-ASSEMBLY",
+      "number": "69054-60908",
+      "code": "69054",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69054-60908",
+      "direct_link": false
+    },
+    "69430-60682": {
+      "name": "BACK DOOR LOCK STRIKER ASSEMBLY",
+      "number": "69430-60682",
+      "code": "69430A",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69430-60682",
+      "direct_link": false
+    },
+    "69410-60783": {
+      "name": "BACK DOOR LOCK STRIKER PLATE ASSEMBLY",
+      "number": "69410-60783",
+      "code": "69410C",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69410-60783",
+      "direct_link": false
+    },
+    "68852-60498": {
+      "name": "BACK DOOR LOWER HINGE COVER",
+      "number": "68852-60498",
+      "code": "68852B",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=68852-60498",
+      "direct_link": false
+    },
+    "69380-60533": {
+      "name": "BACK DOOR LOWER LOCK ASSEMBLY",
+      "number": "69380-60533",
+      "code": "69380C",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69380-60533",
+      "direct_link": false
+    },
+    "69751-60687": {
+      "name": "BACK DOOR LOWER LOCK ASSEMBLY",
+      "number": "69751-60687",
+      "code": "69751D",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69751-60687",
+      "direct_link": false
+    },
+    "75102-60333": {
+      "name": "BACK DOOR LOWER WEATHERSTRIP LH (for Canvas Top)",
+      "number": "75102-60333",
+      "code": "75102",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=75102-60333",
+      "direct_link": false
+    },
+    "68285-60758": {
+      "name": "BACK DOOR LOWER WEATHERSTRIP RH (for Canvas Top)",
+      "number": "68285-60758",
+      "code": "68285",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=68285-60758",
+      "direct_link": false
+    },
+    "75441-60611": {
+      "name": "BACK DOOR NAME PLATE",
+      "number": "75441-60611",
+      "code": "75441B",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=75441-60611",
+      "direct_link": false
+    },
+    "67884-60499": {
+      "name": "BACK DOOR NO. 2 WEATHERSTRIP (except Canvas Top)",
+      "number": "67884-60499",
+      "code": "67884C",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67884-60499",
+      "direct_link": false
+    },
+    "69350-60532": {
+      "name": "BACK DOOR OUTSIDE HANDLE LH",
+      "number": "69350-60532",
+      "code": "69350",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69350-60532",
+      "direct_link": false
+    },
+    "67006-60655": {
+      "name": "BACK DOOR PANEL SUB-ASSEMBLY LH",
+      "number": "67006-60655",
+      "code": "67006A",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67006-60655",
+      "direct_link": false
+    },
+    "67005-60699": {
+      "name": "BACK DOOR PANEL SUB-ASSEMBLY RH",
+      "number": "67005-60699",
+      "code": "67005D",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67005-60699",
+      "direct_link": false
+    },
+    "67881-60072": {
+      "name": "BACK DOOR REMOTE CONTROL ASSEMBLY",
+      "number": "67881-60072",
+      "code": "67881A",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67881-60072",
+      "direct_link": false
+    },
+    "85110-60986": {
+      "name": "BACK DOOR SERVICE HOLE COVER RH",
+      "number": "85110-60986",
+      "code": "85110R",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=85110-60986",
+      "direct_link": false
+    },
+    "69212-60225": {
+      "name": "BACK DOOR STOPPER SUB-ASSEMBLY",
+      "number": "69212-60225",
+      "code": "69212B",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=69212-60225",
+      "direct_link": false
+    },
+    "67882-60144": {
+      "name": "BACK DOOR TRIM PANEL ASSEMBLY LH",
+      "number": "67882-60144",
+      "code": "67882B",
+      "category": "body",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=67882-60144",
+      "direct_link": false
+    },
+    "44731-60689": {
+      "name": "BOOSTER BRACKET STOPPER RING",
+      "number": "44731-60689",
+      "code": "44731C",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44731-60689",
+      "direct_link": false
+    },
+    "44510-60635": {
+      "name": "BRAKE ACTUATOR ASSEMBLY WITH BRACKET",
+      "number": "44510-60635",
+      "code": "44510",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44510-60635",
+      "direct_link": false
+    },
+    "44547-60772": {
+      "name": "BRAKE ACTUATOR BRACKET CUSHION",
+      "number": "44547-60772",
+      "code": "44547B",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44547-60772",
+      "direct_link": false
+    },
+    "44735-60793": {
+      "name": "BRAKE BOOSTER ASSEMBLY",
+      "number": "44735-60793",
+      "code": "44735C",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44735-60793",
+      "direct_link": false
+    },
+    "44785-60880": {
+      "name": "BRAKE BOOSTER BRACKET",
+      "number": "44785-60880",
+      "code": "44785",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44785-60880",
+      "direct_link": false
+    },
+    "04495-60753": {
+      "name": "BRAKE DRUM INSIDE DIAMETER",
+      "number": "04495-60753",
+      "code": "04495",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=04495-60753",
+      "direct_link": false
+    },
+    "47287-60283": {
+      "name": "BRAKE FLUID INFORMATION LABEL",
+      "number": "47287-60283",
+      "code": "47287",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47287-60283",
+      "direct_link": false
+    },
+    "04493-60989": {
+      "name": "BRAKE MASTER CYLINDER KIT",
+      "number": "04493-60989",
+      "code": "04493",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=04493-60989",
+      "direct_link": false
+    },
+    "44610-60292": {
+      "name": "BRAKE MASTER CYLINDER PUSH ROD CLEVIS",
+      "number": "44610-60292",
+      "code": "44610",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44610-60292",
+      "direct_link": false
+    },
+    "47230-60348": {
+      "name": "BRAKE MASTER CYLINDER RESERVOIR FILLER CAP ASSEMBLY",
+      "number": "47230-60348",
+      "code": "47230",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47230-60348",
+      "direct_link": false
+    },
+    "47299-60835": {
+      "name": "BRAKE MASTER CYLINDER RESERVOIR STRAINER",
+      "number": "47299-60835",
+      "code": "47299",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47299-60835",
+      "direct_link": false
+    },
+    "47202-60467": {
+      "name": "BRAKE MASTER CYLINDER RESERVOIR SUB-ASSEMBLY",
+      "number": "47202-60467",
+      "code": "47202",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47202-60467",
+      "direct_link": false
+    },
+    "44773-60414": {
+      "name": "BRAKE MASTER CYLINDER SUB-ASSEMBLY",
+      "number": "44773-60414",
+      "code": "44773F",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44773-60414",
+      "direct_link": false
+    },
+    "47201-60526": {
+      "name": "BRAKE MASTER CYLINDER SUB-ASSEMBLY (for LHD)",
+      "number": "47201-60526",
+      "code": "47201",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47201-60526",
+      "direct_link": false
+    },
+    "47121-60484": {
+      "name": "BRAKE PEDAL PAD",
+      "number": "47121-60484",
+      "code": "47121",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47121-60484",
+      "direct_link": false
+    },
+    "47264-60643": {
+      "name": "BRAKE PEDAL RETURN SPRING",
+      "number": "47264-60643",
+      "code": "47264A",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47264-60643",
+      "direct_link": false
+    },
+    "47110-60960": {
+      "name": "BRAKE PEDAL SUPPORT ASSEMBLY",
+      "number": "47110-60960",
+      "code": "47110",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47110-60960",
+      "direct_link": false
+    },
+    "44730-60480": {
+      "name": "BRAKE VACUUM CHECK VALVE ASSEMBLY",
+      "number": "44730-60480",
+      "code": "44730",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44730-60480",
+      "direct_link": false
+    },
+    "44696-60926": {
+      "name": "BRAKE VACUUM CHECK VALVE ASSEMBLY (for 1GR-FE)",
+      "number": "44696-60926",
+      "code": "44696",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44696-60926",
+      "direct_link": false
+    },
+    "47731-60634": {
+      "name": "CYLINDER BOOT",
+      "number": "47731-60634",
+      "code": "47731B",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47731-60634",
+      "direct_link": false
+    },
+    "47750-60995": {
+      "name": "DISC BRAKE CYLINDER ASSEMBLY LH",
+      "number": "47750-60995",
+      "code": "47750",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47750-60995",
+      "direct_link": false
+    },
+    "47322-60777": {
+      "name": "DISCONNECT CLUTCH RESERVOIR TUBE (for LHD)",
+      "number": "47322-60777",
+      "code": "47322",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47322-60777",
+      "direct_link": false
+    },
+    "04945-60627": {
+      "name": "FRONT ANTI-SQUEAL SHIM KIT",
+      "number": "04945-60627",
+      "code": "04945",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=04945-60627",
+      "direct_link": false
+    },
+    "47430-60884": {
+      "name": "FRONT BRAKE SHOE",
+      "number": "47430-60884",
+      "code": "47430G",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47430-60884",
+      "direct_link": false
+    },
+    "04465-60293": {
+      "name": "FRONT DISC BRAKE PAD",
+      "number": "04465-60293",
+      "code": "04465",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=04465-60293",
+      "direct_link": false
+    },
+    "47714-60002": {
+      "name": "FRONT DISC BRAKE PISTON",
+      "number": "47714-60002",
+      "code": "47714",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47714-60002",
+      "direct_link": false
+    },
+    "47311-60165": {
+      "name": "FRONT NO. 2 BRAKE TUBE",
+      "number": "47311-60165",
+      "code": "47311",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47311-60165",
+      "direct_link": false
+    },
+    "47313-60790": {
+      "name": "FRONT WHEEL",
+      "number": "47313-60790",
+      "code": "47313A",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=47313-60790",
+      "direct_link": false
+    },
+    "89516-60454": {
+      "name": "FRONT WHEEL",
+      "number": "89516-60454",
+      "code": "89516D",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89516-60454",
+      "direct_link": false
+    },
+    "46410-60314": {
+      "name": "FUEL SUB TANK (for Double Tank Type)",
+      "number": "46410-60314",
+      "code": "46410",
+      "category": "brakes",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=46410-60314",
+      "direct_link": false
+    },
+    "33335-60812": {
+      "name": "1ST GEAR BEARING SPACER",
+      "number": "33335-60812",
+      "code": "33335B",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33335-60812",
+      "direct_link": false
+    },
+    "33321-60036": {
+      "name": "1ST GEAR NEEDLE ROLLER BEARING",
+      "number": "33321-60036",
+      "code": "33321D",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33321-60036",
+      "direct_link": false
+    },
+    "33348-60157": {
+      "name": "1ST GEAR THRUST WASHER PIN",
+      "number": "33348-60157",
+      "code": "33348A",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33348-60157",
+      "direct_link": false
+    },
+    "33335-60250": {
+      "name": "2ND GEAR",
+      "number": "33335-60250",
+      "code": "33335",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33335-60250",
+      "direct_link": false
+    },
+    "33364-60548": {
+      "name": "2ND GEAR",
+      "number": "33364-60548",
+      "code": "33364",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33364-60548",
+      "direct_link": false
+    },
+    "33333-60999": {
+      "name": "2ND GEAR NEEDLE ROLLER BEARING",
+      "number": "33333-60999",
+      "code": "33333A",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33333-60999",
+      "direct_link": false
+    },
+    "33361-60273": {
+      "name": "2ND GEAR NEEDLE ROLLER BEARING",
+      "number": "33361-60273",
+      "code": "33361B",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33361-60273",
+      "direct_link": false
+    },
+    "33332-60960": {
+      "name": "3RD GEAR",
+      "number": "33332-60960",
+      "code": "33332B",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33332-60960",
+      "direct_link": false
+    },
+    "36235-60665": {
+      "name": "3RD GEAR NEEDLE ROLLER BEARING",
+      "number": "36235-60665",
+      "code": "36235B",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=36235-60665",
+      "direct_link": false
+    },
+    "33348-60877": {
+      "name": "3RD GEAR NEEDLE ROLLER BEARING",
+      "number": "33348-60877",
+      "code": "33348",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33348-60877",
+      "direct_link": false
+    },
+    "33321-60518": {
+      "name": "3RD GEAR RADIAL CLEARANCE",
+      "number": "33321-60518",
+      "code": "33321M",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33321-60518",
+      "direct_link": false
+    },
+    "33336-60393": {
+      "name": "5TH GEAR",
+      "number": "33336-60393",
+      "code": "33336",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33336-60393",
+      "direct_link": false
+    },
+    "33349-60936": {
+      "name": "5TH GEAR THRUST WASHER",
+      "number": "33349-60936",
+      "code": "33349",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33349-60936",
+      "direct_link": false
+    },
+    "33349-60587": {
+      "name": "5TH GEAR THRUST WASHER PIN",
+      "number": "33349-60587",
+      "code": "33349C",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33349-60587",
+      "direct_link": false
+    },
+    "16571-60634": {
+      "name": "AIR CLEANER CAP AND HOSE SUB-ASSEMBLY",
+      "number": "16571-60634",
+      "code": "16571",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16571-60634",
+      "direct_link": false
+    },
+    "89170-60096": {
+      "name": "AIRBAG SENSOR ASSEMBLY WITH AIRBAG SENSOR BRACKET (w/ Airbag System)",
+      "number": "89170-60096",
+      "code": "89170",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89170-60096",
+      "direct_link": false
+    },
+    "89179-60509": {
+      "name": "AIRBAG SENSOR COVER",
+      "number": "89179-60509",
+      "code": "89179A",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89179-60509",
+      "direct_link": false
+    },
+    "33411-60219": {
+      "name": "CENTER COUNTER SHAFT BEARING",
+      "number": "33411-60219",
+      "code": "33411P",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33411-60219",
+      "direct_link": false
+    },
+    "31490-60553": {
+      "name": "CLUTCH ACCUMULATOR ASSEMBLY",
+      "number": "31490-60553",
+      "code": "31490",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31490-60553",
+      "direct_link": false
+    },
+    "31418-60379": {
+      "name": "CLUTCH HOSE",
+      "number": "31418-60379",
+      "code": "31418",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31418-60379",
+      "direct_link": false
+    },
+    "33101-60066": {
+      "name": "CLUTCH HOUSING",
+      "number": "33101-60066",
+      "code": "33101J",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33101-60066",
+      "direct_link": false
+    },
+    "33101-60844": {
+      "name": "CLUTCH HOUSING",
+      "number": "33101-60844",
+      "code": "33101A",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=33101-60844",
+      "direct_link": false
+    },
+    "31410-60704": {
+      "name": "CLUTCH MASTER CYLINDER ASSEMBLY",
+      "number": "31410-60704",
+      "code": "31410",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31410-60704",
+      "direct_link": false
+    },
+    "31453-60169": {
+      "name": "CLUTCH MASTER CYLINDER PUSH ROD",
+      "number": "31453-60169",
+      "code": "31453",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31453-60169",
+      "direct_link": false
+    },
+    "31402-60378": {
+      "name": "CLUTCH MASTER CYLINDER PUSH ROD CLEVIS",
+      "number": "31402-60378",
+      "code": "31402",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31402-60378",
+      "direct_link": false
+    },
+    "31440-60153": {
+      "name": "CLUTCH MASTER CYLINDER RESERVOIR FILLER CAP ASSEMBLY",
+      "number": "31440-60153",
+      "code": "31440P",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31440-60153",
+      "direct_link": false
+    },
+    "31426-60041": {
+      "name": "CLUTCH MASTER CYLINDER RESERVOIR FLOAT",
+      "number": "31426-60041",
+      "code": "31426",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31426-60041",
+      "direct_link": false
+    },
+    "31481-60817": {
+      "name": "CLUTCH MASTER CYLINDER TO 2 WAY TUBE",
+      "number": "31481-60817",
+      "code": "31481J",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31481-60817",
+      "direct_link": false
+    },
+    "31301-60987": {
+      "name": "CLUTCH PEDAL BUSH",
+      "number": "31301-60987",
+      "code": "31301P",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31301-60987",
+      "direct_link": false
+    },
+    "31301-60877": {
+      "name": "CLUTCH PEDAL PAD",
+      "number": "31301-60877",
+      "code": "31301C",
+      "category": "transmission",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=31301-60877",
+      "direct_link": false
+    },
+    "17402-60437": {
+      "name": "AIR FUEL RATIO SENSOR (w/ DPF)",
+      "number": "17402-60437",
+      "code": "17402",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17402-60437",
+      "direct_link": false
+    },
+    "18450-60191": {
+      "name": "CENTER CONVERTER PROTECTOR STAY (w/o DPF)",
+      "number": "18450-60191",
+      "code": "18450A",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=18450-60191",
+      "direct_link": false
+    },
+    "17403-60199": {
+      "name": "CENTER EXHAUST PIPE ASSEMBLY",
+      "number": "17403-60199",
+      "code": "17403",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17403-60199",
+      "direct_link": false
+    },
+    "17420-60301": {
+      "name": "CENTER EXHAUST PIPE ASSEMBLY (for Model Code #J78 Series)",
+      "number": "17420-60301",
+      "code": "17420",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17420-60301",
+      "direct_link": false
+    },
+    "77740-60527": {
+      "name": "CHARCOAL CANISTER ASSEMBLY",
+      "number": "77740-60527",
+      "code": "77740",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77740-60527",
+      "direct_link": false
+    },
+    "53299-60193": {
+      "name": "COOL AIR INTAKE DUCT",
+      "number": "53299-60193",
+      "code": "53299B",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=53299-60193",
+      "direct_link": false
+    },
+    "53297-60113": {
+      "name": "COOL AIR INTAKE PIPE",
+      "number": "53297-60113",
+      "code": "53297E",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=53297-60113",
+      "direct_link": false
+    },
+    "89481-60997": {
+      "name": "DIFFERENTIAL PRESSURE SENSOR",
+      "number": "89481-60997",
+      "code": "89481B",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89481-60997",
+      "direct_link": false
+    },
+    "78180-60361": {
+      "name": "DISCONNECT ACCELERATOR CONTROL CABLE ASSEMBLY",
+      "number": "78180-60361",
+      "code": "78180P",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=78180-60361",
+      "direct_link": false
+    },
+    "16268-60346": {
+      "name": "DISCONNECT NO. 11 WATER BY-PASS HOSE",
+      "number": "16268-60346",
+      "code": "16268A",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16268-60346",
+      "direct_link": false
+    },
+    "84270-60087": {
+      "name": "DPF SWITCH ASSEMBLY",
+      "number": "84270-60087",
+      "code": "84270K",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84270-60087",
+      "direct_link": false
+    },
+    "25613-60757": {
+      "name": "EGR VALVE WITH EGR COOLER",
+      "number": "25613-60757",
+      "code": "25613",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=25613-60757",
+      "direct_link": false
+    },
+    "89425-60333": {
+      "name": "EXHAUST GAS TEMPERATURE SENSOR (w/ DPF)",
+      "number": "89425-60333",
+      "code": "89425A",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89425-60333",
+      "direct_link": false
+    },
+    "17104-60675": {
+      "name": "EXHAUST MANIFOLD SUB-ASSEMBLY RH",
+      "number": "17104-60675",
+      "code": "17104",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17104-60675",
+      "direct_link": false
+    },
+    "18421-60258": {
+      "name": "FRONT EXHAUST PIPE ASSEMBLY (w/o DPF)",
+      "number": "18421-60258",
+      "code": "18421C",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=18421-60258",
+      "direct_link": false
+    },
+    "53737-60890": {
+      "name": "FRONT FENDER APRON SEAL LH",
+      "number": "53737-60890",
+      "code": "53737B",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=53737-60890",
+      "direct_link": false
+    },
+    "89425-60214": {
+      "name": "FRONT NO. 2 EXHAUST PIPE SUB-ASSEMBLY (w/ DPF)",
+      "number": "89425-60214",
+      "code": "89425",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89425-60214",
+      "direct_link": false
+    },
+    "23812-60397": {
+      "name": "FUEL FILTER TO INJECTION PUMP FUEL PIPE SUB-ASSEMBLY",
+      "number": "23812-60397",
+      "code": "23812D",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=23812-60397",
+      "direct_link": false
+    },
+    "77031-60823": {
+      "name": "FUEL TANK CAP ASSEMBLY",
+      "number": "77031-60823",
+      "code": "77031",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=77031-60823",
+      "direct_link": false
+    },
+    "15407-60209": {
+      "name": "IDLER PULLEY SUB-ASSEMBLY",
+      "number": "15407-60209",
+      "code": "15407",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=15407-60209",
+      "direct_link": false
+    },
+    "78104-60781": {
+      "name": "INJECTION PIPE SUB-ASSEMBLY",
+      "number": "78104-60781",
+      "code": "78104",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=78104-60781",
+      "direct_link": false
+    },
+    "17129-60862": {
+      "name": "INTAKE AIR SURGE TANK",
+      "number": "17129-60862",
+      "code": "17129",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17129-60862",
+      "direct_link": false
+    },
+    "25624-60085": {
+      "name": "INTAKE PIPE",
+      "number": "25624-60085",
+      "code": "25624",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=25624-60085",
+      "direct_link": false
+    },
+    "17138-60861": {
+      "name": "INTAKE PIPE STAY",
+      "number": "17138-60861",
+      "code": "17138A",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17138-60861",
+      "direct_link": false
+    },
+    "15481-60799": {
+      "name": "LOWER OIL FILTER ELEMENT COVER",
+      "number": "15481-60799",
+      "code": "15481",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=15481-60799",
+      "direct_link": false
+    },
+    "18431-60660": {
+      "name": "MONOLITHIC CONVERTER ASSEMBLY (w/o DPF)",
+      "number": "18431-60660",
+      "code": "18431",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=18431-60660",
+      "direct_link": false
+    },
+    "25860-60166": {
+      "name": "NO. 1 ACCELERATOR CONNECTING ROD SUB-ASSEMBLY",
+      "number": "25860-60166",
+      "code": "25860A",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=25860-60166",
+      "direct_link": false
+    },
+    "25630-60457": {
+      "name": "NO. 1 EGR VALVE ASSEMBLY",
+      "number": "25630-60457",
+      "code": "25630",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=25630-60457",
+      "direct_link": false
+    },
+    "17118-60017": {
+      "name": "NO. 1 MANIFOLD STAY",
+      "number": "17118-60017",
+      "code": "17118",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17118-60017",
+      "direct_link": false
+    },
+    "25860-60201": {
+      "name": "NO. 1 VACUUM SWITCHING VALVE OPERATION (for EGR Cooler Bypass Valve)",
+      "number": "25860-60201",
+      "code": "25860",
+      "category": "exhaust",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=25860-60201",
+      "direct_link": false
+    },
+    "41331-60844": {
+      "name": "AND ADJUST ADJUSTING SHIM",
+      "number": "41331-60844",
+      "code": "41331",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41331-60844",
+      "direct_link": false
+    },
+    "43502-60041": {
+      "name": "BEARING OUTER RACE",
+      "number": "43502-60041",
+      "code": "43502F",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=43502-60041",
+      "direct_link": false
+    },
+    "42402-60114": {
+      "name": "BEARING OUTER RACE",
+      "number": "42402-60114",
+      "code": "42402E",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=42402-60114",
+      "direct_link": false
+    },
+    "84725-60726": {
+      "name": "CENTER DIFFERENTIAL LOCK SWITCH",
+      "number": "84725-60726",
+      "code": "84725",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84725-60726",
+      "direct_link": false
+    },
+    "43521-60177": {
+      "name": "COAT INSIDE OF AXLE HUB WITH MP GREASE",
+      "number": "43521-60177",
+      "code": "43521D",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=43521-60177",
+      "direct_link": false
+    },
+    "89533-60105": {
+      "name": "COWL SIDE TRIM SUB-ASSEMBLY RH",
+      "number": "89533-60105",
+      "code": "89533A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=89533-60105",
+      "direct_link": false
+    },
+    "41231-60906": {
+      "name": "DIFFERENTIAL CASE ASSEMBLY",
+      "number": "41231-60906",
+      "code": "41231",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41231-60906",
+      "direct_link": false
+    },
+    "41301-60829": {
+      "name": "DIFFERENTIAL DRIVE PINION",
+      "number": "41301-60829",
+      "code": "41301A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41301-60829",
+      "direct_link": false
+    },
+    "41115-60362": {
+      "name": "DIFFERENTIAL DRIVE PINION",
+      "number": "41115-60362",
+      "code": "41115F",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41115-60362",
+      "direct_link": false
+    },
+    "41211-60915": {
+      "name": "DIFFERENTIAL RING GEAR",
+      "number": "41211-60915",
+      "code": "41211B",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41211-60915",
+      "direct_link": false
+    },
+    "43502-60606": {
+      "name": "FRONT AXLE HUB BOLT LH",
+      "number": "43502-60606",
+      "code": "43502D",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=43502-60606",
+      "direct_link": false
+    },
+    "43502-60804": {
+      "name": "FRONT AXLE HUB SUB-ASSEMBLY LH",
+      "number": "43502-60804",
+      "code": "43502C",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=43502-60804",
+      "direct_link": false
+    },
+    "43405-60830": {
+      "name": "FRONT AXLE OUTER SHAFT SUB-ASSEMBLY",
+      "number": "43405-60830",
+      "code": "43405",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=43405-60830",
+      "direct_link": false
+    },
+    "45047-60652": {
+      "name": "FRONT AXLE SHAFT ASSEMBLY",
+      "number": "45047-60652",
+      "code": "45047",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45047-60652",
+      "direct_link": false
+    },
+    "43401-60178": {
+      "name": "FRONT AXLE SHAFT ASSEMBLY",
+      "number": "43401-60178",
+      "code": "43401",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=43401-60178",
+      "direct_link": false
+    },
+    "41231-60727": {
+      "name": "FRONT DIFFERENTIAL BEARING ADJUSTING NUT",
+      "number": "41231-60727",
+      "code": "41231F",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41231-60727",
+      "direct_link": false
+    },
+    "41214-60788": {
+      "name": "FRONT DIFFERENTIAL BEARING ADJUSTING NUT",
+      "number": "41214-60788",
+      "code": "41214C",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41214-60788",
+      "direct_link": false
+    },
+    "41110-60272": {
+      "name": "FRONT DIFFERENTIAL CARRIER ASSEMBLY",
+      "number": "41110-60272",
+      "code": "41110F",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41110-60272",
+      "direct_link": false
+    },
+    "84222-60332": {
+      "name": "FRONT DIFFERENTIAL CARRIER OIL SEAL",
+      "number": "84222-60332",
+      "code": "84222D",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84222-60332",
+      "direct_link": false
+    },
+    "41311-60481": {
+      "name": "FRONT DIFFERENTIAL CASE BEARING",
+      "number": "41311-60481",
+      "code": "41311A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41311-60481",
+      "direct_link": false
+    },
+    "41211-60930": {
+      "name": "FRONT DIFFERENTIAL CASE BEARING",
+      "number": "41211-60930",
+      "code": "41211A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41211-60930",
+      "direct_link": false
+    },
+    "41453-60398": {
+      "name": "FRONT DIFFERENTIAL DRIVE PINION OIL SLINGER",
+      "number": "41453-60398",
+      "code": "41453A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41453-60398",
+      "direct_link": false
+    },
+    "41252-60279": {
+      "name": "FRONT DIFFERENTIAL DUST DEFLECTOR",
+      "number": "41252-60279",
+      "code": "41252A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41252-60279",
+      "direct_link": false
+    },
+    "41316-60553": {
+      "name": "FRONT DIFFERENTIAL OIL STORAGE RING",
+      "number": "41316-60553",
+      "code": "41316A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41316-60553",
+      "direct_link": false
+    },
+    "43512-60279": {
+      "name": "FRONT DISC",
+      "number": "43512-60279",
+      "code": "43512",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=43512-60279",
+      "direct_link": false
+    },
+    "41101-60696": {
+      "name": "FRONT DRIVE PINION COMPANION FLANGE NUT",
+      "number": "41101-60696",
+      "code": "41101D",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41101-60696",
+      "direct_link": false
+    },
+    "41204-60590": {
+      "name": "FRONT DRIVE PINION COMPANION FLANGE SUB-ASSEMBLY WITH DUST DEFLECTOR",
+      "number": "41204-60590",
+      "code": "41204D",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41204-60590",
+      "direct_link": false
+    },
+    "41450-60898": {
+      "name": "FRONT DRIVE PINION COMPANION FLANGE SUB-ASSEMBLY WITH DUST DEFLECTOR",
+      "number": "41450-60898",
+      "code": "41450A",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41450-60898",
+      "direct_link": false
+    },
+    "41311-60214": {
+      "name": "FRONT DRIVE PINION FRONT TAPERED ROLLER BEARING",
+      "number": "41311-60214",
+      "code": "41311",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41311-60214",
+      "direct_link": false
+    },
+    "41204-60760": {
+      "name": "FRONT DRIVE PINION FRONT TAPERED ROLLER BEARING",
+      "number": "41204-60760",
+      "code": "41204E",
+      "category": "rear-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=41204-60760",
+      "direct_link": false
+    },
+    "17881-60272": {
+      "name": "AIR CLEANER CAP SUB-ASSEMBLY",
+      "number": "17881-60272",
+      "code": "17881",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17881-60272",
+      "direct_link": false
+    },
+    "17705-60452": {
+      "name": "AIR CLEANER CASE SUB-ASSEMBLY",
+      "number": "17705-60452",
+      "code": "17705",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17705-60452",
+      "direct_link": false
+    },
+    "16210-60536": {
+      "name": "ENGINE WATER PUMP ASSEMBLY",
+      "number": "16210-60536",
+      "code": "16210",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16210-60536",
+      "direct_link": false
+    },
+    "16361-60367": {
+      "name": "FAN",
+      "number": "16361-60367",
+      "code": "16361",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16361-60367",
+      "direct_link": false
+    },
+    "16371-60023": {
+      "name": "FAN PULLEY",
+      "number": "16371-60023",
+      "code": "16371",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16371-60023",
+      "direct_link": false
+    },
+    "16711-60150": {
+      "name": "FAN SHROUD",
+      "number": "16711-60150",
+      "code": "16711",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16711-60150",
+      "direct_link": false
+    },
+    "17875-60309": {
+      "name": "INTAKE AIR CONNECTOR PIPE",
+      "number": "17875-60309",
+      "code": "17875",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17875-60309",
+      "direct_link": false
+    },
+    "17805-60298": {
+      "name": "INTAKE AIR CONNECTOR SUB-ASSEMBLY",
+      "number": "17805-60298",
+      "code": "17805",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17805-60298",
+      "direct_link": false
+    },
+    "16571-60614": {
+      "name": "NO. 1 AIR CLEANER HOSE",
+      "number": "16571-60614",
+      "code": "16571C",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16571-60614",
+      "direct_link": false
+    },
+    "53111-60746": {
+      "name": "NO. 1 RADIATOR HOSE",
+      "number": "53111-60746",
+      "code": "53111",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=53111-60746",
+      "direct_link": false
+    },
+    "16323-60708": {
+      "name": "NO. 1 RADIATOR HOSE",
+      "number": "16323-60708",
+      "code": "16323",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16323-60708",
+      "direct_link": false
+    },
+    "51442-60028": {
+      "name": "NO. 2 ENGINE UNDER COVER",
+      "number": "51442-60028",
+      "code": "51442",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=51442-60028",
+      "direct_link": false
+    },
+    "16572-60440": {
+      "name": "NO. 2 RADIATOR HOSE",
+      "number": "16572-60440",
+      "code": "16572D",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16572-60440",
+      "direct_link": false
+    },
+    "16031-60034": {
+      "name": "NO. 2 RADIATOR HOSE",
+      "number": "16031-60034",
+      "code": "16031",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16031-60034",
+      "direct_link": false
+    },
+    "16400-60939": {
+      "name": "RADIATOR ASSEMBLY",
+      "number": "16400-60939",
+      "code": "16400",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16400-60939",
+      "direct_link": false
+    },
+    "16611-60314": {
+      "name": "RADIATOR ASSEMBLY",
+      "number": "16611-60314",
+      "code": "16611",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16611-60314",
+      "direct_link": false
+    },
+    "16401-60931": {
+      "name": "RADIATOR CAP SUB-ASSEMBLY",
+      "number": "16401-60931",
+      "code": "16401",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16401-60931",
+      "direct_link": false
+    },
+    "16584-60767": {
+      "name": "RADIATOR MOUNTING INSULATOR",
+      "number": "16584-60767",
+      "code": "16584",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16584-60767",
+      "direct_link": false
+    },
+    "16470-60987": {
+      "name": "RADIATOR RESERVOIR ASSEMBLY",
+      "number": "16470-60987",
+      "code": "16470",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16470-60987",
+      "direct_link": false
+    },
+    "88310-60132": {
+      "name": "RADIATOR RESERVOIR ASSEMBLY",
+      "number": "88310-60132",
+      "code": "88310A",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=88310-60132",
+      "direct_link": false
+    },
+    "16454-60870": {
+      "name": "RADIATOR SIDE SUPPORT PLATE LH",
+      "number": "16454-60870",
+      "code": "16454",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16454-60870",
+      "direct_link": false
+    },
+    "16453-60537": {
+      "name": "RADIATOR SIDE SUPPORT PLATE RH",
+      "number": "16453-60537",
+      "code": "16453",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16453-60537",
+      "direct_link": false
+    },
+    "16441-60804": {
+      "name": "RADIATOR TANK",
+      "number": "16441-60804",
+      "code": "16441",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16441-60804",
+      "direct_link": false
+    },
+    "16471-60802": {
+      "name": "RESERVOIR CAP",
+      "number": "16471-60802",
+      "code": "16471B",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16471-60802",
+      "direct_link": false
+    },
+    "16400-60428": {
+      "name": "UPPER AND LOWER RADIATOR TANK",
+      "number": "16400-60428",
+      "code": "16400B",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16400-60428",
+      "direct_link": false
+    },
+    "16631-60622": {
+      "name": "WATER INLET HOUSING",
+      "number": "16631-60622",
+      "code": "16631B",
+      "category": "cooling",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=16631-60622",
+      "direct_link": false
+    },
+    "17700-60339": {
+      "name": "AIR CLEANER CAP SUB-ASSEMBLY WITH NO. 1 AIR CLEANER HOSE",
+      "number": "17700-60339",
+      "code": "17700",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=17700-60339",
+      "direct_link": false
+    },
+    "45878-60889": {
+      "name": "BREAK AWAY BRACKET",
+      "number": "45878-60889",
+      "code": "45878A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45878-60889",
+      "direct_link": false
+    },
+    "45204-60360": {
+      "name": "BREAK AWAY BRACKET",
+      "number": "45204-60360",
+      "code": "45204",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45204-60360",
+      "direct_link": false
+    },
+    "45261-60151": {
+      "name": "BREAK AWAY COLLAR SUB-ASSEMBLY",
+      "number": "45261-60151",
+      "code": "45261",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45261-60151",
+      "direct_link": false
+    },
+    "44111-60933": {
+      "name": "CROSS SHAFT",
+      "number": "44111-60933",
+      "code": "44111",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44111-60933",
+      "direct_link": false
+    },
+    "44316-60788": {
+      "name": "FLOW CONTROL VALVE",
+      "number": "44316-60788",
+      "code": "44316",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44316-60788",
+      "direct_link": false
+    },
+    "45203-60587": {
+      "name": "FRONT FENDER APRON SEAL LH",
+      "number": "45203-60587",
+      "code": "45203",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45203-60587",
+      "direct_link": false
+    },
+    "45450-60568": {
+      "name": "FRONT WHEELS",
+      "number": "45450-60568",
+      "code": "45450",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45450-60568",
+      "direct_link": false
+    },
+    "45262-60356": {
+      "name": "IGNITION OR STARTER SWITCH ASSEMBLY",
+      "number": "45262-60356",
+      "code": "45262A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45262-60356",
+      "direct_link": false
+    },
+    "44348-60858": {
+      "name": "INTAKE AIR CONNECTOR ASSEMBLY (for 1VD-FTV)",
+      "number": "44348-60858",
+      "code": "44348A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44348-60858",
+      "direct_link": false
+    },
+    "45636-60687": {
+      "name": "INTERMEDIATE LINK JOINT PROTECTOR",
+      "number": "45636-60687",
+      "code": "45636B",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45636-60687",
+      "direct_link": false
+    },
+    "45184-60330": {
+      "name": "LOWER STEERING WHEEL BOSS COVER",
+      "number": "45184-60330",
+      "code": "45184",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45184-60330",
+      "direct_link": false
+    },
+    "45877-60374": {
+      "name": "NO. 1 STEERING COLUMN RING",
+      "number": "45877-60374",
+      "code": "45877A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45877-60374",
+      "direct_link": false
+    },
+    "45890-60548": {
+      "name": "NO. 1 TILT STEERING SUPPORT REINFORCEMENT",
+      "number": "45890-60548",
+      "code": "45890A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45890-60548",
+      "direct_link": false
+    },
+    "45046-60832": {
+      "name": "PITMAN ARM",
+      "number": "45046-60832",
+      "code": "45046",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45046-60832",
+      "direct_link": false
+    },
+    "44114-60184": {
+      "name": "POWER PISTON NUT RING (\"TEFLON\" RING)",
+      "number": "44114-60184",
+      "code": "44114A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44114-60184",
+      "direct_link": false
+    },
+    "44154-60661": {
+      "name": "POWER PISTON PLUNGER GUIDE NUT",
+      "number": "44154-60661",
+      "code": "44154",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44154-60661",
+      "direct_link": false
+    },
+    "44110-60093": {
+      "name": "POWER STEERING GEAR ASSEMBLY",
+      "number": "44110-60093",
+      "code": "44110",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44110-60093",
+      "direct_link": false
+    },
+    "44107-60301": {
+      "name": "POWER STEERING GEAR HOUSING NEEDLE ROLLER BEARING",
+      "number": "44107-60301",
+      "code": "44107A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44107-60301",
+      "direct_link": false
+    },
+    "44337-60606": {
+      "name": "POWER STEERING SUCTION PORT UNION",
+      "number": "44337-60606",
+      "code": "44337",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44337-60606",
+      "direct_link": false
+    },
+    "45357-60789": {
+      "name": "SECTOR SHAFT ADJUSTING SCREW",
+      "number": "45357-60789",
+      "code": "45357",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45357-60789",
+      "direct_link": false
+    },
+    "44108-60871": {
+      "name": "SIDE COVER SUB-ASSEMBLY",
+      "number": "44108-60871",
+      "code": "44108",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44108-60871",
+      "direct_link": false
+    },
+    "45873-60007": {
+      "name": "STEERING COLUMN TUBE STOPPER",
+      "number": "45873-60007",
+      "code": "45873",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45873-60007",
+      "direct_link": false
+    },
+    "45700-60261": {
+      "name": "STEERING DAMPER ASSEMBLY",
+      "number": "45700-60261",
+      "code": "45700",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45700-60261",
+      "direct_link": false
+    },
+    "45460-60821": {
+      "name": "STEERING DAMPER ASSEMBLY",
+      "number": "45460-60821",
+      "code": "45460A",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45460-60821",
+      "direct_link": false
+    },
+    "45721-60120": {
+      "name": "STEERING DAMPER BRACKET",
+      "number": "45721-60120",
+      "code": "45721",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45721-60120",
+      "direct_link": false
+    },
+    "45813-60298": {
+      "name": "STEERING LOWER COLUMN TUBE ASSEMBLY",
+      "number": "45813-60298",
+      "code": "45813",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=45813-60298",
+      "direct_link": false
+    },
+    "84259-60358": {
+      "name": "STEERING PAD COVER LH",
+      "number": "84259-60358",
+      "code": "84259",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84259-60358",
+      "direct_link": false
+    },
+    "84258-60682": {
+      "name": "STEERING PAD COVER RH",
+      "number": "84258-60682",
+      "code": "84258",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=84258-60682",
+      "direct_link": false
+    },
+    "44251-60735": {
+      "name": "STEERING RELAY ROD ASSEMBLY",
+      "number": "44251-60735",
+      "code": "44251",
+      "category": "steering",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=44251-60735",
+      "direct_link": false
+    },
+    "48132-60961": {
+      "name": "FRONT COIL SPRING LH",
+      "number": "48132-60961",
+      "code": "48132",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48132-60961",
+      "direct_link": false
+    },
+    "48310-60532": {
+      "name": "FRONT COIL SPRING LH",
+      "number": "48310-60532",
+      "code": "48310A",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48310-60532",
+      "direct_link": false
+    },
+    "48706-60540": {
+      "name": "FRONT LATERAL CONTROL ROD ASSEMBLY",
+      "number": "48706-60540",
+      "code": "48706",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48706-60540",
+      "direct_link": false
+    },
+    "48654-60386": {
+      "name": "FRONT LEADING ARM ASSEMBLY",
+      "number": "48654-60386",
+      "code": "48654",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48654-60386",
+      "direct_link": false
+    },
+    "48824-60586": {
+      "name": "FRONT NO. 1 STABILIZER BAR BUSHING",
+      "number": "48824-60586",
+      "code": "48824A",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48824-60586",
+      "direct_link": false
+    },
+    "48520-60241": {
+      "name": "FRONT SHOCK ABSORBER ASSEMBLY LH",
+      "number": "48520-60241",
+      "code": "48520",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48520-60241",
+      "direct_link": false
+    },
+    "48811-60713": {
+      "name": "FRONT SHOCK ABSORBER ASSEMBLY LH",
+      "number": "48811-60713",
+      "code": "48811",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48811-60713",
+      "direct_link": false
+    },
+    "48802-60210": {
+      "name": "FRONT STABILIZER BAR",
+      "number": "48802-60210",
+      "code": "48802F",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48802-60210",
+      "direct_link": false
+    },
+    "48815-60622": {
+      "name": "FRONT STABILIZER LINK SUB-ASSEMBLY LH",
+      "number": "48815-60622",
+      "code": "48815",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48815-60622",
+      "direct_link": false
+    },
+    "48829-60799": {
+      "name": "FRONT STABILIZER LINK SUB-ASSEMBLY RH",
+      "number": "48829-60799",
+      "code": "48829A",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48829-60799",
+      "direct_link": false
+    },
+    "48331-60052": {
+      "name": "FRONT SUSPENSION HOLLOW SPRING ASSEMBLY LH",
+      "number": "48331-60052",
+      "code": "48331C",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48331-60052",
+      "direct_link": false
+    },
+    "48610-60801": {
+      "name": "FRONT WHEEL",
+      "number": "48610-60801",
+      "code": "48610A",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48610-60801",
+      "direct_link": false
+    },
+    "48740-60205": {
+      "name": "FRONT WHEEL",
+      "number": "48740-60205",
+      "code": "48740A",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48740-60205",
+      "direct_link": false
+    },
+    "48510-60006": {
+      "name": "WIRE HARNESS CLAMP (w/ Differential Lock)",
+      "number": "48510-60006",
+      "code": "48510",
+      "category": "front-axle",
+      "buy_url": "https://autoparts.toyota.com/search?search_str=48510-60006",
+      "direct_link": false
+    }
+  }
+}
